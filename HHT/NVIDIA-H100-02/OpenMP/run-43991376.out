@@ -1,0 +1,470 @@
+unload bsc/1.0 (PATH, MANPATH)
+load bsc/1.0 (PATH, MANPATH)
+flatpak: symbol lookup error: /lib64/libldap.so.2: undefined symbol: EVP_md2, version OPENSSL_3.0.0
+unload bsc/1.0 (PATH, MANPATH)
+unload EB/apps (PATH)
+load EB/apps (PATH)
+load CUDA/12.8 (PATH, MANPATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, CUDA_HOME, CUDA_VERSION, CUDA_INC, CUDA_INSTALL_PATH) 
+load CLANG/18.1.8 (PATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, HDF5_DIR, HDF5_ROOT) 
+============================================================
+Host               : as03r4b26
+Job ID             : 43991376
+Repetition         : 1
+Timestamp          : 20260730_132948
+Results dir        : results_43991376_20260730_132948
+N                  : 640
+DT                 : 0.0001074146
+STEPS              : 500
+FAMILIES           : '2 4'
+BASELINE           : 1
+STREAM_HELPERS_2   : 2
+STREAM_HELPERS_4   : 4
+Compiler           : clang version 18.1.8
+============================================================
+SLURM_JOB_GPUS=0,1,2,3
+CUDA_VISIBLE_DEVICES from Slurm=<unset>
+GPU 0: NVIDIA H100 (UUID: GPU-f04b136f-25ca-aeeb-8210-b1edfdbc1038)
+GPU 1: NVIDIA H100 (UUID: GPU-98c5d816-1807-d601-ef1b-32c35e608233)
+GPU 2: NVIDIA H100 (UUID: GPU-6f5bc250-7da9-3b78-0f4f-126f6b4e8ed4)
+GPU 3: NVIDIA H100 (UUID: GPU-922e8d63-f72e-0c50-e6f7-37103ff27a64)
+GPU inventory:
+0, NVIDIA H100, GPU-f04b136f-25ca-aeeb-8210-b1edfdbc1038, 65247 MiB, 535.86.10
+1, NVIDIA H100, GPU-98c5d816-1807-d601-ef1b-32c35e608233, 65247 MiB, 535.86.10
+2, NVIDIA H100, GPU-6f5bc250-7da9-3b78-0f4f-126f6b4e8ed4, 65247 MiB, 535.86.10
+3, NVIDIA H100, GPU-922e8d63-f72e-0c50-e6f7-37103ff27a64, 65247 MiB, 535.86.10
+GPU topology:
+	[4mGPU0	GPU1	GPU2	GPU3	NIC0	NIC1	NIC2	NIC3	NIC4	NIC5	CPU Affinity	NUMA Affinity	GPU NUMA ID[0m
+GPU0	 X 	NV6	NV6	NV6	PXB	SYS	SYS	SYS	SYS	SYS	0-19,80-99	0		N/A
+GPU1	NV6	 X 	NV6	NV6	SYS	PXB	NODE	NODE	SYS	SYS	20-39,100-119	1		N/A
+GPU2	NV6	NV6	 X 	NV6	SYS	SYS	SYS	SYS	PXB	SYS	40-59,120-139	2		N/A
+GPU3	NV6	NV6	NV6	 X 	SYS	SYS	SYS	SYS	SYS	PXB	60-79,140-159	3		N/A
+NIC0	PXB	SYS	SYS	SYS	 X 	SYS	SYS	SYS	SYS	SYS				
+NIC1	SYS	PXB	SYS	SYS	SYS	 X 	NODE	NODE	SYS	SYS				
+NIC2	SYS	NODE	SYS	SYS	SYS	NODE	 X 	PIX	SYS	SYS				
+NIC3	SYS	NODE	SYS	SYS	SYS	NODE	PIX	 X 	SYS	SYS				
+NIC4	SYS	SYS	PXB	SYS	SYS	SYS	SYS	SYS	 X 	SYS				
+NIC5	SYS	SYS	SYS	PXB	SYS	SYS	SYS	SYS	SYS	 X 				
+
+Legend:
+
+  X    = Self
+  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)
+  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node
+  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)
+  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)
+  PIX  = Connection traversing at most a single PCIe bridge
+  NV#  = Connection traversing a bonded set of # NVLinks
+
+NIC Legend:
+
+  NIC0: mlx5_0
+  NIC1: mlx5_1
+  NIC2: mlx5_2
+  NIC3: mlx5_3
+  NIC4: mlx5_4
+  NIC5: mlx5_5
+
+
+Starting benchmarks
+===========================
+N = 640   dt = 0.0001074146
+===========================
+
+>>> 1-omp  gpus=1  mask=0  N=640
+    Runtime configuration:
+      CUDA_VISIBLE_DEVICES=0
+      OMP_NUM_THREADS=1
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=1
+
+**** ONE GPU OpenMP Offloading STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target device 0 of 1
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 2.097 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 6.129966 seconds
+=== SIMULATION ENDS ===
+
+**** ONE GPU OpenMP Offloading FINISHED ****
+    -> wall=19.9850s  reported=6.129966s  status=ok
+
+>>> 2-omp  gpus=2  mask=0,1  N=640
+    Runtime configuration:
+      CUDA_VISIBLE_DEVICES=0,1
+      OMP_NUM_THREADS=1
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=2
+
+**** TWO GPUS OpenMP Offloading STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0 and 1 of 2
+Block sizes: nz0=321, nz1=321, mid=319
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.052 GB
+GPU1 local bytes per array: 1.052 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 3.299212 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS OpenMP Offloading FINISHED ****
+    -> wall=17.6080s  reported=3.299212s  status=ok
+
+>>> 2-omp-stream  gpus=2  mask=0,1  N=640
+    Runtime configuration:
+      CUDA_VISIBLE_DEVICES=0,1
+      OMP_NUM_THREADS=1
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=2
+
+**** TWO GPUS OpenMP Offloading, ASYNC STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0 and 1 of 2
+Block sizes: nz0=321, nz1=321, mid=319
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.052 GB
+GPU1 local bytes per array: 1.052 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 2.719371 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS OpenMP Offloading, ASYNC FINISHED ****
+    -> wall=17.1410s  reported=2.719371s  status=ok
+
+>>> 2-omp-stream-omp  gpus=2  mask=0,1  N=640
+    Runtime configuration:
+      CUDA_VISIBLE_DEVICES=0,1
+      OMP_NUM_THREADS=2
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=2
+
+**** TWO GPUS OpenMP Offloading, ASYNC + 2 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0 and 1 of 2
+Block sizes: nz0=321, nz1=321, mid=319
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.052 GB
+GPU1 local bytes per array: 1.052 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 2.718898 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS OpenMP Offloading, ASYNC + 2 HOST THREADS FINISHED ****
+    -> wall=17.1240s  reported=2.718898s  status=ok
+
+>>> 2-omp-stream-omp-p2p  gpus=2  mask=0,1  N=640
+    Runtime configuration:
+      CUDA_VISIBLE_DEVICES=0,1
+      OMP_NUM_THREADS=2
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=2
+
+**** TWO GPUS OpenMP Offloading, P2P + 2 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0 and 1 of 2
+Block sizes: nz0=321, nz1=321, mid=319
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.052 GB
+GPU1 local bytes per array: 1.052 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 2.602080 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS OpenMP Offloading, P2P + 2 HOST THREADS FINISHED ****
+    -> wall=17.0040s  reported=2.602080s  status=ok
+
+>>> 4-omp  gpus=4  mask=0,1,2,3  N=640
+    Runtime configuration:
+      CUDA_VISIBLE_DEVICES=0,1,2,3
+      OMP_NUM_THREADS=1
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=4
+
+**** FOUR GPUS OpenMP Offloading STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=162, nz1=162, nz2=161, nz3=161
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.531 GB
+GPU1 local bytes per array: 0.531 GB
+GPU2 local bytes per array: 0.528 GB
+GPU3 local bytes per array: 0.528 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 3.484678 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS OpenMP Offloading FINISHED ****
+    -> wall=18.3290s  reported=3.484678s  status=ok
+
+>>> 4-omp-stream  gpus=4  mask=0,1,2,3  N=640
+    Runtime configuration:
+      CUDA_VISIBLE_DEVICES=0,1,2,3
+      OMP_NUM_THREADS=1
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=4
+
+**** FOUR GPUS OpenMP Offloading, ASYNC STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=162, nz1=162, nz2=161, nz3=161
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.531 GB
+GPU1 local bytes per array: 0.531 GB
+GPU2 local bytes per array: 0.528 GB
+GPU3 local bytes per array: 0.528 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 1.641806 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS OpenMP Offloading, ASYNC FINISHED ****
+    -> wall=16.4600s  reported=1.641806s  status=ok
+
+>>> 4-omp-stream-omp  gpus=4  mask=0,1,2,3  N=640
+    Runtime configuration:
+      CUDA_VISIBLE_DEVICES=0,1,2,3
+      OMP_NUM_THREADS=4
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=4
+
+**** FOUR GPUS OpenMP Offloading, ASYNC + 4 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=162, nz1=162, nz2=161, nz3=161
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.531 GB
+GPU1 local bytes per array: 0.531 GB
+GPU2 local bytes per array: 0.528 GB
+GPU3 local bytes per array: 0.528 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 1.652899 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS OpenMP Offloading, ASYNC + 4 HOST THREADS FINISHED ****
+    -> wall=16.5870s  reported=1.652899s  status=ok
+
+>>> 4-omp-stream-omp-p2p  gpus=4  mask=0,1,2,3  N=640
+    Runtime configuration:
+      CUDA_VISIBLE_DEVICES=0,1,2,3
+      OMP_NUM_THREADS=4
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=4
+
+**** FOUR GPUS OpenMP Offloading, P2P + 4 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=162, nz1=162, nz2=161, nz3=161
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.531 GB
+GPU1 local bytes per array: 0.531 GB
+GPU2 local bytes per array: 0.528 GB
+GPU3 local bytes per array: 0.528 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 1.234137 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS OpenMP Offloading, P2P + 4 HOST THREADS FINISHED ****
+    -> wall=16.1040s  reported=1.234137s  status=ok
+
+All done.
+  Timing CSV : results_43991376_20260730_132948/timings.csv
+  Run log    : results_43991376_20260730_132948/run.log

@@ -1,0 +1,452 @@
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+LUMI/25.09:
+   As the LUMI/25.09 stack uses a version of the programming environment
+   that is newer than the current default on the system (25.03), please be
+   aware of https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20251020/102-CPE/#warning-1-you-do-not-always-get-what-you-expect
+   and adapt LD_LIBRARY_PATH as needed. The easiest way to do this, is to
+   simply load lumi-CrayPath after loading all other modules, and reloading
+   it after a module change.
+
+-------------------------------------------------------------------------------
+This module comes with rocprof-sys, rocprof-compute, asan and debug libraries
+installed.
+Please check https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/r/rocm/
+for instructions on how to use them.
+
+
+This module comes with rocprof-sys, rocprof-compute, asan and debug libraries
+installed.
+Please check https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/r/rocm/
+for instructions on how to use them.
+
+Job ID       : 20441725
+Repetition   : 2
+Timestamp    : 20260730_130920
+Results dir  : results_h8_20441725_20260730_130920
+N=512  DT=0.0001679668  STEPS=500  FAMILIES='2 4'
+Hidden helper threads : 8
+P2P runtime  : /scratch/project_465003145/omptarget-p2p/lib
+P2P shim     : /pfs/lustrep2/scratch/project_465003145/Git/3D_Heat_Benchmark/Final-2/OpenMP/libp2p_copy_shim.so
+
+Starting benchmarks
+===========================
+N = 512   dt = 0.0001679668   helpers = 8
+===========================
+
+>>> Running: 1-omp  gpus=1  mask=0  N=512
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0
+      OMP_NUM_THREADS=1
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=1
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS -u LIBOMP_USE_HIDDEN_HELPER_TASK -u LIBOMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=1 HSA_ENABLE_SDMA=1 ./1-omp 512 0.0001679668
+
+**** ONE GPU OpenMP Offloading STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target device 0 of 1
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.074 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 8.609675 seconds
+=== SIMULATION ENDS ===
+
+**** ONE GPU OpenMP Offloading FINISHED ****
+    -> wall=34.2160s  reported=8.609675s  status=ok  exit=0
+
+>>> Running: 2-omp  gpus=2  mask=0,2  N=512
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2
+      OMP_NUM_THREADS=1
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=2
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS -u LIBOMP_USE_HIDDEN_HELPER_TASK -u LIBOMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2 OMP_NUM_THREADS=1 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=2 HSA_ENABLE_SDMA=1 ./2-omp 512 0.0001679668
+
+**** TWO GPUS OpenMP Offloading STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0 and 1 of 2
+Block sizes: nz0=257, nz1=257, mid=255
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.539 GB
+GPU1 local bytes per array: 0.539 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 4.348490 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS OpenMP Offloading FINISHED ****
+    -> wall=17.8740s  reported=4.348490s  status=ok  exit=0
+
+>>> Running: 2-omp-stream  gpus=2  mask=0,2  N=512
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2
+      OMP_NUM_THREADS=1
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=2
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS -u LIBOMP_USE_HIDDEN_HELPER_TASK -u LIBOMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2 OMP_NUM_THREADS=1 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=2 HSA_ENABLE_SDMA=1 ./2-omp-stream 512 0.0001679668
+
+**** TWO GPUS OpenMP Offloading, ASYNC STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0 and 1 of 2
+Block sizes: nz0=257, nz1=257, mid=255
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.539 GB
+GPU1 local bytes per array: 0.539 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 4.260075 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS OpenMP Offloading, ASYNC FINISHED ****
+    -> wall=17.8850s  reported=4.260075s  status=ok  exit=0
+
+>>> Running: 2-omp-stream-omp  gpus=2  mask=0,2  N=512
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2
+      OMP_NUM_THREADS=2
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=2
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS -u LIBOMP_USE_HIDDEN_HELPER_TASK -u LIBOMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2 OMP_NUM_THREADS=2 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=2 HSA_ENABLE_SDMA=1 ./2-omp-stream-omp 512 0.0001679668
+
+**** TWO GPUS OpenMP Offloading, ASYNC + 2 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0 and 1 of 2
+Block sizes: nz0=257, nz1=257, mid=255
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.539 GB
+GPU1 local bytes per array: 0.539 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 4.130329 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS OpenMP Offloading, ASYNC + 2 HOST THREADS FINISHED ****
+    -> wall=17.6090s  reported=4.130329s  status=ok  exit=0
+
+>>> Running: 2-omp-stream-omp-p2p  gpus=2  mask=0,2  N=512
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2
+      OMP_NUM_THREADS=2
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=2
+      HSA_ENABLE_SDMA=1
+      HSA_ENABLE_PEER_SDMA=1
+      LD_PRELOAD=/pfs/lustrep2/scratch/project_465003145/Git/3D_Heat_Benchmark/Final-2/OpenMP/libp2p_copy_shim.so:/scratch/project_465003145/omptarget-p2p/lib/libomp.so:/scratch/project_465003145/omptarget-p2p/lib/libomptarget.so.19.0git
+    command: env -u LD_PRELOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS -u LIBOMP_USE_HIDDEN_HELPER_TASK -u LIBOMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2 OMP_NUM_THREADS=2 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=2 HSA_ENABLE_SDMA=1 HSA_ENABLE_PEER_SDMA=1 LD_PRELOAD=/pfs/lustrep2/scratch/project_465003145/Git/3D_Heat_Benchmark/Final-2/OpenMP/libp2p_copy_shim.so:/scratch/project_465003145/omptarget-p2p/lib/libomp.so:/scratch/project_465003145/omptarget-p2p/lib/libomptarget.so.19.0git ./2-omp-stream-omp-p2p 512 0.0001679668
+
+**** TWO GPUS OpenMP Offloading, P2P + 2 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0 and 1 of 2
+Block sizes: nz0=257, nz1=257, mid=255
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.539 GB
+GPU1 local bytes per array: 0.539 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 4.092117 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS OpenMP Offloading, P2P + 2 HOST THREADS FINISHED ****
+    -> wall=18.6460s  reported=4.092117s  status=ok  exit=0
+
+>>> Running: 4-omp  gpus=4  mask=0,2,4,6  N=512
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2,4,6
+      OMP_NUM_THREADS=1
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=4
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS -u LIBOMP_USE_HIDDEN_HELPER_TASK -u LIBOMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2\,4\,6 OMP_NUM_THREADS=1 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=4 HSA_ENABLE_SDMA=1 ./4-omp 512 0.0001679668
+
+**** FOUR GPUS OpenMP Offloading STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=130, nz1=130, nz2=129, nz3=129
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.273 GB
+GPU1 local bytes per array: 0.273 GB
+GPU2 local bytes per array: 0.271 GB
+GPU3 local bytes per array: 0.271 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 2.593906 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS OpenMP Offloading FINISHED ****
+    -> wall=16.2810s  reported=2.593906s  status=ok  exit=0
+
+>>> Running: 4-omp-stream  gpus=4  mask=0,2,4,6  N=512
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2,4,6
+      OMP_NUM_THREADS=1
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=4
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS -u LIBOMP_USE_HIDDEN_HELPER_TASK -u LIBOMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2\,4\,6 OMP_NUM_THREADS=1 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=4 HSA_ENABLE_SDMA=1 ./4-omp-stream 512 0.0001679668
+
+**** FOUR GPUS OpenMP Offloading, ASYNC STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=130, nz1=130, nz2=129, nz3=129
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.273 GB
+GPU1 local bytes per array: 0.273 GB
+GPU2 local bytes per array: 0.271 GB
+GPU3 local bytes per array: 0.271 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 2.007731 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS OpenMP Offloading, ASYNC FINISHED ****
+    -> wall=15.6610s  reported=2.007731s  status=ok  exit=0
+
+>>> Running: 4-omp-stream-omp  gpus=4  mask=0,2,4,6  N=512
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2,4,6
+      OMP_NUM_THREADS=4
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=4
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS -u LIBOMP_USE_HIDDEN_HELPER_TASK -u LIBOMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2\,4\,6 OMP_NUM_THREADS=4 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=4 HSA_ENABLE_SDMA=1 ./4-omp-stream-omp 512 0.0001679668
+
+**** FOUR GPUS OpenMP Offloading, ASYNC + 4 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=130, nz1=130, nz2=129, nz3=129
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.273 GB
+GPU1 local bytes per array: 0.273 GB
+GPU2 local bytes per array: 0.271 GB
+GPU3 local bytes per array: 0.271 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 2.142973 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS OpenMP Offloading, ASYNC + 4 HOST THREADS FINISHED ****
+    -> wall=15.9060s  reported=2.142973s  status=ok  exit=0
+
+>>> Running: 4-omp-stream-omp-p2p  gpus=4  mask=0,2,4,6  N=512
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2,4,6
+      OMP_NUM_THREADS=4
+      LIBOMP_USE_HIDDEN_HELPER_TASK=1
+      LIBOMP_NUM_HIDDEN_HELPER_THREADS=4
+      HSA_ENABLE_SDMA=1
+      HSA_ENABLE_PEER_SDMA=1
+      LD_PRELOAD=/pfs/lustrep2/scratch/project_465003145/Git/3D_Heat_Benchmark/Final-2/OpenMP/libp2p_copy_shim.so:/scratch/project_465003145/omptarget-p2p/lib/libomp.so:/scratch/project_465003145/omptarget-p2p/lib/libomptarget.so.19.0git
+    command: env -u LD_PRELOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS -u LIBOMP_USE_HIDDEN_HELPER_TASK -u LIBOMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2\,4\,6 OMP_NUM_THREADS=4 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=4 HSA_ENABLE_SDMA=1 HSA_ENABLE_PEER_SDMA=1 LD_PRELOAD=/pfs/lustrep2/scratch/project_465003145/Git/3D_Heat_Benchmark/Final-2/OpenMP/libp2p_copy_shim.so:/scratch/project_465003145/omptarget-p2p/lib/libomp.so:/scratch/project_465003145/omptarget-p2p/lib/libomptarget.so.19.0git ./4-omp-stream-omp-p2p 512 0.0001679668
+/var/spool/slurmd/job20441725/slurm_script: line 158: 112193 Aborted                 timeout "$TIMEOUT_SEC" "${run_cmd[@]}" > "$stdout_file" 2>&1
+
+**** FOUR GPUS OpenMP Offloading, P2P + 4 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=130, nz1=130, nz2=129, nz3=129
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.273 GB
+GPU1 local bytes per array: 0.273 GB
+GPU2 local bytes per array: 0.271 GB
+GPU3 local bytes per array: 0.271 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+AMDGPU fatal error 1: Memory access fault by GPU 8 (agent 0x5c2820) at virtual address 0x15397ef32000. Reasons: Unknown (0)
+    -> wall=13.1630s  reported=N/As  status=runtime_error  exit=134
+
+All done.
+  Timing CSV : results_h8_20441725_20260730_130920/timings.csv
+  Run log    : results_h8_20441725_20260730_130920/run.log

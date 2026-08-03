@@ -1,0 +1,42 @@
+stty: 'standard input': Inappropriate ioctl for device
+
+
+Note: You are loading a complete Base and HPC Intel-OneAPI toolkit / environment.
+      This will remove any conflicting modules
+      already loaded in your environment
+
+
+
+Loading intel-toolkit/2024.1.0
+  Loading requirement: intel/2024.1.0 intel-mpi/2021.12.0 intel-mkl/2024.1.0
+    intel-inspector/2024.1.0 intel-ccl/2021.12.0 intel-dnn/2024.1.0
+    intel-itac/2022.1.0 intel-tbb/2021.12.0 intel-ipp/2021.11.0
+    intel-dal/2024.2.0 intel-ippcp/2021.11.0 intel-dpl/2022.5.0
+    intel-dpct/2024.1.0
+=== Host     : i20r07c05s10 ===
+=== Date     : tor 30 jul 2026 13:13:50 CEST ===
+=== Compiler : Intel(R) oneAPI DPC++/C++ Compiler 2024.1.0 (2024.1.0.20240308) ===
+rm -f 2-omp 2-omp-stream 2-omp-stream-omp 2-omp-stream-omp-p2p 4-omp 4-omp-stream 4-omp-stream-omp 4-omp-stream-omp-p2p 1-omp serial icx_build_*.log
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icx -O3 -fno-fast-math -fiopenmp -fopenmp-targets=spir64 -ffp-contract=off -Wl,--no-warn-execstack -o 2-omp 2-openmp.c -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icx -O3 -fno-fast-math -fiopenmp -fopenmp-targets=spir64 -ffp-contract=off -Wl,--no-warn-execstack -o 2-omp-stream 2-openmp-stream.c -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icx -O3 -fno-fast-math -fiopenmp -fopenmp-targets=spir64 -ffp-contract=off -Wl,--no-warn-execstack -o 2-omp-stream-omp 2-openmp-stream-omp.c -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icx -O3 -fno-fast-math -fiopenmp -fopenmp-targets=spir64 -ffp-contract=off -Wl,--no-warn-execstack -o 2-omp-stream-omp-p2p 2-openmp-stream-omp-p2p.c -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icx -O3 -fno-fast-math -fiopenmp -fopenmp-targets=spir64 -ffp-contract=off -Wl,--no-warn-execstack -o 4-omp 4-openmp.c -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icx -O3 -fno-fast-math -fiopenmp -fopenmp-targets=spir64 -ffp-contract=off -Wl,--no-warn-execstack -o 4-omp-stream 4-openmp-stream.c -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icx -O3 -fno-fast-math -fiopenmp -fopenmp-targets=spir64 -ffp-contract=off -Wl,--no-warn-execstack -o 4-omp-stream-omp 4-openmp-stream-omp.c -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icx -O3 -fno-fast-math -fiopenmp -fopenmp-targets=spir64 -ffp-contract=off -Wl,--no-warn-execstack -o 4-omp-stream-omp-p2p 4-openmp-stream-omp-p2p.c -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icx -O3 -fno-fast-math -fiopenmp -fopenmp-targets=spir64 -ffp-contract=off -Wl,--no-warn-execstack -o 1-omp 1-openmp.c -lm
+
+Verifying binaries...
+  OK : 2-omp
+  OK : 2-omp-stream
+  OK : 2-omp-stream-omp
+  OK : 2-omp-stream-omp-p2p
+  OK : 4-omp
+  OK : 4-omp-stream
+  OK : 4-omp-stream-omp
+  OK : 4-omp-stream-omp-p2p
+  OK : 1-omp
+
+All binaries present -- run jobs are cleared to start.
+All built with identical flags (see OPT in the Makefile).

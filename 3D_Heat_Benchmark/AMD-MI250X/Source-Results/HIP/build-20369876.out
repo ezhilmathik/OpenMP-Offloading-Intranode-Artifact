@@ -1,0 +1,47 @@
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+LUMI/25.09:
+   As the LUMI/25.09 stack uses a version of the programming environment
+   that is newer than the current default on the system (25.03), please be
+   aware of https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20251020/102-CPE/#warning-1-you-do-not-always-get-what-you-expect
+   and adapt LD_LIBRARY_PATH as needed. The easiest way to do this, is to
+   simply load lumi-CrayPath after loading all other modules, and reloading
+   it after a module change.
+
+-------------------------------------------------------------------------------
+This module comes with rocprof-sys, rocprof-compute, asan and debug libraries
+installed.
+Please check https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/r/rocm/
+for instructions on how to use them.
+
+
+This module comes with rocprof-sys, rocprof-compute, asan and debug libraries
+installed.
+Please check https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/r/rocm/
+for instructions on how to use them.
+
+rm -f 2-hip 2-hip-stream 2-hip-stream-omp 2-hip-stream-omp-p2p 4-hip 4-hip-stream 4-hip-stream-omp 4-hip-stream-omp-p2p 1-hip serial
+amdclang++ -O3 -std=c++17 -fopenmp -ffp-contract=off -x hip --offload-arch=gfx90a -Wno-unused-result -o 2-hip 2-hip.cpp -lm
+amdclang++ -O3 -std=c++17 -fopenmp -ffp-contract=off -x hip --offload-arch=gfx90a -Wno-unused-result -o 2-hip-stream 2-hip-stream.cpp -lm
+amdclang++ -O3 -std=c++17 -fopenmp -ffp-contract=off -x hip --offload-arch=gfx90a -Wno-unused-result -o 2-hip-stream-omp 2-hip-stream-omp.cpp -lm
+amdclang++ -O3 -std=c++17 -fopenmp -ffp-contract=off -x hip --offload-arch=gfx90a -Wno-unused-result -o 2-hip-stream-omp-p2p 2-hip-stream-omp-p2p.cpp -lm
+amdclang++ -O3 -std=c++17 -fopenmp -ffp-contract=off -x hip --offload-arch=gfx90a -Wno-unused-result -o 4-hip 4-hip.cpp -lm
+amdclang++ -O3 -std=c++17 -fopenmp -ffp-contract=off -x hip --offload-arch=gfx90a -Wno-unused-result -o 4-hip-stream 4-hip-stream.cpp -lm
+amdclang++ -O3 -std=c++17 -fopenmp -ffp-contract=off -x hip --offload-arch=gfx90a -Wno-unused-result -o 4-hip-stream-omp 4-hip-stream-omp.cpp -lm
+amdclang++ -O3 -std=c++17 -fopenmp -ffp-contract=off -x hip --offload-arch=gfx90a -Wno-unused-result -o 4-hip-stream-omp-p2p 4-hip-stream-omp-p2p.cpp -lm
+amdclang++ -O3 -std=c++17 -fopenmp -ffp-contract=off -x hip --offload-arch=gfx90a -Wno-unused-result -o 1-hip 1-hip.cpp -lm
+
+Verifying binaries...
+  OK : 2-hip
+  OK : 2-hip-stream
+  OK : 2-hip-stream-omp
+  OK : 2-hip-stream-omp-p2p
+  OK : 4-hip
+  OK : 4-hip-stream
+  OK : 4-hip-stream-omp
+  OK : 4-hip-stream-omp-p2p
+  OK : 1-hip
+
+All binaries present -- run jobs are cleared to start.

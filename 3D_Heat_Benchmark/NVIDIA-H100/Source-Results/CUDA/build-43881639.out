@@ -1,0 +1,71 @@
+unload bsc/1.0 (PATH, MANPATH)
+load bsc/1.0 (PATH, MANPATH)
+flatpak: symbol lookup error: /lib64/libldap.so.2: undefined symbol: EVP_md2, version OPENSSL_3.0.0
+unload bsc/1.0 (PATH, MANPATH)
+unload EB/apps (PATH)
+load EB/apps (PATH)
+=== Host   : as04r4b28 ===
+=== Date   : Mon Jul 27 15:25:57 CEST 2026 ===
+=== nvcc   : Cuda compilation tools, release 12.8, V12.8.61 ===
+=== nvc    : nvc 25.3-0 64-bit target on x86-64 Linux -tp sapphirerapids  ===
+GPU 0: NVIDIA H100 (UUID: GPU-9eae4063-9717-d816-25d0-c24af360e38e)
+GPU 1: NVIDIA H100 (UUID: GPU-40bc890a-ff4c-75cd-e21d-9686d5df7497)
+GPU 2: NVIDIA H100 (UUID: GPU-ad590d38-bb10-0381-c6eb-65d5b40f8aa3)
+GPU 3: NVIDIA H100 (UUID: GPU-7b1fa931-3137-ce14-7b9d-3485d00c2871)
+
+=== GPU topology (P2P reachability for the *-p2p variants) ===
+	[4mGPU0	GPU1	GPU2	GPU3	NIC0	NIC1	NIC2	NIC3	NIC4	NIC5	CPU Affinity	NUMA Affinity	GPU NUMA ID[0m
+GPU0	 X 	NV6	NV6	NV6	PXB	SYS	SYS	SYS	SYS	SYS	0-19,80-99	0		N/A
+GPU1	NV6	 X 	NV6	NV6	SYS	PXB	NODE	NODE	SYS	SYS	20-39,100-119	1		N/A
+GPU2	NV6	NV6	 X 	NV6	SYS	SYS	SYS	SYS	PXB	SYS	40-59,120-139	2		N/A
+GPU3	NV6	NV6	NV6	 X 	SYS	SYS	SYS	SYS	SYS	PXB	60-79,140-159	3		N/A
+NIC0	PXB	SYS	SYS	SYS	 X 	SYS	SYS	SYS	SYS	SYS				
+NIC1	SYS	PXB	SYS	SYS	SYS	 X 	NODE	NODE	SYS	SYS				
+NIC2	SYS	NODE	SYS	SYS	SYS	NODE	 X 	PIX	SYS	SYS				
+NIC3	SYS	NODE	SYS	SYS	SYS	NODE	PIX	 X 	SYS	SYS				
+NIC4	SYS	SYS	PXB	SYS	SYS	SYS	SYS	SYS	 X 	SYS				
+NIC5	SYS	SYS	SYS	PXB	SYS	SYS	SYS	SYS	SYS	 X 				
+
+Legend:
+
+  X    = Self
+  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)
+  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node
+  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)
+  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)
+  PIX  = Connection traversing at most a single PCIe bridge
+  NV#  = Connection traversing a bonded set of # NVLinks
+
+NIC Legend:
+
+  NIC0: mlx5_0
+  NIC1: mlx5_1
+  NIC2: mlx5_2
+  NIC3: mlx5_3
+  NIC4: mlx5_4
+  NIC5: mlx5_5
+
+rm -f 2-cuda 2-cuda-stream 2-cuda-stream-omp 2-cuda-stream-omp-p2p 4-cuda 4-cuda-stream 4-cuda-stream-omp 4-cuda-stream-omp-p2p 1-cuda serial
+nvcc -O3 --fmad=false --prec-div=true --prec-sqrt=true --ftz=false -arch=sm_90 -Xcompiler -fopenmp -o 2-cuda 2-cuda.cu -lm
+nvcc -O3 --fmad=false --prec-div=true --prec-sqrt=true --ftz=false -arch=sm_90 -Xcompiler -fopenmp -o 2-cuda-stream 2-cuda-stream.cu -lm
+nvcc -O3 --fmad=false --prec-div=true --prec-sqrt=true --ftz=false -arch=sm_90 -Xcompiler -fopenmp -o 2-cuda-stream-omp 2-cuda-stream-omp.cu -lm
+nvcc -O3 --fmad=false --prec-div=true --prec-sqrt=true --ftz=false -arch=sm_90 -Xcompiler -fopenmp -o 2-cuda-stream-omp-p2p 2-cuda-stream-omp-p2p.cu -lm
+nvcc -O3 --fmad=false --prec-div=true --prec-sqrt=true --ftz=false -arch=sm_90 -Xcompiler -fopenmp -o 4-cuda 4-cuda.cu -lm
+nvcc -O3 --fmad=false --prec-div=true --prec-sqrt=true --ftz=false -arch=sm_90 -Xcompiler -fopenmp -o 4-cuda-stream 4-cuda-stream.cu -lm
+nvcc -O3 --fmad=false --prec-div=true --prec-sqrt=true --ftz=false -arch=sm_90 -Xcompiler -fopenmp -o 4-cuda-stream-omp 4-cuda-stream-omp.cu -lm
+nvcc -O3 --fmad=false --prec-div=true --prec-sqrt=true --ftz=false -arch=sm_90 -Xcompiler -fopenmp -o 4-cuda-stream-omp-p2p 4-cuda-stream-omp-p2p.cu -lm
+nvcc -O3 --fmad=false --prec-div=true --prec-sqrt=true --ftz=false -arch=sm_90 -Xcompiler -fopenmp -o 1-cuda 1-cuda.cu -lm
+
+Verifying binaries...
+  OK : 2-cuda
+  OK : 2-cuda-stream
+  OK : 2-cuda-stream-omp
+  OK : 2-cuda-stream-omp-p2p
+  OK : 4-cuda
+  OK : 4-cuda-stream
+  OK : 4-cuda-stream-omp
+  OK : 4-cuda-stream-omp-p2p
+  OK : 1-cuda
+
+All binaries present -- run jobs are cleared to start.
+All built with identical flags (see NVCC_FLAGS in the Makefile).

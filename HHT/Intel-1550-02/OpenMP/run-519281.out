@@ -1,0 +1,410 @@
+stty: 'standard input': Inappropriate ioctl for device
+
+
+Note: You are loading a complete Base and HPC Intel-OneAPI toolkit / environment.
+      This will remove any conflicting modules
+      already loaded in your environment
+
+
+
+Loading intel-toolkit/2024.1.0
+  Loading requirement: intel/2024.1.0 intel-mpi/2021.12.0 intel-mkl/2024.1.0
+    intel-inspector/2024.1.0 intel-ccl/2021.12.0 intel-dnn/2024.1.0
+    intel-itac/2022.1.0 intel-tbb/2021.12.0 intel-ipp/2021.11.0
+    intel-dal/2024.2.0 intel-ippcp/2021.11.0 intel-dpl/2022.5.0
+    intel-dpct/2024.1.0
+============================================================
+Host       : i20r08c03s06
+Job ID     : 519281   Repetition: 5
+Timestamp  : 20260730_132126
+Results dir: results_COMPOSITE_h8_519281_20260730_132126
+N=512  DT=0.0001679668  STEPS=500  FAMILIES='2 4'  BASELINE=1
+ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE  (1 device = whole card, 2 stacks)
+Hidden helpers for V1/V2 : 8
+Compiler   : Intel(R) oneAPI DPC++/C++ Compiler 2024.1.0 (2024.1.0.20240308)
+============================================================
+[opencl:acc:0] Intel(R) FPGA Emulation Platform for OpenCL(TM), Intel(R) FPGA Emulation Device OpenCL 1.2  [2024.17.3.0.08_160000]
+[opencl:cpu:1] Intel(R) OpenCL, Intel(R) Xeon(R) Platinum 8480L OpenCL 3.0 (Build 0) [2024.17.3.0.08_160000]
+[opencl:gpu:2] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1550 OpenCL 3.0 NEO  [23.43.27642.67]
+[opencl:gpu:3] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1550 OpenCL 3.0 NEO  [23.43.27642.67]
+[opencl:gpu:4] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1550 OpenCL 3.0 NEO  [23.43.27642.67]
+[opencl:gpu:5] Intel(R) OpenCL Graphics, Intel(R) Data Center GPU Max 1550 OpenCL 3.0 NEO  [23.43.27642.67]
+[ext_oneapi_level_zero:gpu:0] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1550 1.3 [1.3.27642]
+[ext_oneapi_level_zero:gpu:1] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1550 1.3 [1.3.27642]
+[ext_oneapi_level_zero:gpu:2] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1550 1.3 [1.3.27642]
+[ext_oneapi_level_zero:gpu:3] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1550 1.3 [1.3.27642]
+
+Starting benchmarks
+===========================
+N = 512   dt = 0.0001679668   helpers(V1/V2) = 8
+===========================
+
+>>> 1-omp  gpus=1  ZE_AFFINITY_MASK=0  N=512
+    runtime: baseline; OMP_NUM_THREADS=1  helpers=disabled
+    command: env -u LIBOMPTARGET_DEVICES ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0 OMP_NUM_THREADS=1 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=1 ./1-omp 512 0.0001679668
+
+**** ONE GPU OpenMP Offloading STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target device 0 of 1
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.074 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 3.432603 seconds
+=== SIMULATION ENDS ===
+
+**** ONE GPU OpenMP Offloading FINISHED ****
+    -> wall=9.5180s  reported=3.432603s  status=ok  exit=0
+
+>>> 2-omp  gpus=2  ZE_AFFINITY_MASK=0,1  N=512
+    runtime: application threads=1  helpers=8
+    command: env -u OMP_NUM_HIDDEN_HELPER_THREADS -u OMP_THREAD_LIMIT -u LIBOMPTARGET_DEVICES ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1 OMP_NUM_THREADS=1 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=2 ./2-omp 512 0.0001679668
+
+**** TWO GPUS OpenMP Offloading STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0 and 1 of 2
+Block sizes: nz0=257, nz1=257, mid=255
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.539 GB
+GPU1 local bytes per array: 0.539 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 2.791177 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS OpenMP Offloading FINISHED ****
+    -> wall=9.1270s  reported=2.791177s  status=ok  exit=0
+
+>>> 2-omp-stream  gpus=2  ZE_AFFINITY_MASK=0,1  N=512
+    runtime: application threads=1  helpers=8
+    command: env -u OMP_NUM_HIDDEN_HELPER_THREADS -u OMP_THREAD_LIMIT -u LIBOMPTARGET_DEVICES ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1 OMP_NUM_THREADS=1 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=2 ./2-omp-stream 512 0.0001679668
+
+**** TWO GPUS OpenMP Offloading, ASYNC STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0 and 1 of 2
+Block sizes: nz0=257, nz1=257, mid=255
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.539 GB
+GPU1 local bytes per array: 0.539 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 3.321578 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS OpenMP Offloading, ASYNC FINISHED ****
+    -> wall=9.6620s  reported=3.321578s  status=ok  exit=0
+
+>>> 2-omp-stream-omp  gpus=2  ZE_AFFINITY_MASK=0,1  N=512
+    runtime: explicit threads=2  helpers=disabled
+    command: env -u OMP_THREAD_LIMIT -u LIBOMPTARGET_DEVICES ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1 OMP_NUM_THREADS=2 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=2 ./2-omp-stream-omp 512 0.0001679668
+
+**** TWO GPUS OpenMP Offloading, ASYNC + 2 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0 and 1 of 2
+Block sizes: nz0=257, nz1=257, mid=255
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.539 GB
+GPU1 local bytes per array: 0.539 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 2.723621 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS OpenMP Offloading, ASYNC + 2 HOST THREADS FINISHED ****
+    -> wall=9.0450s  reported=2.723621s  status=ok  exit=0
+
+>>> 2-omp-stream-omp-p2p  gpus=2  ZE_AFFINITY_MASK=0,1  N=512
+    runtime: explicit threads=2  helpers=disabled
+    command: env -u OMP_THREAD_LIMIT -u LIBOMPTARGET_DEVICES ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1 OMP_NUM_THREADS=2 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=2 ./2-omp-stream-omp-p2p 512 0.0001679668
+
+**** TWO GPUS OpenMP Offloading, P2P + 2 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0 and 1 of 2
+Block sizes: nz0=257, nz1=257, mid=255
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.539 GB
+GPU1 local bytes per array: 0.539 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 2.343855 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS OpenMP Offloading, P2P + 2 HOST THREADS FINISHED ****
+    -> wall=8.7050s  reported=2.343855s  status=ok  exit=0
+
+>>> 4-omp  gpus=4  ZE_AFFINITY_MASK=0,1,2,3  N=512
+    runtime: application threads=1  helpers=8
+    command: env -u OMP_NUM_HIDDEN_HELPER_THREADS -u OMP_THREAD_LIMIT -u LIBOMPTARGET_DEVICES ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1\,2\,3 OMP_NUM_THREADS=1 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=4 ./4-omp 512 0.0001679668
+
+**** FOUR GPUS OpenMP Offloading STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=130, nz1=130, nz2=129, nz3=129
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.273 GB
+GPU1 local bytes per array: 0.273 GB
+GPU2 local bytes per array: 0.271 GB
+GPU3 local bytes per array: 0.271 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 5.760459 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS OpenMP Offloading FINISHED ****
+    -> wall=12.2540s  reported=5.760459s  status=ok  exit=0
+
+>>> 4-omp-stream  gpus=4  ZE_AFFINITY_MASK=0,1,2,3  N=512
+    runtime: application threads=1  helpers=8
+    command: env -u OMP_NUM_HIDDEN_HELPER_THREADS -u OMP_THREAD_LIMIT -u LIBOMPTARGET_DEVICES ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1\,2\,3 OMP_NUM_THREADS=1 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=4 ./4-omp-stream 512 0.0001679668
+
+**** FOUR GPUS OpenMP Offloading, ASYNC STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=130, nz1=130, nz2=129, nz3=129
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.273 GB
+GPU1 local bytes per array: 0.273 GB
+GPU2 local bytes per array: 0.271 GB
+GPU3 local bytes per array: 0.271 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 3.983842 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS OpenMP Offloading, ASYNC FINISHED ****
+    -> wall=10.5110s  reported=3.983842s  status=ok  exit=0
+
+>>> 4-omp-stream-omp  gpus=4  ZE_AFFINITY_MASK=0,1,2,3  N=512
+    runtime: explicit threads=4  helpers=disabled
+    command: env -u OMP_THREAD_LIMIT -u LIBOMPTARGET_DEVICES ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1\,2\,3 OMP_NUM_THREADS=4 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=4 ./4-omp-stream-omp 512 0.0001679668
+
+**** FOUR GPUS OpenMP Offloading, ASYNC + 4 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=130, nz1=130, nz2=129, nz3=129
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.273 GB
+GPU1 local bytes per array: 0.273 GB
+GPU2 local bytes per array: 0.271 GB
+GPU3 local bytes per array: 0.271 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 3.432067 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS OpenMP Offloading, ASYNC + 4 HOST THREADS FINISHED ****
+    -> wall=9.9600s  reported=3.432067s  status=ok  exit=0
+
+>>> 4-omp-stream-omp-p2p  gpus=4  ZE_AFFINITY_MASK=0,1,2,3  N=512
+    runtime: explicit threads=4  helpers=disabled
+    command: env -u OMP_THREAD_LIMIT -u LIBOMPTARGET_DEVICES ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1\,2\,3 OMP_NUM_THREADS=4 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=4 ./4-omp-stream-omp-p2p 512 0.0001679668
+
+**** FOUR GPUS OpenMP Offloading, P2P + 4 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 512 x 512 x 512 = 134217728 points
+Memory per global array: 1.074 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           512
+Final time (T):          0.000168
+Grid spacing (h):        1.956947e-03
+Time step (dt):          3.359335e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using OpenMP target devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=130, nz1=130, nz2=129, nz3=129
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.273 GB
+GPU1 local bytes per array: 0.273 GB
+GPU2 local bytes per array: 0.271 GB
+GPU3 local bytes per array: 0.271 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 1.983660 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS OpenMP Offloading, P2P + 4 HOST THREADS FINISHED ****
+    -> wall=8.5500s  reported=1.983660s  status=ok  exit=0
+
+All done.
+  Timing CSV : results_COMPOSITE_h8_519281_20260730_132126/timings.csv
+  Run log    : results_COMPOSITE_h8_519281_20260730_132126/run.log

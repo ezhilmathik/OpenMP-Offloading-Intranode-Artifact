@@ -1,0 +1,421 @@
+============================================================
+Host       : as07r4b25
+Job ID     : 43881664   Repetition: 5
+Timestamp  : 20260727_152644
+Results dir: results_43881664_20260727_152644
+N=640  DT=0.0001074146  STEPS=500  FAMILIES='2 4'  BASELINE=1
+USE_SRUN=0
+nvcc       : Cuda compilation tools, release 12.8, V12.8.61
+============================================================
+SLURM_JOB_GPUS=0,1,2,3
+CUDA_VISIBLE_DEVICES (from SLURM)=0,1,2,3
+GPU 0: NVIDIA H100 (UUID: GPU-7ac05b03-613a-bb80-246a-f16a71ce2026)
+GPU 1: NVIDIA H100 (UUID: GPU-e0b2e124-1d8a-3404-ab45-62298572ae0b)
+GPU 2: NVIDIA H100 (UUID: GPU-ce12d7ae-ad33-bb37-40bc-dddb338aee09)
+GPU 3: NVIDIA H100 (UUID: GPU-f341cf27-11f5-6bbc-36d4-e63e7704aa81)
+
+Starting benchmarks
+===========================
+N = 640   dt = 0.0001074146
+===========================
+
+>>> 1-cuda  gpus=1  mask=0  N=640
+
+**** ONE GPU CUDA STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA device 0 of 1
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 2.097 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 3.302953 seconds
+=== SIMULATION ENDS ===
+
+**** ONE GPU CUDA FINISHED ****
+    -> wall=10.5850s  reported=3.302953s  status=ok
+  [GPU mem after run]
+0, 2 MiB
+1, 2 MiB
+2, 2 MiB
+3, 2 MiB
+
+>>> 2-cuda  gpus=2  mask=0,1  N=640
+
+**** TWO GPUS CUDA STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0 and 1 of 2
+Block sizes: nz0=321, nz1=321, mid=319
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.052 GB
+GPU1 local bytes per array: 1.052 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 2.645179 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS CUDA FINISHED ****
+    -> wall=10.1890s  reported=2.645179s  status=ok
+  [GPU mem after run]
+0, 2 MiB
+1, 2 MiB
+2, 2 MiB
+3, 2 MiB
+
+>>> 2-cuda-stream  gpus=2  mask=0,1  N=640
+
+**** TWO GPUS CUDA, ASYNC STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0 and 1 of 2
+Block sizes: nz0=321, nz1=321, mid=319
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.052 GB
+GPU1 local bytes per array: 1.052 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 2.653685 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS CUDA, ASYNC FINISHED ****
+    -> wall=10.1730s  reported=2.653685s  status=ok
+  [GPU mem after run]
+0, 2 MiB
+1, 2 MiB
+2, 2 MiB
+3, 2 MiB
+
+>>> 2-cuda-stream-omp  gpus=2  mask=0,1  N=640
+
+**** TWO GPUS CUDA, ASYNC + 2 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0 and 1 of 2
+Block sizes: nz0=321, nz1=321, mid=319
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.052 GB
+GPU1 local bytes per array: 1.052 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 2.369589 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS CUDA, ASYNC + 2 HOST THREADS FINISHED ****
+    -> wall=9.6640s  reported=2.369589s  status=ok
+  [GPU mem after run]
+0, 2 MiB
+1, 2 MiB
+2, 2 MiB
+3, 2 MiB
+
+>>> 2-cuda-stream-omp-p2p  gpus=2  mask=0,1  N=640
+
+**** TWO GPUS CUDA, P2P + 2 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0 and 1 of 2
+P2P enabled between GPU 0 and GPU 1
+Block sizes: nz0=321, nz1=321, mid=319
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.052 GB
+GPU1 local bytes per array: 1.052 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 2.086602 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS CUDA, P2P + 2 HOST THREADS FINISHED ****
+    -> wall=9.7090s  reported=2.086602s  status=ok
+  [GPU mem after run]
+0, 2 MiB
+1, 2 MiB
+2, 2 MiB
+3, 2 MiB
+
+>>> 4-cuda  gpus=4  mask=0,1,2,3  N=640
+
+**** FOUR GPUS CUDA STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=162, nz1=162, nz2=161, nz3=161
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.531 GB
+GPU1 local bytes per array: 0.531 GB
+GPU2 local bytes per array: 0.528 GB
+GPU3 local bytes per array: 0.528 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 2.883970 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS CUDA FINISHED ****
+    -> wall=10.7080s  reported=2.883970s  status=ok
+  [GPU mem after run]
+0, 2 MiB
+1, 2 MiB
+2, 2 MiB
+3, 2 MiB
+
+>>> 4-cuda-stream  gpus=4  mask=0,1,2,3  N=640
+
+**** FOUR GPUS CUDA, ASYNC STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=162, nz1=162, nz2=161, nz3=161
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.531 GB
+GPU1 local bytes per array: 0.531 GB
+GPU2 local bytes per array: 0.528 GB
+GPU3 local bytes per array: 0.528 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 3.011411 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS CUDA, ASYNC FINISHED ****
+    -> wall=10.9600s  reported=3.011411s  status=ok
+  [GPU mem after run]
+0, 2 MiB
+1, 2 MiB
+2, 2 MiB
+3, 2 MiB
+
+>>> 4-cuda-stream-omp  gpus=4  mask=0,1,2,3  N=640
+
+**** FOUR GPUS CUDA, ASYNC + 4 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=162, nz1=162, nz2=161, nz3=161
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.531 GB
+GPU1 local bytes per array: 0.531 GB
+GPU2 local bytes per array: 0.528 GB
+GPU3 local bytes per array: 0.528 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 1.814202 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS CUDA, ASYNC + 4 HOST THREADS FINISHED ****
+    -> wall=9.6650s  reported=1.814202s  status=ok
+  [GPU mem after run]
+0, 2 MiB
+1, 2 MiB
+2, 2 MiB
+3, 2 MiB
+
+>>> 4-cuda-stream-omp-p2p  gpus=4  mask=0,1,2,3  N=640
+
+**** FOUR GPUS CUDA, P2P + 4 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0, 1, 2 and 3 of 4
+P2P enabled: GPU 0 <-> GPU 1
+P2P enabled: GPU 1 <-> GPU 2
+P2P enabled: GPU 2 <-> GPU 3
+Block sizes: nz0=162, nz1=162, nz2=161, nz3=161
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.531 GB
+GPU1 local bytes per array: 0.531 GB
+GPU2 local bytes per array: 0.528 GB
+GPU3 local bytes per array: 0.528 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 1.091686 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS CUDA, P2P + 4 HOST THREADS FINISHED ****
+    -> wall=9.0010s  reported=1.091686s  status=ok
+  [GPU mem after run]
+0, 2 MiB
+1, 2 MiB
+2, 2 MiB
+3, 2 MiB
+
+All done.
+  Timing CSV : results_43881664_20260727_152644/timings.csv
+  Run log    : results_43881664_20260727_152644/run.log

@@ -1,0 +1,41 @@
+unload bsc/1.0 (PATH, MANPATH)
+load bsc/1.0 (PATH, MANPATH)
+flatpak: symbol lookup error: /lib64/libldap.so.2: undefined symbol: EVP_md2, version OPENSSL_3.0.0
+unload bsc/1.0 (PATH, MANPATH)
+unload EB/apps (PATH)
+load EB/apps (PATH)
+load CUDA/12.8 (PATH, MANPATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, CUDA_HOME, CUDA_VERSION, CUDA_INC, CUDA_INSTALL_PATH) 
+load CLANG/18.1.8 (PATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, HDF5_DIR, HDF5_ROOT) 
+=== Host     : as01r4b29 ===
+=== Date     : Thu Jul 30 13:09:36 CEST 2026 ===
+=== Compiler : clang version 18.1.8 ===
+GPU 0: NVIDIA H100 (UUID: GPU-0c1a717b-09b3-55f7-1213-5da8c940a57c)
+GPU 1: NVIDIA H100 (UUID: GPU-3c4d1719-5100-129e-d9eb-3634b648c107)
+GPU 2: NVIDIA H100 (UUID: GPU-7efb7b96-ef05-1b36-84f6-2f2cd2139dde)
+GPU 3: NVIDIA H100 (UUID: GPU-fda98ea2-3848-4b10-643a-f86948fdd2cf)
+rm -f 2-omp 2-omp-stream 2-omp-stream-omp 2-omp-stream-omp-p2p 4-omp 4-omp-stream 4-omp-stream-omp 4-omp-stream-omp-p2p 1-omp serial
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 2-omp 2-openmp.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 2-omp-stream 2-openmp-stream.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 2-omp-stream-omp 2-openmp-stream-omp.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 2-omp-stream-omp-p2p 2-openmp-stream-omp-p2p.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 4-omp 4-openmp.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 4-omp-stream 4-openmp-stream.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 4-omp-stream-omp 4-openmp-stream-omp.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 4-omp-stream-omp-p2p 4-openmp-stream-omp-p2p.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 1-omp 1-openmp.c -lm
+
+Verifying binaries...
+  OK : 2-omp
+  OK : 2-omp-stream
+  OK : 2-omp-stream-omp
+  OK : 2-omp-stream-omp-p2p
+  OK : 4-omp
+  OK : 4-omp-stream
+  OK : 4-omp-stream-omp
+  OK : 4-omp-stream-omp-p2p
+  OK : 1-omp
+
+All binaries present -- run jobs are cleared to start.
+All built with identical flags (see OPT/OMP_FLAGS in the Makefile).

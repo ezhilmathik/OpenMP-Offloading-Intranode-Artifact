@@ -1,0 +1,39 @@
+unload bsc/1.0 (PATH, MANPATH)
+load bsc/1.0 (PATH, MANPATH)
+unload bsc/1.0 (PATH, MANPATH)
+load EB/apps (PATH)
+load CUDA/12.8 (PATH, MANPATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, CUDA_HOME, CUDA_VERSION, CUDA_INC, CUDA_INSTALL_PATH) 
+load CLANG/18.1.8 (PATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, HDF5_DIR, HDF5_ROOT) 
+=== Host     : as01r5b20 ===
+=== Date     : Thu Jul 30 13:09:35 CEST 2026 ===
+=== Compiler : clang version 18.1.8 ===
+GPU 0: NVIDIA H100 (UUID: GPU-afe5c898-e38d-1c2d-720d-e8aa74bbb01a)
+GPU 1: NVIDIA H100 (UUID: GPU-75260067-9574-e53c-4108-9f440f657986)
+GPU 2: NVIDIA H100 (UUID: GPU-e5370348-d2df-8c19-422e-b21916b7c809)
+GPU 3: NVIDIA H100 (UUID: GPU-afcb837a-f7fd-d7f5-6d0b-ba4b79739e7d)
+rm -f 2-omp 2-omp-stream 2-omp-stream-omp 2-omp-stream-omp-p2p 4-omp 4-omp-stream 4-omp-stream-omp 4-omp-stream-omp-p2p 1-omp serial
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 2-omp 2-openmp.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 2-omp-stream 2-openmp-stream.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 2-omp-stream-omp 2-openmp-stream-omp.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 2-omp-stream-omp-p2p 2-openmp-stream-omp-p2p.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 4-omp 4-openmp.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 4-omp-stream 4-openmp-stream.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 4-omp-stream-omp 4-openmp-stream-omp.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 4-omp-stream-omp-p2p 4-openmp-stream-omp-p2p.c -lm
+clang -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -Wl,--no-warn-execstack -o 1-omp 1-openmp.c -lm
+
+Verifying binaries...
+  OK : 2-omp
+  OK : 2-omp-stream
+  OK : 2-omp-stream-omp
+  OK : 2-omp-stream-omp-p2p
+  OK : 4-omp
+  OK : 4-omp-stream
+  OK : 4-omp-stream-omp
+  OK : 4-omp-stream-omp-p2p
+  OK : 1-omp
+
+All binaries present -- run jobs are cleared to start.
+All built with identical flags (see OPT/OMP_FLAGS in the Makefile).

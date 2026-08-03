@@ -1,0 +1,547 @@
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+LUMI/25.09:
+   As the LUMI/25.09 stack uses a version of the programming environment
+   that is newer than the current default on the system (25.03), please be
+   aware of https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20251020/102-CPE/#warning-1-you-do-not-always-get-what-you-expect
+   and adapt LD_LIBRARY_PATH as needed. The easiest way to do this, is to
+   simply load lumi-CrayPath after loading all other modules, and reloading
+   it after a module change.
+
+-------------------------------------------------------------------------------
+This module comes with rocprof-sys, rocprof-compute, asan and debug libraries
+installed.
+Please check https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/r/rocm/
+for instructions on how to use them.
+
+
+This module comes with rocprof-sys, rocprof-compute, asan and debug libraries
+installed.
+Please check https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/r/rocm/
+for instructions on how to use them.
+
+Job ID       : 20370800
+Repetition   : 3
+Timestamp    : 20260729_022120
+Results dir  : results_20370800_20260729_022120
+N=768  DT=7.45546e-05  STEPS=500  FAMILIES='2 4'  BASELINE=1
+WRITE_TXT    : 0
+
+
+============================ ROCm System Management Interface ============================
+====================================== Product Info ======================================
+GPU[0]		: Card Series: 		AMD Instinct MI250X
+GPU[0]		: Card Model: 		0x7408
+GPU[0]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[0]		: Card SKU: 		D65201
+GPU[0]		: Subsystem ID: 	0x0b0c
+GPU[0]		: Device Rev: 		0x00
+GPU[0]		: Node ID: 		4
+GPU[0]		: GUID: 		63582
+GPU[0]		: GFX Version: 		gfx90a
+GPU[1]		: Card Series: 		AMD Instinct MI250X
+GPU[1]		: Card Model: 		0x7408
+GPU[1]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[1]		: Card SKU: 		D65201
+GPU[1]		: Subsystem ID: 	0x0b0c
+GPU[1]		: Device Rev: 		0x00
+GPU[1]		: Node ID: 		5
+GPU[1]		: GUID: 		51740
+GPU[1]		: GFX Version: 		gfx90a
+GPU[2]		: Card Series: 		AMD Instinct MI250X
+GPU[2]		: Card Model: 		0x7408
+GPU[2]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[2]		: Card SKU: 		D65201
+GPU[2]		: Subsystem ID: 	0x0b0c
+GPU[2]		: Device Rev: 		0x00
+GPU[2]		: Node ID: 		6
+GPU[2]		: GUID: 		15961
+GPU[2]		: GFX Version: 		gfx90a
+GPU[3]		: Card Series: 		AMD Instinct MI250X
+GPU[3]		: Card Model: 		0x7408
+GPU[3]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[3]		: Card SKU: 		D65201
+GPU[3]		: Subsystem ID: 	0x0b0c
+GPU[3]		: Device Rev: 		0x00
+GPU[3]		: Node ID: 		7
+GPU[3]		: GUID: 		3099
+GPU[3]		: GFX Version: 		gfx90a
+GPU[4]		: Card Series: 		AMD Instinct MI250X
+GPU[4]		: Card Model: 		0x7408
+GPU[4]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[4]		: Card SKU: 		D65201
+GPU[4]		: Subsystem ID: 	0x0b0c
+GPU[4]		: Device Rev: 		0x00
+GPU[4]		: Node ID: 		8
+GPU[4]		: GUID: 		13395
+GPU[4]		: GFX Version: 		gfx90a
+GPU[5]		: Card Series: 		AMD Instinct MI250X
+GPU[5]		: Card Model: 		0x7408
+GPU[5]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[5]		: Card SKU: 		D65201
+GPU[5]		: Subsystem ID: 	0x0b0c
+GPU[5]		: Device Rev: 		0x00
+GPU[5]		: Node ID: 		9
+GPU[5]		: GUID: 		1553
+GPU[5]		: GFX Version: 		gfx90a
+GPU[6]		: Card Series: 		AMD Instinct MI250X
+GPU[6]		: Card Model: 		0x7408
+GPU[6]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[6]		: Card SKU: 		D65201
+GPU[6]		: Subsystem ID: 	0x0b0c
+GPU[6]		: Device Rev: 		0x00
+GPU[6]		: Node ID: 		10
+GPU[6]		: GUID: 		62036
+GPU[6]		: GFX Version: 		gfx90a
+GPU[7]		: Card Series: 		AMD Instinct MI250X
+GPU[7]		: Card Model: 		0x7408
+GPU[7]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[7]		: Card SKU: 		D65201
+GPU[7]		: Subsystem ID: 	0x0b0c
+GPU[7]		: Device Rev: 		0x00
+GPU[7]		: Node ID: 		11
+GPU[7]		: GUID: 		49174
+GPU[7]		: GFX Version: 		gfx90a
+==========================================================================================
+================================== End of ROCm SMI Log ===================================
+
+Starting HIP benchmarks
+===========================
+N = 768   dt = 7.45546e-05
+===========================
+
+>>> Running: 1-hip  gpus=1  mask=0  N=768
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0
+      WRITE_TXT=0
+      HSA_ENABLE_SDMA=1
+      OMP_NUM_THREADS=1
+      OMP_NUM_HIDDEN_HELPER_THREADS=0
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HIP_VISIBLE_DEVICES -u CUDA_VISIBLE_DEVICES -u OMP_TARGET_OFFLOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0 WRITE_TXT=0 HSA_ENABLE_SDMA=1 OMP_NUM_THREADS=1 OMP_NUM_HIDDEN_HELPER_THREADS=0 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=1 HSA_ENABLE_SDMA=1 ./1-hip 768 7.45546e-05
+
+**** ONE GPU CUDA STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 768 x 768 x 768 = 452984832 points
+Memory per global array: 3.624 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           768
+Final time (T):          0.000075
+Grid spacing (h):        1.303781e-03
+Time step (dt):          1.491092e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA device 0 of 1
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 3.624 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 16.025779 seconds
+=== SIMULATION ENDS ===
+
+**** ONE GPU CUDA FINISHED ****
+    -> wall=98.4910s  reported=16.025779s  status=ok  exit=0
+
+>>> Running: 2-hip  gpus=2  mask=0,2  N=768
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2
+      WRITE_TXT=0
+      HSA_ENABLE_SDMA=1
+      OMP_NUM_THREADS=1
+      OMP_NUM_HIDDEN_HELPER_THREADS=0
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HIP_VISIBLE_DEVICES -u CUDA_VISIBLE_DEVICES -u OMP_TARGET_OFFLOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2 WRITE_TXT=0 HSA_ENABLE_SDMA=1 OMP_NUM_THREADS=1 OMP_NUM_HIDDEN_HELPER_THREADS=0 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=2 HSA_ENABLE_SDMA=1 ./2-hip 768 7.45546e-05
+
+**** TWO GPUS HIP STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 768 x 768 x 768 = 452984832 points
+Memory per global array: 3.624 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           768
+Final time (T):          0.000075
+Grid spacing (h):        1.303781e-03
+Time step (dt):          1.491092e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using HIP devices 0 and 1 of 2
+Block sizes: nz0=385, nz1=385, mid=383
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.817 GB
+GPU1 local bytes per array: 1.817 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 8.519824 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS HIP FINISHED ****
+    -> wall=53.2860s  reported=8.519824s  status=ok  exit=0
+
+>>> Running: 2-hip-stream  gpus=2  mask=0,2  N=768
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2
+      WRITE_TXT=0
+      HSA_ENABLE_SDMA=1
+      OMP_NUM_THREADS=1
+      OMP_NUM_HIDDEN_HELPER_THREADS=0
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HIP_VISIBLE_DEVICES -u CUDA_VISIBLE_DEVICES -u OMP_TARGET_OFFLOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2 WRITE_TXT=0 HSA_ENABLE_SDMA=1 OMP_NUM_THREADS=1 OMP_NUM_HIDDEN_HELPER_THREADS=0 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=2 HSA_ENABLE_SDMA=1 ./2-hip-stream 768 7.45546e-05
+
+**** TWO GPUS HIP, ASYNC STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 768 x 768 x 768 = 452984832 points
+Memory per global array: 3.624 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           768
+Final time (T):          0.000075
+Grid spacing (h):        1.303781e-03
+Time step (dt):          1.491092e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using HIP devices 0 and 1 of 2
+Block sizes: nz0=385, nz1=385, mid=383
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.817 GB
+GPU1 local bytes per array: 1.817 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 7.824109 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS HIP, ASYNC FINISHED ****
+    -> wall=52.2910s  reported=7.824109s  status=ok  exit=0
+
+>>> Running: 2-hip-stream-omp  gpus=2  mask=0,2  N=768
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2
+      WRITE_TXT=0
+      HSA_ENABLE_SDMA=1
+      OMP_NUM_THREADS=2
+      OMP_THREAD_LIMIT=2
+      OMP_NUM_HIDDEN_HELPER_THREADS=0
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HIP_VISIBLE_DEVICES -u CUDA_VISIBLE_DEVICES -u OMP_TARGET_OFFLOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2 WRITE_TXT=0 HSA_ENABLE_SDMA=1 OMP_NUM_THREADS=2 OMP_THREAD_LIMIT=2 OMP_NUM_HIDDEN_HELPER_THREADS=0 LIBOMP_USE_HIDDEN_HELPER_TASK=0 LIBOMP_NUM_HIDDEN_HELPER_THREADS=0 HSA_ENABLE_SDMA=1 ./2-hip-stream-omp 768 7.45546e-05
+
+**** TWO GPUS HIP, ASYNC + 2 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 768 x 768 x 768 = 452984832 points
+Memory per global array: 3.624 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           768
+Final time (T):          0.000075
+Grid spacing (h):        1.303781e-03
+Time step (dt):          1.491092e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using HIP devices 0 and 1 of 2
+Block sizes: nz0=385, nz1=385, mid=383
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.817 GB
+GPU1 local bytes per array: 1.817 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 8.205428 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS HIP, ASYNC + 2 HOST THREADS FINISHED ****
+    -> wall=53.4100s  reported=8.205428s  status=ok  exit=0
+
+>>> Running: 2-hip-stream-omp-p2p  gpus=2  mask=0,2  N=768
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2
+      WRITE_TXT=0
+      HSA_ENABLE_SDMA=1
+      OMP_NUM_THREADS=2
+      OMP_THREAD_LIMIT=2
+      OMP_NUM_HIDDEN_HELPER_THREADS=0
+      HSA_ENABLE_SDMA=1
+      HSA_ENABLE_PEER_SDMA=1
+    command: env -u LD_PRELOAD -u HIP_VISIBLE_DEVICES -u CUDA_VISIBLE_DEVICES -u OMP_TARGET_OFFLOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2 WRITE_TXT=0 HSA_ENABLE_SDMA=1 OMP_NUM_THREADS=2 OMP_THREAD_LIMIT=2 OMP_NUM_HIDDEN_HELPER_THREADS=0 LIBOMP_USE_HIDDEN_HELPER_TASK=0 LIBOMP_NUM_HIDDEN_HELPER_THREADS=0 HSA_ENABLE_SDMA=1 HSA_ENABLE_PEER_SDMA=1 ./2-hip-stream-omp-p2p 768 7.45546e-05
+
+**** TWO GPUS HIP, P2P + 2 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 768 x 768 x 768 = 452984832 points
+Memory per global array: 3.624 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           768
+Final time (T):          0.000075
+Grid spacing (h):        1.303781e-03
+Time step (dt):          1.491092e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using HIP devices 0 and 1 of 2
+P2P enabled between GPU 0 and GPU 1
+Block sizes: nz0=385, nz1=385, mid=383
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.817 GB
+GPU1 local bytes per array: 1.817 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 8.056632 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS HIP, P2P + 2 HOST THREADS FINISHED ****
+    -> wall=52.5040s  reported=8.056632s  status=ok  exit=0
+
+>>> Running: 4-hip  gpus=4  mask=0,2,4,6  N=768
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2,4,6
+      WRITE_TXT=0
+      HSA_ENABLE_SDMA=1
+      OMP_NUM_THREADS=1
+      OMP_NUM_HIDDEN_HELPER_THREADS=0
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HIP_VISIBLE_DEVICES -u CUDA_VISIBLE_DEVICES -u OMP_TARGET_OFFLOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2\,4\,6 WRITE_TXT=0 HSA_ENABLE_SDMA=1 OMP_NUM_THREADS=1 OMP_NUM_HIDDEN_HELPER_THREADS=0 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=4 HSA_ENABLE_SDMA=1 ./4-hip 768 7.45546e-05
+
+**** FOUR GPUS HIP STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 768 x 768 x 768 = 452984832 points
+Memory per global array: 3.624 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           768
+Final time (T):          0.000075
+Grid spacing (h):        1.303781e-03
+Time step (dt):          1.491092e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using HIP devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=194, nz1=194, nz2=193, nz3=193
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.915 GB
+GPU1 local bytes per array: 0.915 GB
+GPU2 local bytes per array: 0.911 GB
+GPU3 local bytes per array: 0.911 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 5.397864 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS HIP FINISHED ****
+    -> wall=50.7310s  reported=5.397864s  status=ok  exit=0
+
+>>> Running: 4-hip-stream  gpus=4  mask=0,2,4,6  N=768
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2,4,6
+      WRITE_TXT=0
+      HSA_ENABLE_SDMA=1
+      OMP_NUM_THREADS=1
+      OMP_NUM_HIDDEN_HELPER_THREADS=0
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HIP_VISIBLE_DEVICES -u CUDA_VISIBLE_DEVICES -u OMP_TARGET_OFFLOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2\,4\,6 WRITE_TXT=0 HSA_ENABLE_SDMA=1 OMP_NUM_THREADS=1 OMP_NUM_HIDDEN_HELPER_THREADS=0 LIBOMP_USE_HIDDEN_HELPER_TASK=1 LIBOMP_NUM_HIDDEN_HELPER_THREADS=4 HSA_ENABLE_SDMA=1 ./4-hip-stream 768 7.45546e-05
+
+**** FOUR GPUS HIP, ASYNC STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 768 x 768 x 768 = 452984832 points
+Memory per global array: 3.624 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           768
+Final time (T):          0.000075
+Grid spacing (h):        1.303781e-03
+Time step (dt):          1.491092e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using HIP devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=194, nz1=194, nz2=193, nz3=193
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.915 GB
+GPU1 local bytes per array: 0.915 GB
+GPU2 local bytes per array: 0.911 GB
+GPU3 local bytes per array: 0.911 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 4.116365 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS HIP, ASYNC FINISHED ****
+    -> wall=49.9320s  reported=4.116365s  status=ok  exit=0
+
+>>> Running: 4-hip-stream-omp  gpus=4  mask=0,2,4,6  N=768
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2,4,6
+      WRITE_TXT=0
+      HSA_ENABLE_SDMA=1
+      OMP_NUM_THREADS=4
+      OMP_THREAD_LIMIT=4
+      OMP_NUM_HIDDEN_HELPER_THREADS=0
+      HSA_ENABLE_SDMA=1
+    command: env -u LD_PRELOAD -u HIP_VISIBLE_DEVICES -u CUDA_VISIBLE_DEVICES -u OMP_TARGET_OFFLOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2\,4\,6 WRITE_TXT=0 HSA_ENABLE_SDMA=1 OMP_NUM_THREADS=4 OMP_THREAD_LIMIT=4 OMP_NUM_HIDDEN_HELPER_THREADS=0 LIBOMP_USE_HIDDEN_HELPER_TASK=0 LIBOMP_NUM_HIDDEN_HELPER_THREADS=0 HSA_ENABLE_SDMA=1 ./4-hip-stream-omp 768 7.45546e-05
+
+**** FOUR GPUS HIP, ASYNC + 4 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 768 x 768 x 768 = 452984832 points
+Memory per global array: 3.624 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           768
+Final time (T):          0.000075
+Grid spacing (h):        1.303781e-03
+Time step (dt):          1.491092e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using HIP devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=194, nz1=194, nz2=193, nz3=193
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.915 GB
+GPU1 local bytes per array: 0.915 GB
+GPU2 local bytes per array: 0.911 GB
+GPU3 local bytes per array: 0.911 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 4.140504 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS HIP, ASYNC + 4 HOST THREADS FINISHED ****
+    -> wall=49.8260s  reported=4.140504s  status=ok  exit=0
+
+>>> Running: 4-hip-stream-omp-p2p  gpus=4  mask=0,2,4,6  N=768
+    Runtime configuration:
+      ROCR_VISIBLE_DEVICES=0,2,4,6
+      WRITE_TXT=0
+      HSA_ENABLE_SDMA=1
+      OMP_NUM_THREADS=4
+      OMP_THREAD_LIMIT=4
+      OMP_NUM_HIDDEN_HELPER_THREADS=0
+      HSA_ENABLE_SDMA=1
+      HSA_ENABLE_PEER_SDMA=1
+    command: env -u LD_PRELOAD -u HIP_VISIBLE_DEVICES -u CUDA_VISIBLE_DEVICES -u OMP_TARGET_OFFLOAD -u HSA_ENABLE_SDMA -u HSA_ENABLE_PEER_SDMA -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT -u OMP_NUM_HIDDEN_HELPER_THREADS ROCR_VISIBLE_DEVICES=0\,2\,4\,6 WRITE_TXT=0 HSA_ENABLE_SDMA=1 OMP_NUM_THREADS=4 OMP_THREAD_LIMIT=4 OMP_NUM_HIDDEN_HELPER_THREADS=0 LIBOMP_USE_HIDDEN_HELPER_TASK=0 LIBOMP_NUM_HIDDEN_HELPER_THREADS=0 HSA_ENABLE_SDMA=1 HSA_ENABLE_PEER_SDMA=1 ./4-hip-stream-omp-p2p 768 7.45546e-05
+
+**** FOUR GPUS HIP, P2P + 4 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 768 x 768 x 768 = 452984832 points
+Memory per global array: 3.624 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           768
+Final time (T):          0.000075
+Grid spacing (h):        1.303781e-03
+Time step (dt):          1.491092e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~500
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using HIP devices 0, 1, 2 and 3 of 4
+P2P enabled: GPU 0 <-> GPU 1
+P2P enabled: GPU 1 <-> GPU 2
+P2P enabled: GPU 2 <-> GPU 3
+Block sizes: nz0=194, nz1=194, nz2=193, nz3=193
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.915 GB
+GPU1 local bytes per array: 0.915 GB
+GPU2 local bytes per array: 0.911 GB
+GPU3 local bytes per array: 0.911 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+501 timesteps complete
+Time = 4.148512 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS HIP, P2P + 4 HOST THREADS FINISHED ****
+    -> wall=49.7140s  reported=4.148512s  status=ok  exit=0
+
+All done.
+  Timing CSV : results_20370800_20260729_022120/timings.csv
+  Run log    : results_20370800_20260729_022120/run.log
