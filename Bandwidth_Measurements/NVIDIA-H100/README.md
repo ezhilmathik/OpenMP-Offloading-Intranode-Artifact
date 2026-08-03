@@ -1,6 +1,6 @@
 # NVIDIA H100 — Intra-node Data Movement Benchmarks
 
-Benchmarks accompanying the paper *[PAPER TITLE]*.
+Benchmarks accompanying the paper *[Evaluating OpenMP Offloading for Intranode Multi-GPU Programming on NVIDIA, AMD, and Intel GPUs: A 3D Heat Transfer Case Study]*.
 
 This directory contains the NVIDIA H100 measurements: host-to-device,
 device-to-host, and peer-to-peer transfer bandwidth, comparing **OpenMP target
@@ -81,13 +81,6 @@ the two-GPU case. In P2P these denote transfer direction rather than GPU count
 Measurements were taken with GCC 13.2.0, CUDA 12.8, and Clang 18.1.8 with
 NVPTX offload support. Figure generation needs Python 3 with numpy and
 matplotlib (`../requirements.txt`).
-
-**No special runtime configuration is required.** Unlike the AMD MI250X
-directories, which disable the DMA engines and preload a separately built
-OpenMP offload runtime, and the Intel directories, which pin the Level Zero
-device hierarchy and its OpenMP counterpart, the H100 measurements run against
-the stock CUDA and Clang offload runtimes with no environment overrides. This
-makes them the most straightforward of the three vendors to reproduce.
 
 The Slurm directives in `build.sh` and `run.sh` — account, partition, QoS —
 are specific to the machine used for the paper and must be changed before

@@ -1,6 +1,6 @@
 # Intel Data Center GPU Max 1550 — Intra-node Data Movement Benchmarks
 
-Benchmarks accompanying the paper *[PAPER TITLE]*.
+Benchmarks accompanying the paper *[Evaluating OpenMP Offloading for Intranode Multi-GPU Programming on NVIDIA, AMD, and Intel GPUs: A 3D Heat Transfer Case Study]*.
 
 This directory contains the Intel Data Center GPU Max 1550 (Ponte Vecchio)
 measurements: host-to-device, device-to-host, and peer-to-peer transfer
