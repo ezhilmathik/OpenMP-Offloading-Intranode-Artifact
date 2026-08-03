@@ -1,0 +1,341 @@
+Job ID     : 515267
+Timestamp  : 20260717_154934
+Hierarchy  : COMPOSITE  (ZE_AFFINITY_MASK=0,1,2,3)
+Results dir: results_COMPOSITE_515267_20260717_154934
+
+Visible L0 GPUs: 4
+[ext_oneapi_level_zero:gpu:0] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1550 1.3 [1.3.27642]
+[ext_oneapi_level_zero:gpu:1] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1550 1.3 [1.3.27642]
+[ext_oneapi_level_zero:gpu:2] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1550 1.3 [1.3.27642]
+[ext_oneapi_level_zero:gpu:3] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1550 1.3 [1.3.27642]
+
+Starting benchmarks
+
+===========================
+N = 940000000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=940000000
+Elapsed time:      0.284713 s
+Total transferred: 7.003546 GB
+PCIe Bandwidth:    26.412560 GB/s
+Verification d_A (device 0): PASSED (1000/940000000 samples)
+    -> elapsed=0.284713s  bandwidth=26.412560 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=940000000
+Elapsed time:      0.390437 s
+Total transferred: 14.007092 GB
+PCIe Bandwidth:    38.520950 GB/s
+Verification d_A (device 0): PASSED (1000/940000000 samples)
+Verification d_B (device 1): PASSED (1000/940000000 samples)
+    -> elapsed=0.390437s  bandwidth=38.520950 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=940000000
+Elapsed time:      0.393194 s
+Total transferred: 28.014183 GB
+PCIe Bandwidth:    76.501637 GB/s
+Verification d_A (device 0): PASSED (1000/940000000 samples)
+Verification d_B (device 1): PASSED (1000/940000000 samples)
+Verification d_C (device 2): PASSED (1000/940000000 samples)
+Verification d_D (device 3): PASSED (1000/940000000 samples)
+    -> elapsed=0.393194s  bandwidth=76.501637 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v1  N=940000000
+Elapsed time:      0.213133 s
+Total transferred: 7.003546 GB
+PCIe Bandwidth:    35.283139 GB/s
+Verification d_A (device 0): PASSED (1000/940000000 samples)
+    -> elapsed=0.213133s  bandwidth=35.283139 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v2  N=940000000
+Elapsed time:      0.347657 s
+Total transferred: 14.007092 GB
+PCIe Bandwidth:    43.261035 GB/s
+Verification d_A (device 0): PASSED (1000/940000000 samples)
+Verification d_B (device 1): PASSED (1000/940000000 samples)
+    -> elapsed=0.347657s  bandwidth=43.261035 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v4  N=940000000
+Elapsed time:      0.392864 s
+Total transferred: 28.014183 GB
+PCIe Bandwidth:    76.565938 GB/s
+Verification d_A (device 0): PASSED (1000/940000000 samples)
+Verification d_B (device 1): PASSED (1000/940000000 samples)
+Verification d_C (device 2): PASSED (1000/940000000 samples)
+Verification d_D (device 3): PASSED (1000/940000000 samples)
+    -> elapsed=0.392864s  bandwidth=76.565938 GB/s  status=ok
+
+===========================
+N = 1740000000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=1740000000
+Elapsed time:      0.438490 s
+Total transferred: 12.964010 GB
+PCIe Bandwidth:    31.745314 GB/s
+Verification d_A (device 0): PASSED (1000/1740000000 samples)
+    -> elapsed=0.438490s  bandwidth=31.745314 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=1740000000
+Elapsed time:      0.487078 s
+Total transferred: 25.928020 GB
+PCIe Bandwidth:    57.157176 GB/s
+Verification d_A (device 0): PASSED (1000/1740000000 samples)
+Verification d_B (device 1): PASSED (1000/1740000000 samples)
+    -> elapsed=0.487078s  bandwidth=57.157176 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=1740000000
+Elapsed time:      0.545107 s
+Total transferred: 51.856041 GB
+PCIe Bandwidth:    102.145060 GB/s
+Verification d_A (device 0): PASSED (1000/1740000000 samples)
+Verification d_B (device 1): PASSED (1000/1740000000 samples)
+Verification d_C (device 2): PASSED (1000/1740000000 samples)
+Verification d_D (device 3): PASSED (1000/1740000000 samples)
+    -> elapsed=0.545107s  bandwidth=102.145060 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v1  N=1740000000
+Elapsed time:      0.427400 s
+Total transferred: 12.964010 GB
+PCIe Bandwidth:    32.569046 GB/s
+Verification d_A (device 0): PASSED (1000/1740000000 samples)
+    -> elapsed=0.427400s  bandwidth=32.569046 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v2  N=1740000000
+Elapsed time:      0.538839 s
+Total transferred: 25.928020 GB
+PCIe Bandwidth:    51.666652 GB/s
+Verification d_A (device 0): PASSED (1000/1740000000 samples)
+Verification d_B (device 1): PASSED (1000/1740000000 samples)
+    -> elapsed=0.538839s  bandwidth=51.666652 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v4  N=1740000000
+Elapsed time:      0.512423 s
+Total transferred: 51.856041 GB
+PCIe Bandwidth:    108.660220 GB/s
+Verification d_A (device 0): PASSED (1000/1740000000 samples)
+Verification d_B (device 1): PASSED (1000/1740000000 samples)
+Verification d_C (device 2): PASSED (1000/1740000000 samples)
+Verification d_D (device 3): PASSED (1000/1740000000 samples)
+    -> elapsed=0.512423s  bandwidth=108.660220 GB/s  status=ok
+
+===========================
+N = 2550000000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=2550000000
+Elapsed time:      0.634203 s
+Total transferred: 18.998981 GB
+PCIe Bandwidth:    32.166359 GB/s
+Verification d_A (device 0): PASSED (1000/2550000000 samples)
+    -> elapsed=0.634203s  bandwidth=32.166359 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=2550000000
+Elapsed time:      0.713420 s
+Total transferred: 37.997961 GB
+PCIe Bandwidth:    57.189320 GB/s
+Verification d_A (device 0): PASSED (1000/2550000000 samples)
+Verification d_B (device 1): PASSED (1000/2550000000 samples)
+    -> elapsed=0.713420s  bandwidth=57.189320 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=2550000000
+Elapsed time:      0.728061 s
+Total transferred: 75.995922 GB
+PCIe Bandwidth:    112.078527 GB/s
+Verification d_A (device 0): PASSED (1000/2550000000 samples)
+Verification d_B (device 1): PASSED (1000/2550000000 samples)
+Verification d_C (device 2): PASSED (1000/2550000000 samples)
+Verification d_D (device 3): PASSED (1000/2550000000 samples)
+    -> elapsed=0.728061s  bandwidth=112.078527 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v1  N=2550000000
+Elapsed time:      0.532162 s
+Total transferred: 18.998981 GB
+PCIe Bandwidth:    38.334162 GB/s
+Verification d_A (device 0): PASSED (1000/2550000000 samples)
+    -> elapsed=0.532162s  bandwidth=38.334162 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v2  N=2550000000
+Elapsed time:      0.712662 s
+Total transferred: 37.997961 GB
+PCIe Bandwidth:    57.250143 GB/s
+Verification d_A (device 0): PASSED (1000/2550000000 samples)
+Verification d_B (device 1): PASSED (1000/2550000000 samples)
+    -> elapsed=0.712662s  bandwidth=57.250143 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v4  N=2550000000
+Elapsed time:      0.701336 s
+Total transferred: 75.995922 GB
+PCIe Bandwidth:    116.349343 GB/s
+Verification d_A (device 0): PASSED (1000/2550000000 samples)
+Verification d_B (device 1): PASSED (1000/2550000000 samples)
+Verification d_C (device 2): PASSED (1000/2550000000 samples)
+Verification d_D (device 3): PASSED (1000/2550000000 samples)
+    -> elapsed=0.701336s  bandwidth=116.349343 GB/s  status=ok
+
+===========================
+N = 3350000000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=3350000000
+Elapsed time:      0.821907 s
+Total transferred: 24.959445 GB
+PCIe Bandwidth:    32.607094 GB/s
+Verification d_A (device 0): PASSED (1000/3350000000 samples)
+    -> elapsed=0.821907s  bandwidth=32.607094 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=3350000000
+Elapsed time:      0.907559 s
+Total transferred: 49.918890 GB
+PCIe Bandwidth:    59.059527 GB/s
+Verification d_A (device 0): PASSED (1000/3350000000 samples)
+Verification d_B (device 1): PASSED (1000/3350000000 samples)
+    -> elapsed=0.907559s  bandwidth=59.059527 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=3350000000
+Elapsed time:      0.935339 s
+Total transferred: 99.837780 GB
+PCIe Bandwidth:    114.610856 GB/s
+Verification d_A (device 0): PASSED (1000/3350000000 samples)
+Verification d_B (device 1): PASSED (1000/3350000000 samples)
+Verification d_C (device 2): PASSED (1000/3350000000 samples)
+Verification d_D (device 3): PASSED (1000/3350000000 samples)
+    -> elapsed=0.935339s  bandwidth=114.610856 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v1  N=3350000000
+Elapsed time:      0.698683 s
+Total transferred: 24.959445 GB
+PCIe Bandwidth:    38.357886 GB/s
+Verification d_A (device 0): PASSED (1000/3350000000 samples)
+    -> elapsed=0.698683s  bandwidth=38.357886 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v2  N=3350000000
+Elapsed time:      0.859458 s
+Total transferred: 49.918890 GB
+PCIe Bandwidth:    62.364888 GB/s
+Verification d_A (device 0): PASSED (1000/3350000000 samples)
+Verification d_B (device 1): PASSED (1000/3350000000 samples)
+    -> elapsed=0.859458s  bandwidth=62.364888 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v4  N=3350000000
+Elapsed time:      0.960421 s
+Total transferred: 99.837780 GB
+PCIe Bandwidth:    111.617735 GB/s
+Verification d_A (device 0): PASSED (1000/3350000000 samples)
+Verification d_B (device 1): PASSED (1000/3350000000 samples)
+Verification d_C (device 2): PASSED (1000/3350000000 samples)
+Verification d_D (device 3): PASSED (1000/3350000000 samples)
+    -> elapsed=0.960421s  bandwidth=111.617735 GB/s  status=ok
+
+===========================
+N = 4160000000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=4160000000
+Elapsed time:      0.928276 s
+Total transferred: 30.994415 GB
+PCIe Bandwidth:    35.851404 GB/s
+Verification d_A (device 0): PASSED (1000/4160000000 samples)
+    -> elapsed=0.928276s  bandwidth=35.851404 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=4160000000
+Elapsed time:      1.009429 s
+Total transferred: 61.988831 GB
+PCIe Bandwidth:    65.938270 GB/s
+Verification d_A (device 0): PASSED (1000/4160000000 samples)
+Verification d_B (device 1): PASSED (1000/4160000000 samples)
+    -> elapsed=1.009429s  bandwidth=65.938270 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=4160000000
+Elapsed time:      1.078164 s
+Total transferred: 123.977661 GB
+PCIe Bandwidth:    123.469145 GB/s
+Verification d_A (device 0): PASSED (1000/4160000000 samples)
+Verification d_B (device 1): PASSED (1000/4160000000 samples)
+Verification d_C (device 2): PASSED (1000/4160000000 samples)
+Verification d_D (device 3): PASSED (1000/4160000000 samples)
+    -> elapsed=1.078164s  bandwidth=123.469145 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v1  N=4160000000
+Elapsed time:      0.854187 s
+Total transferred: 30.994415 GB
+PCIe Bandwidth:    38.961023 GB/s
+Verification d_A (device 0): PASSED (1000/4160000000 samples)
+    -> elapsed=0.854187s  bandwidth=38.961023 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v2  N=4160000000
+Elapsed time:      1.007035 s
+Total transferred: 61.988831 GB
+PCIe Bandwidth:    66.095020 GB/s
+Verification d_A (device 0): PASSED (1000/4160000000 samples)
+Verification d_B (device 1): PASSED (1000/4160000000 samples)
+    -> elapsed=1.007035s  bandwidth=66.095020 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v4  N=4160000000
+Elapsed time:      1.108195 s
+Total transferred: 123.977661 GB
+PCIe Bandwidth:    120.123282 GB/s
+Verification d_A (device 0): PASSED (1000/4160000000 samples)
+Verification d_B (device 1): PASSED (1000/4160000000 samples)
+Verification d_C (device 2): PASSED (1000/4160000000 samples)
+Verification d_D (device 3): PASSED (1000/4160000000 samples)
+    -> elapsed=1.108195s  bandwidth=120.123282 GB/s  status=ok
+
+===========================
+N = 4960000000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=4960000000
+Elapsed time:      1.078590 s
+Total transferred: 36.954880 GB
+PCIe Bandwidth:    36.788773 GB/s
+Verification d_A (device 0): PASSED (1000/4960000000 samples)
+    -> elapsed=1.078590s  bandwidth=36.788773 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=4960000000
+Elapsed time:      1.253452 s
+Total transferred: 73.909760 GB
+PCIe Bandwidth:    63.313151 GB/s
+Verification d_A (device 0): PASSED (1000/4960000000 samples)
+Verification d_B (device 1): PASSED (1000/4960000000 samples)
+    -> elapsed=1.253452s  bandwidth=63.313151 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=4960000000
+Elapsed time:      1.355165 s
+Total transferred: 147.819519 GB
+PCIe Bandwidth:    117.122269 GB/s
+Verification d_A (device 0): PASSED (1000/4960000000 samples)
+Verification d_B (device 1): PASSED (1000/4960000000 samples)
+Verification d_C (device 2): PASSED (1000/4960000000 samples)
+Verification d_D (device 3): PASSED (1000/4960000000 samples)
+    -> elapsed=1.355165s  bandwidth=117.122269 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v1  N=4960000000
+Elapsed time:      1.008445 s
+Total transferred: 36.954880 GB
+PCIe Bandwidth:    39.347727 GB/s
+Verification d_A (device 0): PASSED (1000/4960000000 samples)
+    -> elapsed=1.008445s  bandwidth=39.347727 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v2  N=4960000000
+Elapsed time:      1.171382 s
+Total transferred: 73.909760 GB
+PCIe Bandwidth:    67.749024 GB/s
+Verification d_A (device 0): PASSED (1000/4960000000 samples)
+Verification d_B (device 1): PASSED (1000/4960000000 samples)
+    -> elapsed=1.171382s  bandwidth=67.749024 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v4  N=4960000000
+Elapsed time:      1.306473 s
+Total transferred: 147.819519 GB
+PCIe Bandwidth:    121.487392 GB/s
+Verification d_A (device 0): PASSED (1000/4960000000 samples)
+Verification d_B (device 1): PASSED (1000/4960000000 samples)
+Verification d_C (device 2): PASSED (1000/4960000000 samples)
+Verification d_D (device 3): PASSED (1000/4960000000 samples)
+    -> elapsed=1.306473s  bandwidth=121.487392 GB/s  status=ok
+
+All done.
+  Timing CSV : results_COMPOSITE_515267_20260717_154934/timings.csv
+  Run log    : results_COMPOSITE_515267_20260717_154934/run.log
+  Environment: results_COMPOSITE_515267_20260717_154934/env.txt

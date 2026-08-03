@@ -1,0 +1,525 @@
+Job ID     : 17151808
+Timestamp  : 20260401_232638
+Results dir: results_17151808_20260401_232638
+
+Starting benchmarks
+
+===========================
+N = 117500000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=117500000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.024558 seconds
+Total transferred: 0.875443 GB
+P2P Bandwidth:     38.276628 GB/s
+Verification:      PASS
+    -> elapsed=0.024558s  bandwidth=38.276628 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=117500000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.026718 seconds
+Total transferred: 1.750886 GB
+P2P Bandwidth:     70.364180 GB/s
+Verification:      PASS
+    -> elapsed=0.026718s  bandwidth=70.364180 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=117500000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.030772 seconds
+Total transferred: 2.626330 GB
+P2P Bandwidth:     91.641839 GB/s
+Verification:      PASS
+    -> elapsed=0.030772s  bandwidth=91.641839 GB/s  status=ok
+
+>>> Running: framework=hip  version=v1  N=117500000
+Elapsed time:      0.024680 s
+Total transferred: 0.875443 GB
+P2P Bandwidth:     38.087308 GB/s
+Verification d_B (dev0→dev1): PASSED (1000/117500000 samples)
+    -> elapsed=0.024680s  bandwidth=38.087308 GB/s  status=ok
+
+>>> Running: framework=hip  version=v2  N=117500000
+Elapsed time:      0.034879 s
+Total transferred: 1.750886 GB
+P2P Bandwidth:     53.900675 GB/s
+Verification d_C (dev0→dev1): PASSED (1000/117500000 samples)
+Verification d_D (dev1→dev0): PASSED (1000/117500000 samples)
+    -> elapsed=0.034879s  bandwidth=53.900675 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4  N=117500000
+Elapsed time:      0.037792 s
+Total transferred: 2.626330 GB
+P2P Bandwidth:     74.618561 GB/s
+Verification d_B1 (dev1→dev0): PASSED (1000/117500000 samples)
+Verification d_C1 (dev2→dev0): PASSED (1000/117500000 samples)
+Verification d_D1 (dev3→dev0): PASSED (1000/117500000 samples)
+    -> elapsed=0.037792s  bandwidth=74.618561 GB/s  status=ok
+
+===========================
+N = 217500000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=217500000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.045479 seconds
+Total transferred: 1.620501 GB
+P2P Bandwidth:     38.259367 GB/s
+Verification:      PASS
+    -> elapsed=0.045479s  bandwidth=38.259367 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=217500000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.049024 seconds
+Total transferred: 3.241003 GB
+P2P Bandwidth:     70.985488 GB/s
+Verification:      PASS
+    -> elapsed=0.049024s  bandwidth=70.985488 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=217500000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.056183 seconds
+Total transferred: 4.861504 GB
+P2P Bandwidth:     92.910502 GB/s
+Verification:      PASS
+    -> elapsed=0.056183s  bandwidth=92.910502 GB/s  status=ok
+
+>>> Running: framework=hip  version=v1  N=217500000
+Elapsed time:      0.045345 s
+Total transferred: 1.620501 GB
+P2P Bandwidth:     38.372420 GB/s
+Verification d_B (dev0→dev1): PASSED (1000/217500000 samples)
+    -> elapsed=0.045345s  bandwidth=38.372420 GB/s  status=ok
+
+>>> Running: framework=hip  version=v2  N=217500000
+Elapsed time:      0.056011 s
+Total transferred: 3.241003 GB
+P2P Bandwidth:     62.130696 GB/s
+Verification d_C (dev0→dev1): PASSED (1000/217500000 samples)
+Verification d_D (dev1→dev0): PASSED (1000/217500000 samples)
+    -> elapsed=0.056011s  bandwidth=62.130696 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4  N=217500000
+Elapsed time:      0.063399 s
+Total transferred: 4.861504 GB
+P2P Bandwidth:     82.335584 GB/s
+Verification d_B1 (dev1→dev0): PASSED (1000/217500000 samples)
+Verification d_C1 (dev2→dev0): PASSED (1000/217500000 samples)
+Verification d_D1 (dev3→dev0): PASSED (1000/217500000 samples)
+    -> elapsed=0.063399s  bandwidth=82.335584 GB/s  status=ok
+
+===========================
+N = 318750000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=318750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.066463 seconds
+Total transferred: 2.374873 GB
+P2P Bandwidth:     38.367216 GB/s
+Verification:      PASS
+    -> elapsed=0.066463s  bandwidth=38.367216 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=318750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.071843 seconds
+Total transferred: 4.749745 GB
+P2P Bandwidth:     70.987981 GB/s
+Verification:      PASS
+    -> elapsed=0.071843s  bandwidth=70.987981 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=318750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.081825 seconds
+Total transferred: 7.124618 GB
+P2P Bandwidth:     93.492188 GB/s
+Verification:      PASS
+    -> elapsed=0.081825s  bandwidth=93.492188 GB/s  status=ok
+
+>>> Running: framework=hip  version=v1  N=318750000
+Elapsed time:      0.066386 s
+Total transferred: 2.374873 GB
+P2P Bandwidth:     38.411722 GB/s
+Verification d_B (dev0→dev1): PASSED (1000/318750000 samples)
+    -> elapsed=0.066386s  bandwidth=38.411722 GB/s  status=ok
+
+>>> Running: framework=hip  version=v2  N=318750000
+Elapsed time:      0.078738 s
+Total transferred: 4.749745 GB
+P2P Bandwidth:     64.771600 GB/s
+Verification d_C (dev0→dev1): PASSED (1000/318750000 samples)
+Verification d_D (dev1→dev0): PASSED (1000/318750000 samples)
+    -> elapsed=0.078738s  bandwidth=64.771600 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4  N=318750000
+Elapsed time:      0.089750 s
+Total transferred: 7.124618 GB
+P2P Bandwidth:     85.236946 GB/s
+Verification d_B1 (dev1→dev0): PASSED (1000/318750000 samples)
+Verification d_C1 (dev2→dev0): PASSED (1000/318750000 samples)
+Verification d_D1 (dev3→dev0): PASSED (1000/318750000 samples)
+    -> elapsed=0.089750s  bandwidth=85.236946 GB/s  status=ok
+
+===========================
+N = 418750000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=418750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.087498 seconds
+Total transferred: 3.119931 GB
+P2P Bandwidth:     38.286611 GB/s
+Verification:      PASS
+    -> elapsed=0.087498s  bandwidth=38.286611 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=418750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.094566 seconds
+Total transferred: 6.239861 GB
+P2P Bandwidth:     70.849908 GB/s
+Verification:      PASS
+    -> elapsed=0.094566s  bandwidth=70.849908 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=418750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.107038 seconds
+Total transferred: 9.359792 GB
+P2P Bandwidth:     93.891870 GB/s
+Verification:      PASS
+    -> elapsed=0.107038s  bandwidth=93.891870 GB/s  status=ok
+
+>>> Running: framework=hip  version=v1  N=418750000
+Elapsed time:      0.087312 s
+Total transferred: 3.119931 GB
+P2P Bandwidth:     38.368158 GB/s
+Verification d_B (dev0→dev1): PASSED (1000/418750000 samples)
+    -> elapsed=0.087312s  bandwidth=38.368158 GB/s  status=ok
+
+>>> Running: framework=hip  version=v2  N=418750000
+Elapsed time:      0.102363 s
+Total transferred: 6.239861 GB
+P2P Bandwidth:     65.453420 GB/s
+Verification d_C (dev0→dev1): PASSED (1000/418750000 samples)
+Verification d_D (dev1→dev0): PASSED (1000/418750000 samples)
+    -> elapsed=0.102363s  bandwidth=65.453420 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4  N=418750000
+Elapsed time:      0.114330 s
+Total transferred: 9.359792 GB
+P2P Bandwidth:     87.903396 GB/s
+Verification d_B1 (dev1→dev0): PASSED (1000/418750000 samples)
+Verification d_C1 (dev2→dev0): PASSED (1000/418750000 samples)
+Verification d_D1 (dev3→dev0): PASSED (1000/418750000 samples)
+    -> elapsed=0.114330s  bandwidth=87.903396 GB/s  status=ok
+
+===========================
+N = 520000000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=520000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.108681 seconds
+Total transferred: 3.874302 GB
+P2P Bandwidth:     38.277173 GB/s
+Verification:      PASS
+    -> elapsed=0.108681s  bandwidth=38.277173 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=520000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.117365 seconds
+Total transferred: 7.748604 GB
+P2P Bandwidth:     70.890029 GB/s
+Verification:      PASS
+    -> elapsed=0.117365s  bandwidth=70.890029 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=520000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.132797 seconds
+Total transferred: 11.622906 GB
+P2P Bandwidth:     93.978025 GB/s
+Verification:      PASS
+    -> elapsed=0.132797s  bandwidth=93.978025 GB/s  status=ok
+
+>>> Running: framework=hip  version=v1  N=520000000
+Elapsed time:      0.108414 s
+Total transferred: 3.874302 GB
+P2P Bandwidth:     38.371367 GB/s
+Verification d_B (dev0→dev1): PASSED (1000/520000000 samples)
+    -> elapsed=0.108414s  bandwidth=38.371367 GB/s  status=ok
+
+>>> Running: framework=hip  version=v2  N=520000000
+Elapsed time:      0.124861 s
+Total transferred: 7.748604 GB
+P2P Bandwidth:     66.634096 GB/s
+Verification d_C (dev0→dev1): PASSED (1000/520000000 samples)
+Verification d_D (dev1→dev0): PASSED (1000/520000000 samples)
+    -> elapsed=0.124861s  bandwidth=66.634096 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4  N=520000000
+Elapsed time:      0.140489 s
+Total transferred: 11.622906 GB
+P2P Bandwidth:     88.832514 GB/s
+Verification d_B1 (dev1→dev0): PASSED (1000/520000000 samples)
+Verification d_C1 (dev2→dev0): PASSED (1000/520000000 samples)
+Verification d_D1 (dev3→dev0): PASSED (1000/520000000 samples)
+    -> elapsed=0.140489s  bandwidth=88.832514 GB/s  status=ok
+
+===========================
+N = 1240000000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=1240000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.259555 seconds
+Total transferred: 9.238720 GB
+P2P Bandwidth:     38.219245 GB/s
+Verification:      PASS
+    -> elapsed=0.259555s  bandwidth=38.219245 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=1240000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.279410 seconds
+Total transferred: 18.477440 GB
+P2P Bandwidth:     71.006793 GB/s
+Verification:      PASS
+    -> elapsed=0.279410s  bandwidth=71.006793 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=1240000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.315179 seconds
+Total transferred: 27.716160 GB
+P2P Bandwidth:     94.422573 GB/s
+Verification:      PASS
+    -> elapsed=0.315179s  bandwidth=94.422573 GB/s  status=ok
+
+>>> Running: framework=hip  version=v1  N=1240000000
+Elapsed time:      0.259323 s
+Total transferred: 9.238720 GB
+P2P Bandwidth:     38.253470 GB/s
+Verification d_B (dev0→dev1): PASSED (1000/1240000000 samples)
+    -> elapsed=0.259323s  bandwidth=38.253470 GB/s  status=ok
+
+>>> Running: framework=hip  version=v2  N=1240000000
+Elapsed time:      0.286623 s
+Total transferred: 18.477440 GB
+P2P Bandwidth:     69.219846 GB/s
+Verification d_C (dev0→dev1): PASSED (1000/1240000000 samples)
+Verification d_D (dev1→dev0): PASSED (1000/1240000000 samples)
+    -> elapsed=0.286623s  bandwidth=69.219846 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4  N=1240000000
+Elapsed time:      0.322571 s
+Total transferred: 27.716160 GB
+P2P Bandwidth:     92.258747 GB/s
+Verification d_B1 (dev1→dev0): PASSED (1000/1240000000 samples)
+Verification d_C1 (dev2→dev0): PASSED (1000/1240000000 samples)
+Verification d_D1 (dev3→dev0): PASSED (1000/1240000000 samples)
+    -> elapsed=0.322571s  bandwidth=92.258747 GB/s  status=ok
+
+===========================
+N = 58750000  (4-to-4)
+===========================
+
+>>> Running: framework=omp_off  version=v4_4  N=58750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.050047 seconds
+Total transferred: 5.252659 GB
+P2P Bandwidth:     112.694246 GB/s
+Verification:      PASS
+    -> elapsed=0.050047s  bandwidth=112.694246 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4_4  N=58750000
+Elapsed time:      0.068524 s
+Total transferred: 5.252659 GB
+P2P Bandwidth:     82.307069 GB/s
+Verification d_A2  (dev0→dev1): PASSED (1000/58750000 samples)
+Verification d_A3  (dev0→dev2): PASSED (1000/58750000 samples)
+Verification d_A4  (dev0→dev3): PASSED (1000/58750000 samples)
+Verification d_B1  (dev1→dev0): PASSED (1000/58750000 samples)
+Verification d_B3  (dev1→dev2): PASSED (1000/58750000 samples)
+Verification d_B4  (dev1→dev3): PASSED (1000/58750000 samples)
+Verification d_C1  (dev2→dev0): PASSED (1000/58750000 samples)
+Verification d_C2  (dev2→dev1): PASSED (1000/58750000 samples)
+Verification d_C4  (dev2→dev3): PASSED (1000/58750000 samples)
+Verification d_D1  (dev3→dev0): PASSED (1000/58750000 samples)
+Verification d_D2  (dev3→dev1): PASSED (1000/58750000 samples)
+Verification d_D3  (dev3→dev2): PASSED (1000/58750000 samples)
+    -> elapsed=0.068524s  bandwidth=82.307069 GB/s  status=ok
+
+===========================
+N = 108750000  (4-to-4)
+===========================
+
+>>> Running: framework=omp_off  version=v4_4  N=108750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.091541 seconds
+Total transferred: 9.723008 GB
+P2P Bandwidth:     114.047490 GB/s
+Verification:      PASS
+    -> elapsed=0.091541s  bandwidth=114.047490 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4_4  N=108750000
+Elapsed time:      0.118951 s
+Total transferred: 9.723008 GB
+P2P Bandwidth:     87.767171 GB/s
+Verification d_A2  (dev0→dev1): PASSED (1000/108750000 samples)
+Verification d_A3  (dev0→dev2): PASSED (1000/108750000 samples)
+Verification d_A4  (dev0→dev3): PASSED (1000/108750000 samples)
+Verification d_B1  (dev1→dev0): PASSED (1000/108750000 samples)
+Verification d_B3  (dev1→dev2): PASSED (1000/108750000 samples)
+Verification d_B4  (dev1→dev3): PASSED (1000/108750000 samples)
+Verification d_C1  (dev2→dev0): PASSED (1000/108750000 samples)
+Verification d_C2  (dev2→dev1): PASSED (1000/108750000 samples)
+Verification d_C4  (dev2→dev3): PASSED (1000/108750000 samples)
+Verification d_D1  (dev3→dev0): PASSED (1000/108750000 samples)
+Verification d_D2  (dev3→dev1): PASSED (1000/108750000 samples)
+Verification d_D3  (dev3→dev2): PASSED (1000/108750000 samples)
+    -> elapsed=0.118951s  bandwidth=87.767171 GB/s  status=ok
+
+===========================
+N = 159375000  (4-to-4)
+===========================
+
+>>> Running: framework=omp_off  version=v4_4  N=159375000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.133693 seconds
+Total transferred: 14.249235 GB
+P2P Bandwidth:     114.441312 GB/s
+Verification:      PASS
+    -> elapsed=0.133693s  bandwidth=114.441312 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4_4  N=159375000
+Elapsed time:      0.171718 s
+Total transferred: 14.249235 GB
+P2P Bandwidth:     89.099508 GB/s
+Verification d_A2  (dev0→dev1): PASSED (1000/159375000 samples)
+Verification d_A3  (dev0→dev2): PASSED (1000/159375000 samples)
+Verification d_A4  (dev0→dev3): PASSED (1000/159375000 samples)
+Verification d_B1  (dev1→dev0): PASSED (1000/159375000 samples)
+Verification d_B3  (dev1→dev2): PASSED (1000/159375000 samples)
+Verification d_B4  (dev1→dev3): PASSED (1000/159375000 samples)
+Verification d_C1  (dev2→dev0): PASSED (1000/159375000 samples)
+Verification d_C2  (dev2→dev1): PASSED (1000/159375000 samples)
+Verification d_C4  (dev2→dev3): PASSED (1000/159375000 samples)
+Verification d_D1  (dev3→dev0): PASSED (1000/159375000 samples)
+Verification d_D2  (dev3→dev1): PASSED (1000/159375000 samples)
+Verification d_D3  (dev3→dev2): PASSED (1000/159375000 samples)
+    -> elapsed=0.171718s  bandwidth=89.099508 GB/s  status=ok
+
+===========================
+N = 209375000  (4-to-4)
+===========================
+
+>>> Running: framework=omp_off  version=v4_4  N=209375000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.175501 seconds
+Total transferred: 18.719584 GB
+P2P Bandwidth:     114.529347 GB/s
+Verification:      PASS
+    -> elapsed=0.175501s  bandwidth=114.529347 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4_4  N=209375000
+Elapsed time:      0.222125 s
+Total transferred: 18.719584 GB
+P2P Bandwidth:     90.489665 GB/s
+Verification d_A2  (dev0→dev1): PASSED (1000/209375000 samples)
+Verification d_A3  (dev0→dev2): PASSED (1000/209375000 samples)
+Verification d_A4  (dev0→dev3): PASSED (1000/209375000 samples)
+Verification d_B1  (dev1→dev0): PASSED (1000/209375000 samples)
+Verification d_B3  (dev1→dev2): PASSED (1000/209375000 samples)
+Verification d_B4  (dev1→dev3): PASSED (1000/209375000 samples)
+Verification d_C1  (dev2→dev0): PASSED (1000/209375000 samples)
+Verification d_C2  (dev2→dev1): PASSED (1000/209375000 samples)
+Verification d_C4  (dev2→dev3): PASSED (1000/209375000 samples)
+Verification d_D1  (dev3→dev0): PASSED (1000/209375000 samples)
+Verification d_D2  (dev3→dev1): PASSED (1000/209375000 samples)
+Verification d_D3  (dev3→dev2): PASSED (1000/209375000 samples)
+    -> elapsed=0.222125s  bandwidth=90.489665 GB/s  status=ok
+
+===========================
+N = 260000000  (4-to-4)
+===========================
+
+>>> Running: framework=omp_off  version=v4_4  N=260000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.218168 seconds
+Total transferred: 23.245811 GB
+P2P Bandwidth:     114.407235 GB/s
+Verification:      PASS
+    -> elapsed=0.218168s  bandwidth=114.407235 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4_4  N=260000000
+Elapsed time:      0.276608 s
+Total transferred: 23.245811 GB
+P2P Bandwidth:     90.236005 GB/s
+Verification d_A2  (dev0→dev1): PASSED (1000/260000000 samples)
+Verification d_A3  (dev0→dev2): PASSED (1000/260000000 samples)
+Verification d_A4  (dev0→dev3): PASSED (1000/260000000 samples)
+Verification d_B1  (dev1→dev0): PASSED (1000/260000000 samples)
+Verification d_B3  (dev1→dev2): PASSED (1000/260000000 samples)
+Verification d_B4  (dev1→dev3): PASSED (1000/260000000 samples)
+Verification d_C1  (dev2→dev0): PASSED (1000/260000000 samples)
+Verification d_C2  (dev2→dev1): PASSED (1000/260000000 samples)
+Verification d_C4  (dev2→dev3): PASSED (1000/260000000 samples)
+Verification d_D1  (dev3→dev0): PASSED (1000/260000000 samples)
+Verification d_D2  (dev3→dev1): PASSED (1000/260000000 samples)
+Verification d_D3  (dev3→dev2): PASSED (1000/260000000 samples)
+    -> elapsed=0.276608s  bandwidth=90.236005 GB/s  status=ok
+
+===========================
+N = 310000000  (4-to-4)
+===========================
+
+>>> Running: framework=omp_off  version=v4_4  N=310000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.259207 seconds
+Total transferred: 27.716160 GB
+P2P Bandwidth:     114.811710 GB/s
+Verification:      PASS
+    -> elapsed=0.259207s  bandwidth=114.811710 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4_4  N=310000000
+Elapsed time:      0.326672 s
+Total transferred: 27.716160 GB
+P2P Bandwidth:     91.100532 GB/s
+Verification d_A2  (dev0→dev1): PASSED (1000/310000000 samples)
+Verification d_A3  (dev0→dev2): PASSED (1000/310000000 samples)
+Verification d_A4  (dev0→dev3): PASSED (1000/310000000 samples)
+Verification d_B1  (dev1→dev0): PASSED (1000/310000000 samples)
+Verification d_B3  (dev1→dev2): PASSED (1000/310000000 samples)
+Verification d_B4  (dev1→dev3): PASSED (1000/310000000 samples)
+Verification d_C1  (dev2→dev0): PASSED (1000/310000000 samples)
+Verification d_C2  (dev2→dev1): PASSED (1000/310000000 samples)
+Verification d_C4  (dev2→dev3): PASSED (1000/310000000 samples)
+Verification d_D1  (dev3→dev0): PASSED (1000/310000000 samples)
+Verification d_D2  (dev3→dev1): PASSED (1000/310000000 samples)
+Verification d_D3  (dev3→dev2): PASSED (1000/310000000 samples)
+    -> elapsed=0.326672s  bandwidth=91.100532 GB/s  status=ok
+
+All done.
+  Timing CSV : results_17151808_20260401_232638/timings.csv
+  Run log    : results_17151808_20260401_232638/run.log

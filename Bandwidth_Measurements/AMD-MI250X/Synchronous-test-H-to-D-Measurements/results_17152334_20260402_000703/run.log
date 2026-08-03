@@ -1,0 +1,333 @@
+Job ID     : 17152334
+Timestamp  : 20260402_000703
+Results dir: results_17152334_20260402_000703
+
+Starting benchmarks
+
+===========================
+N = 940000000,
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=940000000,
+Elapsed time:      0.316120 s
+Total transferred: 7.003546 GB
+PCIe Bandwidth:    23.788442 GB/s
+Verification d_A (device 0): PASSED (1000/940000000 samples)
+    -> elapsed=0.316120s  bandwidth=23.788442 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=940000000,
+Elapsed time:      0.450880 s
+Total transferred: 14.007092 GB
+PCIe Bandwidth:    33.356987 GB/s
+Verification d_A (device 0): PASSED (1000/940000000 samples)
+Verification d_B (device 1): PASSED (1000/940000000 samples)
+    -> elapsed=0.450880s  bandwidth=33.356987 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=940000000,
+Elapsed time:      0.724341 s
+Total transferred: 28.014183 GB
+PCIe Bandwidth:    41.527407 GB/s
+Verification d_A (device 0): PASSED (1000/940000000 samples)
+Verification d_B (device 1): PASSED (1000/940000000 samples)
+Verification d_C (device 2): PASSED (1000/940000000 samples)
+Verification d_D (device 3): PASSED (1000/940000000 samples)
+    -> elapsed=0.724341s  bandwidth=41.527407 GB/s  status=ok
+
+>>> Running: framework=hip  version=v1  N=940000000,
+Elapsed time:      0.298408 s
+Total transferred: 7.003546 GB
+PCIe Bandwidth:    25.200394 GB/s
+Verification d_A (device 0): PASSED (1000/940000000 samples)
+    -> elapsed=0.298408s  bandwidth=25.200394 GB/s  status=ok
+
+>>> Running: framework=hip  version=v2  N=940000000,
+Elapsed time:      0.414400 s
+Total transferred: 14.007092 GB
+PCIe Bandwidth:    36.293448 GB/s
+Verification d_A (device 0): PASSED (1000/940000000 samples)
+Verification d_B (device 1): PASSED (1000/940000000 samples)
+    -> elapsed=0.414400s  bandwidth=36.293448 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4  N=940000000,
+Elapsed time:      0.677843 s
+Total transferred: 28.014183 GB
+PCIe Bandwidth:    44.376051 GB/s
+Verification d_A (device 0): PASSED (1000/940000000 samples)
+Verification d_B (device 1): PASSED (1000/940000000 samples)
+Verification d_C (device 2): PASSED (1000/940000000 samples)
+Verification d_D (device 3): PASSED (1000/940000000 samples)
+    -> elapsed=0.677843s  bandwidth=44.376051 GB/s  status=ok
+
+===========================
+N = 1740000000,
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=1740000000,
+Elapsed time:      0.585887 s
+Total transferred: 12.964010 GB
+PCIe Bandwidth:    23.758840 GB/s
+Verification d_A (device 0): PASSED (1000/1740000000 samples)
+    -> elapsed=0.585887s  bandwidth=23.758840 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=1740000000,
+Elapsed time:      0.800543 s
+Total transferred: 25.928020 GB
+PCIe Bandwidth:    34.776392 GB/s
+Verification d_A (device 0): PASSED (1000/1740000000 samples)
+Verification d_B (device 1): PASSED (1000/1740000000 samples)
+    -> elapsed=0.800543s  bandwidth=34.776392 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=1740000000,
+Elapsed time:      1.337262 s
+Total transferred: 51.856041 GB
+PCIe Bandwidth:    41.637311 GB/s
+Verification d_A (device 0): PASSED (1000/1740000000 samples)
+Verification d_B (device 1): PASSED (1000/1740000000 samples)
+Verification d_C (device 2): PASSED (1000/1740000000 samples)
+Verification d_D (device 3): PASSED (1000/1740000000 samples)
+    -> elapsed=1.337262s  bandwidth=41.637311 GB/s  status=ok
+
+>>> Running: framework=hip  version=v1  N=1740000000,
+Elapsed time:      0.551920 s
+Total transferred: 12.964010 GB
+PCIe Bandwidth:    25.221049 GB/s
+Verification d_A (device 0): PASSED (1000/1740000000 samples)
+    -> elapsed=0.551920s  bandwidth=25.221049 GB/s  status=ok
+
+>>> Running: framework=hip  version=v2  N=1740000000,
+Elapsed time:      0.749686 s
+Total transferred: 25.928020 GB
+PCIe Bandwidth:    37.135547 GB/s
+Verification d_A (device 0): PASSED (1000/1740000000 samples)
+Verification d_B (device 1): PASSED (1000/1740000000 samples)
+    -> elapsed=0.749686s  bandwidth=37.135547 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4  N=1740000000,
+Elapsed time:      1.246268 s
+Total transferred: 51.856041 GB
+PCIe Bandwidth:    44.677388 GB/s
+Verification d_A (device 0): PASSED (1000/1740000000 samples)
+Verification d_B (device 1): PASSED (1000/1740000000 samples)
+Verification d_C (device 2): PASSED (1000/1740000000 samples)
+Verification d_D (device 3): PASSED (1000/1740000000 samples)
+    -> elapsed=1.246268s  bandwidth=44.677388 GB/s  status=ok
+
+===========================
+N = 2550000000,
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=2550000000,
+Elapsed time:      0.851470 s
+Total transferred: 18.998981 GB
+PCIe Bandwidth:    23.958566 GB/s
+Verification d_A (device 0): PASSED (1000/2550000000 samples)
+    -> elapsed=0.851470s  bandwidth=23.958566 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=2550000000,
+Elapsed time:      1.163982 s
+Total transferred: 37.997961 GB
+PCIe Bandwidth:    35.052091 GB/s
+Verification d_A (device 0): PASSED (1000/2550000000 samples)
+Verification d_B (device 1): PASSED (1000/2550000000 samples)
+    -> elapsed=1.163982s  bandwidth=35.052091 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=2550000000,
+Elapsed time:      1.956510 s
+Total transferred: 75.995922 GB
+PCIe Bandwidth:    41.706915 GB/s
+Verification d_A (device 0): PASSED (1000/2550000000 samples)
+Verification d_B (device 1): PASSED (1000/2550000000 samples)
+Verification d_C (device 2): PASSED (1000/2550000000 samples)
+Verification d_D (device 3): PASSED (1000/2550000000 samples)
+    -> elapsed=1.956510s  bandwidth=41.706915 GB/s  status=ok
+
+>>> Running: framework=hip  version=v1  N=2550000000,
+Elapsed time:      0.809232 s
+Total transferred: 18.998981 GB
+PCIe Bandwidth:    25.209087 GB/s
+Verification d_A (device 0): PASSED (1000/2550000000 samples)
+    -> elapsed=0.809232s  bandwidth=25.209087 GB/s  status=ok
+
+>>> Running: framework=hip  version=v2  N=2550000000,
+Elapsed time:      1.094210 s
+Total transferred: 37.997961 GB
+PCIe Bandwidth:    37.287178 GB/s
+Verification d_A (device 0): PASSED (1000/2550000000 samples)
+Verification d_B (device 1): PASSED (1000/2550000000 samples)
+    -> elapsed=1.094210s  bandwidth=37.287178 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4  N=2550000000,
+Elapsed time:      1.831569 s
+Total transferred: 75.995922 GB
+PCIe Bandwidth:    44.551967 GB/s
+Verification d_A (device 0): PASSED (1000/2550000000 samples)
+Verification d_B (device 1): PASSED (1000/2550000000 samples)
+Verification d_C (device 2): PASSED (1000/2550000000 samples)
+Verification d_D (device 3): PASSED (1000/2550000000 samples)
+    -> elapsed=1.831569s  bandwidth=44.551967 GB/s  status=ok
+
+===========================
+N = 3350000000,
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=3350000000,
+Elapsed time:      1.117115 s
+Total transferred: 24.959445 GB
+PCIe Bandwidth:    23.990368 GB/s
+Verification d_A (device 0): PASSED (1000/3350000000 samples)
+    -> elapsed=1.117115s  bandwidth=23.990368 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=3350000000,
+Elapsed time:      1.533583 s
+Total transferred: 49.918890 GB
+PCIe Bandwidth:    34.950833 GB/s
+Verification d_A (device 0): PASSED (1000/3350000000 samples)
+Verification d_B (device 1): PASSED (1000/3350000000 samples)
+    -> elapsed=1.533583s  bandwidth=34.950833 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=3350000000,
+Elapsed time:      2.570897 s
+Total transferred: 99.837780 GB
+PCIe Bandwidth:    41.697511 GB/s
+Verification d_A (device 0): PASSED (1000/3350000000 samples)
+Verification d_B (device 1): PASSED (1000/3350000000 samples)
+Verification d_C (device 2): PASSED (1000/3350000000 samples)
+Verification d_D (device 3): PASSED (1000/3350000000 samples)
+    -> elapsed=2.570897s  bandwidth=41.697511 GB/s  status=ok
+
+>>> Running: framework=hip  version=v1  N=3350000000,
+Elapsed time:      1.062810 s
+Total transferred: 24.959445 GB
+PCIe Bandwidth:    25.216174 GB/s
+Verification d_A (device 0): PASSED (1000/3350000000 samples)
+    -> elapsed=1.062810s  bandwidth=25.216174 GB/s  status=ok
+
+>>> Running: framework=hip  version=v2  N=3350000000,
+Elapsed time:      1.436253 s
+Total transferred: 49.918890 GB
+PCIe Bandwidth:    37.319335 GB/s
+Verification d_A (device 0): PASSED (1000/3350000000 samples)
+Verification d_B (device 1): PASSED (1000/3350000000 samples)
+    -> elapsed=1.436253s  bandwidth=37.319335 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4  N=3350000000,
+Elapsed time:      2.395204 s
+Total transferred: 99.837780 GB
+PCIe Bandwidth:    44.756107 GB/s
+Verification d_A (device 0): PASSED (1000/3350000000 samples)
+Verification d_B (device 1): PASSED (1000/3350000000 samples)
+Verification d_C (device 2): PASSED (1000/3350000000 samples)
+Verification d_D (device 3): PASSED (1000/3350000000 samples)
+    -> elapsed=2.395204s  bandwidth=44.756107 GB/s  status=ok
+
+===========================
+N = 4160000000,
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=4160000000,
+Elapsed time:      1.388760 s
+Total transferred: 30.994415 GB
+PCIe Bandwidth:    23.963826 GB/s
+Verification d_A (device 0): PASSED (1000/4160000000 samples)
+    -> elapsed=1.388760s  bandwidth=23.963826 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=4160000000,
+Elapsed time:      1.894702 s
+Total transferred: 61.988831 GB
+PCIe Bandwidth:    35.129536 GB/s
+Verification d_A (device 0): PASSED (1000/4160000000 samples)
+Verification d_B (device 1): PASSED (1000/4160000000 samples)
+    -> elapsed=1.894702s  bandwidth=35.129536 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=4160000000,
+Elapsed time:      3.155629 s
+Total transferred: 123.977661 GB
+PCIe Bandwidth:    42.184935 GB/s
+Verification d_A (device 0): PASSED (1000/4160000000 samples)
+Verification d_B (device 1): PASSED (1000/4160000000 samples)
+Verification d_C (device 2): PASSED (1000/4160000000 samples)
+Verification d_D (device 3): PASSED (1000/4160000000 samples)
+    -> elapsed=3.155629s  bandwidth=42.184935 GB/s  status=ok
+
+>>> Running: framework=hip  version=v1  N=4160000000,
+Elapsed time:      1.319726 s
+Total transferred: 30.994415 GB
+PCIe Bandwidth:    25.217356 GB/s
+Verification d_A (device 0): PASSED (1000/4160000000 samples)
+    -> elapsed=1.319726s  bandwidth=25.217356 GB/s  status=ok
+
+>>> Running: framework=hip  version=v2  N=4160000000,
+Elapsed time:      1.781535 s
+Total transferred: 61.988831 GB
+PCIe Bandwidth:    37.361037 GB/s
+Verification d_A (device 0): PASSED (1000/4160000000 samples)
+Verification d_B (device 1): PASSED (1000/4160000000 samples)
+    -> elapsed=1.781535s  bandwidth=37.361037 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4  N=4160000000,
+Elapsed time:      2.933273 s
+Total transferred: 123.977661 GB
+PCIe Bandwidth:    45.382750 GB/s
+Verification d_A (device 0): PASSED (1000/4160000000 samples)
+Verification d_B (device 1): PASSED (1000/4160000000 samples)
+Verification d_C (device 2): PASSED (1000/4160000000 samples)
+Verification d_D (device 3): PASSED (1000/4160000000 samples)
+    -> elapsed=2.933273s  bandwidth=45.382750 GB/s  status=ok
+
+===========================
+N = 4960000000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=4960000000
+Elapsed time:      1.652565 s
+Total transferred: 36.954880 GB
+PCIe Bandwidth:    24.011158 GB/s
+Verification d_A (device 0): PASSED (1000/4960000000 samples)
+    -> elapsed=1.652565s  bandwidth=24.011158 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=4960000000
+Elapsed time:      2.254318 s
+Total transferred: 73.909760 GB
+PCIe Bandwidth:    35.203552 GB/s
+Verification d_A (device 0): PASSED (1000/4960000000 samples)
+Verification d_B (device 1): PASSED (1000/4960000000 samples)
+    -> elapsed=2.254318s  bandwidth=35.203552 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=4960000000
+Elapsed time:      3.443618 s
+Total transferred: 147.819519 GB
+PCIe Bandwidth:    46.091061 GB/s
+Verification d_A (device 0): PASSED (1000/4960000000 samples)
+Verification d_B (device 1): PASSED (1000/4960000000 samples)
+Verification d_C (device 2): PASSED (1000/4960000000 samples)
+Verification d_D (device 3): PASSED (1000/4960000000 samples)
+    -> elapsed=3.443618s  bandwidth=46.091061 GB/s  status=ok
+
+>>> Running: framework=hip  version=v1  N=4960000000
+Elapsed time:      1.572998 s
+Total transferred: 36.954880 GB
+PCIe Bandwidth:    25.225719 GB/s
+Verification d_A (device 0): PASSED (1000/4960000000 samples)
+    -> elapsed=1.572998s  bandwidth=25.225719 GB/s  status=ok
+
+>>> Running: framework=hip  version=v2  N=4960000000
+Elapsed time:      2.121352 s
+Total transferred: 73.909760 GB
+PCIe Bandwidth:    37.410105 GB/s
+Verification d_A (device 0): PASSED (1000/4960000000 samples)
+Verification d_B (device 1): PASSED (1000/4960000000 samples)
+    -> elapsed=2.121352s  bandwidth=37.410105 GB/s  status=ok
+
+>>> Running: framework=hip  version=v4  N=4960000000
+Elapsed time:      3.244401 s
+Total transferred: 147.819519 GB
+PCIe Bandwidth:    48.921203 GB/s
+Verification d_A (device 0): PASSED (1000/4960000000 samples)
+Verification d_B (device 1): PASSED (1000/4960000000 samples)
+Verification d_C (device 2): PASSED (1000/4960000000 samples)
+Verification d_D (device 3): PASSED (1000/4960000000 samples)
+    -> elapsed=3.244401s  bandwidth=48.921203 GB/s  status=ok
+
+All done.
+  Timing CSV : results_17152334_20260402_000703/timings.csv
+  Run log    : results_17152334_20260402_000703/run.log

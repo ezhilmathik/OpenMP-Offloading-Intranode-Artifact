@@ -1,0 +1,2 @@
+omp_get_num_devices()  = 4
+sycl gpu device count  = 4

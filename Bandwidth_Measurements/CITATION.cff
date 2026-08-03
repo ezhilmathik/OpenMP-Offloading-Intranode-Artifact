@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+title: >-
+  OpenMP Offloading Intra-node Bandwidth Benchmarks:
+  NVIDIA H100, AMD MI250X and Intel Data Center GPU Max 1550
+message: >-
+  If you use this artifact, please cite both the artifact itself
+  and the accompanying paper.
+type: software
+authors:
+  - family-names: Krishnasamy
+    given-names: Ezhilmathi
+    orcid: 'https://orcid.org/0000-0002-1971-4973'
+    # affiliation: '[Your institution]'
+abstract: >-
+  Benchmarks comparing OpenMP target offload against each vendor's native
+  programming model (CUDA, HIP and SYCL) for intra-node data movement on
+  NVIDIA H100, AMD MI250X and Intel Data Center GPU Max 1550 GPUs. Covers
+  synchronous and asynchronous host-to-device and device-to-host transfers,
+  and peer-to-peer transfers between devices. Includes the raw measurement
+  data, so every figure in the paper can be regenerated without GPU access.
+keywords:
+  - OpenMP
+  - GPU offloading
+  - performance portability
+  - memory bandwidth
+  - CUDA
+  - HIP
+  - SYCL
+  - NVIDIA H100
+  - AMD MI250X
+  - Intel Ponte Vecchio
+license: Apache-2.0
+version: '1.0.0'
+date-released: '2026-07-23'
+# doi: 10.5281/zenodo.XXXXXXX
+# repository-code: 'https://github.com/[user]/[repo]'
+# preferred-citation:
+#   type: article
+#   title: '[PAPER TITLE]'
+#   authors:
+#     - family-names: Krishnasamy
+#       given-names: Ezhilmathi
+#       orcid: 'https://orcid.org/0000-0002-1971-4973'
+#   journal: '[JOURNAL]'
+#   year: 2026
+#   doi: '[PAPER DOI]'

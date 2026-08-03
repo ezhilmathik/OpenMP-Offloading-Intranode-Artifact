@@ -1,0 +1,30 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Compiled benchmark binaries
+version-*-off
+version-*-cuda
+version-*-hip
+version-*-sycl
+version-*-acc
+*.o
+*.mod
+
+# Slurm job output
+*.out
+build-*.out
+run-*.out
+
+# Editor and OS debris
+*~
+*.bak
+.DS_Store
+core.*
+
+# Archives built for deposit
+*.zip
+*.tar.gz
+to-compress/

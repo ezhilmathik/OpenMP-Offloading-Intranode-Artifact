@@ -1,0 +1,529 @@
+Job ID     : 515385
+Timestamp  : 20260717_182327
+Hierarchy  : COMPOSITE
+  ZE_AFFINITY_MASK     = 0,1,2,3
+  LIBOMPTARGET_DEVICES = device
+Results dir: results_COMPOSITE_515385_20260717_182327
+
+=== Preflight: device model agreement ===
+omp_get_num_devices()  = 4
+sycl gpu device count  = 4
+OK: both runtimes see 4 devices, matching ZE_AFFINITY_MASK.
+
+Starting benchmarks
+
+===========================
+N = 117500000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=117500000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.030073 seconds
+Total transferred: 0.875443 GB
+P2P Bandwidth:     31.257102 GB/s
+Verification:      PASS
+    -> elapsed=0.030073s  bandwidth=31.257102 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=117500000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.030385 seconds
+Total transferred: 1.750886 GB
+P2P Bandwidth:     61.872599 GB/s
+Verification:      PASS
+    -> elapsed=0.030385s  bandwidth=61.872599 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=117500000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.089484 seconds
+Total transferred: 2.626330 GB
+P2P Bandwidth:     31.514022 GB/s
+Verification:      PASS
+    -> elapsed=0.089484s  bandwidth=31.514022 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v1  N=117500000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 1 -> device 0
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.012445 s
+Total transferred: 0.940000 GB
+P2P Bandwidth:     75.532506 GB/s
+Verification d_B (dev0->dev1): PASSED (1000/117500000 samples)
+    -> elapsed=0.012445s  bandwidth=75.532506 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v2  N=117500000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 1 -> device 0
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.044501 s
+Total transferred: 1.880000 GB
+P2P Bandwidth:     42.246179 GB/s
+Verification d_C (dev0->dev1): PASSED (1000/117500000 samples)
+Verification d_D (dev1->dev0): PASSED (1000/117500000 samples)
+    -> elapsed=0.044501s  bandwidth=42.246179 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v4  N=117500000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+  [2] Intel(R) Data Center GPU Max 1550
+  [3] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 0 -> device 2
+Warning: peer access NOT supported, device 0 -> device 3
+Warning: peer access NOT supported, device 1 -> device 0
+Warning: peer access NOT supported, device 1 -> device 2
+Warning: peer access NOT supported, device 1 -> device 3
+Warning: peer access NOT supported, device 2 -> device 0
+Warning: peer access NOT supported, device 2 -> device 1
+Warning: peer access NOT supported, device 2 -> device 3
+Warning: peer access NOT supported, device 3 -> device 0
+Warning: peer access NOT supported, device 3 -> device 1
+Warning: peer access NOT supported, device 3 -> device 2
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.041489 s
+Total transferred: 2.820000 GB
+P2P Bandwidth:     67.969620 GB/s
+Verification d_B1 (dev1->dev0): PASSED (1000/117500000 samples)
+Verification d_C1 (dev2->dev0): PASSED (1000/117500000 samples)
+Verification d_D1 (dev3->dev0): PASSED (1000/117500000 samples)
+    -> elapsed=0.041489s  bandwidth=67.969620 GB/s  status=ok
+
+===========================
+N = 217500000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=217500000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.055410 seconds
+Total transferred: 1.620501 GB
+P2P Bandwidth:     31.402191 GB/s
+Verification:      PASS
+    -> elapsed=0.055410s  bandwidth=31.402191 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=217500000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.055590 seconds
+Total transferred: 3.241003 GB
+P2P Bandwidth:     62.601284 GB/s
+Verification:      PASS
+    -> elapsed=0.055590s  bandwidth=62.601284 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=217500000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.165086 seconds
+Total transferred: 4.861504 GB
+P2P Bandwidth:     31.619877 GB/s
+Verification:      PASS
+    -> elapsed=0.165086s  bandwidth=31.619877 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v1  N=217500000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 1 -> device 0
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.022942 s
+Total transferred: 1.740000 GB
+P2P Bandwidth:     75.843212 GB/s
+Verification d_B (dev0->dev1): PASSED (1000/217500000 samples)
+    -> elapsed=0.022942s  bandwidth=75.843212 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v2  N=217500000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 1 -> device 0
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.056857 s
+Total transferred: 3.480000 GB
+P2P Bandwidth:     61.206067 GB/s
+Verification d_C (dev0->dev1): PASSED (1000/217500000 samples)
+Verification d_D (dev1->dev0): PASSED (1000/217500000 samples)
+    -> elapsed=0.056857s  bandwidth=61.206067 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v4  N=217500000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+  [2] Intel(R) Data Center GPU Max 1550
+  [3] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 0 -> device 2
+Warning: peer access NOT supported, device 0 -> device 3
+Warning: peer access NOT supported, device 1 -> device 0
+Warning: peer access NOT supported, device 1 -> device 2
+Warning: peer access NOT supported, device 1 -> device 3
+Warning: peer access NOT supported, device 2 -> device 0
+Warning: peer access NOT supported, device 2 -> device 1
+Warning: peer access NOT supported, device 2 -> device 3
+Warning: peer access NOT supported, device 3 -> device 0
+Warning: peer access NOT supported, device 3 -> device 1
+Warning: peer access NOT supported, device 3 -> device 2
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.051581 s
+Total transferred: 5.220000 GB
+P2P Bandwidth:     101.200239 GB/s
+Verification d_B1 (dev1->dev0): PASSED (1000/217500000 samples)
+Verification d_C1 (dev2->dev0): PASSED (1000/217500000 samples)
+Verification d_D1 (dev3->dev0): PASSED (1000/217500000 samples)
+    -> elapsed=0.051581s  bandwidth=101.200239 GB/s  status=ok
+
+===========================
+N = 318750000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=318750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.080820 seconds
+Total transferred: 2.374873 GB
+P2P Bandwidth:     31.551657 GB/s
+Verification:      PASS
+    -> elapsed=0.080820s  bandwidth=31.551657 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=318750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.081125 seconds
+Total transferred: 4.749745 GB
+P2P Bandwidth:     62.865931 GB/s
+Verification:      PASS
+    -> elapsed=0.081125s  bandwidth=62.865931 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=318750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.241830 seconds
+Total transferred: 7.124618 GB
+P2P Bandwidth:     31.633778 GB/s
+Verification:      PASS
+    -> elapsed=0.241830s  bandwidth=31.633778 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v1  N=318750000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 1 -> device 0
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.033578 s
+Total transferred: 2.550000 GB
+P2P Bandwidth:     75.942765 GB/s
+Verification d_B (dev0->dev1): PASSED (1000/318750000 samples)
+    -> elapsed=0.033578s  bandwidth=75.942765 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v2  N=318750000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 1 -> device 0
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.069266 s
+Total transferred: 5.100000 GB
+P2P Bandwidth:     73.629112 GB/s
+Verification d_C (dev0->dev1): PASSED (1000/318750000 samples)
+Verification d_D (dev1->dev0): PASSED (1000/318750000 samples)
+    -> elapsed=0.069266s  bandwidth=73.629112 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v4  N=318750000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+  [2] Intel(R) Data Center GPU Max 1550
+  [3] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 0 -> device 2
+Warning: peer access NOT supported, device 0 -> device 3
+Warning: peer access NOT supported, device 1 -> device 0
+Warning: peer access NOT supported, device 1 -> device 2
+Warning: peer access NOT supported, device 1 -> device 3
+Warning: peer access NOT supported, device 2 -> device 0
+Warning: peer access NOT supported, device 2 -> device 1
+Warning: peer access NOT supported, device 2 -> device 3
+Warning: peer access NOT supported, device 3 -> device 0
+Warning: peer access NOT supported, device 3 -> device 1
+Warning: peer access NOT supported, device 3 -> device 2
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.063300 s
+Total transferred: 7.650000 GB
+P2P Bandwidth:     120.853282 GB/s
+Verification d_B1 (dev1->dev0): PASSED (1000/318750000 samples)
+Verification d_C1 (dev2->dev0): PASSED (1000/318750000 samples)
+Verification d_D1 (dev3->dev0): PASSED (1000/318750000 samples)
+    -> elapsed=0.063300s  bandwidth=120.853282 GB/s  status=ok
+
+===========================
+N = 418750000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=418750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.106122 seconds
+Total transferred: 3.119931 GB
+P2P Bandwidth:     31.567436 GB/s
+Verification:      PASS
+    -> elapsed=0.106122s  bandwidth=31.567436 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=418750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.106233 seconds
+Total transferred: 6.239861 GB
+P2P Bandwidth:     63.068985 GB/s
+Verification:      PASS
+    -> elapsed=0.106233s  bandwidth=63.068985 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=418750000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.317478 seconds
+Total transferred: 9.359792 GB
+P2P Bandwidth:     31.655719 GB/s
+Verification:      PASS
+    -> elapsed=0.317478s  bandwidth=31.655719 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v1  N=418750000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 1 -> device 0
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.044083 s
+Total transferred: 3.350000 GB
+P2P Bandwidth:     75.992809 GB/s
+Verification d_B (dev0->dev1): PASSED (1000/418750000 samples)
+    -> elapsed=0.044083s  bandwidth=75.992809 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v2  N=418750000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 1 -> device 0
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.080830 s
+Total transferred: 6.700000 GB
+P2P Bandwidth:     82.889916 GB/s
+Verification d_C (dev0->dev1): PASSED (1000/418750000 samples)
+Verification d_D (dev1->dev0): PASSED (1000/418750000 samples)
+    -> elapsed=0.080830s  bandwidth=82.889916 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v4  N=418750000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+  [2] Intel(R) Data Center GPU Max 1550
+  [3] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 0 -> device 2
+Warning: peer access NOT supported, device 0 -> device 3
+Warning: peer access NOT supported, device 1 -> device 0
+Warning: peer access NOT supported, device 1 -> device 2
+Warning: peer access NOT supported, device 1 -> device 3
+Warning: peer access NOT supported, device 2 -> device 0
+Warning: peer access NOT supported, device 2 -> device 1
+Warning: peer access NOT supported, device 2 -> device 3
+Warning: peer access NOT supported, device 3 -> device 0
+Warning: peer access NOT supported, device 3 -> device 1
+Warning: peer access NOT supported, device 3 -> device 2
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.073343 s
+Total transferred: 10.050000 GB
+P2P Bandwidth:     137.027320 GB/s
+Verification d_B1 (dev1->dev0): PASSED (1000/418750000 samples)
+Verification d_C1 (dev2->dev0): PASSED (1000/418750000 samples)
+Verification d_D1 (dev3->dev0): PASSED (1000/418750000 samples)
+    -> elapsed=0.073343s  bandwidth=137.027320 GB/s  status=ok
+
+===========================
+N = 520000000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=520000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.131569 seconds
+Total transferred: 3.874302 GB
+P2P Bandwidth:     31.618412 GB/s
+Verification:      PASS
+    -> elapsed=0.131569s  bandwidth=31.618412 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=520000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.131782 seconds
+Total transferred: 7.748604 GB
+P2P Bandwidth:     63.134659 GB/s
+Verification:      PASS
+    -> elapsed=0.131782s  bandwidth=63.134659 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=520000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.393727 seconds
+Total transferred: 11.622906 GB
+P2P Bandwidth:     31.697084 GB/s
+Verification:      PASS
+    -> elapsed=0.393727s  bandwidth=31.697084 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v1  N=520000000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 1 -> device 0
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.054733 s
+Total transferred: 4.160000 GB
+P2P Bandwidth:     76.005282 GB/s
+Verification d_B (dev0->dev1): PASSED (1000/520000000 samples)
+    -> elapsed=0.054733s  bandwidth=76.005282 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v2  N=520000000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 1 -> device 0
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.095376 s
+Total transferred: 8.320000 GB
+P2P Bandwidth:     87.233672 GB/s
+Verification d_C (dev0->dev1): PASSED (1000/520000000 samples)
+Verification d_D (dev1->dev0): PASSED (1000/520000000 samples)
+    -> elapsed=0.095376s  bandwidth=87.233672 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v4  N=520000000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+  [2] Intel(R) Data Center GPU Max 1550
+  [3] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 0 -> device 2
+Warning: peer access NOT supported, device 0 -> device 3
+Warning: peer access NOT supported, device 1 -> device 0
+Warning: peer access NOT supported, device 1 -> device 2
+Warning: peer access NOT supported, device 1 -> device 3
+Warning: peer access NOT supported, device 2 -> device 0
+Warning: peer access NOT supported, device 2 -> device 1
+Warning: peer access NOT supported, device 2 -> device 3
+Warning: peer access NOT supported, device 3 -> device 0
+Warning: peer access NOT supported, device 3 -> device 1
+Warning: peer access NOT supported, device 3 -> device 2
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.083938 s
+Total transferred: 12.480000 GB
+P2P Bandwidth:     148.680954 GB/s
+Verification d_B1 (dev1->dev0): PASSED (1000/520000000 samples)
+Verification d_C1 (dev2->dev0): PASSED (1000/520000000 samples)
+Verification d_D1 (dev3->dev0): PASSED (1000/520000000 samples)
+    -> elapsed=0.083938s  bandwidth=148.680954 GB/s  status=ok
+
+===========================
+N = 1240000000
+===========================
+
+>>> Running: framework=omp_off  version=v1  N=1240000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.312932 seconds
+Total transferred: 9.238720 GB
+P2P Bandwidth:     31.700176 GB/s
+Verification:      PASS
+    -> elapsed=0.312932s  bandwidth=31.700176 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v2  N=1240000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.313174 seconds
+Total transferred: 18.477440 GB
+P2P Bandwidth:     63.351362 GB/s
+Verification:      PASS
+    -> elapsed=0.313174s  bandwidth=63.351362 GB/s  status=ok
+
+>>> Running: framework=omp_off  version=v4  N=1240000000
+omp_get_num_devices()    = 4
+omp_get_initial_device() = 4
+Elapsed time:      0.937737 seconds
+Total transferred: 27.716160 GB
+P2P Bandwidth:     31.735969 GB/s
+Verification:      PASS
+    -> elapsed=0.937737s  bandwidth=31.735969 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v1  N=1240000000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 1 -> device 0
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.130360 s
+Total transferred: 9.920000 GB
+P2P Bandwidth:     76.096888 GB/s
+Verification d_B (dev0->dev1): PASSED (1000/1240000000 samples)
+    -> elapsed=0.130360s  bandwidth=76.096888 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v2  N=1240000000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 1 -> device 0
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.186643 s
+Total transferred: 19.840000 GB
+P2P Bandwidth:     106.299257 GB/s
+Verification d_C (dev0->dev1): PASSED (1000/1240000000 samples)
+Verification d_D (dev1->dev0): PASSED (1000/1240000000 samples)
+    -> elapsed=0.186643s  bandwidth=106.299257 GB/s  status=ok
+
+>>> Running: framework=sycl  version=v4  N=1240000000
+Devices:
+  [0] Intel(R) Data Center GPU Max 1550
+  [1] Intel(R) Data Center GPU Max 1550
+  [2] Intel(R) Data Center GPU Max 1550
+  [3] Intel(R) Data Center GPU Max 1550
+Warning: peer access NOT supported, device 0 -> device 1
+Warning: peer access NOT supported, device 0 -> device 2
+Warning: peer access NOT supported, device 0 -> device 3
+Warning: peer access NOT supported, device 1 -> device 0
+Warning: peer access NOT supported, device 1 -> device 2
+Warning: peer access NOT supported, device 1 -> device 3
+Warning: peer access NOT supported, device 2 -> device 0
+Warning: peer access NOT supported, device 2 -> device 1
+Warning: peer access NOT supported, device 2 -> device 3
+Warning: peer access NOT supported, device 3 -> device 0
+Warning: peer access NOT supported, device 3 -> device 1
+Warning: peer access NOT supported, device 3 -> device 2
+Peer access: INCOMPLETE — see warnings above
+Elapsed time:      0.159929 s
+Total transferred: 29.760000 GB
+P2P Bandwidth:     186.082531 GB/s
+Verification d_B1 (dev1->dev0): PASSED (1000/1240000000 samples)
+Verification d_C1 (dev2->dev0): PASSED (1000/1240000000 samples)
+Verification d_D1 (dev3->dev0): PASSED (1000/1240000000 samples)
+    -> elapsed=0.159929s  bandwidth=186.082531 GB/s  status=ok
+
+All done.
+  Timing CSV : results_COMPOSITE_515385_20260717_182327/timings.csv
+  Run log    : results_COMPOSITE_515385_20260717_182327/run.log
+  Environment: results_COMPOSITE_515385_20260717_182327/env.txt
+  Probe      : results_COMPOSITE_515385_20260717_182327/probe.txt
