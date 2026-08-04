@@ -1,18 +1,20 @@
-OpenMP Offloading Intra-node Bandwidth Benchmarks
+OpenMP Offloading Intra-node Artifact
 Copyright 2026 Ezhilmathi Krishnasamy
 
-Source code in this repository is licensed under the Apache License,
-Version 2.0. See the LICENSE file for the full text.
+Source code in this repository is licensed under the European Union Public
+Licence (EUPL), Version 1.2, or - as soon as they are approved by the European
+Commission - subsequent versions of the EUPL. See the LICENSE file for the full
+text.
 
-Measurement data (the results_*/ directories) and the generated figures
-(plots_final/) are licensed under the Creative Commons Attribution 4.0
-International licence (CC BY 4.0):
+SPDX-License-Identifier: EUPL-1.2
+
+Measurement data and generated figures are licensed under the Creative
+Commons Attribution 4.0 International licence (CC BY 4.0):
 https://creativecommons.org/licenses/by/4.0/
 
-THIRD-PARTY COMPONENTS
-
-The AMD MI250X OpenMP measurements were taken against an OpenMP offload
-runtime derived from AMD's LLVM fork (https://github.com/ROCm/llvm-project),
-which is licensed under the Apache License, Version 2.0 with LLVM exceptions.
-That runtime is not redistributed here; see
-AMD-MI250X/P2P-Measurements/README.md for details.
+This covers:
+  - all results_*/ directories (timings.csv, run.log, skipped.log)
+  - all run-*.out, build-*.out and verify-*.out Slurm logs
+  - the aggregated summary.csv and gains_*.csv files
+  - the generated figures under */plots/, HHT/plots-approach/ and
+    3D_Heat_Benchmark/*/Source-Results/model/
