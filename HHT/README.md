@@ -61,14 +61,6 @@ To confirm nothing else has drifted:
         --exclude='results_*' --exclude='run-*.out' --exclude='*.csv' \
         --exclude='*.so' --exclude='*.o'
 
-**Folder names are load-bearing.** `gain.py` takes the approach label from the
-trailing two digits (`Intel-1550-02` → `02`); a folder with no numeric suffix is
-silently treated as `01`. Renaming or adding a directory that matches
-`NVIDIA-H100-*`, `Intel-1550-*`, or `AMD-MI250X-*` will either add a series or
-collide with an existing one. `gain.py` prints a `[COLLISION]` warning if two
-folders claim the same (machine, approach); the `EXCLUDE` list at the top of the
-script suppresses known offenders.
-
 ## Regenerating the figures
 
 `gain.py` reads `<folder>/OpenMP/summary.csv` from each of the nine directories,
