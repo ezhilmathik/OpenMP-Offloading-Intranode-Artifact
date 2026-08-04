@@ -4,28 +4,34 @@ Bar-chart averaging script for SYCL vs OpenMP Offloading (Intel GPU, 3D-Heat).
 
 This is the Intel twin of the H100 plot_multi_gpu.py: same interleaved-bars
 layout, same colour palette, same hatched 1-GPU baselines, and the same
-inside-the-plot legend. Only the folder layout differs — Intel results live
-under a device-hierarchy mode folder (composite / tile):
+inside-the-plot legend.
 
-    plots/
-      SYCL/composite/   slurm_*_N*.out     (or run-1/ run-2/ ... inside)
-      SYCL/tile/        slurm_*_N*.out
-      OpenMP/composite/ slurm_omp_*_N*.out
-      OpenMP/tile/      slurm_omp_*_N*.out
+Values are read from the harness-produced `summary.csv` in each framework
+folder (columns: variant,gpus,N,samples,failed,min_sec,median_sec,max_sec,
+rel_spread_pct,steps). Searched per framework, first hit wins:
+
+    <sub>/<hierarchy>/summary.csv     e.g. OpenMP/composite/summary.csv
+    <sub>/summary_<hierarchy>.csv     e.g. OpenMP/summary_composite.csv
+    <sub>/summary.csv                 e.g. OpenMP/summary.csv
+
+If one framework's summary.csv is missing, its bar slots are still reserved so
+the remaining bars keep their positions; the missing bars just show as gaps.
 
 Pick the hierarchy with --mode (default: composite). Each program is split by
 the leading number in its name (2-* -> 2-GPU chart, 4-* -> 4-GPU chart). The
 1-GPU programs are carried into BOTH the 2-GPU and 4-GPU charts as a hatched
 baseline reference.
 
-Examples:
-    python3 plot_multi_gpu_intel.py                       # composite, both charts
-    python3 plot_multi_gpu_intel.py --mode tile           # tile hierarchy
-    python3 plot_multi_gpu_intel.py --ns 512 768 1024
-    python3 plot_multi_gpu_intel.py --gpus 4 --no-show
+The first positional argument is the output folder for the PDFs and the CSV
+(default: plots). It is created if it does not exist.
 
-The framework (SYCL vs OpenMP Offloading) is decided by which folder a file is
-in, so program names are auto-discovered.
+Examples:
+    python3 speedup.py                       # -> plots/
+    python3 speedup.py plots                 # same, explicit
+    python3 speedup.py .                     # write next to the script
+    python3 speedup.py --mode tile           # tile hierarchy
+    python3 speedup.py --ns 512 768 1024
+    python3 speedup.py --gpus 4 --no-show
 """
 
 import os
@@ -50,7 +56,8 @@ plt.rc('legend', fontsize=MEDIUM_SIZE)
 plt.rc('figure', titlesize=MEDIUM_SIZE)
 
 # ========================= USER CONFIG =========================
-PLOTS_DIR = "."
+PLOTS_DIR = "."               # where the framework folders live (input)
+OUT_DIR = "plots"             # where the PDFs / CSV are written (output)
 
 # (legend display name, subfolder on disk)
 FRAMEWORKS = [
@@ -61,40 +68,24 @@ FRAMEWORKS = [
 # Intel device-hierarchy mode: "composite" or "tile". Overridable with --mode.
 HIERARCHY = "composite"
 
-RUN_GLOB = "run-*"      # auto-detect run-1, run-2, ... if present
-SLURM_GLOB = "*.out"    # parse every .out file
+# summary.csv locations tried in order, first hit wins.
+SUMMARY_CANDIDATES = [
+    "{sub}/{hier}/summary.csv",
+    "{sub}/summary_{hier}.csv",
+    "{sub}/summary.csv",
+]
+STAT_COLUMN = "median_sec"    # or min_sec / max_sec
 
 DEFAULT_NS = [512, 640, 768, 896, 1024, 1280]
 DEFAULT_GPUS = [2, 4]
 
-# Filename test-mode tokens to keep (your files are *_allmode_*).
-# None means keep every mode. Overridable with --modes on the command line.
-INCLUDE_MODES = {"allmode"}
-INCLUDE_UNKNOWN_MODE = True   # keep files with no recognizable mode token
-
-# Title text. {steps} is filled in automatically from the .out files.
+# Title text. {steps} is filled in automatically from the summary's steps column.
 TITLE_SUFFIX_TEMPLATE = "({steps} time steps)."
 GROUP_WIDTH = 0.8             # total width of one N's group of bars
 
 PALETTE = ["b", "g", "r", "c", "m", "y", "k", "tab:pink",
            "tab:orange", "tab:brown", "tab:purple", "tab:olive"]
 # ===============================================================
-
-RUNNING_RE = re.compile(r"Running:\s*\./(?P<prog>\S+)\s+(?P<N>\d+)")
-TIME_RE    = re.compile(r"Time\s*=\s*(?P<t>[0-9]*\.?[0-9eE+-]+)\s*seconds")
-MODE_TOKENS = ("2mode", "4mode", "8mode", "allmode")
-
-# Auto-detect the number of time steps.
-STEPS_DONE_RE = re.compile(r"(\d+)\s+timesteps?\s+complete", re.IGNORECASE)
-STEPS_EST_RE  = re.compile(r"Estimated\s+timesteps:\s*~?\s*(\d+)")
-
-
-def normalize_prog(p: str) -> str:
-    p = os.path.basename(p)
-    for suf in (".exe", ".x", ".out"):
-        if p.endswith(suf):
-            p = p[:-len(suf)]
-    return p
 
 
 def gpu_count_of(prog: str):
@@ -106,97 +97,71 @@ def gpu_count_of(prog: str):
     return int(m.group(1)) if m else None
 
 
-def detect_mode(filename: str):
-    for m in MODE_TOKENS:
-        if m in filename:
-            return m
+def find_summary(subdir: str, hierarchy: str):
+    for pat in SUMMARY_CANDIDATES:
+        p = os.path.join(PLOTS_DIR, pat.format(sub=subdir, hier=hierarchy))
+        if os.path.isfile(p):
+            return p
     return None
 
 
-def mode_ok(mode) -> bool:
-    if mode is None:
-        return INCLUDE_UNKNOWN_MODE
-    if INCLUDE_MODES is None:
-        return True
-    return mode in INCLUDE_MODES
-
-
-def run_sort_key(path: str):
-    m = re.search(r"run-(\d+)", os.path.basename(path))
-    return int(m.group(1)) if m else 1_000_000
-
-
-def find_run_folders(mode_base: str):
-    """run-* folders under the hierarchy dir, or the hierarchy dir itself if the
-    .out files sit directly in it (the common Intel case)."""
-    dirs = [d for d in glob.glob(os.path.join(mode_base, RUN_GLOB)) if os.path.isdir(d)]
-    if dirs:
-        return sorted(dirs, key=run_sort_key)
-    return [mode_base]
-
-
-def parse_slurm_file(path: str):
-    with open(path, "r", errors="ignore") as f:
-        text = f.read()
-    runs = list(RUNNING_RE.finditer(text))
-    out = []
-    for i, m in enumerate(runs):
-        prog = normalize_prog(m.group("prog"))
-        N = int(m.group("N"))
-        start = m.start()
-        end = runs[i + 1].start() if i + 1 < len(runs) else len(text)
-        segment = text[start:end]
-        tm = TIME_RE.search(segment)
-        if not tm:
-            continue                       # e.g. a run that failed / was cancelled
-        # Prefer the actual completed-step count; fall back to the estimate.
-        sm = STEPS_DONE_RE.search(segment) or STEPS_EST_RE.search(segment)
-        steps = int(sm.group(1)) if sm else None
-        out.append((prog, N, float(tm.group("t")), steps))
-    return out
-
-
 def collect(target_ns, hierarchy):
-    """per_run[framework][N][prog][run_folder] = [times]"""
+    """per_run[framework][N][prog][sample_key] = [time], read from summary.csv."""
     per_run = defaultdict(
         lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
     )
     progs_seen = defaultdict(set)
     steps_by_n = defaultdict(set)           # N -> set of step counts seen
-    scanned = used = skipped_mode = 0
+    scanned = used = skipped = 0
     target_ns = set(target_ns)
 
     for fw_name, subdir in FRAMEWORKS:
-        base = os.path.join(PLOTS_DIR, subdir, hierarchy)
-        if not os.path.isdir(base):
-            print(f"[warn] missing framework dir: {base}")
+        path = find_summary(subdir, hierarchy)
+        if path is None:
+            print(f"[warn] no summary.csv for {fw_name} under {subdir}/ "
+                  f"- its bars will be left empty")
             continue
-        run_folders = find_run_folders(base)
-        for run_folder in run_folders:
-            rf_key = os.path.basename(os.path.normpath(run_folder))
-            for sf in glob.glob(os.path.join(run_folder, SLURM_GLOB)):
-                scanned += 1
-                if not mode_ok(detect_mode(os.path.basename(sf))):
-                    skipped_mode += 1
+        scanned += 1
+        print(f"[info] {fw_name:12s} <- {path}")
+        with open(path, newline="") as f:
+            reader = csv.DictReader(f)
+            if STAT_COLUMN not in (reader.fieldnames or []):
+                print(f"[warn] no '{STAT_COLUMN}' column in {path}; "
+                      f"columns are {reader.fieldnames}")
+                continue
+            for row in reader:
+                try:
+                    N = int(row["N"])
+                    t = float(row[STAT_COLUMN])
+                    samples = int(row.get("samples") or 1)
+                except (KeyError, TypeError, ValueError):
+                    skipped += 1
                     continue
-                for prog, N, t, steps in parse_slurm_file(sf):
-                    if N not in target_ns:
-                        continue
-                    per_run[fw_name][N][prog][rf_key].append(t)
-                    progs_seen[fw_name].add(prog)
-                    if steps is not None:
-                        steps_by_n[N].add(steps)
-                    used += 1
-    return per_run, progs_seen, steps_by_n, scanned, used, skipped_mode
+                prog = (row.get("variant") or "").strip()
+                if not prog or N not in target_ns or t <= 0 or samples <= 0:
+                    skipped += 1
+                    continue
+                # one pseudo-run per sample, so n_runs in the table stays truthful
+                for i in range(samples):
+                    per_run[fw_name][N][prog][f"s{i + 1}"].append(t)
+                progs_seen[fw_name].add(prog)
+                if (row.get("steps") or "").strip().isdigit():
+                    steps_by_n[N].add(int(row["steps"]))
+                used += 1
+    return per_run, progs_seen, steps_by_n, scanned, used, skipped
 
 
 def build_series_for_gpu(progs_seen, gpu_count):
     """Multi-GPU variants for `gpu_count`, preceded by the 1-GPU baselines
-    (SYCL and OpenMP) so every chart carries the single-GPU reference."""
+    (SYCL and OpenMP) so every chart carries the single-GPU reference.
+    A framework with no data still gets its slots, so bars stay aligned."""
     # 1-GPU baselines, one (or more) per framework
     baseline = []
     for fw_name, _ in FRAMEWORKS:
         ones = sorted(p for p in progs_seen[fw_name] if gpu_count_of(p) == 1)
+        if not ones:                       # keep the empty slot
+            baseline.append((f"{fw_name} 1-GPU Baseline", fw_name, None))
+            continue
         for i, p in enumerate(ones):
             tag = f" {i + 1}" if len(ones) > 1 else ""
             baseline.append((f"{fw_name} 1-GPU Baseline{tag}", fw_name, p))
@@ -209,9 +174,9 @@ def build_series_for_gpu(progs_seen, gpu_count):
     for v in range(max_v):
         for fw_name, _ in FRAMEWORKS:
             progs = fw_progs[fw_name]
-            if v < len(progs):
-                label = f"{fw_name} {gpu_count}-GPU Version {v + 1}"
-                series.append((label, fw_name, progs[v]))
+            label = f"{fw_name} {gpu_count}-GPU Version {v + 1}"
+            # prog=None -> no value -> gap in the chart, slot preserved
+            series.append((label, fw_name, progs[v] if v < len(progs) else None))
     return series
 
 
@@ -282,7 +247,7 @@ def plot_chart(series, avg, ns, gpu_count, out_pdf, title_suffix, hierarchy, sho
     # ------------------------------------------------------------
 
     ax.set_xlabel("Grid Size ($N^3$).", fontsize=MEDIUM_SIZE)
-    ax.set_ylabel("Time in Seconds.", fontsize=MEDIUM_SIZE)
+    ax.set_ylabel("Solver Time in Seconds.", fontsize=MEDIUM_SIZE)
     ax.set_title(f"Intel 1550 - {gpu_count} GPUs ({hierarchy}) {title_suffix}")
     ax.set_xticks(x + (n_series - 1) / 2.0 * barWidth)
     ax.set_xticklabels([f"${n}^3$" for n in ns])
@@ -300,7 +265,7 @@ def plot_chart(series, avg, ns, gpu_count, out_pdf, title_suffix, hierarchy, sho
     if show:
         plt.show()
     plt.close(fig)
-    
+
 
 def print_table(series, avg, counts, ns, gpu_count):
     print(f"\n===== {gpu_count}-GPU AVERAGES (with 1-GPU baseline) =====")
@@ -319,7 +284,7 @@ def print_table(series, avg, counts, ns, gpu_count):
             speedup = base_t / v4_t
             print(f"{'OpenMP Off. V4 speedup vs Baseline':38s}: {speedup:.2f}×")
         print()
-        
+
 
 def write_csv(rows, csv_path):
     with open(csv_path, "w", newline="") as f:
@@ -331,43 +296,48 @@ def write_csv(rows, csv_path):
 
 def parse_args():
     p = argparse.ArgumentParser(description="SYCL vs OpenMP Offloading bar charts (Intel GPU).")
+    p.add_argument("outdir", nargs="?", default=OUT_DIR,
+                   help=f"folder for the PDFs and CSV, created if missing "
+                        f"(default: {OUT_DIR})")
     p.add_argument("--ns", type=int, nargs="+", default=DEFAULT_NS,
                    help=f"grid sizes to plot (default: {DEFAULT_NS})")
     p.add_argument("--gpus", type=int, nargs="+", default=DEFAULT_GPUS,
                    help=f"which GPU-count charts to draw (default: {DEFAULT_GPUS})")
     p.add_argument("--mode", choices=["composite", "tile"], default=HIERARCHY,
                    help=f"Intel device-hierarchy folder to read (default: {HIERARCHY})")
-    p.add_argument("--modes", nargs="+", default=None,
-                   help="filename test-mode tokens to include, or 'all' (default: allmode)")
+    p.add_argument("--stat", choices=["min_sec", "median_sec", "max_sec"],
+                   default=STAT_COLUMN,
+                   help=f"summary.csv column to plot (default: {STAT_COLUMN})")
     p.add_argument("--no-show", action="store_true",
                    help="save the PDFs without opening plot windows")
     return p.parse_args()
 
 
 def main():
-    global INCLUDE_MODES
+    global STAT_COLUMN
     args = parse_args()
-    if args.modes is not None:
-        INCLUDE_MODES = None if args.modes == ["all"] else set(args.modes)
+    STAT_COLUMN = args.stat
 
     ns = sorted(args.ns)
     hierarchy = args.mode
-    per_run, progs_seen, steps_by_n, scanned, used, skipped_mode = collect(ns, hierarchy)
+    outdir = args.outdir
+    os.makedirs(outdir, exist_ok=True)
+    per_run, progs_seen, steps_by_n, scanned, used, skipped = collect(ns, hierarchy)
 
     suffix = steps_suffix(steps_by_n, ns)
 
-    print("===== DISCOVERY =====")
+    print("\n===== DISCOVERY =====")
     print(f"Hierarchy mode     : {hierarchy}")
     print(f"N sizes requested  : {ns}")
     print(f"Detected timesteps : {suffix}")
-    print(f"Included modes     : {sorted(INCLUDE_MODES) if INCLUDE_MODES else 'ALL'}"
-          f"  (unknown-mode kept: {INCLUDE_UNKNOWN_MODE})")
+    print(f"Statistic plotted  : {STAT_COLUMN}")
+    print(f"Output folder      : {outdir}")
     for fw_name, _ in FRAMEWORKS:
         progs = sorted(progs_seen[fw_name])
         tagged = [f"{p}(gpu={gpu_count_of(p)})" for p in progs]
         print(f"{fw_name:18s} programs: {tagged}")
-    print(f"Scanned .out files : {scanned} (skipped by mode: {skipped_mode})")
-    print(f"Used (prog,N,time) : {used}")
+    print(f"Summary files read : {scanned}")
+    print(f"Rows used          : {used} (skipped: {skipped})")
 
     csv_rows = []
     for gpu in args.gpus:
@@ -375,7 +345,8 @@ def main():
         avg, counts = compute_averages(per_run, series, ns)
         print_table(series, avg, counts, ns, gpu)
         plot_chart(series, avg, ns, gpu,
-                   out_pdf=f"Diffusion_intel_{hierarchy}_{gpu}gpu.pdf",
+                   out_pdf=os.path.join(outdir,
+                                        f"Diffusion_intel_{hierarchy}_{gpu}gpu.pdf"),
                    title_suffix=suffix, hierarchy=hierarchy, show=not args.no_show)
         for N in ns:
             for label, fw, prog in series:
@@ -384,7 +355,8 @@ def main():
                     csv_rows.append([gpu_count_of(prog), N, label,
                                      f"{avg[N][label]:.6f}", counts[N][label]])
 
-    write_csv(csv_rows, f"measurement_avg_intel_{hierarchy}.csv")
+    write_csv(csv_rows, os.path.join(outdir,
+                                     f"measurement_avg_intel_{hierarchy}.csv"))
 
 
 if __name__ == "__main__":
