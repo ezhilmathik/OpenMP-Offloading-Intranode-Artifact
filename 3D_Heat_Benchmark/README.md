@@ -65,14 +65,14 @@ the scripts that build it.
 | Binary | GPUs | Halo exchange strategy |
 |---|---|---|
 | `1-omp` | 1 | none — single-device baseline, the speedup denominator |
-| `2-omp` | 2 | blocking exchange: `target update` on the default stream |
-| `2-omp-stream` | 2 | one host thread, `target ... nowait`, hidden-helper tasks |
-| `2-omp-stream-omp` | 2 | one host thread **per device**, explicit `nowait` + `taskwait` |
-| `2-omp-stream-omp-p2p` | 2 | as above, with **direct GPU→GPU** copies |
-| `4-omp` | 4 | blocking |
-| `4-omp-stream` | 4 | one host thread, `nowait` |
-| `4-omp-stream-omp` | 4 | one host thread per device |
-| `4-omp-stream-omp-p2p` | 4 | one host thread per device, direct P2P |
+| `2-omp` | 2 | synchronous, host-staged |
+| `2-omp-stream` | 2 | asynchronous, host-staged |
+| `2-omp-stream-omp` | 2 | one host thread per device, asynchronous, host-staged |
+| `2-omp-stream-omp-p2p` | 2 | one host thread per device, asynchronous, direct P2P |
+| `4-omp` | 4 | synchronous, host-staged |
+| `4-omp-stream` | 4 | asynchronous, host-staged |
+| `4-omp-stream-omp` | 4 | one host thread per device, asynchronous, host-staged |
+| `4-omp-stream-omp-p2p` | 4 | one host thread per device, asynchronous, direct P2P |
 
 The progression is deliberate: each step removes one serialisation point.
 `-omp-stream-omp-p2p` is the only variant that needs anything outside a stock
