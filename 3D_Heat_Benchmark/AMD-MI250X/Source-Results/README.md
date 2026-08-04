@@ -62,19 +62,6 @@ ROCR_VISIBLE_DEVICES=0,2,4,6  # 4 GCDs, 4 modules
 
 Jobs request `--gpus-per-node=8 --exclusive` (a whole node) and then mask down.
 
-## Variants
-
-| Binary | Halo exchange | Host threads | Extra runtime |
-|---|---|---|---|
-| `1-omp` | — (baseline) | 1 | `HSA_ENABLE_SDMA=1` |
-| `N-omp` | blocking | 1 | `HSA_ENABLE_SDMA=1` |
-| `N-omp-stream` | `target nowait` | 1 | `HSA_ENABLE_SDMA=1` |
-| `N-omp-stream-omp` | one thread per GCD | `N` | `HSA_ENABLE_SDMA=1` |
-| `N-omp-stream-omp-p2p` | direct GCD-to-GCD | `N` | `+HSA_ENABLE_PEER_SDMA=1`, `LD_PRELOAD` |
-
-`N` is 2 or 4. Every variant gets `LIBOMP_NUM_HIDDEN_HELPER_THREADS=$HELPERS`
-(default 8, libomp's own default).
-
 ## P2P runtime (required by the `-p2p` variants only)
 
 The `-p2p` binaries run on a **patched OpenMP offload runtime** that performs
@@ -93,25 +80,6 @@ P2P_SHIM            default ./libp2p_copy_shim.so
 `run.sh` and `verify.sh` re-check per variant and record
 `missing_p2p_runtime` rather than aborting the sweep. Point `OMPTARGET_P2P_LIB`
 at your own build if you are not on this project's scratch.
-
-## Prerequisite: relax the hidden-helper guard
-
-The `*-stream-omp` and `*-stream-omp-p2p` sources read
-`OMP_NUM_HIDDEN_HELPER_THREADS` and `exit(EXIT_FAILURE)` unless it is `0`.
-The current scripts never set it, so those four variants abort immediately and
-land in the CSV as `runtime_error`. Relax the guards first:
-
-```bash
-python3 relax_hidden_helper_guard.py --dry-run *.c   # inspect
-python3 relax_hidden_helper_guard.py *.c             # apply
-```
-
-A `WARNING: running without OMP_NUM_HIDDEN_HELPER_THREADS=0` line is then
-expected and harmless. The guard documents a real fault: concurrent
-`omp_target_memcpy_async` from several host threads corrupting task-team state
-and faulting inside `__kmpc_barrier` on libomp 18.1.8 — close to the runtime in
-use here, and closer still for the `-p2p` variant. **Prove one job survives
-before committing to a full sweep.**
 
 ## Reproducing
 
@@ -136,31 +104,11 @@ sbatch --export=ALL,N=1280,DT=...,STEPS=500,HELPERS=8 run.sh
 `verify.sh` derives `dt` the same way — keep the two in sync or you verify a
 different stability regime than you benchmark.
 
-## Hidden-helper threads (`HELPERS`, default 8)
-
-Earlier revisions set `LIBOMP_NUM_HIDDEN_HELPER_THREADS=${gpus}` (2 or 4),
-*below* libomp's default of 8: a helper blocked on a transfer cannot submit the
-next task, so one helper per device starves the runtime. Measured on Max 1550,
-raising it to 8 cut the 4-GPU `N=1280` `-omp-stream` time from 23.9 s to 18.0 s;
-re-check on MI250X. Two related changes:
-
-- A global `OMP_NUM_HIDDEN_HELPER_THREADS=0` was in the environment while
-  `LIBOMP_NUM_HIDDEN_HELPER_THREADS` asked for helpers. Contradictory; removed.
-- `OMP_THREAD_LIMIT=${gpus}` on the `*-stream-omp*` variants: thread-limit-var
-  is inherited by the initial task **on the device**, so it capped each team
-  inside the target regions at 2–4 threads (~3x cost on Intel). Removed.
-
-Neither variable is set anywhere now; both are stripped with `env -u`.
-
-Each `HELPERS` value lands in its own `results_h<helpers>_*/` directory, so
-sweeps do not mix.
-
 ## Correctness
 
 ```bash
 sbatch verify.sh                                  # N=256, 100 steps
-sbatch --export=ALL,N=128,STEPS=50 verify.sh
-sbatch --export=ALL,TOL=1e-9,RTOL=1e-9 verify.sh  # tighten
+sbatch --export=ALL,N=128,STEPS=50 verify.s
 ```
 
 Pass criterion is `|ref - gpu| <= TOL + RTOL*|ref|` with `TOL=1e-6`,
