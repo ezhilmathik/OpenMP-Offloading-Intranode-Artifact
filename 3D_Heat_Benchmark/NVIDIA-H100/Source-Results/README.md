@@ -39,18 +39,6 @@ Compiler is **clang 18.1.8**, not NVHPC. All binaries use the same flags:
 
 Update `--account`, `--partition` and `--qos` in the `#SBATCH` headers for your site.
 
-## Variants
-
-| Binary | Halo exchange |
-|---|---|
-| `1-omp` | single-GPU baseline (speedup denominator) |
-| `N-omp` | blocking |
-| `N-omp-stream` | `target nowait`, one host thread |
-| `N-omp-stream-omp` | one host thread per device |
-| `N-omp-stream-omp-p2p` | as above, direct device-to-device |
-
-`N` is 2 or 4. No patched runtime and no `LD_PRELOAD` on this platform.
-
 ## Reproducing
 
 ```bash
