@@ -17,9 +17,9 @@ a reader can re-run the pipeline or inspect the recorded data directly.
 
 | Directory | Hardware | Site | Native model | Setup & commands |
 |---|---|---|---|---|
-| `AMD-MI250X/` | MI250X (gfx90a), 1 GCD per module | LUMI-G | HIP | [README](AMD-MI250X/README.md) |
-| `NVIDIA-H100/` | H100 (sm_90) | MareNostrum 5 | CUDA | [README](NVIDIA-H100/README.md) |
-| `Intel-1550/` | Data Center GPU Max 1550 (PVC) | LRZ | SYCL | [README](Intel-1550/README.md) |
+| `AMD-MI250X/` | MI250X (gfx90a), 1 GCD per module | LUMI-G | HIP | [README](AMD-MI250X/Source-Results/README.md) |
+| `NVIDIA-H100/` | H100 (sm_90) | MareNostrum 5 | CUDA | [README](NVIDIA-H100/Source-Results/README.md) |
+| `Intel-1550/` | Data Center GPU Max 1550 (PVC) | LRZ | SYCL | [README](Intel-1550/Source-Results/README.md) |
 
 **Everything machine-specific — modules, compiler flags, device masking,
 per-variant runtime environment, the P2P runtime, correctness tolerances — is
