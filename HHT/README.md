@@ -47,11 +47,19 @@ HHT/
 ```
 
 Each `<MACHINE>-<NN>/OpenMP/` is a complete, self-contained copy of the run
-pipeline — `Makefile`, `build.sh`, `submit.sh`, `run.sh`, `verify.sh`,
-`aggregate.sh`, `plot.sh`, its own `results_*/` directories and its own
-`summary.csv`. Build and run instructions are identical to the corresponding
-machine in `../3D_Heat_Benchmark/`; see that machine's README for modules,
-device masking, and the AMD P2P runtime.
+pipeline, and `Makefile`, `build.sh`, `submit.sh`, `aggregate.sh`, `plot.sh`,
+and `clean.sh` are identical to the corresponding machine in
+`../3D_Heat_Benchmark/`. **Only `run.sh` and `verify.sh` differ** — they carry
+the per-variant hidden-helper-thread policy, which is the whole point of this
+study. Build instructions, modules, device masking, and the AMD P2P runtime are
+unchanged; see that machine's README.
+
+To confirm nothing else has drifted:
+
+    diff -qr AMD-MI250X-01/OpenMP \
+             ../3D_Heat_Benchmark/AMD-MI250X/Source-Results/OpenMP \
+        --exclude='results_*' --exclude='run-*.out' --exclude='*.csv' \
+        --exclude='*.so' --exclude='*.o'
 
 **Folder names are load-bearing.** `gain.py` takes the approach label from the
 trailing two digits (`Intel-1550-02` → `02`); a folder with no numeric suffix is
