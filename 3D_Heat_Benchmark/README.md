@@ -43,10 +43,14 @@ The **unmodified, machine-independent sources** live one level up:
 ../OpenMP_Single_Source/
 ├── heat3D_variable_coeff.c     # serial CPU reference (correctness only)
 ├── 1-openmp.c                  # single-GPU baseline
-├── 2-openmp.c                  2-openmp-stream.c
-├── 2-openmp-stream-omp.c       2-openmp-stream-omp-p2p.c
-├── 4-openmp.c                  4-openmp-stream.c
-└── 4-openmp-stream-omp.c       4-openmp-stream-omp-p2p.c
+├── 2-openmp.c                  2-openmp.c
+├── 2-openmp-stream.c           2-openmp-stream.c
+├── 2-openmp-stream-omp.c       2-openmp-stream-omp.c
+├── 2-openmp-stream-omp-p2p.c   2-openmp-stream-omp-p2p.c
+├── 4-openmp.c                  4-openmp.c
+|── 4-openmp-stream.c           4-openmp-stream.c
+├── 4-openmp-stream-omp.c       4-openmp-stream-omp.c
+└── 4-openmp-stream-omp-p2p.c   4-openmp-stream-omp-p2p.c
 ```
 
 These nine files are the *single source* compiled on **all three vendors**
