@@ -115,7 +115,7 @@ red.
 
 **The two report figures:**
 
-- `allN_gain_OpenMP.pdf` — every N as a panel on one MDPI page. Bars are speedup
+- `allN_gain_OpenMP.pdf` — every N as a panel on one pdf page. Bars are speedup
   over each machine's *own* single-GPU run, so a fast and a slow machine share
   an axis. Colour = machine, hatch = configuration. Dashed line at 1.0 (extra
   GPUs bought nothing); dotted lines at perfect scaling, drawn only across the
