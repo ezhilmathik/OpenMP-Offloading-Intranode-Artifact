@@ -1,7 +1,5 @@
 # OpenMP Offloading Intra-node Bandwidth Benchmarks
 
-Artifact accompanying the paper *[PAPER TITLE]*.
-
 This repository measures **intra-node data movement bandwidth** on three GPU
 architectures, comparing **OpenMP target offload** against each vendor's native
 programming model.
@@ -9,27 +7,6 @@ programming model.
 Five transfer scenarios are measured on each: synchronous and asynchronous
 host-to-device, synchronous and asynchronous device-to-host, and peer-to-peer
 between devices — 15 benchmark directories in total.
-
----
-
-## Contact
-
-*[Complete before submission.]*
-
-| | |
-|---|---|
-| Maintainer | *[NAME]* |
-| Email | *[EMAIL]* |
-| Affiliation | *[INSTITUTION]* |
-| ORCID | *[ORCID]* |
-| Repository | *[https://github.com/ORG/REPO]* |
-| Paper version | tag *[vX.Y]*, commit *[SHA]* |
-| Archive | https://doi.org/10.5281/zenodo.XXXXXXX |
-
-Please open an issue on the repository for problems with the artifact, or mail
-the maintainer if the repository is unavailable.
-
----
 
 ## Toolchains
 
