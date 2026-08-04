@@ -52,20 +52,6 @@ ONEAPI_DEVICE_SELECTOR unset   # ZE_AFFINITY_MASK owns device selection
 Both `COMPOSITE` and an unset `LIBOMPTARGET_DEVICES` are required; either alone
 is not enough. `run.sh` is locked to `COMPOSITE`.
 
-## Variants
-
-| Binary | Halo exchange |
-|---|---|
-| `1-omp` | single-card baseline (speedup denominator) |
-| `N-omp` | blocking |
-| `N-omp-stream` | `target nowait`, one host thread |
-| `N-omp-stream-omp` | one host thread per card |
-| `N-omp-stream-omp-p2p` | as above, direct device-to-device |
-
-`N` is 2 or 4. The `-p2p` binaries run on the stock runtime; if cross-device P2P
-is not wired up, the runtime silently stages through the host, which shows up as
-roughly halved effective bandwidth rather than an error.
-
 ## Reproducing
 
 ```bash
@@ -87,22 +73,6 @@ sbatch --export=ALL,N=1280,DT=...,STEPS=500,HELPERS=8 run.sh
 ```
 
 `dt = h²/(12·κ_max)` with `h = 1/(N-1)`, `κ_max = 0.95`; `DT = STEPS·dt`.
-
-## Hidden-helper threads (`HELPERS`, default 8)
-
-`N-omp` and `N-omp-stream` are driven by one application thread plus LLVM runtime
-helper threads. The helper count is **not** tied to the device count: earlier runs
-used `LIBOMP_NUM_HIDDEN_HELPER_THREADS=${gpus}` (2 or 4), which is *below*
-libomp's own default of 8 and throttled the runtime. On Max 1550, going back to 8
-cut 4-GPU `N=1280` from 23.9 s to 18.0 s (`-omp-stream`) and 29.5 s to 19.7 s
-(`-omp`); the `*-stream-omp` variants, which disable helpers, barely moved.
-
-`HELPERS=8` should reproduce the stock-default timings. Sweep it with
-`HELPERS=16`, `HELPERS=32`; each value lands in its own `results_COMPOSITE_h*/`
-directory.
-
-`OMP_THREAD_LIMIT` is deliberately **not** set for `*-stream-omp*`: it also caps
-threads per team inside the target regions, costing roughly 3x.
 
 ## Correctness
 
