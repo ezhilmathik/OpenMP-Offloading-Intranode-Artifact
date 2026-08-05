@@ -1,0 +1,1154 @@
+//-*-c++-*-
+/* CUDA implementation of the 3D heat conduction problem
+         du/dt = div ( kappa(x,y,z) grad u ) + f(x,y,z)
+   where kappa(x,y,z) = 0.5+0.45*sin(pi*x)*sin(pi*y)*sin(pi*z),
+   using explicit time stepping.
+
+   FOUR-GPU VERSION, P2P + 4 HOST THREADS. Halo exchange goes DIRECTLY
+   device-to-device via cudaMemcpyPeerAsync; the host is never touched.
+   ONE HOST THREAD PER DEVICE.
+
+   Layout: u[k][j][i]  ->  k is slowest, i is fastest
+     offset = k*(ny*nx) + j*nx + i
+   Decomposition along the k axis, so an XY plane at fixed k is CONTIGUOUS.
+   cudaMemcpyPeerAsync addresses it directly by pointer offset:
+     plane k  ->  base_ptr + k*(ny*nx)
+   so there are no pack/unpack kernels AND no host staging buffers.
+   Neighbour offsets:
+     i+-1  ->  +-1
+     j+-1  ->  +-nx
+     k+-1  ->  +-ny*nx
+
+   This file is kept deliberately parallel to 4-openmp-stream-omp-p2p.c.
+   Against 4-cuda-stream-omp.cu the ONLY difference is the transfer path:
+   six cudaMemcpyPeerAsync calls replace the six D2H/H2D pairs and the six
+   host halo buffers disappear.
+
+   KERNEL SPLIT
+   ------------
+   The split is by INTERFACE, not by position:
+
+     heat_update_boundary_bottom   k = 1        only where k=1 is SENT
+     heat_update_boundary_top      k = nz-2     only where k=nz-2 is SENT
+     heat_update_interior          k_start..k_end   everything else
+
+   With four devices there are THREE interfaces. The two END devices send one
+   plane each and run one boundary kernel; the two MIDDLE devices send both
+   planes and run BOTH:
+
+     GPU0 no lower neighbour -> k=1 folded into interior (k_start=1);
+          runs TOP only.
+     GPU1 both neighbours    -> runs BOTTOM and TOP.
+     GPU2 both neighbours    -> runs BOTTOM and TOP.
+     GPU3 no upper neighbour -> k=nz3-2 folded into interior (k_end=nz3-2);
+          runs BOTTOM only.
+
+     GPU0   interior 1 .. nz0-3   + top             = 1 .. nz0-2
+     GPU1   interior 2 .. nz1-3   + bottom + top    = 1 .. nz1-2
+     GPU2   interior 2 .. nz2-3   + bottom + top    = 1 .. nz2-2
+     GPU3   interior 2 .. nz3-2   + bottom          = 1 .. nz3-2
+
+   PULL PATTERN, AND WHY IT DOES NOT RACE
+   --------------------------------------
+   Every device PULLS into its own ghost planes, so each device writes only
+   its OWN memory:
+
+     GPU0 ghost k=nz0-1  <-  GPU1 plane k=1
+     GPU1 ghost k=0      <-  GPU0 plane k=nz0-2
+     GPU1 ghost k=nz1-1  <-  GPU2 plane k=1
+     GPU2 ghost k=0      <-  GPU1 plane k=nz1-2
+     GPU2 ghost k=nz2-1  <-  GPU3 plane k=1
+     GPU3 ghost k=0      <-  GPU2 plane k=nz2-2
+
+   Three independent reasons the concurrent copies are safe:
+
+     1. On any device the plane being READ by a neighbour (1 or nz-2) is
+        never the plane being WRITTEN locally (0 or nz-1). With nz >= 4 those
+        four indices are distinct.
+     2. The barrier after PHASE 1 guarantees every sent plane is final before
+        any pull is issued.
+     3. The interior kernel runs concurrently on compute_stream but READS
+        u_old and WRITES u_new only in k_start..k_end -- it neither reads nor
+        writes any plane the peer copies touch.
+
+   STREAM ASSIGNMENT
+   -----------------
+     compute_stream[d]        interior kernel
+     halo_stream_bottom[d]    bottom boundary kernel, then the pull into
+                              ghost k=0            (the LOWER interface)
+     halo_stream_top[d]       top boundary kernel, then the pull into
+                              ghost k=nz-1         (the UPPER interface)
+
+   NO HOST HALO BUFFERS
+   --------------------
+   The other files in this set stage through plain malloc'd host memory
+   (never pinned -- see 2-cuda-stream.cu's header). This file has no host
+   staging at all, which is the entire point of the variant.
+
+   BUILD NOTE:
+     nvcc -O3 -arch=sm_90 --fmad=false -Xcompiler -fopenmp 4-cuda-stream-omp-p2p.cu -lm -o 4-cuda-stream-omp-p2p
+   --fmad=false is the nvcc equivalent of clang's -ffp-contract=off. Here
+   -fopenmp is needed for the host threading as well as omp_get_wtime().
+*/
+
+#include <sycl/sycl.hpp>
+#include <dpct/dpct.hpp>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>   /* strcasecmp */
+#include <math.h>
+#include <omp.h>
+#include "p2p_shim.hpp"
+
+#define IDX(k, j, i, ny, nx)  ((size_t)(k)*(size_t)(ny)*(size_t)(nx) \
+                             + (size_t)(j)*(size_t)(nx) + (size_t)(i))
+
+/*
+DPCT1009:280: SYCL uses exceptions to report errors and does not use the error
+codes. The call was replaced by a placeholder string. You need to rewrite this
+code.
+*/
+#define CUDA_CHECK(call)                                                       \
+  do {                                                                         \
+    dpct::err0 err = (call);                                                   \
+                                                                               \
+  } while (0)
+
+static int should_write_txt(void)
+{
+  const char *e = getenv("WRITE_TXT");
+  if (!e) return 1;
+  if (!strcmp(e, "0")) return 0;
+  if (!strcasecmp(e, "false")) return 0;
+  if (!strcasecmp(e, "no")) return 0;
+  return 1;
+}
+
+static void write_u_values(const char *fname, const double *u, int n)
+{
+  FILE *f = fopen(fname, "w");
+  if (!f) { perror("fopen"); return; }
+  for (int k=0; k<n; k++)
+    for (int j=0; j<n; j++)
+      for (int i=0; i<n; i++)
+        fprintf(f, "%.17g\n", u[IDX(k, j, i, n, n)]);
+  fclose(f);
+  printf("Solution written to %s\n", fname);
+}
+
+// -- Partition initialisation  (layout: u[k][j][i]) --------------------------
+// Identical to 4-openmp-stream-omp-p2p.c. Boundaries forced to exact zero.
+static void init_partition(double *u, double *rhs, double *kappa,
+                           int nz_local, int gk_start, int ng,
+                           int n, int ny, int nx, double h, double dt)
+{
+  for (int k=0; k<nz_local; k++) {
+    int gk = (k - ng) + gk_start;
+    for (int j=0; j<ny; j++)
+      for (int i=0; i<nx; i++) {
+        size_t idx = IDX(k, j, i, ny, nx);
+        u[idx]     = (gk<=0||gk>=n-1||j<=0||j>=n-1||i<=0||i>=n-1)
+                     ? 0.0 : sin(M_PI*i*h)*sin(M_PI*j*h)*sin(M_PI*gk*h);
+        rhs[idx]   = dt*(1.0+cos(M_PI*i*h)*cos(M_PI*j*h)*cos(M_PI*gk*h));
+        kappa[idx] = 0.5+0.45*sin(M_PI*i*h)*sin(M_PI*j*h)*sin(M_PI*gk*h);
+      }
+  }
+}
+
+// -- Global reconstruction: copy one partition's owned planes into the global
+// array. Each device contributes global k in [gk_lo, gk_hi); the interface
+// ghosts are excluded because the owner writes them, and the two
+// physical-boundary ghosts are included and hold exact zero.
+static void gather_partition(double *u_global, const double *u_local,
+                             int nz_local, int gk_start, int ng,
+                             int gk_lo, int gk_hi, int n, int ny, int nx)
+{
+  for (int k=0; k<nz_local; k++) {
+    int gk = (k - ng) + gk_start;
+    if (gk >= gk_lo && gk < gk_hi) {
+      for (int j=0; j<n; j++)
+        for (int i=0; i<n; i++)
+          u_global[IDX(gk, j, i, n, n)] = u_local[IDX(k, j, i, ny, nx)];
+    }
+  }
+}
+
+// -- BOTTOM boundary kernel  (layout: u[k][j][i]) ----------------------------
+// Computes k=1, the plane pulled by the LOWER neighbour. Used by GPU 1, 2, 3.
+// `nz` is unused here (k is fixed at 1); the parameter is kept so that all
+// three kernels share one signature shape.
+SYCL_EXTERNAL
+void heat_update_boundary_bottom(double * __restrict__ u_new,
+                                 const double * __restrict__ u_old,
+                                 const double * __restrict__ rhs,
+                                 const double * __restrict__ kappa,
+                                 int nz, int ny, int nx, double factor,
+                                 const sycl::nd_item<3> &item_ct1)
+{
+  int i = item_ct1.get_group(2) * item_ct1.get_local_range(2) +
+          item_ct1.get_local_id(2) + 1;
+  int j = item_ct1.get_group(1) * item_ct1.get_local_range(1) +
+          item_ct1.get_local_id(1) + 1;
+
+  if (i < nx-1 && j < ny-1) {
+    int k = 1;
+
+    size_t idx = IDX(k,   j,   i,   ny, nx);
+    size_t ip1 = IDX(k,   j,   i+1, ny, nx);
+    size_t im1 = IDX(k,   j,   i-1, ny, nx);
+    size_t jp1 = IDX(k,   j+1, i,   ny, nx);
+    size_t jm1 = IDX(k,   j-1, i,   ny, nx);
+    size_t kp1 = IDX(k+1, j,   i,   ny, nx);
+    size_t km1 = IDX(k-1, j,   i,   ny, nx);
+
+    u_new[idx] = u_old[idx] + rhs[idx]
+      + factor * (
+          (kappa[ip1] + kappa[idx]) * (u_old[ip1] - u_old[idx])
+        - (kappa[idx] + kappa[im1]) * (u_old[idx] - u_old[im1])
+        + (kappa[jp1] + kappa[idx]) * (u_old[jp1] - u_old[idx])
+        - (kappa[idx] + kappa[jm1]) * (u_old[idx] - u_old[jm1])
+        + (kappa[kp1] + kappa[idx]) * (u_old[kp1] - u_old[idx])
+        - (kappa[idx] + kappa[km1]) * (u_old[idx] - u_old[km1])
+        );
+  }
+}
+
+// -- TOP boundary kernel  (layout: u[k][j][i]) -------------------------------
+// Computes k=nz-2, the plane pulled by the UPPER neighbour. Used by GPU 0,1,2.
+SYCL_EXTERNAL
+void heat_update_boundary_top(double * __restrict__ u_new,
+                              const double * __restrict__ u_old,
+                              const double * __restrict__ rhs,
+                              const double * __restrict__ kappa,
+                              int nz, int ny, int nx, double factor,
+                              const sycl::nd_item<3> &item_ct1)
+{
+  int i = item_ct1.get_group(2) * item_ct1.get_local_range(2) +
+          item_ct1.get_local_id(2) + 1;
+  int j = item_ct1.get_group(1) * item_ct1.get_local_range(1) +
+          item_ct1.get_local_id(1) + 1;
+
+  if (i < nx-1 && j < ny-1) {
+    int k = nz - 2;
+
+    size_t idx = IDX(k,   j,   i,   ny, nx);
+    size_t ip1 = IDX(k,   j,   i+1, ny, nx);
+    size_t im1 = IDX(k,   j,   i-1, ny, nx);
+    size_t jp1 = IDX(k,   j+1, i,   ny, nx);
+    size_t jm1 = IDX(k,   j-1, i,   ny, nx);
+    size_t kp1 = IDX(k+1, j,   i,   ny, nx);
+    size_t km1 = IDX(k-1, j,   i,   ny, nx);
+
+    u_new[idx] = u_old[idx] + rhs[idx]
+      + factor * (
+          (kappa[ip1] + kappa[idx]) * (u_old[ip1] - u_old[idx])
+        - (kappa[idx] + kappa[im1]) * (u_old[idx] - u_old[im1])
+        + (kappa[jp1] + kappa[idx]) * (u_old[jp1] - u_old[idx])
+        - (kappa[idx] + kappa[jm1]) * (u_old[idx] - u_old[jm1])
+        + (kappa[kp1] + kappa[idx]) * (u_old[kp1] - u_old[idx])
+        - (kappa[idx] + kappa[km1]) * (u_old[idx] - u_old[km1])
+        );
+  }
+}
+
+// -- INTERIOR kernel  (layout: u[k][j][i]) -----------------------------------
+// Computes k = k_start .. k_end. The explicit bounds let each end device fold
+// in the plane it never sends:
+//   GPU0  k_start=1, k_end=nz0-3   GPU1  k_start=2, k_end=nz1-3
+//   GPU2  k_start=2, k_end=nz2-3   GPU3  k_start=2, k_end=nz3-2
+// `nz` is unused here (the range is given explicitly); the parameter is kept
+// so that all three kernels share one signature shape.
+//
+// Block shape (32,4,2): 32 threads along i is a full warp on contiguous
+// addresses, and 256 threads/block keeps register pressure below what an
+// (8,8,8)=512 block costs.
+SYCL_EXTERNAL
+void heat_update_interior(double * __restrict__ u_new,
+                          const double * __restrict__ u_old,
+                          const double * __restrict__ rhs,
+                          const double * __restrict__ kappa,
+                          int nz, int ny, int nx, double factor,
+                          int k_start, int k_end,
+                          const sycl::nd_item<3> &item_ct1)
+{
+  int i = item_ct1.get_group(2) * item_ct1.get_local_range(2) +
+          item_ct1.get_local_id(2) + 1;
+  int j = item_ct1.get_group(1) * item_ct1.get_local_range(1) +
+          item_ct1.get_local_id(1) + 1;
+  int k = item_ct1.get_group(0) * item_ct1.get_local_range(0) +
+          item_ct1.get_local_id(0) + k_start;
+
+  if (i < nx-1 && j < ny-1 && k <= k_end) {
+    size_t idx = IDX(k,   j,   i,   ny, nx);
+    size_t ip1 = IDX(k,   j,   i+1, ny, nx);
+    size_t im1 = IDX(k,   j,   i-1, ny, nx);
+    size_t jp1 = IDX(k,   j+1, i,   ny, nx);
+    size_t jm1 = IDX(k,   j-1, i,   ny, nx);
+    size_t kp1 = IDX(k+1, j,   i,   ny, nx);
+    size_t km1 = IDX(k-1, j,   i,   ny, nx);
+
+    u_new[idx] = u_old[idx] + rhs[idx]
+      + factor * (
+          (kappa[ip1] + kappa[idx]) * (u_old[ip1] - u_old[idx])
+        - (kappa[idx] + kappa[im1]) * (u_old[idx] - u_old[im1])
+        + (kappa[jp1] + kappa[idx]) * (u_old[jp1] - u_old[idx])
+        - (kappa[idx] + kappa[jm1]) * (u_old[idx] - u_old[jm1])
+        + (kappa[kp1] + kappa[idx]) * (u_old[kp1] - u_old[idx])
+        - (kappa[idx] + kappa[km1]) * (u_old[idx] - u_old[km1])
+        );
+  }
+}
+
+int main(int argc, char **argv) try {
+  setvbuf(stdout, NULL, _IONBF, 0);  /* unbuffered: never lose output on a fault */
+
+  printf("\n**** FOUR GPUS CUDA, P2P + 4 HOST THREADS STARTS ****\n");
+
+  int    n = (argc > 1) ? atoi(argv[1]) : 51;
+  double T = (argc > 2) ? atof(argv[2]) : 1.0;
+
+  int nx = n, ny = n;
+  size_t total_points = (size_t)n * (size_t)n * (size_t)n;
+  size_t global_bytes = total_points * sizeof(double);
+
+  printf("\n=== MEMORY ESTIMATE (GLOBAL) ===\n");
+  printf("Grid size: %d x %d x %d = %zu points\n", n, n, n, total_points);
+  printf("Memory per global array: %.3f GB\n", global_bytes / 1e9);
+  printf("================================\n\n");
+
+  double h         = 1.0/(n-1);
+  double kappa_max = 0.95;
+  double dt        = h*h / (12.0 * kappa_max);
+  double factor    = dt/h/h/2.0;
+
+  printf("=== SIMULATION PARAMETERS ===\n");
+  printf("Grid size (n):           %d\n", n);
+  printf("Final time (T):          %.6f\n", T);
+  printf("Grid spacing (h):        %.6e\n", h);
+  printf("Time step (dt):          %.6e\n", dt);
+  printf("Kappa_max:               %.6f\n", kappa_max);
+  printf("Diffusion factor:        %.6e\n", factor);
+  printf("Estimated timesteps:     ~%d\n", (int)(T/dt));
+  printf("CFL condition (dt/h^2):  %.6f (should be < 0.5)\n", dt/(h*h));
+  printf("==============================\n\n");
+
+  // -- Device selection -----------------------------------------
+  int num_devices = 0;
+  CUDA_CHECK(
+      DPCT_CHECK_ERROR(num_devices = dpct::dev_mgr::instance().device_count()));
+
+  if (num_devices < 4) {
+    fprintf(stderr, "ERROR: this version needs 4 CUDA devices, %d present\n",
+            num_devices);
+    exit(EXIT_FAILURE);
+  }
+
+  printf("Using CUDA devices 0, 1, 2 and 3 of %d\n", num_devices);
+
+  // Build the one context that spans all 4 devices. Must precede every
+  // sycl::malloc_device below: that is what makes the peer copies legal.
+  p2p_init(4);
+
+  // -- Enable P2P on the three interfaces -----------------------
+  // This variant has no host fallback: if any neighbouring pair is not
+  // peer-accessible the run is aborted rather than silently routed through
+  // the host, which would make the measurement meaningless.
+  int p2p_pairs[3][2] = { {0,1}, {1,2}, {2,3} };
+  for (int p = 0; p < 3; p++) {
+    int a = p2p_pairs[p][0], b = p2p_pairs[p][1];
+    int can_ab = 0, can_ba = 0;
+    CUDA_CHECK(DPCT_CHECK_ERROR(
+        can_ab =
+            dpct::dev_mgr::instance().get_device(a).ext_oneapi_can_access_peer(
+                dpct::dev_mgr::instance().get_device(b))));
+    CUDA_CHECK(DPCT_CHECK_ERROR(
+        can_ba =
+            dpct::dev_mgr::instance().get_device(b).ext_oneapi_can_access_peer(
+                dpct::dev_mgr::instance().get_device(a))));
+    // FALSE NEGATIVE on oneAPI 2024.1.0 / Max 1550 -- see the note in
+    // 2-sycl-stream-omp-p2p.cpp. Measured 62.9 GB/s direct vs 25.3 GB/s
+    // host-staged, with Xe Link present between every card pair.
+    if (!can_ab || !can_ba) {
+      fprintf(stderr, "WARNING: can_access_peer reports no P2P (GPU %d <-> GPU %d); "
+                      "known false negative on this toolkit, proceeding.\n", a, b);
+    }
+    /*
+    DPCT1093:281: The "a" device may be not the one intended for use. Adjust the
+    selected device if needed.
+    */
+    CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(a)));
+        CUDA_CHECK(DPCT_CHECK_ERROR(
+            dpct::get_current_device().ext_oneapi_enable_peer_access(
+                dpct::dev_mgr::instance().get_device(b))));
+    /*
+    DPCT1093:282: The "b" device may be not the one intended for use. Adjust the
+    selected device if needed.
+    */
+    CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(b)));
+        CUDA_CHECK(DPCT_CHECK_ERROR(
+            dpct::get_current_device().ext_oneapi_enable_peer_access(
+                dpct::dev_mgr::instance().get_device(a))));
+    printf("P2P enabled: GPU %d <-> GPU %d\n", a, b);
+  }
+
+  // -- Domain decomposition along k -----------------------------
+  // The n-2 interior planes are split four ways; the remainder, if any, is
+  // handed to the lowest-numbered devices one plane at a time.
+  int ng        = 1;
+  int nz_int    = n - 2;
+  int quarter   = nz_int / 4;
+  int remainder = nz_int % 4;
+
+  int nz0 = quarter + (remainder > 0 ? 1 : 0) + 2*ng;
+  int nz1 = quarter + (remainder > 1 ? 1 : 0) + 2*ng;
+  int nz2 = quarter + (remainder > 2 ? 1 : 0) + 2*ng;
+  int nz3 = quarter                           + 2*ng;
+
+  int gk_start0 = 1;
+  int gk_start1 = gk_start0 + (nz0 - 2*ng);
+  int gk_start2 = gk_start1 + (nz1 - 2*ng);
+  int gk_start3 = gk_start2 + (nz2 - 2*ng);
+
+  printf("Block sizes: nz0=%d, nz1=%d, nz2=%d, nz3=%d\n", nz0, nz1, nz2, nz3);
+
+  // The boundary kernels write k=1 and k=nz-2 while the peer copies write
+  // k=0 and k=nz-1; those four indices must be distinct, which needs nz>=4.
+  if (nz0 < 4 || nz1 < 4 || nz2 < 4 || nz3 < 4) {
+    fprintf(stderr,
+            "ERROR: n=%d gives nz0=%d nz1=%d nz2=%d nz3=%d; each needs >= 4 planes\n",
+            n, nz0, nz1, nz2, nz3);
+    exit(EXIT_FAILURE);
+  }
+
+  // -- Partition sizes  (layout [k][j][i]) ----------------------
+  size_t size0      = (size_t)nz0*(size_t)ny*(size_t)nx*sizeof(double);
+  size_t size1      = (size_t)nz1*(size_t)ny*(size_t)nx*sizeof(double);
+  size_t size2      = (size_t)nz2*(size_t)ny*(size_t)nx*sizeof(double);
+  size_t size3      = (size_t)nz3*(size_t)ny*(size_t)nx*sizeof(double);
+  size_t halo_bytes = (size_t)ny*(size_t)nx*sizeof(double);  // one XY plane
+
+  printf("\n=== MEMORY ESTIMATE (LOCAL PER GPU) ===\n");
+  printf("GPU0 local bytes per array: %.3f GB\n", size0 / 1e9);
+  printf("GPU1 local bytes per array: %.3f GB\n", size1 / 1e9);
+  printf("GPU2 local bytes per array: %.3f GB\n", size2 / 1e9);
+  printf("GPU3 local bytes per array: %.3f GB\n", size3 / 1e9);
+  printf("======================================\n\n");
+
+  // -- Host arrays -----------------------------------------------
+  double *h_u_global = (double*)malloc(global_bytes);
+  double *h_u0       = (double*)malloc(size0);
+  double *h_u1       = (double*)malloc(size1);
+  double *h_u2       = (double*)malloc(size2);
+  double *h_u3       = (double*)malloc(size3);
+  double *h_rhs0     = (double*)malloc(size0);
+  double *h_rhs1     = (double*)malloc(size1);
+  double *h_rhs2     = (double*)malloc(size2);
+  double *h_rhs3     = (double*)malloc(size3);
+  double *h_kappa0   = (double*)malloc(size0);
+  double *h_kappa1   = (double*)malloc(size1);
+  double *h_kappa2   = (double*)malloc(size2);
+  double *h_kappa3   = (double*)malloc(size3);
+
+  if (!h_u_global || !h_u0 || !h_u1 || !h_u2 || !h_u3 ||
+      !h_rhs0 || !h_rhs1 || !h_rhs2 || !h_rhs3 ||
+      !h_kappa0 || !h_kappa1 || !h_kappa2 || !h_kappa3) {
+    fprintf(stderr, "ERROR: malloc failed (host arrays)\n");
+    return 1;
+  }
+
+  // -- Initialize the four partitions  (layout [k][j][i]) -------
+  init_partition(h_u0, h_rhs0, h_kappa0, nz0, gk_start0, ng, n, ny, nx, h, dt);
+  init_partition(h_u1, h_rhs1, h_kappa1, nz1, gk_start1, ng, n, ny, nx, h, dt);
+  init_partition(h_u2, h_rhs2, h_kappa2, nz2, gk_start2, ng, n, ny, nx, h, dt);
+  init_partition(h_u3, h_rhs3, h_kappa3, nz3, gk_start3, ng, n, ny, nx, h, dt);
+
+  // -- Device allocation + H2D ----------------------------------
+  // u_new is seeded from the same array as u_old so its BOUNDARY values are
+  // the exact zeros above -- the kernels only ever write interior points.
+  double *d0_u_old, *d0_u_new, *d0_rhs, *d0_kappa;
+  double *d1_u_old, *d1_u_new, *d1_rhs, *d1_kappa;
+  double *d2_u_old, *d2_u_new, *d2_rhs, *d2_kappa;
+  double *d3_u_old, *d3_u_new, *d3_rhs, *d3_kappa;
+
+  /*
+  DPCT1093:283: The "0" device may be not the one intended for use. Adjust the
+  selected device if needed.
+  */
+  CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(0)));
+  CUDA_CHECK(DPCT_CHECK_ERROR(d0_u_old = (double *)sycl::malloc_device(
+                                  size0, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(d0_u_new = (double *)sycl::malloc_device(
+                                      size0, q_cur())));
+  CUDA_CHECK(DPCT_CHECK_ERROR(d0_rhs = (double *)sycl::malloc_device(
+                                  size0, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(d0_kappa = (double *)sycl::malloc_device(
+                                      size0, q_cur())));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d0_u_old, h_u0, size0).wait()));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d0_u_new, h_u0, size0).wait()));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d0_rhs, h_rhs0, size0).wait()));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d0_kappa, h_kappa0, size0).wait()));
+
+  /*
+  DPCT1093:284: The "1" device may be not the one intended for use. Adjust the
+  selected device if needed.
+  */
+  CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(1)));
+  CUDA_CHECK(DPCT_CHECK_ERROR(d1_u_old = (double *)sycl::malloc_device(
+                                  size1, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(d1_u_new = (double *)sycl::malloc_device(
+                                      size1, q_cur())));
+  CUDA_CHECK(DPCT_CHECK_ERROR(d1_rhs = (double *)sycl::malloc_device(
+                                  size1, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(d1_kappa = (double *)sycl::malloc_device(
+                                      size1, q_cur())));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d1_u_old, h_u1, size1).wait()));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d1_u_new, h_u1, size1).wait()));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d1_rhs, h_rhs1, size1).wait()));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d1_kappa, h_kappa1, size1).wait()));
+
+  /*
+  DPCT1093:285: The "2" device may be not the one intended for use. Adjust the
+  selected device if needed.
+  */
+  CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(2)));
+  CUDA_CHECK(DPCT_CHECK_ERROR(d2_u_old = (double *)sycl::malloc_device(
+                                  size2, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(d2_u_new = (double *)sycl::malloc_device(
+                                      size2, q_cur())));
+  CUDA_CHECK(DPCT_CHECK_ERROR(d2_rhs = (double *)sycl::malloc_device(
+                                  size2, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(d2_kappa = (double *)sycl::malloc_device(
+                                      size2, q_cur())));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d2_u_old, h_u2, size2).wait()));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d2_u_new, h_u2, size2).wait()));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d2_rhs, h_rhs2, size2).wait()));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d2_kappa, h_kappa2, size2).wait()));
+
+  /*
+  DPCT1093:286: The "3" device may be not the one intended for use. Adjust the
+  selected device if needed.
+  */
+  CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(3)));
+  CUDA_CHECK(DPCT_CHECK_ERROR(d3_u_old = (double *)sycl::malloc_device(
+                                  size3, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(d3_u_new = (double *)sycl::malloc_device(
+                                      size3, q_cur())));
+  CUDA_CHECK(DPCT_CHECK_ERROR(d3_rhs = (double *)sycl::malloc_device(
+                                  size3, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(d3_kappa = (double *)sycl::malloc_device(
+                                      size3, q_cur())));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d3_u_old, h_u3, size3).wait()));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d3_u_new, h_u3, size3).wait()));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d3_rhs, h_rhs3, size3).wait()));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(d3_kappa, h_kappa3, size3).wait()));
+
+  // -- NO host halo buffers ------------------------------------
+  // In [k][j][i] layout each XY plane is already contiguous, and
+  // cudaMemcpyPeerAsync addresses it directly by pointer offset. There is no
+  // pack/unpack and no host staging -- that is the whole point of this file.
+
+  // -- Kernel configs -------------------------------------------
+  sycl::range<3> block(2, 4, 32);
+
+  int k_start0 = 1,  k_end0 = nz0 - 3;
+  int k_start1 = 2,  k_end1 = nz1 - 3;
+  int k_start2 = 2,  k_end2 = nz2 - 3;
+  int k_start3 = 2,  k_end3 = nz3 - 2;
+
+  sycl::range<3> grid0_interior(
+      (k_end0 - k_start0 + 1 + block[0] - 1) / block[0],
+      (ny - 2 + block[1] - 1) / block[1], (nx - 2 + block[2] - 1) / block[2]);
+  sycl::range<3> grid1_interior(
+      (k_end1 - k_start1 + 1 + block[0] - 1) / block[0],
+      (ny - 2 + block[1] - 1) / block[1], (nx - 2 + block[2] - 1) / block[2]);
+  sycl::range<3> grid2_interior(
+      (k_end2 - k_start2 + 1 + block[0] - 1) / block[0],
+      (ny - 2 + block[1] - 1) / block[1], (nx - 2 + block[2] - 1) / block[2]);
+  sycl::range<3> grid3_interior(
+      (k_end3 - k_start3 + 1 + block[0] - 1) / block[0],
+      (ny - 2 + block[1] - 1) / block[1], (nx - 2 + block[2] - 1) / block[2]);
+
+  // Boundary: a single XY plane, so the grid is 2D.
+  sycl::range<3> block_boundary(1, 8, 32);
+  sycl::range<3> grid_boundary(
+      1, (ny - 2 + block_boundary[1] - 1) / block_boundary[1],
+      (nx - 2 + block_boundary[2] - 1) / block_boundary[2]);
+
+  // -- Streams: three per device --------------------------------
+  const int ngpus = 4;
+  dpct::queue_ptr compute_stream[ngpus];
+  dpct::queue_ptr halo_stream_bottom[ngpus];
+  dpct::queue_ptr halo_stream_top[ngpus];
+
+  for (int g = 0; g < ngpus; ++g) {
+    /*
+    DPCT1093:287: The "g" device may be not the one intended for use. Adjust the
+    selected device if needed.
+    */
+    CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(g)));
+    CUDA_CHECK(DPCT_CHECK_ERROR(compute_stream[g] =
+                                    p2p_create_queue()));
+    CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_bottom[g] =
+                                    p2p_create_queue()));
+    CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_top[g] =
+                                    p2p_create_queue()));
+  }
+
+  double t     = 0.0;
+  int    steps = 0;
+
+  printf("\n=== SIMULATION STARTS ===\n");
+
+  double compute_timer = 0.0;
+  compute_timer -= omp_get_wtime();
+
+  // ======================================================================
+  // Time loop, one host thread per device.
+  //
+  // PHASE 1: interior on compute_stream, boundary kernels on their interface
+  //   streams, then each thread synchronises its OWN halo streams so the
+  //   planes it exposes are final.
+  //
+  //   barrier: every sent plane must be final before any peer copy reads it.
+  //
+  // PHASE 2: each device PULLS into its own ghost planes -- no host.
+  //
+  //   barrier: every device must be idle before the pointer swap.
+  //
+  // The ghost planes at GPU0 k=0 and GPU3 k=nz3-1 are physical domain
+  // boundaries. They are initialised to zero and never written.
+  // ======================================================================
+
+#pragma omp parallel num_threads(ngpus)
+  {
+    int tid = omp_get_thread_num();
+
+    // Each host thread owns one device: set once, never switch.
+    /*
+    DPCT1093:288: The "tid" device may be not the one intended for use. Adjust
+    the selected device if needed.
+    */
+    CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(tid)));
+
+    while (t < T) {
+
+      // -- PHASE 1: compute ---------------------------------------
+      if (tid == 0) {
+        // GPU0: no bottom boundary -- k=1 is never pulled from here.
+        /*
+        DPCT1049:47: The work-group size passed to the SYCL kernel may exceed
+        the limit. To get the device limit, query
+        info::device::max_work_group_size. Adjust the work-group size if needed.
+        */
+        {
+          dpct::has_capability_or_fail(compute_stream[0]->get_device(),
+                                       {sycl::aspect::fp64});
+
+          compute_stream[0]->parallel_for(
+              sycl::nd_range<3>(grid0_interior * block, block),
+              [=](sycl::nd_item<3> item_ct1) {
+                heat_update_interior(d0_u_new, d0_u_old, d0_rhs, d0_kappa, nz0,
+                                     ny, nx, factor, k_start0, k_end0,
+                                     item_ct1);
+              });
+        }
+        /*
+        DPCT1010:289: SYCL uses exceptions to report errors and does not use the
+        error codes. The call was replaced with 0. You need to rewrite this
+        code.
+        */
+        CUDA_CHECK(0);
+        /*
+        DPCT1049:48: The work-group size passed to the SYCL kernel may exceed
+        the limit. To get the device limit, query
+        info::device::max_work_group_size. Adjust the work-group size if needed.
+        */
+        {
+          dpct::has_capability_or_fail(halo_stream_top[0]->get_device(),
+                                       {sycl::aspect::fp64});
+
+          halo_stream_top[0]->parallel_for(
+              sycl::nd_range<3>(grid_boundary * block_boundary, block_boundary),
+              [=](sycl::nd_item<3> item_ct1) {
+                heat_update_boundary_top(d0_u_new, d0_u_old, d0_rhs, d0_kappa,
+                                         nz0, ny, nx, factor, item_ct1);
+              });
+        }
+        /*
+        DPCT1010:290: SYCL uses exceptions to report errors and does not use the
+        error codes. The call was replaced with 0. You need to rewrite this
+        code.
+        */
+        CUDA_CHECK(0);
+
+        // plane k=nz0-2 must be final before GPU1 pulls it
+        CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_top[0]->wait()));
+      }
+      else if (tid == 1) {
+        /*
+        DPCT1049:49: The work-group size passed to the SYCL kernel may exceed
+        the limit. To get the device limit, query
+        info::device::max_work_group_size. Adjust the work-group size if needed.
+        */
+        {
+          dpct::has_capability_or_fail(compute_stream[1]->get_device(),
+                                       {sycl::aspect::fp64});
+
+          compute_stream[1]->parallel_for(
+              sycl::nd_range<3>(grid1_interior * block, block),
+              [=](sycl::nd_item<3> item_ct1) {
+                heat_update_interior(d1_u_new, d1_u_old, d1_rhs, d1_kappa, nz1,
+                                     ny, nx, factor, k_start1, k_end1,
+                                     item_ct1);
+              });
+        }
+        /*
+        DPCT1010:291: SYCL uses exceptions to report errors and does not use the
+        error codes. The call was replaced with 0. You need to rewrite this
+        code.
+        */
+        CUDA_CHECK(0);
+        /*
+        DPCT1049:50: The work-group size passed to the SYCL kernel may exceed
+        the limit. To get the device limit, query
+        info::device::max_work_group_size. Adjust the work-group size if needed.
+        */
+        {
+          dpct::has_capability_or_fail(halo_stream_bottom[1]->get_device(),
+                                       {sycl::aspect::fp64});
+
+          halo_stream_bottom[1]->parallel_for(
+              sycl::nd_range<3>(grid_boundary * block_boundary, block_boundary),
+              [=](sycl::nd_item<3> item_ct1) {
+                heat_update_boundary_bottom(d1_u_new, d1_u_old, d1_rhs,
+                                            d1_kappa, nz1, ny, nx, factor,
+                                            item_ct1);
+              });
+        }
+        /*
+        DPCT1010:292: SYCL uses exceptions to report errors and does not use the
+        error codes. The call was replaced with 0. You need to rewrite this
+        code.
+        */
+        CUDA_CHECK(0);
+        /*
+        DPCT1049:51: The work-group size passed to the SYCL kernel may exceed
+        the limit. To get the device limit, query
+        info::device::max_work_group_size. Adjust the work-group size if needed.
+        */
+        {
+          dpct::has_capability_or_fail(halo_stream_top[1]->get_device(),
+                                       {sycl::aspect::fp64});
+
+          halo_stream_top[1]->parallel_for(
+              sycl::nd_range<3>(grid_boundary * block_boundary, block_boundary),
+              [=](sycl::nd_item<3> item_ct1) {
+                heat_update_boundary_top(d1_u_new, d1_u_old, d1_rhs, d1_kappa,
+                                         nz1, ny, nx, factor, item_ct1);
+              });
+        }
+        /*
+        DPCT1010:293: SYCL uses exceptions to report errors and does not use the
+        error codes. The call was replaced with 0. You need to rewrite this
+        code.
+        */
+        CUDA_CHECK(0);
+
+        // planes k=1 and k=nz1-2 must be final before the neighbours pull
+        CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_bottom[1]->wait()));
+        CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_top[1]->wait()));
+      }
+      else if (tid == 2) {
+        /*
+        DPCT1049:52: The work-group size passed to the SYCL kernel may exceed
+        the limit. To get the device limit, query
+        info::device::max_work_group_size. Adjust the work-group size if needed.
+        */
+        {
+          dpct::has_capability_or_fail(compute_stream[2]->get_device(),
+                                       {sycl::aspect::fp64});
+
+          compute_stream[2]->parallel_for(
+              sycl::nd_range<3>(grid2_interior * block, block),
+              [=](sycl::nd_item<3> item_ct1) {
+                heat_update_interior(d2_u_new, d2_u_old, d2_rhs, d2_kappa, nz2,
+                                     ny, nx, factor, k_start2, k_end2,
+                                     item_ct1);
+              });
+        }
+        /*
+        DPCT1010:294: SYCL uses exceptions to report errors and does not use the
+        error codes. The call was replaced with 0. You need to rewrite this
+        code.
+        */
+        CUDA_CHECK(0);
+        /*
+        DPCT1049:53: The work-group size passed to the SYCL kernel may exceed
+        the limit. To get the device limit, query
+        info::device::max_work_group_size. Adjust the work-group size if needed.
+        */
+        {
+          dpct::has_capability_or_fail(halo_stream_bottom[2]->get_device(),
+                                       {sycl::aspect::fp64});
+
+          halo_stream_bottom[2]->parallel_for(
+              sycl::nd_range<3>(grid_boundary * block_boundary, block_boundary),
+              [=](sycl::nd_item<3> item_ct1) {
+                heat_update_boundary_bottom(d2_u_new, d2_u_old, d2_rhs,
+                                            d2_kappa, nz2, ny, nx, factor,
+                                            item_ct1);
+              });
+        }
+        /*
+        DPCT1010:295: SYCL uses exceptions to report errors and does not use the
+        error codes. The call was replaced with 0. You need to rewrite this
+        code.
+        */
+        CUDA_CHECK(0);
+        /*
+        DPCT1049:54: The work-group size passed to the SYCL kernel may exceed
+        the limit. To get the device limit, query
+        info::device::max_work_group_size. Adjust the work-group size if needed.
+        */
+        {
+          dpct::has_capability_or_fail(halo_stream_top[2]->get_device(),
+                                       {sycl::aspect::fp64});
+
+          halo_stream_top[2]->parallel_for(
+              sycl::nd_range<3>(grid_boundary * block_boundary, block_boundary),
+              [=](sycl::nd_item<3> item_ct1) {
+                heat_update_boundary_top(d2_u_new, d2_u_old, d2_rhs, d2_kappa,
+                                         nz2, ny, nx, factor, item_ct1);
+              });
+        }
+        /*
+        DPCT1010:296: SYCL uses exceptions to report errors and does not use the
+        error codes. The call was replaced with 0. You need to rewrite this
+        code.
+        */
+        CUDA_CHECK(0);
+
+        CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_bottom[2]->wait()));
+        CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_top[2]->wait()));
+      }
+      else {
+        // GPU3: no top boundary -- k=nz3-2 is never pulled from here.
+        /*
+        DPCT1049:55: The work-group size passed to the SYCL kernel may exceed
+        the limit. To get the device limit, query
+        info::device::max_work_group_size. Adjust the work-group size if needed.
+        */
+        {
+          dpct::has_capability_or_fail(compute_stream[3]->get_device(),
+                                       {sycl::aspect::fp64});
+
+          compute_stream[3]->parallel_for(
+              sycl::nd_range<3>(grid3_interior * block, block),
+              [=](sycl::nd_item<3> item_ct1) {
+                heat_update_interior(d3_u_new, d3_u_old, d3_rhs, d3_kappa, nz3,
+                                     ny, nx, factor, k_start3, k_end3,
+                                     item_ct1);
+              });
+        }
+        /*
+        DPCT1010:297: SYCL uses exceptions to report errors and does not use the
+        error codes. The call was replaced with 0. You need to rewrite this
+        code.
+        */
+        CUDA_CHECK(0);
+        /*
+        DPCT1049:56: The work-group size passed to the SYCL kernel may exceed
+        the limit. To get the device limit, query
+        info::device::max_work_group_size. Adjust the work-group size if needed.
+        */
+        {
+          dpct::has_capability_or_fail(halo_stream_bottom[3]->get_device(),
+                                       {sycl::aspect::fp64});
+
+          halo_stream_bottom[3]->parallel_for(
+              sycl::nd_range<3>(grid_boundary * block_boundary, block_boundary),
+              [=](sycl::nd_item<3> item_ct1) {
+                heat_update_boundary_bottom(d3_u_new, d3_u_old, d3_rhs,
+                                            d3_kappa, nz3, ny, nx, factor,
+                                            item_ct1);
+              });
+        }
+        /*
+        DPCT1010:298: SYCL uses exceptions to report errors and does not use the
+        error codes. The call was replaced with 0. You need to rewrite this
+        code.
+        */
+        CUDA_CHECK(0);
+
+        // plane k=1 must be final before GPU2 pulls it
+        CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_bottom[3]->wait()));
+      }
+
+      // Every sent plane is final -- safe to peer-copy.
+#pragma omp barrier
+
+      // -- PHASE 2: pull into our own ghost planes ----------------
+      if (tid == 0) {
+        /*
+        DPCT1007:299: Migration of cudaMemcpyPeerAsync is not supported.
+        */
+        CUDA_CHECK(cudaMemcpyPeerAsync(
+            d0_u_new + (size_t)(nz0 - 1) * ny * nx, 0, // dst: GPU0 top ghost
+            d1_u_new + (size_t)1 * ny * nx, 1,         // src: GPU1 plane k=1
+            halo_bytes, halo_stream_top[0]));
+        CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_top[0]->wait()));
+        CUDA_CHECK(DPCT_CHECK_ERROR(compute_stream[0]->wait()));
+      }
+      else if (tid == 1) {
+        /*
+        DPCT1007:300: Migration of cudaMemcpyPeerAsync is not supported.
+        */
+        CUDA_CHECK(cudaMemcpyPeerAsync(d1_u_new + (size_t)0 * ny * nx,
+                                       1, // dst: GPU1 bottom ghost
+                                       d0_u_new + (size_t)(nz0 - 2) * ny * nx,
+                                       0, // src: GPU0 plane k=nz0-2
+                                       halo_bytes, halo_stream_bottom[1]));
+        /*
+        DPCT1007:301: Migration of cudaMemcpyPeerAsync is not supported.
+        */
+        CUDA_CHECK(cudaMemcpyPeerAsync(
+            d1_u_new + (size_t)(nz1 - 1) * ny * nx, 1, // dst: GPU1 top ghost
+            d2_u_new + (size_t)1 * ny * nx, 2,         // src: GPU2 plane k=1
+            halo_bytes, halo_stream_top[1]));
+        CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_bottom[1]->wait()));
+        CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_top[1]->wait()));
+        CUDA_CHECK(DPCT_CHECK_ERROR(compute_stream[1]->wait()));
+      }
+      else if (tid == 2) {
+        /*
+        DPCT1007:302: Migration of cudaMemcpyPeerAsync is not supported.
+        */
+        CUDA_CHECK(cudaMemcpyPeerAsync(d2_u_new + (size_t)0 * ny * nx,
+                                       2, // dst: GPU2 bottom ghost
+                                       d1_u_new + (size_t)(nz1 - 2) * ny * nx,
+                                       1, // src: GPU1 plane k=nz1-2
+                                       halo_bytes, halo_stream_bottom[2]));
+        /*
+        DPCT1007:303: Migration of cudaMemcpyPeerAsync is not supported.
+        */
+        CUDA_CHECK(cudaMemcpyPeerAsync(
+            d2_u_new + (size_t)(nz2 - 1) * ny * nx, 2, // dst: GPU2 top ghost
+            d3_u_new + (size_t)1 * ny * nx, 3,         // src: GPU3 plane k=1
+            halo_bytes, halo_stream_top[2]));
+        CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_bottom[2]->wait()));
+        CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_top[2]->wait()));
+        CUDA_CHECK(DPCT_CHECK_ERROR(compute_stream[2]->wait()));
+      }
+      else {
+        /*
+        DPCT1007:304: Migration of cudaMemcpyPeerAsync is not supported.
+        */
+        CUDA_CHECK(cudaMemcpyPeerAsync(d3_u_new + (size_t)0 * ny * nx,
+                                       3, // dst: GPU3 bottom ghost
+                                       d2_u_new + (size_t)(nz2 - 2) * ny * nx,
+                                       2, // src: GPU2 plane k=nz2-2
+                                       halo_bytes, halo_stream_bottom[3]));
+        CUDA_CHECK(DPCT_CHECK_ERROR(halo_stream_bottom[3]->wait()));
+        CUDA_CHECK(DPCT_CHECK_ERROR(compute_stream[3]->wait()));
+      }
+
+      // Every device is idle -- safe to swap.
+#pragma omp barrier
+
+      // The implicit barrier at the end of `single` is what publishes the
+      // updated `t` to all four threads before the loop condition is re-read.
+#pragma omp single
+      {
+        double *tmp;
+        tmp = d0_u_old; d0_u_old = d0_u_new; d0_u_new = tmp;
+        tmp = d1_u_old; d1_u_old = d1_u_new; d1_u_new = tmp;
+        tmp = d2_u_old; d2_u_old = d2_u_new; d2_u_new = tmp;
+        tmp = d3_u_old; d3_u_old = d3_u_new; d3_u_new = tmp;
+        steps++;
+        t += dt;
+      }
+
+    } // end while
+  }   // end omp parallel
+
+  // Every stream is drained inside the loop, so all four devices are already
+  // idle. Make it explicit so the timed region cannot drift if the internal
+  // synchronisation is ever relaxed.
+  for (int g = 0; g < ngpus; ++g) {
+    /*
+    DPCT1093:305: The "g" device may be not the one intended for use. Adjust the
+    selected device if needed.
+    */
+    CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(g)));
+    CUDA_CHECK(
+        DPCT_CHECK_ERROR(p2p_wait_current()));
+  }
+
+  compute_timer += omp_get_wtime();
+
+  printf("\n%d timesteps complete\n", steps);
+  printf("Time = %f seconds\n", compute_timer);
+  printf("=== SIMULATION ENDS ===\n");
+
+  // -- Copy back (layout [k][j][i]) ------------------------------
+  /*
+  DPCT1093:306: The "0" device may be not the one intended for use. Adjust the
+  selected device if needed.
+  */
+  CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(0)));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(h_u0, d0_u_old, size0).wait()));
+  /*
+  DPCT1093:307: The "1" device may be not the one intended for use. Adjust the
+  selected device if needed.
+  */
+  CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(1)));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(h_u1, d1_u_old, size1).wait()));
+  /*
+  DPCT1093:308: The "2" device may be not the one intended for use. Adjust the
+  selected device if needed.
+  */
+  CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(2)));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(h_u2, d2_u_old, size2).wait()));
+  /*
+  DPCT1093:309: The "3" device may be not the one intended for use. Adjust the
+  selected device if needed.
+  */
+  CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(3)));
+  CUDA_CHECK(DPCT_CHECK_ERROR(
+      q_cur().memcpy(h_u3, d3_u_old, size3).wait()));
+
+  // -- Reconstruct global solution (global output is [k][j][i]) --
+  memset(h_u_global, 0, global_bytes);
+
+  gather_partition(h_u_global, h_u0, nz0, gk_start0, ng, 0,         gk_start1, n, ny, nx);
+  gather_partition(h_u_global, h_u1, nz1, gk_start1, ng, gk_start1, gk_start2, n, ny, nx);
+  gather_partition(h_u_global, h_u2, nz2, gk_start2, ng, gk_start2, gk_start3, n, ny, nx);
+  gather_partition(h_u_global, h_u3, nz3, gk_start3, ng, gk_start3, n,         n, ny, nx);
+
+  if (should_write_txt())
+    write_u_values("u_sycl_stream_omp_p2p_4gpu.txt", h_u_global, n);
+
+  // -- Cleanup streams -------------------------------------------
+  for (int g = 0; g < ngpus; ++g) {
+    /*
+    DPCT1093:310: The "g" device may be not the one intended for use. Adjust the
+    selected device if needed.
+    */
+    CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(g)));
+    CUDA_CHECK(DPCT_CHECK_ERROR(
+        p2p_destroy_queue(compute_stream[g])));
+    CUDA_CHECK(DPCT_CHECK_ERROR(
+        p2p_destroy_queue(halo_stream_bottom[g])));
+    CUDA_CHECK(DPCT_CHECK_ERROR(
+        p2p_destroy_queue(halo_stream_top[g])));
+  }
+
+  // -- Disable P2P -----------------------------------------------
+  // Not CUDA_CHECK'd: teardown, and a failure here cannot affect the result
+  // that was already computed and written.
+  for (int p = 0; p < 3; p++) {
+    int a = p2p_pairs[p][0], b = p2p_pairs[p][1];
+    /*
+    DPCT1093:311: The "a" device may be not the one intended for use. Adjust the
+    selected device if needed.
+    */
+    CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(a)));
+        CUDA_CHECK(DPCT_CHECK_ERROR(dpct::get_current_device().ext_oneapi_disable_peer_access(dpct::dev_mgr::instance().get_device(b))));  // wrapped: disable throws -59 on this toolkit, and an unwrapped throw here aborts AFTER the result is already written
+    /*
+    DPCT1093:312: The "b" device may be not the one intended for use. Adjust the
+    selected device if needed.
+    */
+    CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(b)));
+        CUDA_CHECK(DPCT_CHECK_ERROR(dpct::get_current_device().ext_oneapi_disable_peer_access(dpct::dev_mgr::instance().get_device(a))));  // wrapped: disable throws -59 on this toolkit, and an unwrapped throw here aborts AFTER the result is already written
+  }
+
+  // -- Cleanup ---------------------------------------------------
+  /*
+  DPCT1093:313: The "0" device may be not the one intended for use. Adjust the
+  selected device if needed.
+  */
+  CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(0)));
+  CUDA_CHECK(
+      DPCT_CHECK_ERROR(dpct::dpct_free(d0_u_old, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(
+          dpct::dpct_free(d0_u_new, q_cur())));
+  CUDA_CHECK(
+      DPCT_CHECK_ERROR(dpct::dpct_free(d0_rhs, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(
+          dpct::dpct_free(d0_kappa, q_cur())));
+
+  /*
+  DPCT1093:314: The "1" device may be not the one intended for use. Adjust the
+  selected device if needed.
+  */
+  CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(1)));
+  CUDA_CHECK(
+      DPCT_CHECK_ERROR(dpct::dpct_free(d1_u_old, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(
+          dpct::dpct_free(d1_u_new, q_cur())));
+  CUDA_CHECK(
+      DPCT_CHECK_ERROR(dpct::dpct_free(d1_rhs, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(
+          dpct::dpct_free(d1_kappa, q_cur())));
+
+  /*
+  DPCT1093:315: The "2" device may be not the one intended for use. Adjust the
+  selected device if needed.
+  */
+  CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(2)));
+  CUDA_CHECK(
+      DPCT_CHECK_ERROR(dpct::dpct_free(d2_u_old, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(
+          dpct::dpct_free(d2_u_new, q_cur())));
+  CUDA_CHECK(
+      DPCT_CHECK_ERROR(dpct::dpct_free(d2_rhs, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(
+          dpct::dpct_free(d2_kappa, q_cur())));
+
+  /*
+  DPCT1093:316: The "3" device may be not the one intended for use. Adjust the
+  selected device if needed.
+  */
+  CUDA_CHECK(DPCT_CHECK_ERROR(dpct::select_device(3)));
+  CUDA_CHECK(
+      DPCT_CHECK_ERROR(dpct::dpct_free(d3_u_old, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(
+          dpct::dpct_free(d3_u_new, q_cur())));
+  CUDA_CHECK(
+      DPCT_CHECK_ERROR(dpct::dpct_free(d3_rhs, q_cur())));
+      CUDA_CHECK(DPCT_CHECK_ERROR(
+          dpct::dpct_free(d3_kappa, q_cur())));
+
+  free(h_u_global);
+  free(h_u0);     free(h_u1);     free(h_u2);     free(h_u3);
+  free(h_rhs0);   free(h_rhs1);   free(h_rhs2);   free(h_rhs3);
+  free(h_kappa0); free(h_kappa1); free(h_kappa2); free(h_kappa3);
+
+  printf("\n**** FOUR GPUS CUDA, P2P + 4 HOST THREADS FINISHED ****\n");
+  return 0;
+}
+catch (sycl::exception const &exc) {
+  std::cerr << exc.what() << "Exception caught at file:" << __FILE__
+            << ", line:" << __LINE__ << std::endl;
+  std::exit(1);
+}

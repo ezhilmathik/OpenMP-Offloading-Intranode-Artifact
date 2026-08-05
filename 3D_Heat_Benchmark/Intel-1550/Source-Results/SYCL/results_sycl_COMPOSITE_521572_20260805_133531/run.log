@@ -1,0 +1,415 @@
+============================================================
+Host       : i20r06c06s08
+Job ID     : 521572   Repetition: 1
+Timestamp  : 20260805_133531
+Results dir: results_sycl_COMPOSITE_521572_20260805_133531
+N=640  DT=0.0001074146  STEPS=500  FAMILIES='2 4'  BASELINE=1
+ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE  (1 device = whole card, 2 stacks)
+ONEAPI_DEVICE_SELECTOR=level_zero:gpu
+Compiler   : Intel(R) oneAPI DPC++/C++ Compiler 2024.1.0 (2024.1.0.20240308)
+============================================================
+[ext_oneapi_level_zero:gpu:0] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1550 1.3 [1.3.27642]
+[ext_oneapi_level_zero:gpu:1] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1550 1.3 [1.3.27642]
+[ext_oneapi_level_zero:gpu:2] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1550 1.3 [1.3.27642]
+[ext_oneapi_level_zero:gpu:3] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1550 1.3 [1.3.27642]
+
+Starting benchmarks
+===========================
+N = 640   dt = 0.0001074146
+===========================
+
+>>> 1-sycl  gpus=1  ZE_AFFINITY_MASK=0  N=640
+    runtime: host threads=1; overlap from SYCL queues
+    command: env ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0 ZE_ENABLE_PCI_ID_DEVICE_ORDER=1 ONEAPI_DEVICE_SELECTOR=level_zero:gpu OMP_NUM_THREADS=1 ./1-sycl 640 0.0001074146
+
+**** ONE GPU CUDA STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA device 0 of 1
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 2.097 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 4.718215 seconds
+=== SIMULATION ENDS ===
+
+**** ONE GPU CUDA FINISHED ****
+    -> wall=16.0650s  reported=4.718215s  status=ok  exit=0
+
+>>> 2-sycl  gpus=2  ZE_AFFINITY_MASK=0,1  N=640
+    runtime: host threads=1; overlap from SYCL queues
+    command: env ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1 ZE_ENABLE_PCI_ID_DEVICE_ORDER=1 ONEAPI_DEVICE_SELECTOR=level_zero:gpu OMP_NUM_THREADS=1 ./2-sycl 640 0.0001074146
+
+**** TWO GPUS CUDA STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0 and 1 of 2
+Block sizes: nz0=321, nz1=321, mid=319
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.052 GB
+GPU1 local bytes per array: 1.052 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 3.372117 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS CUDA FINISHED ****
+    -> wall=14.5340s  reported=3.372117s  status=ok  exit=0
+
+>>> 2-sycl-stream  gpus=2  ZE_AFFINITY_MASK=0,1  N=640
+    runtime: host threads=1; overlap from SYCL queues
+    command: env ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1 ZE_ENABLE_PCI_ID_DEVICE_ORDER=1 ONEAPI_DEVICE_SELECTOR=level_zero:gpu OMP_NUM_THREADS=1 ./2-sycl-stream 640 0.0001074146
+
+**** TWO GPUS CUDA, ASYNC STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0 and 1 of 2
+Block sizes: nz0=321, nz1=321, mid=319
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.052 GB
+GPU1 local bytes per array: 1.052 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 3.059046 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS CUDA, ASYNC FINISHED ****
+    -> wall=14.2290s  reported=3.059046s  status=ok  exit=0
+
+>>> 2-sycl-stream-omp  gpus=2  ZE_AFFINITY_MASK=0,1  N=640
+    runtime: explicit host threads=2 (one per card)
+    command: env ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1 ZE_ENABLE_PCI_ID_DEVICE_ORDER=1 ONEAPI_DEVICE_SELECTOR=level_zero:gpu OMP_NUM_THREADS=2 ./2-sycl-stream-omp 640 0.0001074146
+
+**** TWO GPUS CUDA, ASYNC + 2 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0 and 1 of 2
+Block sizes: nz0=321, nz1=321, mid=319
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.052 GB
+GPU1 local bytes per array: 1.052 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 3.022070 seconds
+=== SIMULATION ENDS ===
+
+**** TWO GPUS CUDA, ASYNC + 2 HOST THREADS FINISHED ****
+    -> wall=14.6200s  reported=3.022070s  status=ok  exit=0
+
+>>> 2-sycl-stream-omp-p2p  gpus=2  ZE_AFFINITY_MASK=0,1  N=640
+    runtime: explicit host threads=2 (one per card)
+    command: env ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1 ZE_ENABLE_PCI_ID_DEVICE_ORDER=1 ONEAPI_DEVICE_SELECTOR=level_zero:gpu OMP_NUM_THREADS=2 ./2-sycl-stream-omp-p2p 640 0.0001074146
+
+**** TWO GPUS CUDA, P2P + 2 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0 and 1 of 2
+P2P shim: one shared context over 2 device(s)
+WARNING: can_access_peer reports no P2P (GPU 0 <-> GPU 1); known false negative on this toolkit, proceeding.
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+P2P enabled between GPU 0 and GPU 1
+Block sizes: nz0=321, nz1=321, mid=319
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 1.052 GB
+GPU1 local bytes per array: 1.052 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 2.516138 seconds
+=== SIMULATION ENDS ===
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+
+**** TWO GPUS CUDA, P2P + 2 HOST THREADS FINISHED ****
+    -> wall=14.1000s  reported=2.516138s  status=ok  exit=0
+
+>>> 4-sycl  gpus=4  ZE_AFFINITY_MASK=0,1,2,3  N=640
+    runtime: host threads=1; overlap from SYCL queues
+    command: env ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1\,2\,3 ZE_ENABLE_PCI_ID_DEVICE_ORDER=1 ONEAPI_DEVICE_SELECTOR=level_zero:gpu OMP_NUM_THREADS=1 ./4-sycl 640 0.0001074146
+
+**** FOUR GPUS CUDA STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=162, nz1=162, nz2=161, nz3=161
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.531 GB
+GPU1 local bytes per array: 0.531 GB
+GPU2 local bytes per array: 0.528 GB
+GPU3 local bytes per array: 0.528 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 4.791405 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS CUDA FINISHED ****
+    -> wall=16.1190s  reported=4.791405s  status=ok  exit=0
+
+>>> 4-sycl-stream  gpus=4  ZE_AFFINITY_MASK=0,1,2,3  N=640
+    runtime: host threads=1; overlap from SYCL queues
+    command: env ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1\,2\,3 ZE_ENABLE_PCI_ID_DEVICE_ORDER=1 ONEAPI_DEVICE_SELECTOR=level_zero:gpu OMP_NUM_THREADS=1 ./4-sycl-stream 640 0.0001074146
+
+**** FOUR GPUS CUDA, ASYNC STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=162, nz1=162, nz2=161, nz3=161
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.531 GB
+GPU1 local bytes per array: 0.531 GB
+GPU2 local bytes per array: 0.528 GB
+GPU3 local bytes per array: 0.528 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 3.187021 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS CUDA, ASYNC FINISHED ****
+    -> wall=14.5440s  reported=3.187021s  status=ok  exit=0
+
+>>> 4-sycl-stream-omp  gpus=4  ZE_AFFINITY_MASK=0,1,2,3  N=640
+    runtime: explicit host threads=4 (one per card)
+    command: env ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1\,2\,3 ZE_ENABLE_PCI_ID_DEVICE_ORDER=1 ONEAPI_DEVICE_SELECTOR=level_zero:gpu OMP_NUM_THREADS=4 ./4-sycl-stream-omp 640 0.0001074146
+
+**** FOUR GPUS CUDA, ASYNC + 4 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0, 1, 2 and 3 of 4
+Block sizes: nz0=162, nz1=162, nz2=161, nz3=161
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.531 GB
+GPU1 local bytes per array: 0.531 GB
+GPU2 local bytes per array: 0.528 GB
+GPU3 local bytes per array: 0.528 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 3.674293 seconds
+=== SIMULATION ENDS ===
+
+**** FOUR GPUS CUDA, ASYNC + 4 HOST THREADS FINISHED ****
+    -> wall=15.4330s  reported=3.674293s  status=ok  exit=0
+
+>>> 4-sycl-stream-omp-p2p  gpus=4  ZE_AFFINITY_MASK=0,1,2,3  N=640
+    runtime: explicit host threads=4 (one per card)
+    command: env ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE ZE_AFFINITY_MASK=0\,1\,2\,3 ZE_ENABLE_PCI_ID_DEVICE_ORDER=1 ONEAPI_DEVICE_SELECTOR=level_zero:gpu OMP_NUM_THREADS=4 ./4-sycl-stream-omp-p2p 640 0.0001074146
+
+**** FOUR GPUS CUDA, P2P + 4 HOST THREADS STARTS ****
+
+=== MEMORY ESTIMATE (GLOBAL) ===
+Grid size: 640 x 640 x 640 = 262144000 points
+Memory per global array: 2.097 GB
+================================
+
+=== SIMULATION PARAMETERS ===
+Grid size (n):           640
+Final time (T):          0.000107
+Grid spacing (h):        1.564945e-03
+Time step (dt):          2.148293e-07
+Kappa_max:               0.950000
+Diffusion factor:        4.385965e-02
+Estimated timesteps:     ~499
+CFL condition (dt/h^2):  0.087719 (should be < 0.5)
+==============================
+
+Using CUDA devices 0, 1, 2 and 3 of 4
+P2P shim: one shared context over 4 device(s)
+WARNING: can_access_peer reports no P2P (GPU 0 <-> GPU 1); known false negative on this toolkit, proceeding.
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+P2P enabled: GPU 0 <-> GPU 1
+WARNING: can_access_peer reports no P2P (GPU 1 <-> GPU 2); known false negative on this toolkit, proceeding.
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+P2P enabled: GPU 1 <-> GPU 2
+WARNING: can_access_peer reports no P2P (GPU 2 <-> GPU 3); known false negative on this toolkit, proceeding.
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+P2P enabled: GPU 2 <-> GPU 3
+Block sizes: nz0=162, nz1=162, nz2=161, nz3=161
+
+=== MEMORY ESTIMATE (LOCAL PER GPU) ===
+GPU0 local bytes per array: 0.531 GB
+GPU1 local bytes per array: 0.531 GB
+GPU2 local bytes per array: 0.528 GB
+GPU3 local bytes per array: 0.528 GB
+======================================
+
+
+=== SIMULATION STARTS ===
+
+500 timesteps complete
+Time = 1.377772 seconds
+=== SIMULATION ENDS ===
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+Native API failed. Native API returns: -59 (PI_ERROR_INVALID_OPERATION) -59 (PI_ERROR_INVALID_OPERATION)
+
+**** FOUR GPUS CUDA, P2P + 4 HOST THREADS FINISHED ****
+    -> wall=13.2300s  reported=1.377772s  status=ok  exit=0
+
+All done.
+  Timing CSV : results_sycl_COMPOSITE_521572_20260805_133531/timings.csv
+  Run log    : results_sycl_COMPOSITE_521572_20260805_133531/run.log

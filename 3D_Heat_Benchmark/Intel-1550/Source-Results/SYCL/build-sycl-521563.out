@@ -1,0 +1,71 @@
+stty: 'standard input': Inappropriate ioctl for device
+=== Host     : i20r02c06s10 ===
+=== Date     : Wed 05 Aug 2026 01:30:00 PM CEST ===
+=== Compiler : Intel(R) oneAPI DPC++/C++ Compiler 2024.1.0 (2024.1.0.20240308) ===
+=== ocloc    : /usr/bin/ocloc ===
+
+CXX          = /dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icpx
+AOT          = 1
+GPU_CXXFLAGS = -O3 -fno-fast-math -fsycl -fiopenmp -ffp-contract=off -fsycl-targets=spir64_gen -Xs -device pvc
+CPU_CFLAGS   = -O3 -fno-fast-math -fiopenmp -ffp-contract=off
+
+rm -f 2-sycl 2-sycl-stream 2-sycl-stream-omp 2-sycl-stream-omp-p2p 4-sycl 4-sycl-stream 4-sycl-stream-omp 4-sycl-stream-omp-p2p 1-sycl serial icpx_build_*.log
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icpx -O3 -fno-fast-math -fsycl -fiopenmp -ffp-contract=off -fsycl-targets=spir64_gen -Xs "-device pvc" -Wl,--no-warn-execstack -o 2-sycl 2-sycl.cpp -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icpx -O3 -fno-fast-math -fsycl -fiopenmp -ffp-contract=off -fsycl-targets=spir64_gen -Xs "-device pvc" -Wl,--no-warn-execstack -o 2-sycl-stream 2-sycl-stream.cpp -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icpx -O3 -fno-fast-math -fsycl -fiopenmp -ffp-contract=off -fsycl-targets=spir64_gen -Xs "-device pvc" -Wl,--no-warn-execstack -o 2-sycl-stream-omp 2-sycl-stream-omp.cpp -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icpx -O3 -fno-fast-math -fsycl -fiopenmp -ffp-contract=off -fsycl-targets=spir64_gen -Xs "-device pvc" -Wl,--no-warn-execstack -o 2-sycl-stream-omp-p2p 2-sycl-stream-omp-p2p.cpp -lm
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icpx -O3 -fno-fast-math -fsycl -fiopenmp -ffp-contract=off -fsycl-targets=spir64_gen -Xs "-device pvc" -Wl,--no-warn-execstack -o 4-sycl 4-sycl.cpp -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icpx -O3 -fno-fast-math -fsycl -fiopenmp -ffp-contract=off -fsycl-targets=spir64_gen -Xs "-device pvc" -Wl,--no-warn-execstack -o 4-sycl-stream 4-sycl-stream.cpp -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icpx -O3 -fno-fast-math -fsycl -fiopenmp -ffp-contract=off -fsycl-targets=spir64_gen -Xs "-device pvc" -Wl,--no-warn-execstack -o 4-sycl-stream-omp 4-sycl-stream-omp.cpp -lm
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icpx -O3 -fno-fast-math -fsycl -fiopenmp -ffp-contract=off -fsycl-targets=spir64_gen -Xs "-device pvc" -Wl,--no-warn-execstack -o 4-sycl-stream-omp-p2p 4-sycl-stream-omp-p2p.cpp -lm
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icpx -O3 -fno-fast-math -fsycl -fiopenmp -ffp-contract=off -fsycl-targets=spir64_gen -Xs "-device pvc" -Wl,--no-warn-execstack -o 1-sycl 1-sycl.cpp -lm
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+
+Verifying binaries...
+  OK : 2-sycl
+  OK : 2-sycl-stream
+  OK : 2-sycl-stream-omp
+  OK : 2-sycl-stream-omp-p2p
+  OK : 4-sycl
+  OK : 4-sycl-stream
+  OK : 4-sycl-stream-omp
+  OK : 4-sycl-stream-omp-p2p
+  OK : 1-sycl
+
+All binaries present -- run jobs are cleared to start.
+All built with identical flags (see OPT/SYCL_FLAGS in the Makefile), AOT=1.
