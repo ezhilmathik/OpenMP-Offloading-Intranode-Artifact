@@ -54,8 +54,55 @@ the maintainer if the repository is unavailable.
 
 ## Citation
 
-<!-- TODO: paper / preprint reference and BibTeX entry. -->
+If you use this artifact, please cite **both** the software and the paper.
+
+`CITATION.cff` in the repository root is machine-readable — GitHub renders a
+"Cite this repository" button from it, and Zenodo reads it when minting the DOI.
+
+**Software**
+
+```bibtex
+@software{krishnasamy_openmp_intranode_artifact_2026,
+  author    = {Krishnasamy, Ezhilmathi},
+  title     = {{OpenMP Offloading Intra-node: Artifact for "Evaluating OpenMP
+               Offloading for Intra-node Multi-GPU Programming across NVIDIA,
+               AMD, and Intel Architectures: A 3D Heat Transfer Case Study"}},
+  year      = {2026},
+  version   = {1.0.0},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.XXXXXXX},
+  url       = {https://github.com/ezhilmathi/OpenMP-Offloading-Intranode-Artifact}
+}
+```
+
+**Paper**
+
+```bibtex
+@article{krishnasamy_openmp_intranode_2026,
+  author  = {Krishnasamy, Ezhilmathi},
+  title   = {Evaluating OpenMP Offloading for Intra-node Multi-GPU Programming
+             across NVIDIA, AMD, and Intel Architectures: A 3D Heat Transfer
+             Case Study},
+  journal = {[JOURNAL]},
+  year    = {2026},
+  doi     = {[DOI]}
+}
+```
 
 ## License
 
-<!-- TODO. -->
+Licensed under the **European Union Public Licence v1.2 (EUPL-1.2)**. Full text
+in [`LICENSE`](LICENSE); attribution and third-party notices in
+[`NOTICE`](NOTICE).
+
+    Copyright (c) 2026 Ezhilmathi Krishnasamy
+    Licensed under the EUPL-1.2
+
+EUPL-1.2 is a copyleft licence: distributed derivative works must be released
+under the EUPL or one of the compatible licences named in its appendix (GPL-2.0
+and -3.0, AGPL-3.0, LGPL, MPL-2.0, EPL-1.0, CeCILL, OSL, and CC BY-SA 3.0 for
+non-software). Reading, running, and citing the artifact carry no such
+condition.
+
+The recorded measurement data under `3D_Heat_Benchmark/*/Source-Results/` and
+`Bandwidth_Measurements/` is released under **CC BY 4.0**.
