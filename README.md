@@ -39,8 +39,6 @@ All jobs assume **Slurm** and a node with at least four GPUs.
 
 ## Contact
 
-*[Complete before submission.]*
-
 | | |
 |---|---|
 | Maintainer | Ezhilmathi Krishnasamy |
