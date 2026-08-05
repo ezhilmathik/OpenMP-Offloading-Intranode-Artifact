@@ -43,12 +43,12 @@ All jobs assume **Slurm** and a node with at least four GPUs.
 
 | | |
 |---|---|
-| Maintainer | *[NAME]* |
-| Email | *[EMAIL]* |
-| Affiliation | *[INSTITUTION]* |
-| ORCID | *[ORCID]* |
-| Repository | *[https://github.com/ORG/REPO]* |
-| Paper version | tag *[vX.Y]*, commit *[SHA]* |
+| Maintainer | Ezhilmathi Krishnasamy |
+| Email | ezhilmathi.krishnasamy@rudolfovo.eu |
+| Affiliation | Rudolfovo Science and Technology, Novo Mesto, Slovenia<br>University of Ljubljana, Ljubljana, Slovenia<br>University of Luxembourg, Belval, Luxembourg |
+| ORCID | [0000-0002-1971-4973](https://orcid.org/0000-0002-1971-4973) |
+| Repository | https://github.com/ezhilmathi/OpenMP-Offloading-Intranode-Artifact |
+| Paper version | tag `vX.Y`, commit `SHA` |
 | Archive | https://doi.org/10.5281/zenodo.XXXXXXX |
 
 Please open an issue on the repository for problems with the artifact, or mail
