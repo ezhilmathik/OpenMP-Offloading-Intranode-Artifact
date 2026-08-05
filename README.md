@@ -42,7 +42,7 @@ All jobs assume **Slurm** and a node with at least four GPUs.
 | | |
 |---|---|
 | Maintainer | Ezhilmathi Krishnasamy |
-| Email | ezhilmathi.krishnasamy@rudolfovo.eu |
+| Email | ezhilmathi.krishnasamy@gmail.com |
 | Affiliation | Rudolfovo Science and Technology, Novo Mesto, Slovenia<br>University of Ljubljana, Ljubljana, Slovenia<br>University of Luxembourg, Belval, Luxembourg |
 | ORCID | [0000-0002-1971-4973](https://orcid.org/0000-0002-1971-4973) |
 | Repository | https://github.com/ezhilmathi/OpenMP-Offloading-Intranode-Artifact |
