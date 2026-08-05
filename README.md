@@ -1,6 +1,6 @@
 # OpenMP Offloading Intra-node
 
-Artifact accompanying the paper *Evaluating OpenMP Offloading for Intra-node Multi-GPU Programming across NVIDIA, AMD, and Intel Architectures: A 3D Heat Transfer Case Study*.
+Artifact accompanying the paper **Evaluating OpenMP Offloading for Intra-node Multi-GPU Programming across NVIDIA, AMD, and Intel Architectures: A 3D Heat Transfer Case Study**.
 
 How much of the achievable **intra-node multi-GPU** performance can portable
 **OpenMP target offloading** deliver, and what does the halo-exchange strategy
