@@ -77,7 +77,7 @@ the scripts that build it.
 The progression is deliberate: each step removes one serialisation point.
 `-omp-stream-omp-p2p` is the only variant that needs anything outside a stock
 toolchain, and only on AMD — see the
-[MI250X README](AMD-MI250X/README.md#p2p-runtime-required-by-the-p2p-variants-only).
+[MI250X README](AMD-MI250X/Source-Results/README.md#p2p-runtime-required-by-the--p2p-variants-only).
 
 The `HIP/`, `CUDA/`, and `SYCL/` trees mirror this naming
 (`2-hip-stream-omp-p2p`, `4-cuda-stream`, …) so a variant can be compared
@@ -275,10 +275,10 @@ measurement in the CSVs traces back to the exact configuration that produced it.
 
 ---
 
-## 9. Citation
 
-<!-- TODO: paper / preprint reference and BibTeX entry. -->
+## 9. Citation and License
 
-## 10. License
 
-<!-- TODO. -->
+See the [repository root README](../README.md#citation). The artifact is
+licensed under EUPL-1.2 ([`LICENSE`](../LICENSE)); recorded measurement data
+under CC BY 4.0.

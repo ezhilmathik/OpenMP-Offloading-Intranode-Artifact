@@ -20,7 +20,7 @@ OpenMP_Single_Source/
 ```
 
 Nothing is built here — there is no Makefile. See
-[`../3D_Heat_Benchmark/`](../3D_Heat_Benchmark/Source-Results/README.md) for the variant
+[`../3D_Heat_Benchmark/`](../3D_Heat_Benchmark/README.md) for the variant
 descriptions, the problem definition, and the run pipeline.
 
 ## Use
@@ -37,9 +37,9 @@ done
 ```
 
 Then follow the per-machine README:
-[AMD-MI250X](../../3D_Heat_Benchmark/AMD-MI250X/Source_Results/README.md) ·
-[NVIDIA-H100](../3D_Heat_Benchmark/NVIDIA-H100/Source_Results/README.md) ·
-[Intel-1550](../3D_Heat_Benchmark/Intel-1550/Source_Results/README.md)
+[AMD-MI250X](../3D_Heat_Benchmark/AMD-MI250X/Source-Results/README.md) ·
+[NVIDIA-H100](../3D_Heat_Benchmark/NVIDIA-H100/Source-Results/README.md) ·
+[Intel-1550](../3D_Heat_Benchmark/Intel-1550/Source-Results/README.md)
 
 To confirm the deployed copies have not drifted:
 
