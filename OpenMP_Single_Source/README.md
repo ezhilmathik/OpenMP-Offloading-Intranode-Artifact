@@ -37,7 +37,7 @@ done
 ```
 
 Then follow the per-machine README:
-[AMD-MI250X](../3D_Heat_Benchmark/AMD-MI250X/Source_Results/README.md) ·
+[AMD-MI250X](../../3D_Heat_Benchmark/AMD-MI250X/Source_Results/README.md) ·
 [NVIDIA-H100](../3D_Heat_Benchmark/NVIDIA-H100/Source_Results/README.md) ·
 [Intel-1550](../3D_Heat_Benchmark/Intel-1550/Source_Results/README.md)
 
