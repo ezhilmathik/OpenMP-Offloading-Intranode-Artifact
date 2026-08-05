@@ -9,13 +9,11 @@ Thumbs.db
 .\#*
 
 # Merge and patch leftovers
-*.orig
 *.rej
 *.bak
 
 # Build artifacts
 *.o
-*.log
 core
 core.[0-9]*
 
