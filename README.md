@@ -46,8 +46,8 @@ All jobs assume **Slurm** and a node with at least four GPUs.
 | Affiliation | Rudolfovo Science and Technology, Novo Mesto, Slovenia<br>University of Ljubljana, Ljubljana, Slovenia<br>University of Luxembourg, Belval, Luxembourg |
 | ORCID | [0000-0002-1971-4973](https://orcid.org/0000-0002-1971-4973) |
 | Repository | https://github.com/ezhilmathi/OpenMP-Offloading-Intranode-Artifact |
-| Paper version | tag `vX.Y`, commit `SHA` |
-| Archive | https://doi.org/10.5281/zenodo.XXXXXXX |
+| Paper version | tag `v1.0.0`, commit `e41a873563d1` |
+| Archive | https://doi.org/10.5281/zenodo.21878593 |
 
 Please open an issue on the repository for problems with the artifact, or mail
 the maintainer if the repository is unavailable.
@@ -70,7 +70,7 @@ If you use this artifact, please cite **both** the software and the paper.
   year      = {2026},
   version   = {1.0.0},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.XXXXXXX},
+  doi       = {10.5281/zenodo.21878593},
   url       = {https://github.com/ezhilmathi/OpenMP-Offloading-Intranode-Artifact}
 }
 ```
