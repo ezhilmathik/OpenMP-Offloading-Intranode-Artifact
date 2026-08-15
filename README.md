@@ -83,9 +83,21 @@ If you use this artifact, please cite **both** the software and the paper.
   title   = {Evaluating OpenMP Offloading for Intra-node Multi-GPU Programming
              across NVIDIA, AMD, and Intel Architectures: A 3D Heat Transfer
              Case Study},
-  journal = {[JOURNAL]},
+  journal = {Submitted to Journal - Under Review},
   year    = {2026},
-  doi     = {[DOI]}
+  doi     = {TO BE UPDATED}
+}
+```
+
+```bibtex
+@article{krishnasamy_openmp_intranode_2026_preprint,
+  author  = {Krishnasamy, Ezhilmathi},
+  title   = {Evaluating OpenMP Offloading for Intra-node Multi-GPU Programming
+             across NVIDIA, AMD, and Intel Architectures: A 3D Heat Transfer
+             Case Study},
+  journal = {https://arxiv.org/abs/2608.11882},
+  year    = {2026},
+  doi     = {10.48550/arXiv.2608.11882}
 }
 ```
 
