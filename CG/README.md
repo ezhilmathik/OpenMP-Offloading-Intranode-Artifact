@@ -41,8 +41,3 @@ on NVIDIA or Intel:
    HSA_STATUS_ERROR_INVALID_ARGUMENT, and the run does not abort: it
    carries on with p unexchanged and converges to a wrong answer.
 
-**Intel Max 1550.** `ZE_FLAT_DEVICE_HIERARCHY` matters. Under COMPOSITE one
-device is a whole card and the runtime reduces across both stacks
-internally; with two devices the vector-operation time tripled and two
-cards were slower than one. Under FLAT one device is one stack and scaling
-is near-linear.
