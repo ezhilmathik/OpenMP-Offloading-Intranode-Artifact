@@ -21,6 +21,7 @@ reader can re-run the pipeline or inspect the recorded data directly.
 | [`3D_Heat_Benchmark/`](3D_Heat_Benchmark/README.md) | **The main results.** Per-machine build/run/verify/aggregate pipelines, the recorded timings, the analytical performance model, and the paper's figures. One subfolder per machine, each with its own README. |
 | [`HHT/`](HHT/README.md) | Sensitivity study: how much does the LLVM runtime's **hidden-helper-thread count** change the outcome? The same nine variants on all three machines under three helper configurations (HHT-0, HHT-GPU, HHT-8), compared as within-cell ratios so the hardware cancels out. |
 | [`Bandwidth_Measurements/`](Bandwidth_Measurements/README.md) | Measured device-to-device bandwidth and latency per machine. Supplies the `β_p2p` and `α_p2p` constants the performance model in `3D_Heat_Benchmark/*/model/` is evaluated with. |
+| [`CG/`](CG/README.md) | Conjugate Gradient on a sparse matrix in CSR — an additional problem domain, intended to show how OpenMP Offloading scales on unstructured grids where the sparsity pattern, not the geometry. |
 
 ## Where to start
 
