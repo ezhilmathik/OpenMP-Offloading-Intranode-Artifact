@@ -1,0 +1,1506 @@
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+LUMI/25.09:
+   As the LUMI/25.09 stack uses a version of the programming environment
+   that is newer than the current default on the system (25.03), please be
+   aware of https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20251020/102-CPE/#warning-1-you-do-not-always-get-what-you-expect
+   and adapt LD_LIBRARY_PATH as needed. The easiest way to do this, is to
+   simply load lumi-CrayPath after loading all other modules, and reloading
+   it after a module change.
+
+-------------------------------------------------------------------------------
+This module comes with rocprof-sys, rocprof-compute, asan and debug libraries
+installed.
+Please check https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/r/rocm/
+for instructions on how to use them.
+
+
+This module comes with rocprof-sys, rocprof-compute, asan and debug libraries
+installed.
+Please check https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/r/rocm/
+for instructions on how to use them.
+
+=== BUILD  nid005511  ons  9 sep 2026 16:54:14 EEST  arch=gfx90a ===
+  OK : cg-cpu  (built for reference; not timed in this sweep)
+  OK : cg-ompgpu1
+  OK : cg-ompgpu2
+  OK : cg-ompgpu2halo
+  OK : cg-ompgpu4
+  OK : cg-ompgpu4halo
+
+P2P runtime : /scratch/project_465003145/omptarget-p2p/lib + libp2p_copy_shim.so
+
+============================================================
+Host          : nid005511
+Job ID        : 21848686
+Repetition    : 3
+Results dir   : results_21848686_20260909_165511
+Footprints GB : 5 10 20 30 40 50   (TOTAL problem size, not per device)
+nnz per row   : 15
+Orderings     : natural
+Runs / config : 3
+Variants      :  ompgpu1 ompgpu2 ompgpu2halo ompgpu4 ompgpu4halo
+GCDs seen     : 8  ->  4 cards (one GCD each)
+GCD memory    : 65536 MB    Host memory : 503 GB
+Offload arch  : gfx90a
+CG_OVERLAP    : 1
+Precision     : fp64
+============================================================
+--- device topology ----------------------------------------
+
+
+============================ ROCm System Management Interface ============================
+================================ Weight between two GPUs =================================
+       GPU0         GPU1         GPU2         GPU3         GPU4         GPU5         GPU6         GPU7         
+GPU0   0            15           15           30           30           30           15           30           
+GPU1   15           0            30           15           30           15           30           45           
+GPU2   15           30           0            15           15           30           30           30           
+GPU3   30           15           15           0            30           45           30           15           
+GPU4   30           30           15           30           0            15           15           30           
+GPU5   30           15           30           45           15           0            30           15           
+GPU6   15           30           30           30           15           30           0            15           
+GPU7   30           45           30           15           30           15           15           0            
+
+================================= Hops between two GPUs ==================================
+       GPU0         GPU1         GPU2         GPU3         GPU4         GPU5         GPU6         GPU7         
+GPU0   0            1            1            1            1            1            1            1            
+GPU1   1            0            1            1            1            1            1            1            
+GPU2   1            1            0            1            1            1            1            1            
+GPU3   1            1            1            0            1            1            1            1            
+GPU4   1            1            1            1            0            1            1            1            
+GPU5   1            1            1            1            1            0            1            1            
+GPU6   1            1            1            1            1            1            0            1            
+GPU7   1            1            1            1            1            1            1            0            
+
+=============================== Link Type between two GPUs ===============================
+       GPU0         GPU1         GPU2         GPU3         GPU4         GPU5         GPU6         GPU7         
+GPU0   0            XGMI         XGMI         XGMI         XGMI         XGMI         XGMI         XGMI         
+GPU1   XGMI         0            XGMI         XGMI         XGMI         XGMI         XGMI         XGMI         
+GPU2   XGMI         XGMI         0            XGMI         XGMI         XGMI         XGMI         XGMI         
+GPU3   XGMI         XGMI         XGMI         0            XGMI         XGMI         XGMI         XGMI         
+GPU4   XGMI         XGMI         XGMI         XGMI         0            XGMI         XGMI         XGMI         
+GPU5   XGMI         XGMI         XGMI         XGMI         XGMI         0            XGMI         XGMI         
+GPU6   XGMI         XGMI         XGMI         XGMI         XGMI         XGMI         0            XGMI         
+GPU7   XGMI         XGMI         XGMI         XGMI         XGMI         XGMI         XGMI         0            
+
+======================================= Numa Nodes =======================================
+GPU[0]		: (Topology) Numa Node: 3
+GPU[0]		: (Topology) Numa Affinity: 3
+GPU[1]		: (Topology) Numa Node: 3
+GPU[1]		: (Topology) Numa Affinity: 3
+GPU[2]		: (Topology) Numa Node: 1
+GPU[2]		: (Topology) Numa Affinity: 1
+GPU[3]		: (Topology) Numa Node: 1
+GPU[3]		: (Topology) Numa Affinity: 1
+GPU[4]		: (Topology) Numa Node: 0
+GPU[4]		: (Topology) Numa Affinity: 0
+GPU[5]		: (Topology) Numa Node: 0
+GPU[5]		: (Topology) Numa Affinity: 0
+GPU[6]		: (Topology) Numa Node: 2
+GPU[6]		: (Topology) Numa Affinity: 2
+GPU[7]		: (Topology) Numa Node: 2
+GPU[7]		: (Topology) Numa Affinity: 2
+================================== End of ROCm SMI Log ===================================
+-----------------------------------------------------------
+
+
+Starting sweep
+===========================
+
+>>> ompgpu1  5GB  order=natural  n=21086369
+=========================================================
+  GPUs            : 1  (OpenMP target device 0 of 1)
+  backend         : OpenMP target offload
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 21086369
+  nonzeros        : 335433721
+  nnz/row         : mean 15.91, std 3.92, max 42
+  mean |i-col|    : 41059.2  (locality: lower is better)
+  device memory   : 5.04 GB
+  build time      : 1.85 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.726e-06
+  run 1/3        : 49.9951 ms/iter  (167 iters, relres 9.46e-09)
+    iter    100   relres 7.726e-06
+  run 2/3        : 49.9995 ms/iter  (167 iters, relres 9.46e-09)
+    iter    100   relres 7.726e-06
+  run 3/3        : 49.9948 ms/iter  (167 iters, relres 9.46e-09)
+---------------------------------------------------------
+  iterations      : 167
+  true rel. resid : 9.459831e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 49.9965 ms/iter   <- headline number
+                    (best 49.9948 ms, spread 0.0%)
+    of which SpMV : 47.6091 ms/iter   (95.2 GB/s, lower-bound traffic)
+    other (dots,  : 2.3874 ms/iter
+     axpy, copy)  
+  SpMV share      : 95.2%
+=========================================================
+RESULT,gpu,omp,natural,21086369,335433721,15.91,41059.2,5.037,167,9.459831e-09,49.996477,47.609051,2.387427,95.2,95.18,49.994761,0.00,3,1
+    -> cycle=49.996477 ms  spmv=47.609051 ms  95.18 GB/s  spread=0.00%  iters=167  wall=40.0110s
+
+>>> ompgpu2  5GB total (2.94GB/GCD)  order=natural  n=21086369
+=========================================================
+  GPUs            : 2  (OpenMP target devices 0-1 of 2)
+  backend         : OpenMP target offload
+  halo path       : omp_target_memcpy (device-to-device)
+  host threads    : 2  (one per device)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 21086369
+  nonzeros        : 335433721
+  nnz/row         : mean 15.91, std 3.92, max 42
+  mean |i-col|    : 41059.2  (locality: lower is better)
+  rows / GPU      : 10542572 10543797
+  nnz / GPU       : 167716863 167716858
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 5.88 GB total, 2.94 GB max/GPU
+  p exchanged     : 0.084 GB/GPU/iter  (replicated p, no halo list)
+  exchange mode   : overlapped with interior SpMV (nowait interior kernel)
+  interior rows   : 99.20%  (rows computable before the exchange)
+  boundary rows   : 83736 84076
+  build time      : 1.85 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.726e-06
+  run 1/3        : 26.9396 ms/iter  (167 iters, relres 9.47e-09)
+    iter    100   relres 7.726e-06
+  run 2/3        : 26.9284 ms/iter  (167 iters, relres 9.47e-09)
+    iter    100   relres 7.726e-06
+  run 3/3        : 26.9233 ms/iter  (167 iters, relres 9.47e-09)
+---------------------------------------------------------
+  iterations      : 167
+  true rel. resid : 9.465177e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 26.9304 ms/iter   <- headline number
+                    (best 26.9233 ms, spread 0.0%)
+    SpMV+exchange : 25.3954 ms/iter   (178.4 GB/s on SpMV traffic alone)
+                    exchange runs underneath the interior rows,
+                    so it has no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 1.5350 ms/iter
+     axpy, copy)  
+  SpMV share      : 94.3%
+=========================================================
+RESULT,gpu,omp,natural,21086369,335433721,15.91,41059.2,5.881,167,9.465177e-09,26.930429,25.395407,1.535021,94.3,178.43,26.923285,0.03,3,2
+HALO,natural,21086369,2,0.000000,0.084,ompmemcpy-overlapped
+    -> cycle=26.930429 ms  spmv=25.395407 ms  178.43 GB/s  spread=0.03%  iters=167  wall=17.5020s
+
+>>> ompgpu2halo  5GB total (2.94GB/GCD)  order=natural  n=21086369
+=========================================================
+  GPUs            : 2  (OpenMP target devices 0-1 of 2)
+  backend         : OpenMP target offload
+  halo path       : packed lists (gather, peer copy, scatter)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 21086369
+  nonzeros        : 335433721
+  nnz/row         : mean 15.91, std 3.92, max 42
+  mean |i-col|    : 41059.2  (locality: lower is better)
+  rows / GPU      : 10542572 10543797
+  nnz / GPU       : 167716863 167716858
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 5.88 GB total, 2.94 GB max/GPU
+  halo entries    : 84076 83736   (recv/GPU/iter)
+  halo fraction   : 0.398% of n
+  p exchanged     : 0.000671 GB/GPU/iter  (replicated would be 0.084, 126x more)
+  exchange mode   : overlapped with interior SpMV (wide host team, no nowait)
+  interior rows   : 99.20%  (rows computable before the halo lands)
+  boundary rows   : 83736 84076
+  build time      : 1.83 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.726e-06
+  run 1/3        : 25.4449 ms/iter  (167 iters, relres 9.47e-09)
+    iter    100   relres 7.726e-06
+  run 2/3        : 25.4319 ms/iter  (167 iters, relres 9.47e-09)
+    iter    100   relres 7.726e-06
+  run 3/3        : 25.4363 ms/iter  (167 iters, relres 9.47e-09)
+---------------------------------------------------------
+  iterations      : 167
+  true rel. resid : 9.465177e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 25.4377 ms/iter   <- headline number
+                    (best 25.4319 ms, spread 0.0%)
+    SpMV+halo     : 23.8715 ms/iter   (189.8 GB/s on SpMV traffic alone)
+                    pack and unpack are inside this; the peer
+                    copies run underneath the interior rows, so
+                    they have no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 1.5662 ms/iter
+     axpy, copy)  
+  SpMV share      : 93.8%
+=========================================================
+RESULT,gpu,omp,natural,21086369,335433721,15.91,41059.2,5.885,167,9.465177e-09,25.437715,23.871470,1.566244,93.8,189.82,25.431876,0.02,3,2
+HALO,natural,21086369,2,0.000000,0.000671,packedhalo-overlapped
+    -> cycle=25.437715 ms  spmv=23.871470 ms  189.82 GB/s  spread=0.02%  iters=167  wall=16.7320s
+
+>>> ompgpu4  5GB total (1.91GB/GCD)  order=natural  n=21086369
+=========================================================
+  GPUs            : 4  (OpenMP target devices 0-3 of 4)
+  backend         : OpenMP target offload
+  halo path       : omp_target_memcpy (device-to-device)
+  host threads    : 4  (one per device)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 21086369
+  nonzeros        : 335433721
+  nnz/row         : mean 15.91, std 3.92, max 42
+  mean |i-col|    : 41059.2  (locality: lower is better)
+  rows / GPU      : 5278995 5263577 5262664 5281133
+  nnz / GPU       : 83858440 83858423 83858430 83858428
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 7.57 GB total, 1.89 GB max/GPU
+  p exchanged     : 0.127 GB/GPU/iter  (replicated p, no halo list)
+  exchange mode   : overlapped with interior SpMV (nowait interior kernel)
+  interior rows   : 97.61%  (rows computable before the exchange)
+  boundary rows   : 84430 167858 168202 83727
+  build time      : 1.85 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.726e-06
+  run 1/3        : 17.9410 ms/iter  (167 iters, relres 9.38e-09)
+    iter    100   relres 7.726e-06
+  run 2/3        : 17.9340 ms/iter  (167 iters, relres 9.38e-09)
+    iter    100   relres 7.726e-06
+  run 3/3        : 17.9375 ms/iter  (167 iters, relres 9.38e-09)
+---------------------------------------------------------
+  iterations      : 167
+  true rel. resid : 9.379220e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 17.9375 ms/iter   <- headline number
+                    (best 17.9340 ms, spread 0.0%)
+    SpMV+exchange : 16.9259 ms/iter   (267.7 GB/s on SpMV traffic alone)
+                    exchange runs underneath the interior rows,
+                    so it has no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 1.0116 ms/iter
+     axpy, copy)  
+  SpMV share      : 94.4%
+=========================================================
+RESULT,gpu,omp,natural,21086369,335433721,15.91,41059.2,7.568,167,9.379220e-09,17.937490,16.925915,1.011575,94.4,267.71,17.934009,0.02,3,4
+HALO,natural,21086369,4,0.000000,0.127,ompmemcpy-overlapped
+    -> cycle=17.937490 ms  spmv=16.925915 ms  267.71 GB/s  spread=0.02%  iters=167  wall=13.3810s
+
+>>> ompgpu4halo  5GB total (1.91GB/GCD)  order=natural  n=21086369
+=========================================================
+  GPUs            : 4  (OpenMP target devices 0-3 of 4)
+  backend         : OpenMP target offload
+  halo path       : packed lists (gather, peer copy, scatter)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 21086369
+  nonzeros        : 335433721
+  nnz/row         : mean 15.91, std 3.92, max 42
+  mean |i-col|    : 41059.2  (locality: lower is better)
+  rows / GPU      : 5278995 5263577 5262664 5281133
+  nnz / GPU       : 83858440 83858423 83858430 83858428
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 7.58 GB total, 1.90 GB max/GPU
+  halo entries    : 84122 168506 167463 84126   (recv/GPU/iter)
+  halo fraction   : 0.598% of n
+  p exchanged     : 0.001008 GB/GPU/iter  (replicated would be 0.127, 125x more)
+  exchange mode   : overlapped with interior SpMV (wide host team, no nowait)
+  interior rows   : 97.61%  (rows computable before the halo lands)
+  boundary rows   : 84430 167858 168202 83727
+  build time      : 1.83 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.726e-06
+  run 1/3        : 12.6102 ms/iter  (167 iters, relres 9.38e-09)
+    iter    100   relres 7.726e-06
+  run 2/3        : 12.5172 ms/iter  (167 iters, relres 9.38e-09)
+    iter    100   relres 7.726e-06
+  run 3/3        : 12.5141 ms/iter  (167 iters, relres 9.38e-09)
+---------------------------------------------------------
+  iterations      : 167
+  true rel. resid : 9.379220e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 12.5472 ms/iter   <- headline number
+                    (best 12.5141 ms, spread 0.3%)
+    SpMV+halo     : 11.5142 ms/iter   (393.5 GB/s on SpMV traffic alone)
+                    pack and unpack are inside this; the peer
+                    copies run underneath the interior rows, so
+                    they have no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 1.0330 ms/iter
+     axpy, copy)  
+  SpMV share      : 91.8%
+=========================================================
+RESULT,gpu,omp,natural,21086369,335433721,15.91,41059.2,7.580,167,9.379220e-09,12.547157,11.514156,1.033001,91.8,393.54,12.514077,0.26,3,4
+HALO,natural,21086369,4,0.000000,0.001008,packedhalo-overlapped
+    -> cycle=12.547157 ms  spmv=11.514156 ms  393.54 GB/s  spread=0.26%  iters=167  wall=10.6780s
+
+>>> ompgpu1  10GB  order=natural  n=42172739
+=========================================================
+  GPUs            : 1  (OpenMP target device 0 of 1)
+  backend         : OpenMP target offload
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 42172739
+  nonzeros        : 671630069
+  nnz/row         : mean 15.93, std 3.91, max 41
+  mean |i-col|    : 65176.9  (locality: lower is better)
+  device memory   : 10.08 GB
+  build time      : 4.12 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.919e-06
+  run 1/3        : 101.0210 ms/iter  (167 iters, relres 9.89e-09)
+    iter    100   relres 7.919e-06
+  run 2/3        : 101.0011 ms/iter  (167 iters, relres 9.89e-09)
+    iter    100   relres 7.919e-06
+  run 3/3        : 101.0139 ms/iter  (167 iters, relres 9.89e-09)
+---------------------------------------------------------
+  iterations      : 167
+  true rel. resid : 9.890726e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 101.0120 ms/iter   <- headline number
+                    (best 101.0011 ms, spread 0.0%)
+    of which SpMV : 96.5366 ms/iter   (94.0 GB/s, lower-bound traffic)
+    other (dots,  : 4.4754 ms/iter
+     axpy, copy)  
+  SpMV share      : 95.6%
+=========================================================
+RESULT,gpu,omp,natural,42172739,671630069,15.93,65176.9,10.084,167,9.890726e-09,101.011986,96.536559,4.475427,95.6,93.97,101.001114,0.01,3,1
+    -> cycle=101.011986 ms  spmv=96.536559 ms  93.97 GB/s  spread=0.01%  iters=167  wall=58.3360s
+
+>>> ompgpu2  10GB total (5.88GB/GCD)  order=natural  n=42172739
+=========================================================
+  GPUs            : 2  (OpenMP target devices 0-1 of 2)
+  backend         : OpenMP target offload
+  halo path       : omp_target_memcpy (device-to-device)
+  host threads    : 2  (one per device)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 42172739
+  nonzeros        : 671630069
+  nnz/row         : mean 15.93, std 3.91, max 41
+  mean |i-col|    : 65176.9  (locality: lower is better)
+  rows / GPU      : 21084578 21088161
+  nnz / GPU       : 335815042 335815027
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 11.77 GB total, 5.89 GB max/GPU
+  p exchanged     : 0.169 GB/GPU/iter  (replicated p, no halo list)
+  exchange mode   : overlapped with interior SpMV (nowait interior kernel)
+  interior rows   : 99.37%  (rows computable before the exchange)
+  boundary rows   : 133373 133283
+  build time      : 4.10 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.919e-06
+  run 1/3        : 55.2174 ms/iter  (168 iters, relres 9.11e-09)
+    iter    100   relres 7.919e-06
+  run 2/3        : 55.2049 ms/iter  (168 iters, relres 9.11e-09)
+    iter    100   relres 7.919e-06
+  run 3/3        : 55.2103 ms/iter  (168 iters, relres 9.11e-09)
+---------------------------------------------------------
+  iterations      : 168
+  true rel. resid : 9.114724e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 55.2109 ms/iter   <- headline number
+                    (best 55.2049 ms, spread 0.0%)
+    SpMV+exchange : 52.4670 ms/iter   (172.9 GB/s on SpMV traffic alone)
+                    exchange runs underneath the interior rows,
+                    so it has no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 2.7439 ms/iter
+     axpy, copy)  
+  SpMV share      : 95.0%
+=========================================================
+RESULT,gpu,omp,natural,42172739,671630069,15.93,65176.9,11.771,168,9.114724e-09,55.210857,52.466956,2.743900,95.0,172.90,55.204879,0.01,3,2
+HALO,natural,42172739,2,0.000000,0.169,ompmemcpy-overlapped
+    -> cycle=55.210857 ms  spmv=52.466956 ms  172.90 GB/s  spread=0.01%  iters=168  wall=36.0250s
+
+>>> ompgpu2halo  10GB total (5.88GB/GCD)  order=natural  n=42172739
+=========================================================
+  GPUs            : 2  (OpenMP target devices 0-1 of 2)
+  backend         : OpenMP target offload
+  halo path       : packed lists (gather, peer copy, scatter)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 42172739
+  nonzeros        : 671630069
+  nnz/row         : mean 15.93, std 3.91, max 41
+  mean |i-col|    : 65176.9  (locality: lower is better)
+  rows / GPU      : 21084578 21088161
+  nnz / GPU       : 335815042 335815027
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 11.78 GB total, 5.89 GB max/GPU
+  halo entries    : 133283 133373   (recv/GPU/iter)
+  halo fraction   : 0.316% of n
+  p exchanged     : 0.001067 GB/GPU/iter  (replicated would be 0.169, 158x more)
+  exchange mode   : overlapped with interior SpMV (wide host team, no nowait)
+  interior rows   : 99.37%  (rows computable before the halo lands)
+  boundary rows   : 133373 133283
+  build time      : 4.09 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.919e-06
+  run 1/3        : 52.3533 ms/iter  (168 iters, relres 9.11e-09)
+    iter    100   relres 7.919e-06
+  run 2/3        : 55.2519 ms/iter  (168 iters, relres 9.11e-09)
+    iter    100   relres 7.919e-06
+  run 3/3        : 50.4537 ms/iter  (168 iters, relres 9.11e-09)
+---------------------------------------------------------
+  iterations      : 168
+  true rel. resid : 9.114724e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 52.6863 ms/iter   <- headline number
+                    (best 50.4537 ms, spread 4.4%)
+    SpMV+halo     : 48.4604 ms/iter   (187.2 GB/s on SpMV traffic alone)
+                    pack and unpack are inside this; the peer
+                    copies run underneath the interior rows, so
+                    they have no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 4.2259 ms/iter
+     axpy, copy)  
+  SpMV share      : 92.0%
+=========================================================
+RESULT,gpu,omp,natural,42172739,671630069,15.93,65176.9,11.777,168,9.114724e-09,52.686296,48.460445,4.225851,92.0,187.20,50.453750,4.42,3,2
+HALO,natural,42172739,2,0.000000,0.001067,packedhalo-overlapped
+    -> cycle=52.686296 ms  spmv=48.460445 ms  187.20 GB/s  spread=4.42%  iters=168  wall=34.8210s
+
+>>> ompgpu4  10GB total (3.82GB/GCD)  order=natural  n=42172739
+=========================================================
+  GPUs            : 4  (OpenMP target devices 0-3 of 4)
+  backend         : OpenMP target offload
+  halo path       : omp_target_memcpy (device-to-device)
+  host threads    : 4  (one per device)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 42172739
+  nonzeros        : 671630069
+  nnz/row         : mean 15.93, std 3.91, max 41
+  mean |i-col|    : 65176.9  (locality: lower is better)
+  rows / GPU      : 10555487 10529091 10528551 10559610
+  nnz / GPU       : 167907523 167907519 167907511 167907516
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 15.14 GB total, 3.79 GB max/GPU
+  p exchanged     : 0.253 GB/GPU/iter  (replicated p, no halo list)
+  exchange mode   : overlapped with interior SpMV (nowait interior kernel)
+  interior rows   : 98.10%  (rows computable before the exchange)
+  boundary rows   : 134207 266952 266107 132792
+  build time      : 4.00 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.919e-06
+  run 1/3        : 36.1804 ms/iter  (168 iters, relres 9.25e-09)
+    iter    100   relres 7.919e-06
+  run 2/3        : 36.1713 ms/iter  (168 iters, relres 9.25e-09)
+    iter    100   relres 7.919e-06
+  run 3/3        : 36.1717 ms/iter  (168 iters, relres 9.25e-09)
+---------------------------------------------------------
+  iterations      : 168
+  true rel. resid : 9.248915e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 36.1745 ms/iter   <- headline number
+                    (best 36.1713 ms, spread 0.0%)
+    SpMV+exchange : 34.5791 ms/iter   (262.3 GB/s on SpMV traffic alone)
+                    exchange runs underneath the interior rows,
+                    so it has no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 1.5954 ms/iter
+     axpy, copy)  
+  SpMV share      : 95.6%
+=========================================================
+RESULT,gpu,omp,natural,42172739,671630069,15.93,65176.9,15.145,168,9.248915e-09,36.174455,34.579076,1.595379,95.6,262.35,36.171286,0.01,3,4
+HALO,natural,42172739,4,0.000000,0.253,ompmemcpy-overlapped
+    -> cycle=36.174455 ms  spmv=34.579076 ms  262.35 GB/s  spread=0.01%  iters=168  wall=26.9930s
+
+>>> ompgpu4halo  10GB total (3.82GB/GCD)  order=natural  n=42172739
+=========================================================
+  GPUs            : 4  (OpenMP target devices 0-3 of 4)
+  backend         : OpenMP target offload
+  halo path       : packed lists (gather, peer copy, scatter)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 42172739
+  nonzeros        : 671630069
+  nnz/row         : mean 15.93, std 3.91, max 41
+  mean |i-col|    : 65176.9  (locality: lower is better)
+  rows / GPU      : 10555487 10529091 10528551 10559610
+  nnz / GPU       : 167907523 167907519 167907511 167907516
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 15.16 GB total, 3.79 GB max/GPU
+  halo entries    : 133579 267490 266165 132824   (recv/GPU/iter)
+  halo fraction   : 0.474% of n
+  p exchanged     : 0.001600 GB/GPU/iter  (replicated would be 0.253, 158x more)
+  exchange mode   : overlapped with interior SpMV (wide host team, no nowait)
+  interior rows   : 98.10%  (rows computable before the halo lands)
+  boundary rows   : 134207 266952 266107 132792
+  build time      : 4.03 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.919e-06
+  run 1/3        : 25.2754 ms/iter  (168 iters, relres 9.25e-09)
+    iter    100   relres 7.919e-06
+  run 2/3        : 25.2562 ms/iter  (168 iters, relres 9.25e-09)
+    iter    100   relres 7.919e-06
+  run 3/3        : 25.2557 ms/iter  (168 iters, relres 9.25e-09)
+---------------------------------------------------------
+  iterations      : 168
+  true rel. resid : 9.248915e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 25.2624 ms/iter   <- headline number
+                    (best 25.2557 ms, spread 0.0%)
+    SpMV+halo     : 23.6317 ms/iter   (383.9 GB/s on SpMV traffic alone)
+                    pack and unpack are inside this; the peer
+                    copies run underneath the interior rows, so
+                    they have no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 1.6307 ms/iter
+     axpy, copy)  
+  SpMV share      : 93.5%
+=========================================================
+RESULT,gpu,omp,natural,42172739,671630069,15.93,65176.9,15.164,168,9.248915e-09,25.262435,23.631697,1.630738,93.5,383.88,25.255687,0.03,3,4
+HALO,natural,42172739,4,0.000000,0.001600,packedhalo-overlapped
+    -> cycle=25.262435 ms  spmv=23.631697 ms  383.88 GB/s  spread=0.03%  iters=168  wall=21.7200s
+
+>>> ompgpu1  20GB  order=natural  n=84345479
+=========================================================
+  GPUs            : 1  (OpenMP target device 0 of 1)
+  backend         : OpenMP target offload
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 84345479
+  nonzeros        : 1344549713
+  nnz/row         : mean 15.94, std 3.90, max 43
+  mean |i-col|    : 103467.4  (locality: lower is better)
+  device memory   : 20.18 GB
+  build time      : 8.61 s  (host)
+---------------------------------------------------------
+    iter    100   relres 8.324e-06
+  run 1/3        : 205.2989 ms/iter  (169 iters, relres 9.11e-09)
+    iter    100   relres 8.324e-06
+  run 2/3        : 205.2884 ms/iter  (169 iters, relres 9.11e-09)
+    iter    100   relres 8.324e-06
+  run 3/3        : 205.9995 ms/iter  (169 iters, relres 9.11e-09)
+---------------------------------------------------------
+  iterations      : 169
+  true rel. resid : 9.106102e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 205.5289 ms/iter   <- headline number
+                    (best 205.2884 ms, spread 0.1%)
+    of which SpMV : 196.5483 ms/iter   (92.4 GB/s, lower-bound traffic)
+    other (dots,  : 8.9806 ms/iter
+     axpy, copy)  
+  SpMV share      : 95.6%
+=========================================================
+RESULT,gpu,omp,natural,84345479,1344549713,15.94,103467.4,20.183,169,9.106102e-09,205.528918,196.548330,8.980588,95.6,92.39,205.288420,0.12,3,1
+    -> cycle=205.528918 ms  spmv=196.548330 ms  92.39 GB/s  spread=0.12%  iters=169  wall=119.6800s
+
+>>> ompgpu2  20GB total (11.75GB/GCD)  order=natural  n=84345479
+=========================================================
+  GPUs            : 2  (OpenMP target devices 0-1 of 2)
+  backend         : OpenMP target offload
+  halo path       : omp_target_memcpy (device-to-device)
+  host threads    : 2  (one per device)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 84345479
+  nonzeros        : 1344549713
+  nnz/row         : mean 15.94, std 3.90, max 43
+  mean |i-col|    : 103467.4  (locality: lower is better)
+  rows / GPU      : 42169453 42176026
+  nnz / GPU       : 672274864 672274849
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 23.56 GB total, 11.78 GB max/GPU
+  p exchanged     : 0.337 GB/GPU/iter  (replicated p, no halo list)
+  exchange mode   : overlapped with interior SpMV (nowait interior kernel)
+  interior rows   : 99.50%  (rows computable before the exchange)
+  boundary rows   : 212331 211719
+  build time      : 8.60 s  (host)
+---------------------------------------------------------
+    iter    100   relres 8.324e-06
+  run 1/3        : 113.2587 ms/iter  (169 iters, relres 9.13e-09)
+    iter    100   relres 8.324e-06
+  run 2/3        : 120.2958 ms/iter  (169 iters, relres 9.13e-09)
+    iter    100   relres 8.324e-06
+  run 3/3        : 114.2413 ms/iter  (169 iters, relres 9.13e-09)
+---------------------------------------------------------
+  iterations      : 169
+  true rel. resid : 9.128358e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 115.9319 ms/iter   <- headline number
+                    (best 113.2587 ms, spread 2.4%)
+    SpMV+exchange : 108.3642 ms/iter   (167.6 GB/s on SpMV traffic alone)
+                    exchange runs underneath the interior rows,
+                    so it has no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 7.5678 ms/iter
+     axpy, copy)  
+  SpMV share      : 93.5%
+=========================================================
+RESULT,gpu,omp,natural,84345479,1344549713,15.94,103467.4,23.557,169,9.128358e-09,115.931931,108.364157,7.567774,93.5,167.57,113.258715,2.36,3,2
+HALO,natural,84345479,2,0.000000,0.337,ompmemcpy-overlapped
+    -> cycle=115.931931 ms  spmv=108.364157 ms  167.57 GB/s  spread=2.36%  iters=169  wall=75.1690s
+
+>>> ompgpu2halo  20GB total (11.75GB/GCD)  order=natural  n=84345479
+=========================================================
+  GPUs            : 2  (OpenMP target devices 0-1 of 2)
+  backend         : OpenMP target offload
+  halo path       : packed lists (gather, peer copy, scatter)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 84345479
+  nonzeros        : 1344549713
+  nnz/row         : mean 15.94, std 3.90, max 43
+  mean |i-col|    : 103467.4  (locality: lower is better)
+  rows / GPU      : 42169453 42176026
+  nnz / GPU       : 672274864 672274849
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 23.57 GB total, 11.78 GB max/GPU
+  halo entries    : 211719 212331   (recv/GPU/iter)
+  halo fraction   : 0.251% of n
+  p exchanged     : 0.001696 GB/GPU/iter  (replicated would be 0.337, 199x more)
+  exchange mode   : overlapped with interior SpMV (wide host team, no nowait)
+  interior rows   : 99.50%  (rows computable before the halo lands)
+  boundary rows   : 212331 211719
+  build time      : 8.61 s  (host)
+---------------------------------------------------------
+    iter    100   relres 8.324e-06
+  run 1/3        : 103.3661 ms/iter  (169 iters, relres 9.13e-09)
+    iter    100   relres 8.324e-06
+  run 2/3        : 103.3672 ms/iter  (169 iters, relres 9.13e-09)
+    iter    100   relres 8.324e-06
+  run 3/3        : 103.3568 ms/iter  (169 iters, relres 9.13e-09)
+---------------------------------------------------------
+  iterations      : 169
+  true rel. resid : 9.128358e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 103.3634 ms/iter   <- headline number
+                    (best 103.3568 ms, spread 0.0%)
+    SpMV+halo     : 97.8662 ms/iter   (185.5 GB/s on SpMV traffic alone)
+                    pack and unpack are inside this; the peer
+                    copies run underneath the interior rows, so
+                    they have no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 5.4971 ms/iter
+     axpy, copy)  
+  SpMV share      : 94.7%
+=========================================================
+RESULT,gpu,omp,natural,84345479,1344549713,15.94,103467.4,23.567,169,9.128358e-09,103.363368,97.866238,5.497130,94.7,185.55,103.356792,0.01,3,2
+HALO,natural,84345479,2,0.000000,0.001696,packedhalo-overlapped
+    -> cycle=103.363368 ms  spmv=97.866238 ms  185.55 GB/s  spread=0.01%  iters=169  wall=68.6690s
+
+>>> ompgpu4  20GB total (7.63GB/GCD)  order=natural  n=84345479
+=========================================================
+  GPUs            : 4  (OpenMP target devices 0-3 of 4)
+  backend         : OpenMP target offload
+  halo path       : omp_target_memcpy (device-to-device)
+  host threads    : 4  (one per device)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 84345479
+  nonzeros        : 1344549713
+  nnz/row         : mean 15.94, std 3.90, max 43
+  mean |i-col|    : 103467.4  (locality: lower is better)
+  rows / GPU      : 21114721 21054732 21068008 21108018
+  nnz / GPU       : 336137437 336137427 336137430 336137419
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 30.30 GB total, 7.58 GB max/GPU
+  p exchanged     : 0.506 GB/GPU/iter  (replicated p, no halo list)
+  exchange mode   : overlapped with interior SpMV (nowait interior kernel)
+  interior rows   : 98.49%  (rows computable before the exchange)
+  boundary rows   : 212184 424100 423498 212076
+  build time      : 8.49 s  (host)
+---------------------------------------------------------
+    iter    100   relres 8.324e-06
+  run 1/3        : 73.6395 ms/iter  (169 iters, relres 9.11e-09)
+    iter    100   relres 8.324e-06
+  run 2/3        : 73.6375 ms/iter  (169 iters, relres 9.11e-09)
+    iter    100   relres 8.324e-06
+  run 3/3        : 73.6435 ms/iter  (169 iters, relres 9.11e-09)
+---------------------------------------------------------
+  iterations      : 169
+  true rel. resid : 9.109535e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 73.6402 ms/iter   <- headline number
+                    (best 73.6375 ms, spread 0.0%)
+    SpMV+exchange : 70.7657 ms/iter   (256.6 GB/s on SpMV traffic alone)
+                    exchange runs underneath the interior rows,
+                    so it has no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 2.8745 ms/iter
+     axpy, copy)  
+  SpMV share      : 96.1%
+=========================================================
+RESULT,gpu,omp,natural,84345479,1344549713,15.94,103467.4,30.305,169,9.109535e-09,73.640179,70.765653,2.874526,96.1,256.61,73.637539,0.00,3,4
+HALO,natural,84345479,4,0.000000,0.506,ompmemcpy-overlapped
+    -> cycle=73.640179 ms  spmv=70.765653 ms  256.61 GB/s  spread=0.00%  iters=169  wall=54.9390s
+
+>>> ompgpu4halo  20GB total (7.63GB/GCD)  order=natural  n=84345479
+=========================================================
+  GPUs            : 4  (OpenMP target devices 0-3 of 4)
+  backend         : OpenMP target offload
+  halo path       : packed lists (gather, peer copy, scatter)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 84345479
+  nonzeros        : 1344549713
+  nnz/row         : mean 15.94, std 3.90, max 43
+  mean |i-col|    : 103467.4  (locality: lower is better)
+  rows / GPU      : 21114721 21054732 21068008 21108018
+  nnz / GPU       : 336137437 336137427 336137430 336137419
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 30.34 GB total, 7.59 GB max/GPU
+  halo entries    : 211769 423903 424407 211779   (recv/GPU/iter)
+  halo fraction   : 0.377% of n
+  p exchanged     : 0.002544 GB/GPU/iter  (replicated would be 0.506, 199x more)
+  exchange mode   : overlapped with interior SpMV (wide host team, no nowait)
+  interior rows   : 98.49%  (rows computable before the halo lands)
+  boundary rows   : 212184 424100 423498 212076
+  build time      : 8.48 s  (host)
+---------------------------------------------------------
+    iter    100   relres 8.324e-06
+  run 1/3        : 53.2780 ms/iter  (169 iters, relres 9.11e-09)
+    iter    100   relres 8.324e-06
+  run 2/3        : 51.6030 ms/iter  (169 iters, relres 9.11e-09)
+    iter    100   relres 8.324e-06
+  run 3/3        : 51.5834 ms/iter  (169 iters, relres 9.11e-09)
+---------------------------------------------------------
+  iterations      : 169
+  true rel. resid : 9.109535e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 52.1548 ms/iter   <- headline number
+                    (best 51.5834 ms, spread 1.1%)
+    SpMV+halo     : 48.9342 ms/iter   (371.1 GB/s on SpMV traffic alone)
+                    pack and unpack are inside this; the peer
+                    copies run underneath the interior rows, so
+                    they have no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 3.2206 ms/iter
+     axpy, copy)  
+  SpMV share      : 93.8%
+=========================================================
+RESULT,gpu,omp,natural,84345479,1344549713,15.94,103467.4,30.335,169,9.109535e-09,52.154770,48.934161,3.220609,93.8,371.09,51.583365,1.11,3,4
+HALO,natural,84345479,4,0.000000,0.002544,packedhalo-overlapped
+    -> cycle=52.154770 ms  spmv=48.934161 ms  371.09 GB/s  spread=1.11%  iters=169  wall=44.2840s
+
+>>> ompgpu1  30GB  order=natural  n=126518218
+=========================================================
+  GPUs            : 1  (OpenMP target device 0 of 1)
+  backend         : OpenMP target offload
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 126518218
+  nonzeros        : 2017751756
+  nnz/row         : mean 15.95, std 3.90, max 41
+  mean |i-col|    : 135565.8  (locality: lower is better)
+  device memory   : 30.29 GB
+  build time      : 13.10 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.872e-06
+  run 1/3        : 305.2988 ms/iter  (168 iters, relres 9.43e-09)
+    iter    100   relres 7.872e-06
+  run 2/3        : 305.3162 ms/iter  (168 iters, relres 9.43e-09)
+    iter    100   relres 7.872e-06
+  run 3/3        : 305.2753 ms/iter  (168 iters, relres 9.43e-09)
+---------------------------------------------------------
+  iterations      : 168
+  true rel. resid : 9.425903e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 305.2968 ms/iter   <- headline number
+                    (best 305.2753 ms, spread 0.0%)
+    of which SpMV : 292.0874 ms/iter   (93.3 GB/s, lower-bound traffic)
+    other (dots,  : 13.2093 ms/iter
+     axpy, copy)  
+  SpMV share      : 95.7%
+=========================================================
+RESULT,gpu,omp,natural,126518218,2017751756,15.95,135565.8,30.286,168,9.425903e-09,305.296753,292.087408,13.209345,95.7,93.29,305.275277,0.01,3,1
+    -> cycle=305.296753 ms  spmv=292.087408 ms  93.29 GB/s  spread=0.01%  iters=168  wall=177.1290s
+
+>>> ompgpu2  30GB total (17.63GB/GCD)  order=natural  n=126518218
+=========================================================
+  GPUs            : 2  (OpenMP target devices 0-1 of 2)
+  backend         : OpenMP target offload
+  halo path       : omp_target_memcpy (device-to-device)
+  host threads    : 2  (one per device)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 126518218
+  nonzeros        : 2017751756
+  nnz/row         : mean 15.95, std 3.90, max 41
+  mean |i-col|    : 135565.8  (locality: lower is better)
+  rows / GPU      : 63253431 63264787
+  nnz / GPU       : 1008875886 1008875870
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 35.35 GB total, 17.67 GB max/GPU
+  p exchanged     : 0.506 GB/GPU/iter  (replicated p, no halo list)
+  exchange mode   : overlapped with interior SpMV (nowait interior kernel)
+  interior rows   : 99.56%  (rows computable before the exchange)
+  boundary rows   : 277853 277267
+  build time      : 13.01 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.872e-06
+  run 1/3        : 168.9815 ms/iter  (168 iters, relres 9.45e-09)
+    iter    100   relres 7.872e-06
+  run 2/3        : 171.6905 ms/iter  (168 iters, relres 9.45e-09)
+    iter    100   relres 7.872e-06
+  run 3/3        : 168.9700 ms/iter  (168 iters, relres 9.45e-09)
+---------------------------------------------------------
+  iterations      : 168
+  true rel. resid : 9.446114e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 169.8806 ms/iter   <- headline number
+                    (best 168.9700 ms, spread 0.5%)
+    SpMV+exchange : 160.9955 ms/iter   (169.3 GB/s on SpMV traffic alone)
+                    exchange runs underneath the interior rows,
+                    so it has no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 8.8852 ms/iter
+     axpy, copy)  
+  SpMV share      : 94.8%
+=========================================================
+RESULT,gpu,omp,natural,126518218,2017751756,15.95,135565.8,35.347,168,9.446114e-09,169.880643,160.995452,8.885190,94.8,169.26,168.969982,0.54,3,2
+HALO,natural,126518218,2,0.000000,0.506,ompmemcpy-overlapped
+    -> cycle=169.880643 ms  spmv=160.995452 ms  169.26 GB/s  spread=0.54%  iters=168  wall=110.0570s
+
+>>> ompgpu2halo  30GB total (17.63GB/GCD)  order=natural  n=126518218
+=========================================================
+  GPUs            : 2  (OpenMP target devices 0-1 of 2)
+  backend         : OpenMP target offload
+  halo path       : packed lists (gather, peer copy, scatter)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 126518218
+  nonzeros        : 2017751756
+  nnz/row         : mean 15.95, std 3.90, max 41
+  mean |i-col|    : 135565.8  (locality: lower is better)
+  rows / GPU      : 63253431 63264787
+  nnz / GPU       : 1008875886 1008875870
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 35.36 GB total, 17.68 GB max/GPU
+  halo entries    : 277267 277853   (recv/GPU/iter)
+  halo fraction   : 0.219% of n
+  p exchanged     : 0.002220 GB/GPU/iter  (replicated would be 0.506, 228x more)
+  exchange mode   : overlapped with interior SpMV (wide host team, no nowait)
+  interior rows   : 99.56%  (rows computable before the halo lands)
+  boundary rows   : 277853 277267
+  build time      : 13.24 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.872e-06
+  run 1/3        : 154.2432 ms/iter  (168 iters, relres 9.45e-09)
+    iter    100   relres 7.872e-06
+  run 2/3        : 154.1468 ms/iter  (168 iters, relres 9.45e-09)
+    iter    100   relres 7.872e-06
+  run 3/3        : 154.0897 ms/iter  (168 iters, relres 9.45e-09)
+---------------------------------------------------------
+  iterations      : 168
+  true rel. resid : 9.446114e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 154.1599 ms/iter   <- headline number
+                    (best 154.0897 ms, spread 0.0%)
+    SpMV+halo     : 145.9191 ms/iter   (186.7 GB/s on SpMV traffic alone)
+                    pack and unpack are inside this; the peer
+                    copies run underneath the interior rows, so
+                    they have no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 8.2408 ms/iter
+     axpy, copy)  
+  SpMV share      : 94.7%
+=========================================================
+RESULT,gpu,omp,natural,126518218,2017751756,15.95,135565.8,35.360,168,9.446114e-09,154.159902,145.919088,8.240814,94.7,186.74,154.089681,0.05,3,2
+HALO,natural,126518218,2,0.000000,0.002220,packedhalo-overlapped
+    -> cycle=154.159902 ms  spmv=145.919088 ms  186.74 GB/s  spread=0.05%  iters=168  wall=102.5680s
+
+>>> ompgpu4  30GB total (11.45GB/GCD)  order=natural  n=126518218
+=========================================================
+  GPUs            : 4  (OpenMP target devices 0-3 of 4)
+  backend         : OpenMP target offload
+  halo path       : omp_target_memcpy (device-to-device)
+  host threads    : 4  (one per device)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 126518218
+  nonzeros        : 2017751756
+  nnz/row         : mean 15.95, std 3.90, max 41
+  mean |i-col|    : 135565.8  (locality: lower is better)
+  rows / GPU      : 31665594 31587837 31601858 31662929
+  nnz / GPU       : 504437948 504437938 504437938 504437932
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 45.47 GB total, 11.37 GB max/GPU
+  p exchanged     : 0.759 GB/GPU/iter  (replicated p, no halo list)
+  exchange mode   : overlapped with interior SpMV (nowait interior kernel)
+  interior rows   : 98.68%  (rows computable before the exchange)
+  boundary rows   : 278765 555680 553525 276717
+  build time      : 12.96 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.872e-06
+  run 1/3        : 107.4035 ms/iter  (168 iters, relres 9.44e-09)
+    iter    100   relres 7.872e-06
+  run 2/3        : 107.3068 ms/iter  (168 iters, relres 9.44e-09)
+    iter    100   relres 7.872e-06
+  run 3/3        : 107.2676 ms/iter  (168 iters, relres 9.44e-09)
+---------------------------------------------------------
+  iterations      : 168
+  true rel. resid : 9.443046e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 107.3260 ms/iter   <- headline number
+                    (best 107.2676 ms, spread 0.1%)
+    SpMV+exchange : 103.1038 ms/iter   (264.3 GB/s on SpMV traffic alone)
+                    exchange runs underneath the interior rows,
+                    so it has no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 4.2221 ms/iter
+     axpy, copy)  
+  SpMV share      : 96.1%
+=========================================================
+RESULT,gpu,omp,natural,126518218,2017751756,15.95,135565.8,45.468,168,9.443046e-09,107.325969,103.103845,4.222123,96.1,264.29,107.267626,0.05,3,4
+HALO,natural,126518218,4,0.000000,0.759,ompmemcpy-overlapped
+    -> cycle=107.325969 ms  spmv=103.103845 ms  264.29 GB/s  spread=0.05%  iters=168  wall=80.3560s
+
+>>> ompgpu4halo  30GB total (11.45GB/GCD)  order=natural  n=126518218
+=========================================================
+  GPUs            : 4  (OpenMP target devices 0-3 of 4)
+  backend         : OpenMP target offload
+  halo path       : packed lists (gather, peer copy, scatter)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 126518218
+  nonzeros        : 2017751756
+  nnz/row         : mean 15.95, std 3.90, max 41
+  mean |i-col|    : 135565.8  (locality: lower is better)
+  rows / GPU      : 31665594 31587837 31601858 31662929
+  nnz / GPU       : 504437948 504437938 504437938 504437932
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 45.51 GB total, 11.38 GB max/GPU
+  halo entries    : 277827 556032 554570 276258   (recv/GPU/iter)
+  halo fraction   : 0.329% of n
+  p exchanged     : 0.003329 GB/GPU/iter  (replicated would be 0.759, 228x more)
+  exchange mode   : overlapped with interior SpMV (wide host team, no nowait)
+  interior rows   : 98.68%  (rows computable before the halo lands)
+  boundary rows   : 278765 555680 553525 276717
+  build time      : 13.27 s  (host)
+---------------------------------------------------------
+    iter    100   relres 7.872e-06
+  run 1/3        : 78.7246 ms/iter  (168 iters, relres 9.44e-09)
+    iter    100   relres 7.872e-06
+  run 2/3        : 78.6596 ms/iter  (168 iters, relres 9.44e-09)
+    iter    100   relres 7.872e-06
+  run 3/3        : 78.6674 ms/iter  (168 iters, relres 9.44e-09)
+---------------------------------------------------------
+  iterations      : 168
+  true rel. resid : 9.443046e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 78.6839 ms/iter   <- headline number
+                    (best 78.6596 ms, spread 0.0%)
+    SpMV+halo     : 74.4887 ms/iter   (365.8 GB/s on SpMV traffic alone)
+                    pack and unpack are inside this; the peer
+                    copies run underneath the interior rows, so
+                    they have no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 4.1951 ms/iter
+     axpy, copy)  
+  SpMV share      : 94.7%
+=========================================================
+RESULT,gpu,omp,natural,126518218,2017751756,15.95,135565.8,45.508,168,9.443046e-09,78.683885,74.488743,4.195142,94.7,365.82,78.659623,0.03,3,4
+HALO,natural,126518218,4,0.000000,0.003329,packedhalo-overlapped
+    -> cycle=78.683885 ms  spmv=74.488743 ms  365.82 GB/s  spread=0.03%  iters=168  wall=66.7910s
+
+>>> ompgpu1  40GB  order=natural  n=168690958
+=========================================================
+  GPUs            : 1  (OpenMP target device 0 of 1)
+  backend         : OpenMP target offload
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 168690958
+  nonzeros        : 2691219644
+  nnz/row         : mean 15.95, std 3.89, max 45
+  mean |i-col|    : 164224.1  (locality: lower is better)
+  device memory   : 40.39 GB
+  build time      : 17.60 s  (host)
+---------------------------------------------------------
+    iter    100   relres 9.541e-06
+  run 1/3        : 419.7049 ms/iter  (171 iters, relres 9.32e-09)
+    iter    100   relres 9.541e-06
+  run 2/3        : 419.7234 ms/iter  (171 iters, relres 9.32e-09)
+    iter    100   relres 9.541e-06
+  run 3/3        : 419.7131 ms/iter  (171 iters, relres 9.32e-09)
+---------------------------------------------------------
+  iterations      : 171
+  true rel. resid : 9.324093e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 419.7138 ms/iter   <- headline number
+                    (best 419.7049 ms, spread 0.0%)
+    of which SpMV : 402.3241 ms/iter   (90.3 GB/s, lower-bound traffic)
+    other (dots,  : 17.3897 ms/iter
+     axpy, copy)  
+  SpMV share      : 95.9%
+=========================================================
+RESULT,gpu,omp,natural,168690958,2691219644,15.95,164224.1,40.392,171,9.324093e-09,419.713797,402.324123,17.389673,95.9,90.33,419.704886,0.00,3,1
+    -> cycle=419.713797 ms  spmv=402.324123 ms  90.33 GB/s  spread=0.00%  iters=171  wall=246.2540s
+
+>>> ompgpu2  40GB total (23.51GB/GCD)  order=natural  n=168690958
+=========================================================
+  GPUs            : 2  (OpenMP target devices 0-1 of 2)
+  backend         : OpenMP target offload
+  halo path       : omp_target_memcpy (device-to-device)
+  host threads    : 2  (one per device)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 168690958
+  nonzeros        : 2691219644
+  nnz/row         : mean 15.95, std 3.89, max 45
+  mean |i-col|    : 164224.1  (locality: lower is better)
+  rows / GPU      : 84332684 84358274
+  nnz / GPU       : 1345609830 1345609814
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 47.14 GB total, 23.57 GB max/GPU
+  p exchanged     : 0.675 GB/GPU/iter  (replicated p, no halo list)
+  exchange mode   : overlapped with interior SpMV (nowait interior kernel)
+  interior rows   : 99.60%  (rows computable before the exchange)
+  boundary rows   : 335450 335769
+  build time      : 17.47 s  (host)
+---------------------------------------------------------
+    iter    100   relres 9.541e-06
+  run 1/3        : 228.1804 ms/iter  (171 iters, relres 9.28e-09)
+    iter    100   relres 9.541e-06
+  run 2/3        : 228.1364 ms/iter  (171 iters, relres 9.28e-09)
+    iter    100   relres 9.541e-06
+  run 3/3        : 233.0011 ms/iter  (171 iters, relres 9.28e-09)
+---------------------------------------------------------
+  iterations      : 171
+  true rel. resid : 9.279968e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 229.7726 ms/iter   <- headline number
+                    (best 228.1364 ms, spread 0.7%)
+    SpMV+exchange : 217.8550 ms/iter   (166.8 GB/s on SpMV traffic alone)
+                    exchange runs underneath the interior rows,
+                    so it has no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 11.9176 ms/iter
+     axpy, copy)  
+  SpMV share      : 94.8%
+=========================================================
+RESULT,gpu,omp,natural,168690958,2691219644,15.95,164224.1,47.139,171,9.279968e-09,229.772621,217.855046,11.917575,94.8,166.82,228.136387,0.72,3,2
+HALO,natural,168690958,2,0.000000,0.675,ompmemcpy-overlapped
+    -> cycle=229.772621 ms  spmv=217.855046 ms  166.82 GB/s  spread=0.72%  iters=171  wall=150.1520s
+
+>>> ompgpu2halo  40GB total (23.51GB/GCD)  order=natural  n=168690958
+=========================================================
+  GPUs            : 2  (OpenMP target devices 0-1 of 2)
+  backend         : OpenMP target offload
+  halo path       : packed lists (gather, peer copy, scatter)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 168690958
+  nonzeros        : 2691219644
+  nnz/row         : mean 15.95, std 3.89, max 45
+  mean |i-col|    : 164224.1  (locality: lower is better)
+  rows / GPU      : 84332684 84358274
+  nnz / GPU       : 1345609830 1345609814
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 47.16 GB total, 23.58 GB max/GPU
+  halo entries    : 335769 335450   (recv/GPU/iter)
+  halo fraction   : 0.199% of n
+  p exchanged     : 0.002685 GB/GPU/iter  (replicated would be 0.675, 251x more)
+  exchange mode   : overlapped with interior SpMV (wide host team, no nowait)
+  interior rows   : 99.60%  (rows computable before the halo lands)
+  boundary rows   : 335450 335769
+  build time      : 17.83 s  (host)
+---------------------------------------------------------
+    iter    100   relres 9.541e-06
+  run 1/3        : 208.4604 ms/iter  (171 iters, relres 9.28e-09)
+    iter    100   relres 9.541e-06
+  run 2/3        : 208.4304 ms/iter  (171 iters, relres 9.28e-09)
+    iter    100   relres 9.541e-06
+  run 3/3        : 208.4349 ms/iter  (171 iters, relres 9.28e-09)
+---------------------------------------------------------
+  iterations      : 171
+  true rel. resid : 9.279968e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 208.4419 ms/iter   <- headline number
+                    (best 208.4304 ms, spread 0.0%)
+    SpMV+halo     : 197.7819 ms/iter   (183.8 GB/s on SpMV traffic alone)
+                    pack and unpack are inside this; the peer
+                    copies run underneath the interior rows, so
+                    they have no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 10.6600 ms/iter
+     axpy, copy)  
+  SpMV share      : 94.9%
+=========================================================
+RESULT,gpu,omp,natural,168690958,2691219644,15.95,164224.1,47.156,171,9.279968e-09,208.441886,197.781922,10.659964,94.9,183.75,208.430397,0.01,3,2
+HALO,natural,168690958,2,0.000000,0.002685,packedhalo-overlapped
+    -> cycle=208.441886 ms  spmv=197.781922 ms  183.75 GB/s  spread=0.01%  iters=171  wall=139.5870s
+
+>>> ompgpu4  40GB total (15.26GB/GCD)  order=natural  n=168690958
+=========================================================
+  GPUs            : 4  (OpenMP target devices 0-3 of 4)
+  backend         : OpenMP target offload
+  halo path       : omp_target_memcpy (device-to-device)
+  host threads    : 4  (one per device)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 168690958
+  nonzeros        : 2691219644
+  nnz/row         : mean 15.95, std 3.89, max 45
+  mean |i-col|    : 164224.1  (locality: lower is better)
+  rows / GPU      : 42209803 42122881 42143098 42215176
+  nnz / GPU       : 672804912 672804918 672804912 672804902
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 60.63 GB total, 15.16 GB max/GPU
+  p exchanged     : 1.012 GB/GPU/iter  (replicated p, no halo list)
+  exchange mode   : overlapped with interior SpMV (nowait interior kernel)
+  interior rows   : 98.80%  (rows computable before the exchange)
+  boundary rows   : 336686 671872 671567 336607
+  build time      : 17.68 s  (host)
+---------------------------------------------------------
+    iter    100   relres 9.541e-06
+  run 1/3        : 146.2711 ms/iter  (171 iters, relres 9.28e-09)
+    iter    100   relres 9.541e-06
+  run 2/3        : 146.2370 ms/iter  (171 iters, relres 9.28e-09)
+    iter    100   relres 9.541e-06
+  run 3/3        : 146.2460 ms/iter  (171 iters, relres 9.28e-09)
+---------------------------------------------------------
+  iterations      : 171
+  true rel. resid : 9.283285e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 146.2514 ms/iter   <- headline number
+                    (best 146.2370 ms, spread 0.0%)
+    SpMV+exchange : 140.7458 ms/iter   (258.2 GB/s on SpMV traffic alone)
+                    exchange runs underneath the interior rows,
+                    so it has no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 5.5056 ms/iter
+     axpy, copy)  
+  SpMV share      : 96.2%
+=========================================================
+RESULT,gpu,omp,natural,168690958,2691219644,15.95,164224.1,60.635,171,9.283285e-09,146.251375,140.745754,5.505621,96.2,258.22,146.237022,0.01,3,4
+HALO,natural,168690958,4,0.000000,1.012,ompmemcpy-overlapped
+    -> cycle=146.251375 ms  spmv=140.745754 ms  258.22 GB/s  spread=0.01%  iters=171  wall=109.6230s
+
+>>> ompgpu4halo  40GB total (15.26GB/GCD)  order=natural  n=168690958
+=========================================================
+  GPUs            : 4  (OpenMP target devices 0-3 of 4)
+  backend         : OpenMP target offload
+  halo path       : packed lists (gather, peer copy, scatter)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 168690958
+  nonzeros        : 2691219644
+  nnz/row         : mean 15.95, std 3.89, max 45
+  mean |i-col|    : 164224.1  (locality: lower is better)
+  rows / GPU      : 42209803 42122881 42143098 42215176
+  nnz / GPU       : 672804912 672804918 672804912 672804902
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 60.68 GB total, 15.17 GB max/GPU
+  halo entries    : 336422 672455 672057 335798   (recv/GPU/iter)
+  halo fraction   : 0.299% of n
+  p exchanged     : 0.004033 GB/GPU/iter  (replicated would be 1.012, 251x more)
+  exchange mode   : overlapped with interior SpMV (wide host team, no nowait)
+  interior rows   : 98.80%  (rows computable before the halo lands)
+  boundary rows   : 336686 671872 671567 336607
+  build time      : 17.58 s  (host)
+---------------------------------------------------------
+    iter    100   relres 9.541e-06
+  run 1/3        : 103.9772 ms/iter  (171 iters, relres 9.28e-09)
+    iter    100   relres 9.541e-06
+  run 2/3        : 103.8333 ms/iter  (171 iters, relres 9.28e-09)
+    iter    100   relres 9.541e-06
+  run 3/3        : 103.8562 ms/iter  (171 iters, relres 9.28e-09)
+---------------------------------------------------------
+  iterations      : 171
+  true rel. resid : 9.283285e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 103.8889 ms/iter   <- headline number
+                    (best 103.8333 ms, spread 0.1%)
+    SpMV+halo     : 98.3684 ms/iter   (369.5 GB/s on SpMV traffic alone)
+                    pack and unpack are inside this; the peer
+                    copies run underneath the interior rows, so
+                    they have no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 5.5205 ms/iter
+     axpy, copy)  
+  SpMV share      : 94.7%
+=========================================================
+RESULT,gpu,omp,natural,168690958,2691219644,15.95,164224.1,60.683,171,9.283285e-09,103.888883,98.368422,5.520460,94.7,369.46,103.833277,0.05,3,4
+HALO,natural,168690958,4,0.000000,0.004033,packedhalo-overlapped
+    -> cycle=103.888883 ms  spmv=98.368422 ms  369.46 GB/s  spread=0.05%  iters=171  wall=88.2870s
+
+>>> ompgpu1  50GB  order=natural  n=210863697
+=========================================================
+  GPUs            : 1  (OpenMP target device 0 of 1)
+  backend         : OpenMP target offload
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 210863697
+  nonzeros        : 3364739477
+  nnz/row         : mean 15.96, std 3.89, max 42
+  mean |i-col|    : 190562.8  (locality: lower is better)
+  device memory   : 50.50 GB
+  build time      : 22.53 s  (host)
+---------------------------------------------------------
+    iter    100   relres 8.464e-06
+  run 1/3        : 511.4115 ms/iter  (169 iters, relres 9.80e-09)
+    iter    100   relres 8.464e-06
+  run 2/3        : 511.0747 ms/iter  (169 iters, relres 9.80e-09)
+    iter    100   relres 8.464e-06
+  run 3/3        : 511.5998 ms/iter  (169 iters, relres 9.80e-09)
+---------------------------------------------------------
+  iterations      : 169
+  true rel. resid : 9.799500e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 511.3620 ms/iter   <- headline number
+                    (best 511.0747 ms, spread 0.1%)
+    of which SpMV : 489.4614 ms/iter   (92.8 GB/s, lower-bound traffic)
+    other (dots,  : 21.9006 ms/iter
+     axpy, copy)  
+  SpMV share      : 95.7%
+=========================================================
+RESULT,gpu,omp,natural,210863697,3364739477,15.96,190562.8,50.498,169,9.799500e-09,511.361992,489.461378,21.900614,95.7,92.83,511.074663,0.06,3,1
+    -> cycle=511.361992 ms  spmv=489.461378 ms  92.83 GB/s  spread=0.06%  iters=169  wall=298.3540s
+
+>>> ompgpu2  50GB total (29.39GB/GCD)  order=natural  n=210863697
+=========================================================
+  GPUs            : 2  (OpenMP target devices 0-1 of 2)
+  backend         : OpenMP target offload
+  halo path       : omp_target_memcpy (device-to-device)
+  host threads    : 2  (one per device)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 210863697
+  nonzeros        : 3364739477
+  nnz/row         : mean 15.96, std 3.89, max 42
+  mean |i-col|    : 190562.8  (locality: lower is better)
+  rows / GPU      : 105425978 105437719
+  nnz / GPU       : 1682369747 1682369730
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 58.93 GB total, 29.47 GB max/GPU
+  p exchanged     : 0.843 GB/GPU/iter  (replicated p, no halo list)
+  exchange mode   : overlapped with interior SpMV (nowait interior kernel)
+  interior rows   : 99.63%  (rows computable before the exchange)
+  boundary rows   : 389188 389592
+  build time      : 22.67 s  (host)
+---------------------------------------------------------
+    iter    100   relres 8.464e-06
+  run 1/3        : 286.5431 ms/iter  (169 iters, relres 9.80e-09)
+    iter    100   relres 8.464e-06
+  run 2/3        : 283.5840 ms/iter  (169 iters, relres 9.80e-09)
+    iter    100   relres 8.464e-06
+  run 3/3        : 283.5805 ms/iter  (169 iters, relres 9.80e-09)
+---------------------------------------------------------
+  iterations      : 169
+  true rel. resid : 9.799338e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 284.5692 ms/iter   <- headline number
+                    (best 283.5805 ms, spread 0.3%)
+    SpMV+exchange : 270.3310 ms/iter   (168.1 GB/s on SpMV traffic alone)
+                    exchange runs underneath the interior rows,
+                    so it has no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 14.2382 ms/iter
+     axpy, copy)  
+  SpMV share      : 95.0%
+=========================================================
+RESULT,gpu,omp,natural,210863697,3364739477,15.96,190562.8,58.933,169,9.799338e-09,284.569182,270.331017,14.238164,95.0,168.08,283.580469,0.35,3,2
+HALO,natural,210863697,2,0.000000,0.843,ompmemcpy-overlapped
+    -> cycle=284.569182 ms  spmv=270.331017 ms  168.08 GB/s  spread=0.35%  iters=169  wall=185.1590s
+
+>>> ompgpu2halo  50GB total (29.39GB/GCD)  order=natural  n=210863697
+=========================================================
+  GPUs            : 2  (OpenMP target devices 0-1 of 2)
+  backend         : OpenMP target offload
+  halo path       : packed lists (gather, peer copy, scatter)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 210863697
+  nonzeros        : 3364739477
+  nnz/row         : mean 15.96, std 3.89, max 42
+  mean |i-col|    : 190562.8  (locality: lower is better)
+  rows / GPU      : 105425978 105437719
+  nnz / GPU       : 1682369747 1682369730
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 58.95 GB total, 29.48 GB max/GPU
+  halo entries    : 389592 389188   (recv/GPU/iter)
+  halo fraction   : 0.185% of n
+  p exchanged     : 0.003115 GB/GPU/iter  (replicated would be 0.843, 271x more)
+  exchange mode   : overlapped with interior SpMV (wide host team, no nowait)
+  interior rows   : 99.63%  (rows computable before the halo lands)
+  boundary rows   : 389188 389592
+  build time      : 22.70 s  (host)
+---------------------------------------------------------
+    iter    100   relres 8.464e-06
+  run 1/3        : 259.0086 ms/iter  (169 iters, relres 9.80e-09)
+    iter    100   relres 8.464e-06
+  run 2/3        : 259.2097 ms/iter  (169 iters, relres 9.80e-09)
+    iter    100   relres 8.464e-06
+  run 3/3        : 258.9942 ms/iter  (169 iters, relres 9.80e-09)
+---------------------------------------------------------
+  iterations      : 169
+  true rel. resid : 9.799338e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 259.0708 ms/iter   <- headline number
+                    (best 258.9942 ms, spread 0.0%)
+    SpMV+halo     : 245.4330 ms/iter   (185.1 GB/s on SpMV traffic alone)
+                    pack and unpack are inside this; the peer
+                    copies run underneath the interior rows, so
+                    they have no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 13.6378 ms/iter
+     axpy, copy)  
+  SpMV share      : 94.7%
+=========================================================
+RESULT,gpu,omp,natural,210863697,3364739477,15.96,190562.8,58.952,169,9.799338e-09,259.070828,245.433007,13.637821,94.7,185.13,258.994247,0.03,3,2
+HALO,natural,210863697,2,0.000000,0.003115,packedhalo-overlapped
+    -> cycle=259.070828 ms  spmv=245.433007 ms  185.13 GB/s  spread=0.03%  iters=169  wall=172.4590s
+
+>>> ompgpu4  50GB total (19.08GB/GCD)  order=natural  n=210863697
+=========================================================
+  GPUs            : 4  (OpenMP target devices 0-3 of 4)
+  backend         : OpenMP target offload
+  halo path       : omp_target_memcpy (device-to-device)
+  host threads    : 4  (one per device)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 210863697
+  nonzeros        : 3364739477
+  nnz/row         : mean 15.96, std 3.89, max 42
+  mean |i-col|    : 190562.8  (locality: lower is better)
+  rows / GPU      : 52763625 52662353 52673436 52764283
+  nnz / GPU       : 841184874 841184873 841184866 841184864
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 75.80 GB total, 18.95 GB max/GPU
+  p exchanged     : 1.265 GB/GPU/iter  (replicated p, no halo list)
+  exchange mode   : overlapped with interior SpMV (nowait interior kernel)
+  interior rows   : 98.89%  (rows computable before the exchange)
+  boundary rows   : 390601 779947 779462 390345
+  build time      : 22.39 s  (host)
+---------------------------------------------------------
+    iter    100   relres 8.464e-06
+  run 1/3        : 182.0644 ms/iter  (169 iters, relres 9.80e-09)
+    iter    100   relres 8.464e-06
+  run 2/3        : 181.8241 ms/iter  (169 iters, relres 9.80e-09)
+    iter    100   relres 8.464e-06
+  run 3/3        : 181.7718 ms/iter  (169 iters, relres 9.80e-09)
+---------------------------------------------------------
+  iterations      : 169
+  true rel. resid : 9.799288e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 181.8868 ms/iter   <- headline number
+                    (best 181.7718 ms, spread 0.1%)
+    SpMV+exchange : 174.8989 ms/iter   (259.8 GB/s on SpMV traffic alone)
+                    exchange runs underneath the interior rows,
+                    so it has no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 6.9879 ms/iter
+     axpy, copy)  
+  SpMV share      : 96.2%
+=========================================================
+RESULT,gpu,omp,natural,210863697,3364739477,15.96,190562.8,75.802,169,9.799288e-09,181.886780,174.898888,6.987892,96.2,259.79,181.771814,0.06,3,4
+HALO,natural,210863697,4,0.000000,1.265,ompmemcpy-overlapped
+    -> cycle=181.886780 ms  spmv=174.898888 ms  259.79 GB/s  spread=0.06%  iters=169  wall=135.5520s
+
+>>> ompgpu4halo  50GB total (19.08GB/GCD)  order=natural  n=210863697
+=========================================================
+  GPUs            : 4  (OpenMP target devices 0-3 of 4)
+  backend         : OpenMP target offload
+  halo path       : packed lists (gather, peer copy, scatter)
+  matrix          : synthetic radius graph
+  ordering        : natural
+  rows            : 210863697
+  nonzeros        : 3364739477
+  nnz/row         : mean 15.96, std 3.89, max 42
+  mean |i-col|    : 190562.8  (locality: lower is better)
+  rows / GPU      : 52763625 52662353 52673436 52764283
+  nnz / GPU       : 841184874 841184873 841184866 841184864
+  nnz imbalance   : 0.00%  (max vs mean)
+  device memory   : 75.86 GB total, 18.97 GB max/GPU
+  halo entries    : 390759 780193 779533 389870   (recv/GPU/iter)
+  halo fraction   : 0.277% of n
+  p exchanged     : 0.004681 GB/GPU/iter  (replicated would be 1.265, 270x more)
+  exchange mode   : overlapped with interior SpMV (wide host team, no nowait)
+  interior rows   : 98.89%  (rows computable before the halo lands)
+  boundary rows   : 390601 779947 779462 390345
+  build time      : 22.33 s  (host)
+---------------------------------------------------------
+    iter    100   relres 8.464e-06
+  run 1/3        : 143.7979 ms/iter  (169 iters, relres 9.80e-09)
+    iter    100   relres 8.464e-06
+  run 2/3        : 138.6813 ms/iter  (169 iters, relres 9.80e-09)
+    iter    100   relres 8.464e-06
+  run 3/3        : 138.6695 ms/iter  (169 iters, relres 9.80e-09)
+---------------------------------------------------------
+  iterations      : 169
+  true rel. resid : 9.799288e-09
+  runs            : 3
+---------------------------------------------------------
+  FULL CG CYCLE   : 140.3829 ms/iter   <- headline number
+                    (best 138.6695 ms, spread 1.2%)
+    SpMV+halo     : 132.4690 ms/iter   (343.0 GB/s on SpMV traffic alone)
+                    pack and unpack are inside this; the peer
+                    copies run underneath the interior rows, so
+                    they have no separate duration. CG_OVERLAP=0
+                    times the two apart.
+    other (dots,  : 7.9139 ms/iter
+     axpy, copy)  
+  SpMV share      : 94.4%
+=========================================================
+RESULT,gpu,omp,natural,210863697,3364739477,15.96,190562.8,75.858,169,9.799288e-09,140.382919,132.468971,7.913947,94.4,343.01,138.669510,1.24,3,4
+HALO,natural,210863697,4,0.000000,0.004681,packedhalo-overlapped
+    -> cycle=140.382919 ms  spmv=132.468971 ms  343.01 GB/s  spread=1.24%  iters=169  wall=115.2190s
+
+
+SUMMARY -- full CG cycle, ms/iter
+===============================================================================
+
+order = natural
+
+    GB       ompgpu1       ompgpu2   ompgpu2halo       ompgpu4   ompgpu4halo
+-------------------------------------------------------------------------------
+     5        49.996        26.930        25.438        17.937        12.547
+    10       101.012        55.211        52.686        36.174        25.262
+    20       205.529       115.932       103.363        73.640        52.155
+    30       305.297       169.881       154.160       107.326        78.684
+    40       419.714       229.773       208.442       146.251       103.889
+    50       511.362       284.569       259.071       181.887       140.383
+
+  scaling vs ompgpu1 (ideal 2.00x / 4.00x)
+    GB    ompgpu2/1    ompgpu4/1        halo2/1        halo4/1
+-------------------------------------------------------------------------------
+     5        1.86x        2.79x         1.97x          3.98x
+    10        1.83x        2.79x         1.92x          4.00x
+    20        1.77x        2.79x         1.99x          3.94x
+    30        1.80x        2.84x         1.98x          3.88x
+    40        1.83x        2.87x         2.01x          4.04x
+    50        1.80x        2.81x         1.97x          3.64x
+
+  packed halo vs replicated exchange, same device count
+    GB  halo2/ompgpu2  halo4/ompgpu4
+-------------------------------------------------------------------------------
+     5          1.06x          1.43x
+    10          1.05x          1.43x
+    20          1.12x          1.41x
+    30          1.10x          1.36x
+    40          1.10x          1.41x
+    50          1.10x          1.30x
+===============================================================================
+
+All done.
+  Timing CSV : results_21848686_20260909_165511/timings.csv
+  Run log    : results_21848686_20260909_165511/run.log
