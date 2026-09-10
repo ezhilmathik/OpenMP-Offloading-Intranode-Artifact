@@ -68,7 +68,7 @@ MACHINES = {
     # folder with no trailing digits is treated as approach "01".
     # Run with --list to see exactly what is found on disk.
     "H100": dict(color="tab:blue", patterns=["NVIDIA-H100-*"]),
-    "PVC 1550": dict(color="tab:orange", patterns=["Intel-1550-*"]),
+    "Intel-1550": dict(color="tab:orange", patterns=["Intel-1550-*"]),
     "MI250X": dict(color="tab:green", patterns=["AMD-MI250X-*"]),
 }
 
@@ -117,7 +117,7 @@ VARIANT_DESC = {}
 
 # How each machine is named in the legends. Keys are the MACHINES keys above.
 MACHINE_LEGEND = {"H100": "H100", "PVC 1550": "Intel-1550",
-                  "MI250X": "AMD-MI250X"}
+                  "MI250X": "MI250X"}
 
 # Display names only: the internal approach identifiers remain 01/02/03.
 APPROACH_LEGEND = {"01": "HHT-0", "02": "HHT-GPU", "03": "HHT-8"}
