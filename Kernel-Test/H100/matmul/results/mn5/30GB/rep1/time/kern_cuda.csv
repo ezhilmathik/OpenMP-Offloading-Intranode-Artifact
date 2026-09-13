@@ -1,0 +1,7 @@
+name,gridX,gridY,blockX,blockY,regs,static_smem_B,dyn_smem_B,local_B,launches
+_Z11dgemm_naivePKdS0_Pdi,276,35328,128,1,32,0,0,0,4
+_Z11dgemm_naivePKdS0_Pdi,1104,4416,32,8,32,0,0,0,4
+_Z12empty_kernelv,1,1,1,1,16,0,0,0,1001
+_Z13dgemm_regtileILi128ELi128ELi8ELi8ELi8EEvPKdS1_Pdi,276,276,256,1,202,17408,0,0,4
+_Z13dgemm_regtileILi64ELi64ELi16ELi4ELi4EEvPKdS1_Pdi,552,552,256,1,80,16896,0,0,4
+_Z13dgemm_tiled32PKdS0_Pdi,1104,1104,32,32,32,16384,0,0,4

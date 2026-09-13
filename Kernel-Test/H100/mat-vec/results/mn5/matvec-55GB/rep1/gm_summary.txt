@@ -1,0 +1,121 @@
+# per-kernel averages of all nsys GPU metrics (timed launches only)
+cuda_mvt       DRAM Write Bandwidth [Throughput %]                               0.581
+cuda_mvt       Unallocated Warps in Active SMs [Avg]                        79653798.235
+cuda_mvt       Compute Warps in Flight [Throughput %]                           28.243
+cuda_mvt       GPC Clock Frequency [MHz]                                    1994859128.261
+cuda_mvt       PCIe RX Throughput [Throughput %]                                 0.058
+cuda_mvt       Pixel Warps in Flight [Avg Warps per Cycle]                       0.000
+cuda_mvt       Pixel Warps in Flight [Avg]                                       0.000
+cuda_mvt       NVLink RX Responses User Data [Throughput %]                      0.000
+cuda_mvt       Pixel Warps in Flight [Throughput %]                              0.000
+cuda_mvt       PCIe TX Throughput [Throughput %]                                 1.000
+cuda_mvt       NVLink RX Requests Protocol Data [Throughput %]                   0.000
+cuda_mvt       Tensor Active [Throughput %]                                      0.000
+cuda_mvt       NVLink TX Responses User Data [Throughput %]                      0.000
+cuda_mvt       NVLink RX Requests User Data [Throughput %]                       0.000
+cuda_mvt       Unallocated Warps in Active SMs [Throughput %]                   62.131
+cuda_mvt       Vertex/Tess/Geometry Warps in Flight [Avg]                        0.000
+cuda_mvt       NVLink TX Responses Protocol Data [Throughput %]                  0.000
+cuda_mvt       DRAM Read Bandwidth [Throughput %]                               52.288
+cuda_mvt       Compute Warps in Flight [Avg]                                35802792.619
+cuda_mvt       Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle]        0.000
+cuda_mvt       GR Active [Throughput %]                                         99.959
+cuda_mvt       NVLink TX Requests User Data [Throughput %]                       0.000
+cuda_mvt       NVLink TX Requests Protocol Data [Throughput %]                   0.000
+cuda_mvt       NVLink RX Responses Protocol Data [Throughput %]                  0.000
+cuda_mvt       Compute Warps in Flight [Avg Warps per Cycle]                    35.654
+cuda_mvt       Vertex/Tess/Geometry Warps in Flight [Throughput %]               0.000
+cuda_mvt       Unallocated Warps in Active SMs [Avg Warps per Cycle]            80.062
+cuda_mvt       SYS Clock Frequency [MHz]                                    1663199048.328
+cuda_mvt       SM Issue [Throughput %]                                           2.901
+cuda_mvt       SMs Active [Throughput %]                                        90.459
+cuda_mvw       DRAM Write Bandwidth [Throughput %]                               0.928
+cuda_mvw       Unallocated Warps in Active SMs [Avg]                        5214345.193
+cuda_mvw       Compute Warps in Flight [Throughput %]                           95.277
+cuda_mvw       GPC Clock Frequency [MHz]                                    1994840134.932
+cuda_mvw       PCIe RX Throughput [Throughput %]                                 0.071
+cuda_mvw       Pixel Warps in Flight [Avg Warps per Cycle]                       0.000
+cuda_mvw       Pixel Warps in Flight [Avg]                                       0.000
+cuda_mvw       NVLink RX Responses User Data [Throughput %]                      0.000
+cuda_mvw       Pixel Warps in Flight [Throughput %]                              0.000
+cuda_mvw       PCIe TX Throughput [Throughput %]                                 1.001
+cuda_mvw       NVLink RX Requests Protocol Data [Throughput %]                   0.000
+cuda_mvw       Tensor Active [Throughput %]                                      0.000
+cuda_mvw       NVLink TX Responses User Data [Throughput %]                      0.000
+cuda_mvw       NVLink RX Requests User Data [Throughput %]                       0.000
+cuda_mvw       Unallocated Warps in Active SMs [Throughput %]                    4.172
+cuda_mvw       Vertex/Tess/Geometry Warps in Flight [Avg]                        0.000
+cuda_mvw       NVLink TX Responses Protocol Data [Throughput %]                  0.000
+cuda_mvw       DRAM Read Bandwidth [Throughput %]                               96.095
+cuda_mvw       Compute Warps in Flight [Avg]                                121608310.828
+cuda_mvw       Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle]        0.000
+cuda_mvw       GR Active [Throughput %]                                         99.922
+cuda_mvw       NVLink TX Requests User Data [Throughput %]                       0.000
+cuda_mvw       NVLink TX Requests Protocol Data [Throughput %]                   0.000
+cuda_mvw       NVLink RX Responses Protocol Data [Throughput %]                  0.000
+cuda_mvw       Compute Warps in Flight [Avg Warps per Cycle]                    71.154
+cuda_mvw       Vertex/Tess/Geometry Warps in Flight [Throughput %]               0.000
+cuda_mvw       Unallocated Warps in Active SMs [Avg Warps per Cycle]             5.322
+cuda_mvw       SYS Clock Frequency [MHz]                                    1663270121.650
+cuda_mvw       SM Issue [Throughput %]                                           6.955
+cuda_mvw       SMs Active [Throughput %]                                        99.337
+omp            DRAM Write Bandwidth [Throughput %]                               0.553
+omp            Unallocated Warps in Active SMs [Avg]                        113925035.050
+omp            Compute Warps in Flight [Throughput %]                            7.767
+omp            GPC Clock Frequency [MHz]                                    1979971592.350
+omp            PCIe RX Throughput [Throughput %]                                 0.995
+omp            Pixel Warps in Flight [Avg Warps per Cycle]                       0.000
+omp            Pixel Warps in Flight [Avg]                                       0.000
+omp            NVLink RX Responses User Data [Throughput %]                      0.000
+omp            Pixel Warps in Flight [Throughput %]                              0.000
+omp            PCIe TX Throughput [Throughput %]                                 1.000
+omp            NVLink RX Requests Protocol Data [Throughput %]                   0.000
+omp            Tensor Active [Throughput %]                                      0.132
+omp            NVLink TX Responses User Data [Throughput %]                      0.000
+omp            NVLink RX Requests User Data [Throughput %]                       0.000
+omp            Unallocated Warps in Active SMs [Throughput %]                   89.581
+omp            Vertex/Tess/Geometry Warps in Flight [Avg]                        0.000
+omp            NVLink TX Responses Protocol Data [Throughput %]                  0.000
+omp            DRAM Read Bandwidth [Throughput %]                               49.277
+omp            Compute Warps in Flight [Avg]                                9413509.049
+omp            Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle]        0.000
+omp            GR Active [Throughput %]                                         99.695
+omp            NVLink TX Requests User Data [Throughput %]                       0.000
+omp            NVLink TX Requests Protocol Data [Throughput %]                   0.000
+omp            NVLink RX Responses Protocol Data [Throughput %]                  0.000
+omp            Compute Warps in Flight [Avg Warps per Cycle]                     9.709
+omp            Vertex/Tess/Geometry Warps in Flight [Throughput %]               0.000
+omp            Unallocated Warps in Active SMs [Avg Warps per Cycle]           114.888
+omp            SYS Clock Frequency [MHz]                                    1663042704.412
+omp            SM Issue [Throughput %]                                           1.967
+omp            SMs Active [Throughput %]                                        97.333
+omp_team       DRAM Write Bandwidth [Throughput %]                               0.987
+omp_team       Unallocated Warps in Active SMs [Avg]                        86350021.471
+omp_team       Compute Warps in Flight [Throughput %]                           22.178
+omp_team       GPC Clock Frequency [MHz]                                    1979993660.923
+omp_team       PCIe RX Throughput [Throughput %]                                 1.000
+omp_team       Pixel Warps in Flight [Avg Warps per Cycle]                       0.000
+omp_team       Pixel Warps in Flight [Avg]                                       0.000
+omp_team       NVLink RX Responses User Data [Throughput %]                      0.000
+omp_team       Pixel Warps in Flight [Throughput %]                              0.000
+omp_team       PCIe TX Throughput [Throughput %]                                 1.000
+omp_team       NVLink RX Requests Protocol Data [Throughput %]                   0.000
+omp_team       Tensor Active [Throughput %]                                      1.000
+omp_team       NVLink TX Responses User Data [Throughput %]                      0.000
+omp_team       NVLink RX Requests User Data [Throughput %]                       0.000
+omp_team       Unallocated Warps in Active SMs [Throughput %]                   68.133
+omp_team       Vertex/Tess/Geometry Warps in Flight [Avg]                        0.000
+omp_team       NVLink TX Responses Protocol Data [Throughput %]                  0.000
+omp_team       DRAM Read Bandwidth [Throughput %]                               52.339
+omp_team       Compute Warps in Flight [Avg]                                28045439.176
+omp_team       Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle]        0.000
+omp_team       GR Active [Throughput %]                                         99.644
+omp_team       NVLink TX Requests User Data [Throughput %]                       0.000
+omp_team       NVLink TX Requests Protocol Data [Throughput %]                   0.000
+omp_team       NVLink RX Responses Protocol Data [Throughput %]                  0.000
+omp_team       Compute Warps in Flight [Avg Warps per Cycle]                    28.337
+omp_team       Vertex/Tess/Geometry Warps in Flight [Throughput %]               0.000
+omp_team       Unallocated Warps in Active SMs [Avg Warps per Cycle]            87.189
+omp_team       SYS Clock Frequency [MHz]                                    1662889960.513
+omp_team       SM Issue [Throughput %]                                          30.995
+omp_team       SMs Active [Throughput %]                                        90.284

@@ -1,0 +1,7 @@
+OpenMP offload: 1 device(s) visible, using device 0
+N = 1874999936 elements, each vector 15.000 GB, reps = 5, 45.000 GB moved per call
+H2D copy                      1705.654 ms  (A and B, not included in kernel times)
+first call (warm-up)            50.699 ms  (includes one-time runtime setup)
+kernel                       time/call           GB/s   check vs CPU (all elements)
+omp teams distribute           47.6932 ms       943.5   bitwise exact (0 of 1874999936 wrong)
+launch overhead                  15.34 us  (empty target region, launch + wait, mean of 1000)

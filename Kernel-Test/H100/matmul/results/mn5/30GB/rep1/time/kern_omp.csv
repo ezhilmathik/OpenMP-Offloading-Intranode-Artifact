@@ -1,0 +1,3 @@
+name,gridX,gridY,blockX,blockY,regs,static_smem_B,dyn_smem_B,local_B,launches
+__omp_offloading_35_f00de41f__Z17emptyTargetRegioni_l48,1,1,128,1,24,0,0,0,1001
+__omp_offloading_35_f00de41f__Z20matrixMultiplyOpenMPPdS_S_mi_l29,3200,1,128,1,110,24,0,0,4

@@ -1,0 +1,27 @@
+$ nvcc -O3 -arch=sm_90 --fmad=false -lineinfo -Xptxas -v -Xcompiler -fopenmp -Xcompiler -ffp-contract=off -o vecadd_cuda src/vec-cuda.cu -lgomp
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z12empty_kernelv' for 'sm_90'
+ptxas info    : Function properties for _Z12empty_kernelv
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 4 registers, used 0 barriers
+ptxas info    : Compile time = 3.597 ms
+ptxas info    : Compiling entry function '_Z15vadd_gridstridePKdS0_Pdm' for 'sm_90'
+ptxas info    : Function properties for _Z15vadd_gridstridePKdS0_Pdm
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, used 0 barriers
+ptxas info    : Compile time = 3.506 ms
+ptxas info    : Compiling entry function '_Z9vadd_vec2PKdS0_Pdm' for 'sm_90'
+ptxas info    : Function properties for _Z9vadd_vec2PKdS0_Pdm
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, used 0 barriers
+ptxas info    : Compile time = 3.107 ms
+ptxas info    : Compiling entry function '_Z7vadd_2dPKdS0_Pdm' for 'sm_90'
+ptxas info    : Function properties for _Z7vadd_2dPKdS0_Pdm
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, used 0 barriers
+ptxas info    : Compile time = 1.715 ms
+ptxas info    : Compiling entry function '_Z7vadd_1dPKdS0_Pdm' for 'sm_90'
+ptxas info    : Function properties for _Z7vadd_1dPKdS0_Pdm
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, used 0 barriers
+ptxas info    : Compile time = 1.303 ms

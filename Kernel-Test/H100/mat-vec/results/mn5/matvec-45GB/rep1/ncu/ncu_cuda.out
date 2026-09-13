@@ -1,0 +1,14 @@
+==PROF== Connected to process 2678724 (/gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-4-all/results/mn5/matvec-45GB/rep1/ncu/matvec_cuda)
+==PROF== Profiling "mv_thread_row": 0%
+==WARNING== Backing up device memory in system memory. Kernel replay might be slow. Consider using "--replay-mode application" to avoid memory save-and-restore.
+....50%....100% - 9 passes
+==PROF== Profiling "mv_warp_row": 0%....50%....100% - 9 passes
+GPU : NVIDIA H100 (sm_90, 132 SMs), theoretical DRAM bandwidth 1631 GB/s
+N = 74880, A = 44.856 GB, reps = 1, 44.857 GB moved per call
+H2D copy                      4371.626 ms  (A and x, not included in kernel times)
+kernel                       time/call           GB/s   check vs CPU (all of y)
+mv thread/row (yours)       10519.6932 ms         4.3   bitwise exact (0 of 74880 wrong)
+mv warp/row                  9597.4652 ms         4.7   bitwise exact (0 of 74880 wrong)
+launch overhead                  64.56 us  (empty kernel, launch + synchronize, mean of 1000)
+==PROF== Disconnected from process 2678724
+==PROF== Report: /gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-4-all/results/mn5/matvec-45GB/rep1/ncu/ncu_cuda.ncu-rep

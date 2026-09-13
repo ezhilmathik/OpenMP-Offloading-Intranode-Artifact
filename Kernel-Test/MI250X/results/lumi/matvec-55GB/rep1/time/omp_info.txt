@@ -1,0 +1,3 @@
+"PluginInterface" device 0 info: Launching kernel __omp_offloading_43b2fce4_1000893__Z22matrix_vector_multiplyPdS_S_mmi_l29 with 128 blocks and 8 threads in SPMD-Big-Jump-Loop mode
+"PluginInterface" device 0 info: Launching kernel __omp_offloading_43b2fce4_1000893__Z27matrix_vector_multiply_teamPdS_S_mmi_l46 with 660 blocks and 256 threads in Generic-SPMD mode
+"PluginInterface" device 0 info: Launching kernel __omp_offloading_43b2fce4_1000893__Z17emptyTargetRegioni_l63 with 1 blocks and 256 threads in Generic-SPMD mode

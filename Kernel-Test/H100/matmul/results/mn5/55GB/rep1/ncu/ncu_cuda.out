@@ -1,0 +1,22 @@
+==PROF== Connected to process 3541483 (/gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-3/results/mn5/55GB/rep1/ncu/matmul_cuda)
+==PROF== Profiling "dgemm_naive": 0%
+==WARNING== Backing up device memory in system memory. Kernel replay might be slow. Consider using "--replay-mode application" to avoid memory save-and-restore.
+..
+==WARNING== Launching the workload is taking more time than expected. If this continues to hang, terminate the profile and re-try by profiling the range of all related launches using '--replay-mode range'. See https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#replay for more details.
+..50%....100% - 9 passes
+==PROF== Profiling "dgemm_naive": 0%..
+==WARNING== Launching the workload is taking more time than expected. If this continues to hang, terminate the profile and re-try by profiling the range of all related launches using '--replay-mode range'. See https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#replay for more details.
+..50%....100% - 9 passes
+==PROF== Profiling "dgemm_tiled32": 0%....50%....100% - 9 passes
+GPU : NVIDIA H100 (sm_90, 132 SMs)
+N = 47744, each matrix 18.236 GB, reps = 1, 217663.897 GFLOP per multiply
+H2D copy                      3588.292 ms  (A and B, not included in kernel times)
+kernel                       time/call        GFLOP/s   check vs CPU
+naive (32x8 threads)        892433.625 ms       243.9   bitwise exact (512/512 exact, max rel err 0.0e+00)
+naive (128x1, OMP-like)    4977835.500 ms        43.7   bitwise exact (512/512 exact, max rel err 0.0e+00)
+tiled32 (your original)     418757.406 ms       519.8   bitwise exact (512/512 exact, max rel err 0.0e+00)
+regtile 64x64x16, 4x4        18067.979 ms     12046.9   bitwise exact (512/512 exact, max rel err 0.0e+00)
+regtile 128x128x8, 8x8       18669.451 ms     11658.8   bitwise exact (512/512 exact, max rel err 0.0e+00)
+launch overhead                  59.22 us  (empty kernel, launch + synchronize, mean of 1000)
+==PROF== Disconnected from process 3541483
+==PROF== Report: /gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-3/results/mn5/55GB/rep1/ncu/ncu_cuda.ncu-rep

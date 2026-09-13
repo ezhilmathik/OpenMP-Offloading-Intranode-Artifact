@@ -1,0 +1,27 @@
+$ nvcc -O3 -arch=sm_90 --fmad=false -lineinfo -Xptxas -v -Xcompiler -fopenmp -Xcompiler -ffp-contract=off -o matmul_cuda src/mat-cuda.cu -lgomp
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z13dgemm_regtileILi128ELi128ELi8ELi8ELi8EEvPKdS1_Pdi' for 'sm_90'
+ptxas info    : Function properties for _Z13dgemm_regtileILi128ELi128ELi8ELi8ELi8EEvPKdS1_Pdi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 202 registers, used 1 barriers, 17408 bytes smem
+ptxas info    : Compile time = 71.912 ms
+ptxas info    : Compiling entry function '_Z13dgemm_regtileILi64ELi64ELi16ELi4ELi4EEvPKdS1_Pdi' for 'sm_90'
+ptxas info    : Function properties for _Z13dgemm_regtileILi64ELi64ELi16ELi4ELi4EEvPKdS1_Pdi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 80 registers, used 1 barriers, 16896 bytes smem
+ptxas info    : Compile time = 31.481 ms
+ptxas info    : Compiling entry function '_Z12empty_kernelv' for 'sm_90'
+ptxas info    : Function properties for _Z12empty_kernelv
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 4 registers, used 0 barriers
+ptxas info    : Compile time = 0.355 ms
+ptxas info    : Compiling entry function '_Z13dgemm_tiled32PKdS0_Pdi' for 'sm_90'
+ptxas info    : Function properties for _Z13dgemm_tiled32PKdS0_Pdi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, used 1 barriers, 16384 bytes smem
+ptxas info    : Compile time = 6.151 ms
+ptxas info    : Compiling entry function '_Z11dgemm_naivePKdS0_Pdi' for 'sm_90'
+ptxas info    : Function properties for _Z11dgemm_naivePKdS0_Pdi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, used 0 barriers
+ptxas info    : Compile time = 8.152 ms

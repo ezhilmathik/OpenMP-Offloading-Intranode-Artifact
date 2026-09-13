@@ -1,0 +1,32 @@
+Importer error status: Importation succeeded with non-fatal errors.
+**** Analysis failed with:
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/dvs/p4/build/sw/devtools/Agora/Rel/CUDA12.8/QuadD/Host/Analysis/EventHandler/PwMetricsEventHandler.cpp(147): Throw in function void QuadDAnalysis::EventHandler::PwMetricsEventHandler::PutEvent(QuadDCommon::PerfService::Event*)\nDynamic exception type: boost::wrapexcept<QuadDAnalysis::ChronologicalOrderError>\nstd::exception::what: ChronologicalOrderError\n[QuadDCommon::tag_message*] = GPU Metrics event chronological order was broken\n"
+      }
+    }
+  }
+}
+
+
+**** Errors occurred while processing the raw events. ****
+**** Please see the Diagnostics Summary page after opening the report file in GUI. ****
+Generating SQLite file nsys_cuda.sqlite from nsys_cuda.nsys-rep
+Processing [nsys_cuda.sqlite] with [/gpfs/apps/MN5/ACC/CUDA/12.8/nsight-systems-2024.6.2/host-linux-x64/reports/cuda_gpu_trace.py] to [cuda_cuda_gpu_trace.csv]... PROCESSED
+
+Processing [nsys_cuda.sqlite] with [/gpfs/apps/MN5/ACC/CUDA/12.8/nsight-systems-2024.6.2/host-linux-x64/reports/cuda_api_sum.py] to [cuda_cuda_api_sum.csv]... PROCESSED
+
+kernel resources: 6 kernel configurations written to kern_cuda.csv
+GPU metrics: 20 kernels written to gm_cuda.csv; sampled GPU(s) used: {281479271677952: 6}

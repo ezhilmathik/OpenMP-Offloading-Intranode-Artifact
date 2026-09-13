@@ -1,0 +1,66 @@
+=== hip counters: FETCH_SIZE WRITE_SIZE
+[0;31mE20260913 01:56:57.935403 23075148445760 output_stream.cpp:105] Opened result file: pmc_hip_run1/pmc1_counter_collection.csv
+[m[0;31mE20260913 01:56:57.952651 23075148445760 output_stream.cpp:105] Opened result file: pmc_hip_run1/pmc1_agent_info.csv
+[mGPU : AMD Instinct MI250X (gfx90a:sramecc+:xnack-, 110 CUs), theoretical DRAM bandwidth 1638 GB/s
+N = 1874999936 elements, each vector 15.000 GB, reps = 1, 45.000 GB moved per call
+H2D copy                      1843.401 ms  (A and B, not included in kernel times)
+kernel                       time/call           GB/s   check vs CPU (all elements)
+vadd 1-D (256/block)           33.2214 ms      1354.5   bitwise exact (0 of 1874999936 wrong)
+vadd 2-D grid (16x16)          52.1931 ms       862.2   bitwise exact (0 of 1874999936 wrong)
+vadd vectorized (double2)      36.4510 ms      1234.5   bitwise exact (0 of 1874999936 wrong)
+vadd grid-stride (OMP)         61.2328 ms       734.9   bitwise exact (0 of 1874999936 wrong)
+launch overhead                  87.87 us  (empty kernel, launch + synchronize, mean of 1000)
+=== hip counters: OccupancyPercent MeanOccupancyPerCU
+[0;31mE20260913 01:57:15.011841 22762127525952 output_stream.cpp:105] Opened result file: pmc_hip_run2/pmc2_counter_collection.csv
+[m[0;31mE20260913 01:57:15.030533 22762127525952 output_stream.cpp:105] Opened result file: pmc_hip_run2/pmc2_agent_info.csv
+[mGPU : AMD Instinct MI250X (gfx90a:sramecc+:xnack-, 110 CUs), theoretical DRAM bandwidth 1638 GB/s
+N = 1874999936 elements, each vector 15.000 GB, reps = 1, 45.000 GB moved per call
+H2D copy                      2023.939 ms  (A and B, not included in kernel times)
+kernel                       time/call           GB/s   check vs CPU (all elements)
+vadd 1-D (256/block)           33.3102 ms      1350.9   bitwise exact (0 of 1874999936 wrong)
+vadd 2-D grid (16x16)          52.0596 ms       864.4   bitwise exact (0 of 1874999936 wrong)
+vadd vectorized (double2)      36.3771 ms      1237.0   bitwise exact (0 of 1874999936 wrong)
+vadd grid-stride (OMP)         62.6906 ms       717.8   bitwise exact (0 of 1874999936 wrong)
+launch overhead                  45.70 us  (empty kernel, launch + synchronize, mean of 1000)
+=== hip counters: L2CacheHit MemUnitStalled
+[0;31mE20260913 01:57:31.855564 22489707321408 output_stream.cpp:105] Opened result file: pmc_hip_run3/pmc3_counter_collection.csv
+[m[0;31mE20260913 01:57:31.873336 22489707321408 output_stream.cpp:105] Opened result file: pmc_hip_run3/pmc3_agent_info.csv
+[mGPU : AMD Instinct MI250X (gfx90a:sramecc+:xnack-, 110 CUs), theoretical DRAM bandwidth 1638 GB/s
+N = 1874999936 elements, each vector 15.000 GB, reps = 1, 45.000 GB moved per call
+H2D copy                      2021.943 ms  (A and B, not included in kernel times)
+kernel                       time/call           GB/s   check vs CPU (all elements)
+vadd 1-D (256/block)           33.2906 ms      1351.7   bitwise exact (0 of 1874999936 wrong)
+vadd 2-D grid (16x16)          52.0434 ms       864.7   bitwise exact (0 of 1874999936 wrong)
+vadd vectorized (double2)      36.4331 ms      1235.1   bitwise exact (0 of 1874999936 wrong)
+vadd grid-stride (OMP)         62.6506 ms       718.3   bitwise exact (0 of 1874999936 wrong)
+launch overhead                 146.22 us  (empty kernel, launch + synchronize, mean of 1000)
+=== omp counters: FETCH_SIZE WRITE_SIZE
+[0;31mE20260913 01:57:48.556904 22762277009600 output_stream.cpp:105] Opened result file: pmc_omp_run1/pmc1_counter_collection.csv
+[m[0;31mE20260913 01:57:48.574983 22762277009600 output_stream.cpp:105] Opened result file: pmc_omp_run1/pmc1_agent_info.csv
+[mOpenMP offload: 1 device(s) visible, using device 0
+N = 1874999936 elements, each vector 15.000 GB, reps = 1, 45.000 GB moved per call
+H2D copy                      1838.824 ms  (A and B, not included in kernel times)
+first call (warm-up)            50.328 ms  (includes one-time runtime setup)
+kernel                       time/call           GB/s   check vs CPU (all elements)
+omp teams distribute           48.8698 ms       920.8   bitwise exact (0 of 1874999936 wrong)
+launch overhead                  84.77 us  (empty target region, launch + wait, mean of 1000)
+=== omp counters: OccupancyPercent MeanOccupancyPerCU
+[0;31mE20260913 01:58:02.501936 22843891439808 output_stream.cpp:105] Opened result file: pmc_omp_run2/pmc2_counter_collection.csv
+[m[0;31mE20260913 01:58:02.520488 22843891439808 output_stream.cpp:105] Opened result file: pmc_omp_run2/pmc2_agent_info.csv
+[mOpenMP offload: 1 device(s) visible, using device 0
+N = 1874999936 elements, each vector 15.000 GB, reps = 1, 45.000 GB moved per call
+H2D copy                      1836.043 ms  (A and B, not included in kernel times)
+first call (warm-up)            51.535 ms  (includes one-time runtime setup)
+kernel                       time/call           GB/s   check vs CPU (all elements)
+omp teams distribute           49.3171 ms       912.5   bitwise exact (0 of 1874999936 wrong)
+launch overhead                  38.97 us  (empty target region, launch + wait, mean of 1000)
+=== omp counters: L2CacheHit MemUnitStalled
+[0;31mE20260913 01:58:16.937417 22732907706560 output_stream.cpp:105] Opened result file: pmc_omp_run3/pmc3_counter_collection.csv
+[m[0;31mE20260913 01:58:16.954693 22732907706560 output_stream.cpp:105] Opened result file: pmc_omp_run3/pmc3_agent_info.csv
+[mOpenMP offload: 1 device(s) visible, using device 0
+N = 1874999936 elements, each vector 15.000 GB, reps = 1, 45.000 GB moved per call
+H2D copy                      1837.028 ms  (A and B, not included in kernel times)
+first call (warm-up)            51.681 ms  (includes one-time runtime setup)
+kernel                       time/call           GB/s   check vs CPU (all elements)
+omp teams distribute           49.5250 ms       908.6   bitwise exact (0 of 1874999936 wrong)
+launch overhead                 139.76 us  (empty target region, launch + wait, mean of 1000)

@@ -1,0 +1,19 @@
+=== matmul | lumi | AMD Instinct MI250X | 55 GB (N = 47744) | rep 1 ===
+                              HIP naive                  HIP tiled32                OMP collapse(2)            HIP 1-D (ref)            
+Kernel time, median [min-max]  n/a                        n/a                        n/a                        n/a                      
+GFLOP/s                       n/a                        n/a                        n/a                        n/a                      
+OMP slower by                 n/a                        n/a                        -                          n/a                      
+Regs / smem B / local B       14 / 0 / 0                 48 / 16384 / 0             n/a                        14 / 0 / 0               
+Launch: blocks x threads      n/a                        n/a                        n/a                        n/a                      
+Elements per thread           n/a                        n/a                        n/a                        n/a                      
+Occupancy theoretical %       100.0                      100.0                      n/a                        100.0                    
+Occupancy achieved % rocprof  n/a                        n/a                        n/a                        n/a                      
+Occupancy achieved % PMC      n/a                        n/a                        n/a                        n/a                      
+DRAM throughput % rocprof     n/a                        n/a                        n/a                        n/a                      
+DRAM throughput % PMC         n/a                        n/a                        n/a                        n/a                      
+L1 / L2 hit % PMC             n/a                        n/a                        n/a                        n/a                      
+Mem unit stalled % PMC        n/a                        n/a                        n/a                        n/a                      
+Sectors per request PMC       n/a                        n/a                        n/a                        n/a                      
+Launch overhead us (wall)     n/a                        same as column 1           n/a                        same as column 1         
+Launch / sync call med us     n/a / n/a                  same as column 1           n/a / n/a                  same as column 1         
+Kernel mode | correctness     HIP | n/a                  HIP | n/a                  SPMD-Big-Jump-Loop | n/a   HIP | n/a                

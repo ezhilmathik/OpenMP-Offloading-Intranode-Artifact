@@ -1,0 +1,45 @@
+site: lrz
+bench: matmul
+stage: ncu
+size_gb: 30
+N: 35328
+rep: 1
+reps: 1
+kernels: tiled32
+date: 2026-09-13T11:14:20+02:00
+host: i20r08c04s10
+job: 537937
+gpu_index: 0
+arch: pvc
+gpu: Intel(R) Data Center GPU Max 1550
+gpu_info: tile 0 of a Max 1550 (ZE_FLAT_DEVICE_HIERARCHY=FLAT), 65536 MB
+cpu: Intel(R) Xeon(R) Platinum 8480L
+omp_num_threads: 1
+modules: slurm_setup intel-toolkit
+vendor: intel
+peak_bw_gbs: 1638
+native_compiler: /dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icpx -- Intel(R) oneAPI DPC++/C++ Compiler 2024.1.0 (2024.1.0.20240308)
+omp_compiler: /dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icpx -- Intel(R) oneAPI DPC++/C++ Compiler 2024.1.0 (2024.1.0.20240308)
+profiler: SYCL event profiling + LIBOMPTARGET_PLUGIN_PROFILE; counters: /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/bin64/vtune
+gpu_metrics_option: none
+sha256: ed7c6a16a0a732354aeda08b7d0ea858566f50063374d4b0bbeec9f95c6e3a43  mat-sycl.cpp
+sha256: 946d388d0dbcb0c801010b38a458221298cb186c96a5cd853b1c0a768f9151f3  mat-omp.cpp
+--- module list
+Currently Loaded Modulefiles:
+ 1) stack/24.1.0{arch=auto}(default) <aL>         15) intel-dpl/2022.5.0 <aL>   
+ 2) mpi_settings/2.0{mode=default}(default) <aL>  16) intel-dpct/2024.1.0 <aL>  
+ 3) slurm_setup/1.0(default)                      17) intel-toolkit/2024.1.0    
+ 4) intel/2024.1.0 <aL>                           
+ 5) intel-mpi/2021.12.0 <aL>                      
+ 6) intel-mkl/2024.1.0 <aL>                       
+ 7) intel-inspector/2024.1.0 <aL>                 
+ 8) intel-ccl/2021.12.0 <aL>                      
+ 9) intel-dnn/2024.1.0 <aL>                       
+10) intel-itac/2022.1.0 <aL>                      
+11) intel-tbb/2021.12.0 <aL>                      
+12) intel-ipp/2021.11.0 <aL>                      
+13) intel-dal/2024.2.0 <aL>                       
+14) intel-ippcp/2021.11.0 <aL>                    
+
+Key:
+{variant=value}  (symbolic-version)  <module-tag>  <aL>=auto-loaded  

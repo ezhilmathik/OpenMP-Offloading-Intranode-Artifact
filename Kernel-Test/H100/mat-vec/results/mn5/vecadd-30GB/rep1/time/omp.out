@@ -1,0 +1,17 @@
+OpenMP offload: 1 device(s) visible, using device 0
+N = 1250000000 elements, each vector 10.000 GB, reps = 100, 30.000 GB moved per call
+H2D copy                      1949.280 ms  (A and B, not included in kernel times)
+first call (warm-up)            22.616 ms  (includes one-time runtime setup)
+kernel                       time/call           GB/s   check vs CPU (all elements)
+omp teams distribute           21.6357 ms      1386.6   bitwise exact (0 of 1250000000 wrong)
+launch overhead                  28.26 us  (empty target region, launch + wait, mean of 1000)
+Hint: CUDA_VISIBLE_DEVICES is set. You may want to use '--gpu-metrics-devices=cuda-visible' instead of '--gpu-metrics-devices=all'
+GPU 0: General Metrics for NVIDIA GH100 (any frequency)
+GPU 1: General Metrics for NVIDIA GH100 (any frequency)
+GPU 2: General Metrics for NVIDIA GH100 (any frequency)
+GPU 3: General Metrics for NVIDIA GH100 (any frequency)
+Collecting data...
+Generating '/scratch/tmp/45751795/nsys-report-5300.qdstrm'
+[1/1] [0%                          ] nsys_omp.nsys-rep[1/1] [0%                          ] nsys_omp.nsys-rep[1/1] [6%                          ] nsys_omp.nsys-rep[1/1] [7%                          ] nsys_omp.nsys-rep[1/1] [10%                         ] nsys_omp.nsys-rep[1/1] [13%                         ] nsys_omp.nsys-rep[1/1] [=17%                        ] nsys_omp.nsys-rep[1/1] [==21%                       ] nsys_omp.nsys-rep[1/1] [===23%                      ] nsys_omp.nsys-rep[1/1] [====25%                     ] nsys_omp.nsys-rep[1/1] [=====29%                    ] nsys_omp.nsys-rep[1/1] [=====32%                    ] nsys_omp.nsys-rep[1/1] [=======36%                  ] nsys_omp.nsys-rep[1/1] [========40%                 ] nsys_omp.nsys-rep[1/1] [=========44%                ] nsys_omp.nsys-rep[1/1] [==========47%               ] nsys_omp.nsys-rep[1/1] [===========51%              ] nsys_omp.nsys-rep[1/1] [===========53%              ] nsys_omp.nsys-rep[1/1] [========================100%] nsys_omp.nsys-rep[1/1] [========================100%] nsys_omp.nsys-rep
+Generated:
+    /gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-4-all/results/mn5/vecadd-30GB/rep1/time/nsys_omp.nsys-rep

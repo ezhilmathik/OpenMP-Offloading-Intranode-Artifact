@@ -1,0 +1,22 @@
+=== mn5 | NVIDIA H100 | 30 GB (N = 35328) | rep 1 ===
+                              CUDA naive                 CUDA tiled32               OMP collapse(2)            CUDA 1-D (ref)           
+Time, median [min-max]        38.94 [38.94-38.94] s      18.09 [18.09-18.09] s      209.39 [209.02-217.45] s   222.87 [222.87-222.88] s 
+GFLOP/s                       2264                       4875                       421                        396                      
+OMP slower by                 5.38x                      11.58x                     -                          0.94x                    
+Regs / smem B / local B       32 / 0 / 0                 32 / 16384 / 0             110 / 24 / 0               32 / 0 / 0               
+Launch: blocks x threads      4875264 x 256 (32x8)       1218816 x 1024 (32x32)     3200 x 128 (128x1)         9750528 x 128 (128x1)    
+Elements per thread           1                          1                          3047                       1                        
+Occupancy theoretical %       100.0                      100.0                      25.0                       100.0                    
+Occupancy achieved % nsys     100.0                      n/a                        24.5                       100.0                    
+Occupancy achieved % ncu      100.0 *                    100.0                      n/a                        invalid (ncu)            
+DRAM throughput % nsys        72.0                       n/a                        97.4                       98.0                     
+DRAM throughput % ncu         71.5 *                     38.8                       n/a                        invalid (ncu)            
+L1 / L2 hit % ncu             86.8 / 10.9 *              0.0 / 35.6                 n/a                        invalid (ncu)            
+SM throughput % ncu           26.9 *                     47.4                       n/a                        invalid (ncu)            
+Sectors per request ncu       4.50 *                     8.00                       n/a                        invalid (ncu)            
+Launch overhead us (wall)     7.5                        same as naive              28.0                       same as naive            
+Launch / sync call med us     2.1 / 5.0                  same as naive              4.0 / 21.6                 same as naive            
+Kernel mode | correctness     CUDA | bitwise exact       CUDA | bitwise exact       SPMD | bitwise exact       CUDA | bitwise exact     
+OpenMP first call (warm-up, incl. runtime setup): 219882.644 ms
+invalid (ncu):  impossible values (0% or >110% occupancy, 0% SM throughput, >32 sectors/request or 100% L2 hits): counter overflow in a very long kernel
+*  ncu value from a kernel longer than 25 s at ncu's clock; treat with caution

@@ -1,0 +1,121 @@
+start_ns,end_ns,gridX,gridY,blockX,blockY,name,metric,value,samples,gpu
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,GPC Clock Frequency [MHz],1979988531.1851,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,SYS Clock Frequency [MHz],1661572352.8057,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,GR Active [Throughput %],99.9999,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,SMs Active [Throughput %],99.2804,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,SM Issue [Throughput %],5.3689,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Tensor Active [Throughput %],1.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Vertex/Tess/Geometry Warps in Flight [Throughput %],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Vertex/Tess/Geometry Warps in Flight [Avg],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Pixel Warps in Flight [Throughput %],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Pixel Warps in Flight [Avg],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Pixel Warps in Flight [Avg Warps per Cycle],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Compute Warps in Flight [Throughput %],24.6735,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Compute Warps in Flight [Avg],312824166.9017,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Compute Warps in Flight [Avg Warps per Cycle],31.5886,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Unallocated Warps in Active SMs [Throughput %],74.5756,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Unallocated Warps in Active SMs [Avg],945177748.0773,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Unallocated Warps in Active SMs [Avg Warps per Cycle],95.4597,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,DRAM Read Bandwidth [Throughput %],96.1958,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,DRAM Write Bandwidth [Throughput %],1.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Requests Protocol Data [Throughput %],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Requests User Data [Throughput %],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Responses Protocol Data [Throughput %],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Responses User Data [Throughput %],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Requests Protocol Data [Throughput %],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Requests User Data [Throughput %],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Responses Protocol Data [Throughput %],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Responses User Data [Throughput %],0.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,PCIe RX Throughput [Throughput %],1.0000,101919,281479271677952
+18845471712,528440461680,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,PCIe TX Throughput [Throughput %],1.0000,101919,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,GPC Clock Frequency [MHz],1979829386.3867,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,SYS Clock Frequency [MHz],1661567358.2298,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,GR Active [Throughput %],99.9999,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,SMs Active [Throughput %],99.2562,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,SM Issue [Throughput %],5.3796,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Tensor Active [Throughput %],1.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Vertex/Tess/Geometry Warps in Flight [Throughput %],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Vertex/Tess/Geometry Warps in Flight [Avg],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Pixel Warps in Flight [Throughput %],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Pixel Warps in Flight [Avg],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Pixel Warps in Flight [Avg Warps per Cycle],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Compute Warps in Flight [Throughput %],24.6783,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Compute Warps in Flight [Avg],312854101.0703,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Compute Warps in Flight [Avg Warps per Cycle],31.5952,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Unallocated Warps in Active SMs [Throughput %],74.5490,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Unallocated Warps in Active SMs [Avg],944749603.5407,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Unallocated Warps in Active SMs [Avg Warps per Cycle],95.4246,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,DRAM Read Bandwidth [Throughput %],96.0936,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,DRAM Write Bandwidth [Throughput %],1.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Requests Protocol Data [Throughput %],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Requests User Data [Throughput %],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Responses Protocol Data [Throughput %],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Responses User Data [Throughput %],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Requests Protocol Data [Throughput %],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Requests User Data [Throughput %],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Responses Protocol Data [Throughput %],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Responses User Data [Throughput %],0.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,PCIe RX Throughput [Throughput %],1.0000,101728,281479271677952
+528440882322,1037084558468,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,PCIe TX Throughput [Throughput %],1.0000,101728,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,GPC Clock Frequency [MHz],1979834714.9999,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,SYS Clock Frequency [MHz],1661643521.4144,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,GR Active [Throughput %],99.9999,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,SMs Active [Throughput %],99.1310,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,SM Issue [Throughput %],5.3318,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Tensor Active [Throughput %],1.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Vertex/Tess/Geometry Warps in Flight [Throughput %],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Vertex/Tess/Geometry Warps in Flight [Avg],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Pixel Warps in Flight [Throughput %],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Pixel Warps in Flight [Avg],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Pixel Warps in Flight [Avg Warps per Cycle],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Compute Warps in Flight [Throughput %],24.6149,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Compute Warps in Flight [Avg],312095938.5927,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Compute Warps in Flight [Avg Warps per Cycle],31.5155,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Unallocated Warps in Active SMs [Throughput %],74.4774,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Unallocated Warps in Active SMs [Avg],943897843.3261,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Unallocated Warps in Active SMs [Avg Warps per Cycle],95.3351,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,DRAM Read Bandwidth [Throughput %],96.2497,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,DRAM Write Bandwidth [Throughput %],1.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Requests Protocol Data [Throughput %],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Requests User Data [Throughput %],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Responses Protocol Data [Throughput %],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Responses User Data [Throughput %],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Requests Protocol Data [Throughput %],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Requests User Data [Throughput %],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Responses Protocol Data [Throughput %],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Responses User Data [Throughput %],0.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,PCIe RX Throughput [Throughput %],1.0000,102716,281479271677952
+1037084867046,1550663675451,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,PCIe TX Throughput [Throughput %],1.0000,102716,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,GPC Clock Frequency [MHz],1979843910.6841,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,SYS Clock Frequency [MHz],1661601420.0644,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,GR Active [Throughput %],99.9996,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,SMs Active [Throughput %],99.2318,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,SM Issue [Throughput %],5.3723,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Tensor Active [Throughput %],1.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Vertex/Tess/Geometry Warps in Flight [Throughput %],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Vertex/Tess/Geometry Warps in Flight [Avg],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Pixel Warps in Flight [Throughput %],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Pixel Warps in Flight [Avg],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Pixel Warps in Flight [Avg Warps per Cycle],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Compute Warps in Flight [Throughput %],24.6672,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Compute Warps in Flight [Avg],312714350.6781,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Compute Warps in Flight [Avg Warps per Cycle],31.5803,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Unallocated Warps in Active SMs [Throughput %],74.5345,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Unallocated Warps in Active SMs [Avg],944586119.9843,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,Unallocated Warps in Active SMs [Avg Warps per Cycle],95.4073,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,DRAM Read Bandwidth [Throughput %],96.1668,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,DRAM Write Bandwidth [Throughput %],1.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Requests Protocol Data [Throughput %],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Requests User Data [Throughput %],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Responses Protocol Data [Throughput %],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink RX Responses User Data [Throughput %],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Requests Protocol Data [Throughput %],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Requests User Data [Throughput %],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Responses Protocol Data [Throughput %],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,NVLink TX Responses User Data [Throughput %],0.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,PCIe RX Throughput [Throughput %],1.0000,101892,281479271677952
+1550663976925,2060127796962,3200,1,128,1,__omp_offloading_37_f00d0c03__Z20matrixMultiplyOpenMPPdS_S_mi_l29,PCIe TX Throughput [Throughput %],1.0001,101892,281479271677952

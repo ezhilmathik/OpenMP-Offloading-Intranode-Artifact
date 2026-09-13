@@ -1,0 +1,1 @@
+$ clang++ -O3 -fiopenmp -fopenmp-targets=spir64 -ffp-contract=off -fno-fast-math -o matvec_omp src/mv-omp.cpp

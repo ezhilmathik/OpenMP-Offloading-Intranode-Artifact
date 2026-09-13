@@ -1,0 +1,3 @@
+=== vecadd lumi 45GB rep1 stage=time on nid006258 at sön 13 sep 2026 01:54:31 EEST ===
+  N=1874999936  arch=gfx90a  results in /pfs/lustrep2/scratch/project_465003145/Git/CG-Halo/SIMT-SIMD/test-5-all/results/lumi/vecadd-45GB/rep1/time
+=== done 45GB time at sön 13 sep 2026 01:56:03 EEST ===

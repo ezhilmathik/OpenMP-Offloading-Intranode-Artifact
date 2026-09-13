@@ -1,0 +1,10 @@
+site      bench   GPU                     size GB           N   CUDA time    OMP time  OMP/CUDA  OMP/best unit      tput C/O  regs C/O  occ% C/O   DRAM% C/O
+lumi      matmul  AMD Instinct MI250X          30       35328    184.27 s    279.28 s     1.52x     7.25x GFLOP/s    478/316     14/24       n/a         n/a
+lumi      matmul  AMD Instinct MI250X          45       43264    347.62 s    528.19 s     1.52x     7.33x GFLOP/s    466/307     14/24       n/a         n/a
+lumi      matvec  AMD Instinct MI250X          30       61184   335.78 ms   384.00 ms     1.14x    16.76x GB/s         89/78     20/24       n/a         n/a
+lumi      matvec  AMD Instinct MI250X          45       74880   475.77 ms   515.70 ms     1.08x    15.05x GB/s         94/87     20/24       n/a         n/a
+lumi      vecadd  AMD Instinct MI250X          30  1250000000    22.88 ms    31.30 ms     1.37x     1.37x GB/s      1311/958     10/24       n/a         n/a
+lumi      vecadd  AMD Instinct MI250X          45  1874999936    34.20 ms    47.78 ms     1.40x     1.40x GB/s      1316/942     10/24       n/a         n/a
+CUDA = naive (matmul), 1-D (vecadd), thread/row (matvec): the counterpart of the OpenMP loop. OMP = your OpenMP kernel.
+best = tiled32 (matmul), fastest of 1-D / 2-D grid / double2 (vecadd), fastest of thread/row / warp/row (matvec).
+Kernel times: profiler median (Nsight Systems on NVIDIA, rocprofv3 on AMD), warm-up excluded.

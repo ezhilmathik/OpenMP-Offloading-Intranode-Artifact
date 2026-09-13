@@ -1,0 +1,7 @@
+OpenMP offload: 1 device(s) visible, using device 0
+N = 1024, each matrix 0.008 GB, reps = 1, 2.147 GFLOP per multiply
+H2D copy                         1.800 ms  (A and B, not included in kernel times)
+first call (warm-up)             1.672 ms  (includes one-time runtime setup)
+kernel                       time/call        GFLOP/s   check vs CPU
+omp collapse(2)                  1.032 ms      2081.1   bitwise exact (512/512 exact, max rel err 0.0e+00)
+launch overhead                  29.54 us  (empty target region, launch + wait, mean of 1000)

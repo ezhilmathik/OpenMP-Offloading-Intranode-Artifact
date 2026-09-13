@@ -1,0 +1,3 @@
+[0;31mE20260913 02:07:33.463753 23194682779712 output_stream.cpp:105] Opened result file: prof_hip/hip_kernel_trace.csv
+[m[0;31mE20260913 02:07:33.474474 23194682779712 output_stream.cpp:105] Opened result file: prof_hip/hip_agent_info.csv
+[m

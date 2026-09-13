@@ -1,0 +1,2 @@
+"PluginInterface" device 0 info: Launching kernel __omp_offloading_38_f00a4805__Z15vectorAddOpenMPPdS_S_mi_l24 with 32 blocks and 32 threads in SPMD mode
+"PluginInterface" device 0 info: Launching kernel __omp_offloading_38_f00a4805__Z17emptyTargetRegioni_l34 with 1 blocks and 128 threads in Generic-SPMD mode

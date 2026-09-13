@@ -1,0 +1,18 @@
+==PROF== Connected to process 2162107 (/gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-4-all/results/mn5/vecadd-55GB/rep1/ncu/vecadd_cuda)
+==PROF== Profiling "vadd_1d": 0%
+==WARNING== Backing up device memory in system memory. Kernel replay might be slow. Consider using "--replay-mode application" to avoid memory save-and-restore.
+....50%....100% - 9 passes
+==PROF== Profiling "vadd_2d": 0%....50%....100% - 9 passes
+==PROF== Profiling "vadd_vec2": 0%....50%....100% - 9 passes
+==PROF== Profiling "vadd_gridstride": 0%....50%....100% - 9 passes
+GPU : NVIDIA H100 (sm_90, 132 SMs), theoretical DRAM bandwidth 1631 GB/s
+N = 2291666560 elements, each vector 18.333 GB, reps = 1, 55.000 GB moved per call
+H2D copy                      3578.070 ms  (A and B, not included in kernel times)
+kernel                       time/call           GB/s   check vs CPU (all elements)
+vadd 1-D (256/block)        21838.1094 ms         2.5   bitwise exact (0 of 2291666560 wrong)
+vadd 2-D grid (16x16)       21911.1212 ms         2.5   bitwise exact (0 of 2291666560 wrong)
+vadd vectorized (double2)   18969.8857 ms         2.9   bitwise exact (0 of 2291666560 wrong)
+vadd grid-stride (OMP)      18799.9919 ms         2.9   bitwise exact (0 of 2291666560 wrong)
+launch overhead                  59.18 us  (empty kernel, launch + synchronize, mean of 1000)
+==PROF== Disconnected from process 2162107
+==PROF== Report: /gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-4-all/results/mn5/vecadd-55GB/rep1/ncu/ncu_cuda.ncu-rep

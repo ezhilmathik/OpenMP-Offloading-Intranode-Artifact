@@ -1,0 +1,34 @@
+site: mn5
+bench: matvec
+stage: ncu
+size_gb: 55
+N: 82816
+rep: 1
+reps: 20
+date: 2026-09-11T21:02:51+02:00
+host: as03r5b08
+job: 45751806
+gpu_index: 0
+arch: sm_90
+gpu: NVIDIA H100
+gpu_info: 595.71.05, 65247 MiB, 1980 MHz, 1593 MHz
+cpu: Intel(R) Xeon(R) Platinum 8460Y+
+omp_num_threads: 1
+modules: EB/apps GCC/13.2.0 cuda/12.8 clang/18.1.8-cuda12.8
+nvcc: Build cuda_12.8.r12.8/compiler.35404655_0
+clang: clang version 18.1.8
+nsys: NVIDIA Nsight Systems version 2024.6.2.225-246235244400v0
+ncu: Version 2026.1.1.0 (build 37634170) (public-release)
+gpu_metrics_option: --gpu-metrics-devices=all
+sha256: d725b80e6955ee9a76ced198413baeee0927c98880c88cf260b124d58b88007a  mv-cuda.cu
+sha256: 177ac4628621fa7b95daeb5060d04880ccc3202dc4f8e4a9518bf3e259af8c5b  mv-omp.cpp
+--- module list
+
+Currently Loaded Modules:
+  1) EB/apps                        5) GCC/13.2.0
+  2) GCCcore/13.2.0                 6) cuda/12.8
+  3) zlib/1.2.13-GCCcore-13.2.0     7) clang/18.1.8-cuda12.8
+  4) binutils/2.40-GCCcore-13.2.0
+
+ 
+

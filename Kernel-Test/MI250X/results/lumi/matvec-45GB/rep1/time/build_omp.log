@@ -1,0 +1,1 @@
+$ clang++ -O3 -fopenmp --offload-arch=gfx90a -ffp-contract=off -Rpass-analysis=kernel-resource-usage -g1 -o matvec_omp src/mv-omp.cpp

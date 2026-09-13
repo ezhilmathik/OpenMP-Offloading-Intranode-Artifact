@@ -1,0 +1,63 @@
+=== hip counters: FETCH_SIZE WRITE_SIZE
+[0;31mE20260913 01:52:42.335966 22614916327488 output_stream.cpp:105] Opened result file: pmc_hip_run1/pmc1_counter_collection.csv
+[m[0;31mE20260913 01:52:42.353327 22614916327488 output_stream.cpp:105] Opened result file: pmc_hip_run1/pmc1_agent_info.csv
+[mGPU : AMD Instinct MI250X (gfx90a:sramecc+:xnack-, 110 CUs), theoretical DRAM bandwidth 1638 GB/s
+N = 74880, A = 44.856 GB, reps = 1, 44.857 GB moved per call
+H2D copy                      2557.161 ms  (A and x, not included in kernel times)
+kernel                       time/call           GB/s   check vs CPU (all of y)
+mv thread/row (yours)         475.8465 ms        94.3   bitwise exact (0 of 74880 wrong)
+mv warp/row                    34.9788 ms      1282.4   bitwise exact (0 of 74880 wrong)
+launch overhead                  85.94 us  (empty kernel, launch + synchronize, mean of 1000)
+=== hip counters: OccupancyPercent MeanOccupancyPerCU
+[0;31mE20260913 01:52:51.355597 23405919373376 output_stream.cpp:105] Opened result file: pmc_hip_run2/pmc2_counter_collection.csv
+[m[0;31mE20260913 01:52:51.373538 23405919373376 output_stream.cpp:105] Opened result file: pmc_hip_run2/pmc2_agent_info.csv
+[mGPU : AMD Instinct MI250X (gfx90a:sramecc+:xnack-, 110 CUs), theoretical DRAM bandwidth 1638 GB/s
+N = 74880, A = 44.856 GB, reps = 1, 44.857 GB moved per call
+H2D copy                      2706.858 ms  (A and x, not included in kernel times)
+kernel                       time/call           GB/s   check vs CPU (all of y)
+mv thread/row (yours)         475.2809 ms        94.4   bitwise exact (0 of 74880 wrong)
+mv warp/row                    34.7799 ms      1289.7   bitwise exact (0 of 74880 wrong)
+launch overhead                  41.84 us  (empty kernel, launch + synchronize, mean of 1000)
+=== hip counters: L2CacheHit MemUnitStalled
+[0;31mE20260913 01:53:00.144177 22906428639296 output_stream.cpp:105] Opened result file: pmc_hip_run3/pmc3_counter_collection.csv
+[m[0;31mE20260913 01:53:00.161289 22906428639296 output_stream.cpp:105] Opened result file: pmc_hip_run3/pmc3_agent_info.csv
+[mGPU : AMD Instinct MI250X (gfx90a:sramecc+:xnack-, 110 CUs), theoretical DRAM bandwidth 1638 GB/s
+N = 74880, A = 44.856 GB, reps = 1, 44.857 GB moved per call
+H2D copy                      2554.023 ms  (A and x, not included in kernel times)
+kernel                       time/call           GB/s   check vs CPU (all of y)
+mv thread/row (yours)         455.3662 ms        98.5   bitwise exact (0 of 74880 wrong)
+mv warp/row                    34.7004 ms      1292.7   bitwise exact (0 of 74880 wrong)
+launch overhead                 142.43 us  (empty kernel, launch + synchronize, mean of 1000)
+=== omp counters: FETCH_SIZE WRITE_SIZE
+[0;31mE20260913 01:53:11.088074 23281761761472 output_stream.cpp:105] Opened result file: pmc_omp_run1/pmc1_counter_collection.csv
+[m[0;31mE20260913 01:53:11.105704 23281761761472 output_stream.cpp:105] Opened result file: pmc_omp_run1/pmc1_agent_info.csv
+[mOpenMP offload: 1 device(s) visible, using device 0
+N = 74880, A = 44.856 GB, reps = 1, 44.857 GB moved per call
+H2D copy                      2549.783 ms  (A and x, not included in kernel times)
+first call (warm-up)           519.707 ms  (includes one-time runtime setup)
+kernel                       time/call           GB/s   check vs CPU (all of y)
+omp thread/row (yours)        507.5879 ms        88.4   bitwise exact (0 of 74880 wrong)
+omp team/row (reduction)       34.9739 ms      1282.6   bitwise exact (0 of 74880 wrong)
+launch overhead                  83.07 us  (empty target region, launch + wait, mean of 1000)
+=== omp counters: OccupancyPercent MeanOccupancyPerCU
+[0;31mE20260913 01:53:19.684838 22458437433536 output_stream.cpp:105] Opened result file: pmc_omp_run2/pmc2_counter_collection.csv
+[m[0;31mE20260913 01:53:19.705360 22458437433536 output_stream.cpp:105] Opened result file: pmc_omp_run2/pmc2_agent_info.csv
+[mOpenMP offload: 1 device(s) visible, using device 0
+N = 74880, A = 44.856 GB, reps = 1, 44.857 GB moved per call
+H2D copy                      2550.961 ms  (A and x, not included in kernel times)
+first call (warm-up)           522.373 ms  (includes one-time runtime setup)
+kernel                       time/call           GB/s   check vs CPU (all of y)
+omp thread/row (yours)        518.0910 ms        86.6   bitwise exact (0 of 74880 wrong)
+omp team/row (reduction)       34.8940 ms      1285.5   bitwise exact (0 of 74880 wrong)
+launch overhead                  37.21 us  (empty target region, launch + wait, mean of 1000)
+=== omp counters: L2CacheHit MemUnitStalled
+[0;31mE20260913 01:53:28.373678 23260255701184 output_stream.cpp:105] Opened result file: pmc_omp_run3/pmc3_counter_collection.csv
+[m[0;31mE20260913 01:53:28.391297 23260255701184 output_stream.cpp:105] Opened result file: pmc_omp_run3/pmc3_agent_info.csv
+[mOpenMP offload: 1 device(s) visible, using device 0
+N = 74880, A = 44.856 GB, reps = 1, 44.857 GB moved per call
+H2D copy                      2546.413 ms  (A and x, not included in kernel times)
+first call (warm-up)           502.635 ms  (includes one-time runtime setup)
+kernel                       time/call           GB/s   check vs CPU (all of y)
+omp thread/row (yours)        518.6410 ms        86.5   bitwise exact (0 of 74880 wrong)
+omp team/row (reduction)       34.9922 ms      1281.9   bitwise exact (0 of 74880 wrong)
+launch overhead                 138.00 us  (empty target region, launch + wait, mean of 1000)

@@ -1,0 +1,4 @@
+name,gridX,gridY,blockX,blockY,regs,static_smem_B,dyn_smem_B,local_B,launches
+__omp_offloading_36_f004a805__Z17emptyTargetRegioni_l63,1,1,128,1,16,28,0,0,1001
+__omp_offloading_36_f004a805__Z22matrix_vector_multiplyPdS_S_mmi_l29,1912,1,32,1,73,72,0,0,21
+__omp_offloading_36_f004a805__Z27matrix_vector_multiply_teamPdS_S_mmi_l46,3200,1,128,1,64,184,0,0,21

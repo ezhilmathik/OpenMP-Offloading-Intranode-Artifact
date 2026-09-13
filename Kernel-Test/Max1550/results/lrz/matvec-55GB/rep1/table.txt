@@ -1,0 +1,17 @@
+=== matvec | lrz | Intel(R) Data Center GPU Max 1550 | 55 GB (N = 82816) | rep 1 ===
+                              SYCL thread/row            SYCL sub-group/row         OMP thread/row (yours)     OMP team/row             
+Kernel time, median [min-max]  343.18 [340.84-346.47] ms  56.78 [56.72-56.80] ms     499.61 ms prog             56.95 ms prog            
+Wall per call, launch+wait    344.42 ms                  56.92 ms                   499.61 ms                  56.95 ms                 
+GB/s (% of peak)              160 (10%)                  966 (59%)                  110 (7%)                   964 (59%)                
+OMP slower by                 1.46x                      8.80x                      -                          8.77x                    
+Launch: blocks x threads      324 x 256 (256x1)          10352 x 256 (256x1)        1296 x 64 (64x1)           512 x 1024 (1024x1)      
+Threads per row               1                          32                         1                          1                        
+Occupancy achieved % VTune    48.8                       97.8                       34.4                       97.6                     
+DRAM throughput % VTune       9.6                        58.7                       6.8                        59.1                     
+L3 bandwidth GB/s VTune       225                        1073                       194                        1751                     
+XVE array active % VTune      2.9                        21.1                       1.4                        25.3                     
+Launch overhead us (wall)     6.5                        same as column 1           6.3                        same as OMP              
+Launch / sync call med us     n/a / n/a                  same as column 1           n/a / n/a                  same as OMP              
+Kernel mode | correctness     SYCL | bitwise exact       SYCL | bitwise exact       ? | bitwise exact          ? | bitwise exact        
+OpenMP first call (warm-up, incl. runtime setup): 652.927 ms
+Compiled SIMD width (VTune): SYCL thread/row: 32 SYCL sub-group/row: 32 OMP thread/row (yours): 32 OMP team/row: 32

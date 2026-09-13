@@ -1,0 +1,3 @@
+=== vecadd lumi 55GB rep1 stage=time on nid006499 at sön 13 sep 2026 01:56:30 EEST ===
+  N=2291666560  arch=gfx90a  results in /pfs/lustrep2/scratch/project_465003145/Git/CG-Halo/SIMT-SIMD/test-5-all/results/lumi/vecadd-55GB/rep1/time
+[2026-09-13T01:57:46.621] error: Detected 1 oom_kill event in StepId=21993347.batch. Some of the step tasks have been OOM Killed.

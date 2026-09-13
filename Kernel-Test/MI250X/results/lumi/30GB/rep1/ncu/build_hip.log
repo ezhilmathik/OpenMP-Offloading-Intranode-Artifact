@@ -1,0 +1,67 @@
+$ /appl/lumi/SW/LUMI-25.09/G/EB/rocm/6.4.4/bin/hipcc -O3 --offload-arch=gfx90a -ffp-contract=off -fopenmp -Rpass-analysis=kernel-resource-usage -g1 -o matmul_hip src/mat-hip.cpp -lm
+src/mat-hip.cpp:329:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  329 |             hipDeviceSynchronize();
+      |             ^~~~~~~~~~~~~~~~~~~~
+src/mat-hip.cpp:44:1: remark: Function Name: _Z11dgemm_naivePKdS0_Pdi [-Rpass-analysis=kernel-resource-usage]
+   44 | {
+      | ^
+src/mat-hip.cpp:44:1: remark:     SGPRs: 14 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:44:1: remark:     VGPRs: 14 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:44:1: remark:     AGPRs: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:44:1: remark:     ScratchSize [bytes/lane]: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:44:1: remark:     Dynamic Stack: False [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:44:1: remark:     Occupancy [waves/SIMD]: 8 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:44:1: remark:     SGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:44:1: remark:     VGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:44:1: remark:     LDS Size [bytes/block]: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:61:1: remark: Function Name: _Z13dgemm_tiled32PKdS0_Pdi [-Rpass-analysis=kernel-resource-usage]
+   61 | {
+      | ^
+src/mat-hip.cpp:61:1: remark:     SGPRs: 18 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:61:1: remark:     VGPRs: 48 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:61:1: remark:     AGPRs: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:61:1: remark:     ScratchSize [bytes/lane]: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:61:1: remark:     Dynamic Stack: False [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:61:1: remark:     Occupancy [waves/SIMD]: 8 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:61:1: remark:     SGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:61:1: remark:     VGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:61:1: remark:     LDS Size [bytes/block]: 16384 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:170:1: remark: Function Name: _Z12empty_kernelv [-Rpass-analysis=kernel-resource-usage]
+  170 | __global__ void empty_kernel() {}
+      | ^
+src/mat-hip.cpp:170:1: remark:     SGPRs: 4 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:170:1: remark:     VGPRs: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:170:1: remark:     AGPRs: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:170:1: remark:     ScratchSize [bytes/lane]: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:170:1: remark:     Dynamic Stack: False [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:170:1: remark:     Occupancy [waves/SIMD]: 8 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:170:1: remark:     SGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:170:1: remark:     VGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:170:1: remark:     LDS Size [bytes/block]: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark: Function Name: _Z13dgemm_regtileILi64ELi64ELi16ELi4ELi4EEvPKdS1_Pdi [-Rpass-analysis=kernel-resource-usage]
+   95 | {
+      | ^
+src/mat-hip.cpp:95:1: remark:     SGPRs: 28 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     VGPRs: 102 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     AGPRs: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     ScratchSize [bytes/lane]: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     Dynamic Stack: False [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     Occupancy [waves/SIMD]: 3 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     SGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     VGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     LDS Size [bytes/block]: 16896 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark: Function Name: _Z13dgemm_regtileILi128ELi128ELi8ELi8ELi8EEvPKdS1_Pdi [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     SGPRs: 28 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     VGPRs: 256 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     AGPRs: 6 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     ScratchSize [bytes/lane]: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     Dynamic Stack: False [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     Occupancy [waves/SIMD]: 1 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     SGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     VGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mat-hip.cpp:95:1: remark:     LDS Size [bytes/block]: 17408 [-Rpass-analysis=kernel-resource-usage]
+1 warning generated when compiling for gfx90a.
+src/mat-hip.cpp:329:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  329 |             hipDeviceSynchronize();
+      |             ^~~~~~~~~~~~~~~~~~~~
+1 warning generated when compiling for host.

@@ -1,0 +1,10 @@
+site      bench   GPU                     size GB           N   CUDA time    OMP time  OMP/CUDA  OMP/best unit      tput C/O  regs C/O  occ% C/O   DRAM% C/O
+mn5       matvec  NVIDIA H100                  30       61184    34.42 ms    39.18 ms     1.14x     2.04x GB/s       870/764     30/73      22/6       54/47
+mn5       matvec  NVIDIA H100                  45       74880    55.68 ms    56.24 ms     1.01x     1.96x GB/s       806/798     30/73      25/7       50/49
+mn5       matvec  NVIDIA H100                  55       82816    64.21 ms    68.20 ms     1.06x     1.94x GB/s       854/804     30/73      28/8       53/50
+mn5       vecadd  NVIDIA H100                  30  1250000000    19.68 ms    21.35 ms     1.08x     1.08x GB/s     1524/1405     16/36     82/40       93/86
+mn5       vecadd  NVIDIA H100                  45  1874999936    29.53 ms    32.02 ms     1.08x     1.08x GB/s     1524/1405     16/36     82/40       93/86
+mn5       vecadd  NVIDIA H100                  55  2291666560    36.10 ms    39.18 ms     1.09x     1.09x GB/s     1524/1404     16/36     82/40       93/86
+CUDA = naive (matmul), 1-D (vecadd), thread/row (matvec): the counterpart of the OpenMP loop. OMP = your OpenMP kernel.
+best = tiled32 (matmul), fastest of 1-D / 2-D grid / double2 (vecadd), fastest of thread/row / warp/row (matvec).
+Kernel times: nsys median, warm-up excluded.

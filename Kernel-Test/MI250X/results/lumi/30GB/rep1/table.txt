@@ -1,0 +1,20 @@
+=== matmul | lumi | AMD Instinct MI250X | 30 GB (N = 35328) | rep 1 ===
+                              HIP naive                  HIP tiled32                OMP collapse(2)            HIP 1-D (ref)            
+Kernel time, median [min-max]  184.27 [184.27-184.27] s   38.51 [38.51-38.51] s      279.28 [279.28-279.28] s   276.86 [276.86-276.86] s 
+GFLOP/s                       479                        2290                       316                        319                      
+OMP slower by                 1.52x                      7.25x                      -                          1.01x                    
+Regs / smem B / local B       14 / 0 / 0                 48 / 16384 / 0             24 / 0 / 0                 14 / 0 / 0               
+Launch: blocks x threads      4875264 x 256 (256x1)      1218816 x 1024 (1024x1)    440 x 256 (256x1)          9750528 x 128 (128x1)    
+Elements per thread           1                          1                          11080                      1                        
+Occupancy theoretical %       100.0                      100.0                      100.0                      100.0                    
+Occupancy achieved % rocprof  n/a                        n/a                        n/a                        n/a                      
+Occupancy achieved % PMC      52.4                       99.3                       48.5                       64.0                     
+DRAM throughput % rocprof     n/a                        n/a                        n/a                        n/a                      
+DRAM throughput % PMC         n/a                        n/a                        n/a                        n/a                      
+L1 / L2 hit % PMC             - / 31.4                   - / 42.0                   - / 6.0                    - / 8.1                  
+Mem unit stalled % PMC        0.0                        0.0                        0.0                        0.0                      
+Sectors per request PMC       n/a                        n/a                        n/a                        n/a                      
+Launch overhead us (wall)     11.5                       same as column 1           15.2                       same as column 1         
+Launch / sync call med us     n/a / n/a                  same as column 1           n/a / n/a                  same as column 1         
+Kernel mode | correctness     HIP | bitwise exact        HIP | bitwise exact        SPMD-Big-Jump-Loop | bitwise exact  HIP | bitwise exact      
+OpenMP first call (warm-up, incl. runtime setup): 279193.577 ms

@@ -1,0 +1,4 @@
+stty: 'standard input': Inappropriate ioctl for device
+=== matvec lrz 45GB rep1 stage=ncu on i20r01c02s10 at Sun 13 Sep 2026 03:27:23 AM CEST ===
+  N=74880  arch=pvc  results in /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu
+slurmstepd: error: *** JOB 537913 ON i20r01c02s10 CANCELLED AT 2026-09-13T03:55:50 DUE TO TIME LIMIT ***

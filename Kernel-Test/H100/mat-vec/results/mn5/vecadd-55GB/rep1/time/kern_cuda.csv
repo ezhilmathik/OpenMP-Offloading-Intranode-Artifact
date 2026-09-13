@@ -1,0 +1,6 @@
+name,gridX,gridY,blockX,blockY,regs,static_smem_B,dyn_smem_B,local_B,launches
+_Z12empty_kernelv,1,1,1,1,16,0,0,0,1001
+_Z15vadd_gridstridePKdS0_Pdm,3200,1,128,1,16,0,0,0,101
+_Z7vadd_1dPKdS0_Pdm,8951823,1,256,1,16,0,0,0,101
+_Z7vadd_2dPKdS0_Pdm,2992,2992,16,16,16,0,0,0,101
+_Z9vadd_vec2PKdS0_Pdm,2237956,1,256,1,28,0,0,0,101

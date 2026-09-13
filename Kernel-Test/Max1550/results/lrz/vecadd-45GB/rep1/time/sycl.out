@@ -1,0 +1,9 @@
+GPU : Intel(R) Data Center GPU Max 1550 (512 EUs, 64 GB), theoretical DRAM bandwidth 1638 GB/s
+N = 1874999936 elements, each vector 15.000 GB, reps = 3, 45.000 GB moved per call
+H2D copy                       947.778 ms  (A and B, not included in kernel times)
+kernel                       time/call           GB/s   check vs CPU (all elements)
+vadd range (runtime wg)        42.6730 ms      1054.5   bitwise exact (0 of 1874999936 wrong)  [min 42.6698 max 42.6896, wall 43.1863 ms] {groups 7324219, wg 256, per_item 1}
+vadd nd_range (256/wg)         42.5957 ms      1056.4   bitwise exact (0 of 1874999936 wrong)  [min 42.5661 max 42.6032, wall 42.7253 ms] {groups 7324219, wg 256, per_item 1}
+vadd vectorized (vec2)         44.1459 ms      1019.3   bitwise exact (0 of 1874999936 wrong)  [min 44.1086 max 44.1770, wall 44.2808 ms] {groups 1831055, wg 256, per_item 4}
+vadd stride (OMP layout)       46.1187 ms       975.7   bitwise exact (0 of 1874999936 wrong)  [min 45.9578 max 46.8054, wall 46.4360 ms] {groups 3200, wg 256, per_item 2289}
+launch overhead                   6.51 us  (empty kernel, submit + wait, mean of 1000)

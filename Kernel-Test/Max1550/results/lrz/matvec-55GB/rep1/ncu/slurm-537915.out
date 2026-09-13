@@ -1,0 +1,4 @@
+stty: 'standard input': Inappropriate ioctl for device
+=== matvec lrz 55GB rep1 stage=ncu on i20r01c04s04 at Sun 13 Sep 2026 03:27:28 AM CEST ===
+  N=82816  arch=pvc  results in /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-55GB/rep1/ncu
+=== done 55GB ncu at Sun 13 Sep 2026 03:39:26 AM CEST ===

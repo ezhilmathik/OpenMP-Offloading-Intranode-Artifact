@@ -1,0 +1,20 @@
+==PROF== Connected to process 2635834 (/gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-3/results/mn5/30GB/rep1/ncu/matmul_cuda)
+==PROF== Profiling "dgemm_naive": 0%..
+==WARNING== Launching the workload is taking more time than expected. If this continues to hang, terminate the profile and re-try by profiling the range of all related launches using '--replay-mode range'. See https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#replay for more details.
+..50%....100% - 9 passes
+==PROF== Profiling "dgemm_naive": 0%..
+==WARNING== Launching the workload is taking more time than expected. If this continues to hang, terminate the profile and re-try by profiling the range of all related launches using '--replay-mode range'. See https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#replay for more details.
+..50%....100% - 4 passes
+==PROF== Profiling "dgemm_tiled32": 0%....50%....100% - 9 passes
+GPU : NVIDIA H100 (sm_90, 132 SMs)
+N = 35328, each matrix 9.985 GB, reps = 1, 88183.463 GFLOP per multiply
+H2D copy                      1945.337 ms  (A and B, not included in kernel times)
+kernel                       time/call        GFLOP/s   check vs CPU
+naive (32x8 threads)        351504.812 ms       250.9   bitwise exact (512/512 exact, max rel err 0.0e+00)
+naive (128x1, OMP-like)     892148.750 ms        98.8   bitwise exact (512/512 exact, max rel err 0.0e+00)
+tiled32 (your original)     163046.641 ms       540.8   bitwise exact (512/512 exact, max rel err 0.0e+00)
+regtile 64x64x16, 4x4         7346.663 ms     12003.2   bitwise exact (512/512 exact, max rel err 0.0e+00)
+regtile 128x128x8, 8x8        7555.693 ms     11671.1   bitwise exact (512/512 exact, max rel err 0.0e+00)
+launch overhead                  64.21 us  (empty kernel, launch + synchronize, mean of 1000)
+==PROF== Disconnected from process 2635834
+==PROF== Report: /gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-3/results/mn5/30GB/rep1/ncu/ncu_cuda.ncu-rep

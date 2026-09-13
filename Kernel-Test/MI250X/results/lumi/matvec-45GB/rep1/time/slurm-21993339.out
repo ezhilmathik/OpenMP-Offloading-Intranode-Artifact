@@ -1,0 +1,3 @@
+=== matvec lumi 45GB rep1 stage=time on nid006599 at sön 13 sep 2026 01:48:39 EEST ===
+  N=74880  arch=gfx90a  results in /pfs/lustrep2/scratch/project_465003145/Git/CG-Halo/SIMT-SIMD/test-5-all/results/lumi/matvec-45GB/rep1/time
+=== done 45GB time at sön 13 sep 2026 01:50:22 EEST ===

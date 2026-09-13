@@ -1,0 +1,4 @@
+name,gridX,gridY,blockX,blockY,regs,static_smem_B,dyn_smem_B,local_B,launches
+_Z11mv_warp_rowPKdS0_Pdmm,7648,1,256,1,28,0,0,0,21
+_Z12empty_kernelv,1,1,1,1,16,0,0,0,1001
+_Z13mv_thread_rowPKdS0_Pdmm,239,1,256,1,30,2048,0,0,21

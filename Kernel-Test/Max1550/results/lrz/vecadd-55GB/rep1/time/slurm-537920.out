@@ -1,0 +1,4 @@
+stty: 'standard input': Inappropriate ioctl for device
+=== vecadd lrz 55GB rep1 stage=time on i20r02c01s10 at Sun 13 Sep 2026 03:25:53 AM CEST ===
+  N=2291666560  arch=pvc  results in /hppfs/work/pn67qe/di97zez/test-3/results/lrz/vecadd-55GB/rep1/time
+=== done 55GB time at Sun 13 Sep 2026 03:26:44 AM CEST ===

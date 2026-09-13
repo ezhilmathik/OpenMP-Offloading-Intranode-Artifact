@@ -1,0 +1,12 @@
+==PROF== Connected to process 1584411 (/gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-4-all/results/mn5/matvec-30GB/rep1/ncu/matvec_cuda)
+==PROF== Profiling "mv_thread_row": 0%....50%....100% - 9 passes
+==PROF== Profiling "mv_warp_row": 0%....50%....100% - 9 passes
+GPU : NVIDIA H100 (sm_90, 132 SMs), theoretical DRAM bandwidth 1631 GB/s
+N = 61184, A = 29.948 GB, reps = 1, 29.949 GB moved per call
+H2D copy                      2862.914 ms  (A and x, not included in kernel times)
+kernel                       time/call           GB/s   check vs CPU (all of y)
+mv thread/row (yours)        1637.0369 ms        18.3   bitwise exact (0 of 61184 wrong)
+mv warp/row                   521.0599 ms        57.5   bitwise exact (0 of 61184 wrong)
+launch overhead                  62.43 us  (empty kernel, launch + synchronize, mean of 1000)
+==PROF== Disconnected from process 1584411
+==PROF== Report: /gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-4-all/results/mn5/matvec-30GB/rep1/ncu/ncu_cuda.ncu-rep

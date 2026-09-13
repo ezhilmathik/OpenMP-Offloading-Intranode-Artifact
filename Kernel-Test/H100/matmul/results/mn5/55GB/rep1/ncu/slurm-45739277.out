@@ -1,0 +1,5 @@
+unload bsc/1.0 (PATH, MANPATH)
+load bsc/1.0 (PATH, MANPATH)
+=== mn5 55GB rep1 stage=ncu on as03r4b16 at Fri Sep 11 17:18:24 CEST 2026 ===
+  N=47744  arch=sm_90  results in /gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-3/results/mn5/55GB/rep1/ncu
+=== done 55GB ncu at Fri Sep 11 19:16:27 CEST 2026 ===

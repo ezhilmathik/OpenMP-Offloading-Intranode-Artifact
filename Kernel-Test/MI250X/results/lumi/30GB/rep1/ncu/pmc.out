@@ -1,0 +1,69 @@
+=== hip counters: FETCH_SIZE WRITE_SIZE
+[0;31mE20260913 02:07:11.899164 23233818875968 output_stream.cpp:105] Opened result file: pmc_hip_run1/pmc1_counter_collection.csv
+[m[0;31mE20260913 02:07:11.916568 23233818875968 output_stream.cpp:105] Opened result file: pmc_hip_run1/pmc1_agent_info.csv
+[mGPU : AMD Instinct MI250X (gfx90a:sramecc+:xnack-, 110 CUs)
+N = 35328, each matrix 9.985 GB, reps = 1, 88183.463 GFLOP per multiply
+H2D copy                      1252.473 ms  (A and B, not included in kernel times)
+kernel                       time/call        GFLOP/s   check vs CPU
+naive (32x8 threads)        182567.641 ms       483.0   bitwise exact (512/512 exact, max rel err 0.0e+00)
+naive (128x1, OMP-like)     270907.469 ms       325.5   bitwise exact (512/512 exact, max rel err 0.0e+00)
+tiled32 (your original)      38473.996 ms      2292.0   bitwise exact (512/512 exact, max rel err 0.0e+00)
+regtile 64x64x16, 4x4        16549.785 ms      5328.4   bitwise exact (512/512 exact, max rel err 0.0e+00)
+regtile 128x128x8, 8x8       25161.137 ms      3504.7   bitwise exact (512/512 exact, max rel err 0.0e+00)
+launch overhead                  86.56 us  (empty kernel, launch + synchronize, mean of 1000)
+=== hip counters: OccupancyPercent MeanOccupancyPerCU
+[0;31mE20260913 02:25:20.085525 22590687320128 output_stream.cpp:105] Opened result file: pmc_hip_run2/pmc2_counter_collection.csv
+[m[0;31mE20260913 02:25:20.104485 22590687320128 output_stream.cpp:105] Opened result file: pmc_hip_run2/pmc2_agent_info.csv
+[mGPU : AMD Instinct MI250X (gfx90a:sramecc+:xnack-, 110 CUs)
+N = 35328, each matrix 9.985 GB, reps = 1, 88183.463 GFLOP per multiply
+H2D copy                      1140.395 ms  (A and B, not included in kernel times)
+kernel                       time/call        GFLOP/s   check vs CPU
+naive (32x8 threads)        183820.328 ms       479.7   bitwise exact (512/512 exact, max rel err 0.0e+00)
+naive (128x1, OMP-like)     274754.000 ms       321.0   bitwise exact (512/512 exact, max rel err 0.0e+00)
+tiled32 (your original)      38502.246 ms      2290.3   bitwise exact (512/512 exact, max rel err 0.0e+00)
+regtile 64x64x16, 4x4        16576.520 ms      5319.8   bitwise exact (512/512 exact, max rel err 0.0e+00)
+regtile 128x128x8, 8x8       25242.699 ms      3493.4   bitwise exact (512/512 exact, max rel err 0.0e+00)
+launch overhead                  41.45 us  (empty kernel, launch + synchronize, mean of 1000)
+=== hip counters: L2CacheHit MemUnitStalled
+[0;31mE20260913 02:43:33.975833 22910366083136 output_stream.cpp:105] Opened result file: pmc_hip_run3/pmc3_counter_collection.csv
+[m[0;31mE20260913 02:43:33.994625 22910366083136 output_stream.cpp:105] Opened result file: pmc_hip_run3/pmc3_agent_info.csv
+[mGPU : AMD Instinct MI250X (gfx90a:sramecc+:xnack-, 110 CUs)
+N = 35328, each matrix 9.985 GB, reps = 1, 88183.463 GFLOP per multiply
+H2D copy                      1249.405 ms  (A and B, not included in kernel times)
+kernel                       time/call        GFLOP/s   check vs CPU
+naive (32x8 threads)        184094.781 ms       479.0   bitwise exact (512/512 exact, max rel err 0.0e+00)
+naive (128x1, OMP-like)     277098.844 ms       318.2   bitwise exact (512/512 exact, max rel err 0.0e+00)
+tiled32 (your original)      38500.930 ms      2290.4   bitwise exact (512/512 exact, max rel err 0.0e+00)
+regtile 64x64x16, 4x4        16581.387 ms      5318.2   bitwise exact (512/512 exact, max rel err 0.0e+00)
+regtile 128x128x8, 8x8       25200.566 ms      3499.3   bitwise exact (512/512 exact, max rel err 0.0e+00)
+launch overhead                 142.82 us  (empty kernel, launch + synchronize, mean of 1000)
+=== omp counters: FETCH_SIZE WRITE_SIZE
+[0;31mE20260913 02:53:09.141901 22911341725888 output_stream.cpp:105] Opened result file: pmc_omp_run1/pmc1_counter_collection.csv
+[m[0;31mE20260913 02:53:09.166781 22911341725888 output_stream.cpp:105] Opened result file: pmc_omp_run1/pmc1_agent_info.csv
+[mOpenMP offload: 1 device(s) visible, using device 0
+N = 35328, each matrix 9.985 GB, reps = 1, 88183.463 GFLOP per multiply
+H2D copy                      1142.105 ms  (A and B, not included in kernel times)
+first call (warm-up)        281996.877 ms  (includes one-time runtime setup)
+kernel                       time/call        GFLOP/s   check vs CPU
+omp collapse(2)             281249.943 ms       313.5   bitwise exact (512/512 exact, max rel err 0.0e+00)
+launch overhead                  83.75 us  (empty target region, launch + wait, mean of 1000)
+=== omp counters: OccupancyPercent MeanOccupancyPerCU
+[0;31mE20260913 03:02:51.804475 22944271321280 output_stream.cpp:105] Opened result file: pmc_omp_run2/pmc2_counter_collection.csv
+[m[0;31mE20260913 03:02:51.822478 22944271321280 output_stream.cpp:105] Opened result file: pmc_omp_run2/pmc2_agent_info.csv
+[mOpenMP offload: 1 device(s) visible, using device 0
+N = 35328, each matrix 9.985 GB, reps = 1, 88183.463 GFLOP per multiply
+H2D copy                      1142.805 ms  (A and B, not included in kernel times)
+first call (warm-up)        282682.875 ms  (includes one-time runtime setup)
+kernel                       time/call        GFLOP/s   check vs CPU
+omp collapse(2)             283128.905 ms       311.5   bitwise exact (512/512 exact, max rel err 0.0e+00)
+launch overhead                  38.30 us  (empty target region, launch + wait, mean of 1000)
+=== omp counters: L2CacheHit MemUnitStalled
+[0;31mE20260913 03:12:21.690563 23388959758528 output_stream.cpp:105] Opened result file: pmc_omp_run3/pmc3_counter_collection.csv
+[m[0;31mE20260913 03:12:21.708101 23388959758528 output_stream.cpp:105] Opened result file: pmc_omp_run3/pmc3_agent_info.csv
+[mOpenMP offload: 1 device(s) visible, using device 0
+N = 35328, each matrix 9.985 GB, reps = 1, 88183.463 GFLOP per multiply
+H2D copy                      1143.341 ms  (A and B, not included in kernel times)
+first call (warm-up)        279713.096 ms  (includes one-time runtime setup)
+kernel                       time/call        GFLOP/s   check vs CPU
+omp collapse(2)             279349.467 ms       315.7   bitwise exact (512/512 exact, max rel err 0.0e+00)
+launch overhead                 139.22 us  (empty target region, launch + wait, mean of 1000)

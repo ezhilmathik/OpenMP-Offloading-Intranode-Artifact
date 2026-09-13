@@ -1,0 +1,3 @@
+[0;31mE20260913 01:55:27.321048 23418119096512 output_stream.cpp:105] Opened result file: prof_omp/omp_kernel_trace.csv
+[m[0;31mE20260913 01:55:27.332487 23418119096512 output_stream.cpp:105] Opened result file: prof_omp/omp_agent_info.csv
+[m

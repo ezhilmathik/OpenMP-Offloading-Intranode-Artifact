@@ -1,0 +1,21 @@
+GPU : NVIDIA H100 (sm_90, 132 SMs)
+N = 35328, each matrix 9.985 GB, reps = 3, 88183.463 GFLOP per multiply
+H2D copy                      1905.534 ms  (A and B, not included in kernel times)
+kernel                       time/call        GFLOP/s   check vs CPU
+naive (32x8 threads)         38943.238 ms      2264.4   bitwise exact (512/512 exact, max rel err 0.0e+00)
+naive (128x1, OMP-like)     222872.312 ms       395.7   bitwise exact (512/512 exact, max rel err 0.0e+00)
+tiled32 (your original)      18087.688 ms      4875.3   bitwise exact (512/512 exact, max rel err 0.0e+00)
+regtile 64x64x16, 4x4         7486.033 ms     11779.7   bitwise exact (512/512 exact, max rel err 0.0e+00)
+regtile 128x128x8, 8x8        7552.712 ms     11675.7   bitwise exact (512/512 exact, max rel err 0.0e+00)
+launch overhead                   7.51 us  (empty kernel, launch + synchronize, mean of 1000)
+Hint: CUDA_VISIBLE_DEVICES is set. You may want to use '--gpu-metrics-devices=cuda-visible' instead of '--gpu-metrics-devices=all'
+GPU 0: General Metrics for NVIDIA GH100 (any frequency)
+GPU 1: General Metrics for NVIDIA GH100 (any frequency)
+GPU 2: General Metrics for NVIDIA GH100 (any frequency)
+GPU 3: General Metrics for NVIDIA GH100 (any frequency)
+Collecting data...
+Generating '/scratch/tmp/45739272/nsys-report-dd68.qdstrm'
+[1/1] [0%                          ] nsys_cuda.nsys-rep[1/1] [0%                          ] nsys_cuda.nsys-rep[1/1] [5%                          ] nsys_cuda.nsys-rep[1/1] [6%                          ] nsys_cuda.nsys-rep[1/1] [7%                          ] nsys_cuda.nsys-rep[1/1] [8%                          ] nsys_cuda.nsys-rep[1/1] [9%                          ] nsys_cuda.nsys-rep[1/1] [10%                         ] nsys_cuda.nsys-rep[1/1] [11%                         ] nsys_cuda.nsys-rep[1/1] [12%                         ] nsys_cuda.nsys-rep[1/1] [13%                         ] nsys_cuda.nsys-rep[1/1] [14%                         ] nsys_cuda.nsys-rep[1/1] [=15%                        ] nsys_cuda.nsys-rep[1/1] [=16%                        ] nsys_cuda.nsys-rep[1/1] [=17%                        ] nsys_cuda.nsys-rep[1/1] [==18%                       ] nsys_cuda.nsys-rep[1/1] [==19%                       ] nsys_cuda.nsys-rep[1/1] [==20%                       ] nsys_cuda.nsys-rep[1/1] [==21%                       ] nsys_cuda.nsys-rep[1/1] [========================100%] nsys_cuda.nsys-rep
+Generated:
+    /gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-3/results/mn5/30GB/rep1/time/nsys_cuda.qdstrm
+    /gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-3/results/mn5/30GB/rep1/time/nsys_cuda.nsys-rep

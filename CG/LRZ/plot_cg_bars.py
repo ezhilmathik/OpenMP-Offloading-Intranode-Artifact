@@ -71,7 +71,7 @@ SPEEDUP_BASE  = "ompgpu1"
 ANNOTATE      = ["ompgpu2halo", "ompgpu4halo"]
 
 #TITLE         = "Intel Data Center GPU Max 1550 - CG (fp64)"
-TITLE = ("Intel 1550 (flat) - CG (fp64, CSR, mean 16 nnz/row, "
+TITLE = ("Intel Max 1550 (flat) - CG (fp64, CSR, mean 16 nnz/row, "
          r"$\|r\|/\|b\| \leq 10^{-8}$)")
 #XLABEL        = "Problem footprint (GB, total across devices)."
 XLABEL         ="Matrix and vector footprint (GB, total across devices)."

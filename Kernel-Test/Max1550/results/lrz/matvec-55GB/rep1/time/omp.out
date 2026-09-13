@@ -1,0 +1,8 @@
+OpenMP offload: 1 device(s) visible, using device 0
+N = 82816, A = 54.868 GB, reps = 3, 54.869 GB moved per call
+H2D copy                      1390.938 ms  (A and x, not included in kernel times)
+first call (warm-up)           652.927 ms  (includes one-time runtime setup)
+kernel                       time/call           GB/s   check vs CPU (all of y)
+omp thread/row (yours)        499.6117 ms       109.8   bitwise exact (0 of 82816 wrong)
+omp team/row (reduction)       56.9467 ms       963.5   bitwise exact (0 of 82816 wrong)
+launch overhead                   6.32 us  (empty target region, launch + wait, mean of 1000)

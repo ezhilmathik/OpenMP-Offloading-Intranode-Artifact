@@ -1,0 +1,21 @@
+=== vecadd | lumi | AMD Instinct MI250X | 30 GB (N = 1250000000) | rep 1 ===
+                              HIP 1-D                    HIP 2-D grid               HIP double2                OMP teams distribute       HIP OMP-layout (ref)     
+Kernel time, median [min-max]  22.88 [22.82-22.92] ms     37.27 [37.13-37.37] ms     24.17 [24.12-24.21] ms     31.30 [30.74-31.65] ms     40.66 [40.44-40.75] ms   
+Wall per call, launch+wait    22.89 ms                   37.28 ms                   24.19 ms                   31.28 ms                   40.64 ms                 
+GB/s (% of peak)              1311 (80%)                 805 (49%)                  1241 (76%)                 958 (59%)                  738 (45%)                
+OMP slower by                 1.37x                      0.84x                      1.29x                      -                          0.77x                    
+Regs / smem B / local B       10 / 0 / 0                 10 / 0 / 0                 14 / 0 / 0                 24 / 0 / 0                 18 / 0 / 0               
+Launch: blocks x threads      4882813 x 256 (256x1)      4884100 x 256 (256x1)      1220704 x 256 (256x1)      440 x 256 (256x1)          3200 x 128 (128x1)       
+Elements per thread           1                          1                          4                          11097                      3052                     
+Occupancy theoretical %       100.0                      100.0                      100.0                      100.0                      100.0                    
+Occupancy achieved % rocprof  n/a                        n/a                        n/a                        n/a                        n/a                      
+Occupancy achieved % PMC      87.9                       55.3                       45.5                       41.2                       68.1                     
+DRAM throughput % rocprof     n/a                        n/a                        n/a                        n/a                        n/a                      
+DRAM throughput % PMC         80.1                       49.1                       75.8                       58.5                       45.0                     
+L1 / L2 hit % PMC             - / 31.2                   - / 35.3                   - / 28.6                   - / 33.0                   - / 25.7                 
+Mem unit stalled % PMC        3.9                        7.9                        7.5                        6.3                        5.6                      
+Sectors per request PMC       n/a                        n/a                        n/a                        n/a                        n/a                      
+Launch overhead us (wall)     12.6                       same as column 1           same as column 1           15.9                       same as column 1         
+Launch / sync call med us     n/a / n/a                  same as column 1           same as column 1           n/a / n/a                  same as column 1         
+Kernel mode | correctness     HIP | bitwise exact        HIP | bitwise exact        HIP | bitwise exact        SPMD-Big-Jump-Loop | bitwise exact  HIP | bitwise exact      
+OpenMP first call (warm-up, incl. runtime setup): 32.593 ms

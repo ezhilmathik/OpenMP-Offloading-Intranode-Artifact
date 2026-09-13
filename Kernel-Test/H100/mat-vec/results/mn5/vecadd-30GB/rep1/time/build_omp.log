@@ -1,0 +1,1 @@
+$ clang++ -O3 -fopenmp --offload-arch=sm_90 -ffp-contract=off -gline-tables-only -Wl,--no-warn-execstack -o vecadd_omp src/vec-omp.cpp

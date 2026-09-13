@@ -1,0 +1,21 @@
+=== matvec | mn5 | NVIDIA H100 | 30 GB (N = 61184) | rep 1 ===
+                              CUDA thread/row (yours)    CUDA warp/row              OMP thread/row (yours)     OMP team/row             
+Kernel time, median [min-max]  34.42 [34.31-34.49] ms     19.20 [19.16-19.24] ms     39.18 [38.94-39.26] ms     34.71 [34.69-34.77] ms   
+Wall per call, launch+wait    34.42 ms                   19.20 ms                   39.45 ms                   35.01 ms                 
+GB/s (% of peak)              870 (53%)                  1560 (96%)                 764 (47%)                  863 (53%)                
+OMP slower by                 1.14x                      2.04x                      -                          1.13x                    
+Regs / smem B / local B       30 / 2048 / 0              28 / 0 / 0                 73 / 72 / 0                64 / 184 / 0             
+Launch: blocks x threads      239 x 256 (256x1)          7648 x 256 (256x1)         1912 x 32 (32x1)           3200 x 128 (128x1)       
+Rows per thread               1                          0.0312                     1                          0.149                    
+Occupancy theoretical %       100.0                      100.0                      39.1                       50.0                     
+Occupancy achieved % nsys     22.2                       96.1                       5.8                        22.2                     
+Occupancy achieved % ncu      22.7                       97.0                       n/a                        n/a                      
+DRAM throughput % nsys        53.8                       96.9                       47.2                       53.4                     
+DRAM throughput % ncu         53.4                       96.0                       n/a                        n/a                      
+L1 / L2 hit % ncu             74.9 / 33.9                47.9 / 3.7                 n/a                        n/a                      
+SM throughput % ncu           2.9                        6.7                        n/a                        n/a                      
+Sectors per request ncu       31.91                      8.00                       n/a                        n/a                      
+Launch overhead us (wall)     7.5                        same as column 1           28.2                       same as OMP              
+Launch / sync call med us     2.1 / 5.0                  same as column 1           4.0 / 22.4                 same as OMP              
+Kernel mode | correctness     CUDA | bitwise exact       CUDA | bitwise exact       SPMD | bitwise exact       Generic-SPMD | bitwise exact
+OpenMP first call (warm-up, incl. runtime setup): 42.081 ms

@@ -1,0 +1,3 @@
+=== matmul lumi 55GB rep1 stage=ncu on nid006188 at sön 13 sep 2026 01:48:31 EEST ===
+  N=47744  arch=gfx90a  results in /pfs/lustrep2/scratch/project_465003145/Git/CG-Halo/SIMT-SIMD/test-5-all/results/lumi/55GB/rep1/ncu
+[2026-09-13T02:04:29.850] error: Detected 1 oom_kill event in StepId=21993336.batch. Some of the step tasks have been OOM Killed.

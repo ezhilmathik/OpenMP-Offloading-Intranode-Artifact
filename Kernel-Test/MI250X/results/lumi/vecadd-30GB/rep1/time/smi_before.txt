@@ -1,0 +1,1694 @@
+
+
+============================ ROCm System Management Interface ============================
+============================== Version of System Component ===============================
+Driver version: 6.10.5
+==========================================================================================
+=========================================== ID ===========================================
+GPU[0]		: Device Name: 		AMD Instinct MI250X
+GPU[0]		: Device ID: 		0x7408
+GPU[0]		: Device Rev: 		0x00
+GPU[0]		: Subsystem ID: 	0x0b0c
+GPU[0]		: GUID: 		63582
+GPU[1]		: Device Name: 		AMD Instinct MI250X
+GPU[1]		: Device ID: 		0x7408
+GPU[1]		: Device Rev: 		0x00
+GPU[1]		: Subsystem ID: 	0x0b0c
+GPU[1]		: GUID: 		51740
+GPU[2]		: Device Name: 		AMD Instinct MI250X
+GPU[2]		: Device ID: 		0x7408
+GPU[2]		: Device Rev: 		0x00
+GPU[2]		: Subsystem ID: 	0x0b0c
+GPU[2]		: GUID: 		15961
+GPU[3]		: Device Name: 		AMD Instinct MI250X
+GPU[3]		: Device ID: 		0x7408
+GPU[3]		: Device Rev: 		0x00
+GPU[3]		: Subsystem ID: 	0x0b0c
+GPU[3]		: GUID: 		3099
+GPU[4]		: Device Name: 		AMD Instinct MI250X
+GPU[4]		: Device ID: 		0x7408
+GPU[4]		: Device Rev: 		0x00
+GPU[4]		: Subsystem ID: 	0x0b0c
+GPU[4]		: GUID: 		13395
+GPU[5]		: Device Name: 		AMD Instinct MI250X
+GPU[5]		: Device ID: 		0x7408
+GPU[5]		: Device Rev: 		0x00
+GPU[5]		: Subsystem ID: 	0x0b0c
+GPU[5]		: GUID: 		1553
+GPU[6]		: Device Name: 		AMD Instinct MI250X
+GPU[6]		: Device ID: 		0x7408
+GPU[6]		: Device Rev: 		0x00
+GPU[6]		: Subsystem ID: 	0x0b0c
+GPU[6]		: GUID: 		62036
+GPU[7]		: Device Name: 		AMD Instinct MI250X
+GPU[7]		: Device ID: 		0x7408
+GPU[7]		: Device Rev: 		0x00
+GPU[7]		: Subsystem ID: 	0x0b0c
+GPU[7]		: GUID: 		49174
+==========================================================================================
+======================================= Unique ID ========================================
+GPU[0]		: Unique ID: 0xd52c1303ddce6454
+GPU[1]		: Unique ID: 0x6343ab7d803b1665
+GPU[2]		: Unique ID: 0x682e79506d6669db
+GPU[3]		: Unique ID: 0x236534ec3bf8ad30
+GPU[4]		: Unique ID: 0x59d19786696fb051
+GPU[5]		: Unique ID: 0x85f6b28c28e1d13
+GPU[6]		: Unique ID: 0x1097aeb3a8e5faa0
+GPU[7]		: Unique ID: 0xd5762f1e42ffbda7
+==========================================================================================
+========================================= VBIOS ==========================================
+GPU[0]		: VBIOS version: 113-D65201-046
+GPU[1]		: VBIOS version: 113-D65201-046
+GPU[2]		: VBIOS version: 113-D65201-046
+GPU[3]		: VBIOS version: 113-D65201-046
+GPU[4]		: VBIOS version: 113-D65201-046
+GPU[5]		: VBIOS version: 113-D65201-046
+GPU[6]		: VBIOS version: 113-D65201-046
+GPU[7]		: VBIOS version: 113-D65201-046
+==========================================================================================
+====================================== Temperature =======================================
+GPU[0]		: Temperature (Sensor edge) (C): 50.0
+GPU[0]		: Temperature (Sensor junction) (C): 51.0
+GPU[0]		: Temperature (Sensor memory) (C): 59.0
+GPU[0]		: Temperature (Sensor HBM 0) (C): 59.0
+GPU[0]		: Temperature (Sensor HBM 1) (C): 56.0
+GPU[0]		: Temperature (Sensor HBM 2) (C): 58.0
+GPU[0]		: Temperature (Sensor HBM 3) (C): 57.0
+GPU[1]		: Temperature (Sensor edge) (C): 51.0
+GPU[1]		: Temperature (Sensor junction) (C): 54.0
+GPU[1]		: Temperature (Sensor memory) (C): 60.0
+GPU[1]		: Temperature (Sensor HBM 0) (C): 60.0
+GPU[1]		: Temperature (Sensor HBM 1) (C): 55.0
+GPU[1]		: Temperature (Sensor HBM 2) (C): 56.0
+GPU[1]		: Temperature (Sensor HBM 3) (C): 58.0
+GPU[2]		: Temperature (Sensor edge) (C): 46.0
+GPU[2]		: Temperature (Sensor junction) (C): 47.0
+GPU[2]		: Temperature (Sensor memory) (C): 56.0
+GPU[2]		: Temperature (Sensor HBM 0) (C): 55.0
+GPU[2]		: Temperature (Sensor HBM 1) (C): 50.0
+GPU[2]		: Temperature (Sensor HBM 2) (C): 53.0
+GPU[2]		: Temperature (Sensor HBM 3) (C): 56.0
+GPU[3]		: Temperature (Sensor edge) (C): 40.0
+GPU[3]		: Temperature (Sensor junction) (C): 45.0
+GPU[3]		: Temperature (Sensor memory) (C): 55.0
+GPU[3]		: Temperature (Sensor HBM 0) (C): 53.0
+GPU[3]		: Temperature (Sensor HBM 1) (C): 52.0
+GPU[3]		: Temperature (Sensor HBM 2) (C): 53.0
+GPU[3]		: Temperature (Sensor HBM 3) (C): 55.0
+GPU[4]		: Temperature (Sensor edge) (C): 43.0
+GPU[4]		: Temperature (Sensor junction) (C): 50.0
+GPU[4]		: Temperature (Sensor memory) (C): 56.0
+GPU[4]		: Temperature (Sensor HBM 0) (C): 54.0
+GPU[4]		: Temperature (Sensor HBM 1) (C): 55.0
+GPU[4]		: Temperature (Sensor HBM 2) (C): 54.0
+GPU[4]		: Temperature (Sensor HBM 3) (C): 56.0
+GPU[5]		: Temperature (Sensor edge) (C): 45.0
+GPU[5]		: Temperature (Sensor junction) (C): 51.0
+GPU[5]		: Temperature (Sensor memory) (C): 57.0
+GPU[5]		: Temperature (Sensor HBM 0) (C): 57.0
+GPU[5]		: Temperature (Sensor HBM 1) (C): 53.0
+GPU[5]		: Temperature (Sensor HBM 2) (C): 53.0
+GPU[5]		: Temperature (Sensor HBM 3) (C): 54.0
+GPU[6]		: Temperature (Sensor edge) (C): 40.0
+GPU[6]		: Temperature (Sensor junction) (C): 45.0
+GPU[6]		: Temperature (Sensor memory) (C): 55.0
+GPU[6]		: Temperature (Sensor HBM 0) (C): 54.0
+GPU[6]		: Temperature (Sensor HBM 1) (C): 52.0
+GPU[6]		: Temperature (Sensor HBM 2) (C): 55.0
+GPU[6]		: Temperature (Sensor HBM 3) (C): 54.0
+GPU[7]		: Temperature (Sensor edge) (C): 44.0
+GPU[7]		: Temperature (Sensor junction) (C): 49.0
+GPU[7]		: Temperature (Sensor memory) (C): 54.0
+GPU[7]		: Temperature (Sensor HBM 0) (C): 53.0
+GPU[7]		: Temperature (Sensor HBM 1) (C): 52.0
+GPU[7]		: Temperature (Sensor HBM 2) (C): 52.0
+GPU[7]		: Temperature (Sensor HBM 3) (C): 55.0
+==========================================================================================
+=============================== Current clock frequencies ================================
+GPU[0]		: fclk clock level: 0: (400Mhz)
+GPU[0]		: mclk clock level: 3: (1600Mhz)
+GPU[0]		: sclk clock level: 1: (800Mhz)
+GPU[0]		: socclk clock level: 3: (1090Mhz)
+GPU[1]		: fclk clock level: 0: (400Mhz)
+GPU[1]		: mclk clock level: 3: (1600Mhz)
+GPU[1]		: sclk clock level: 1: (800Mhz)
+GPU[1]		: socclk clock level: 3: (1090Mhz)
+GPU[2]		: fclk clock level: 0: (400Mhz)
+GPU[2]		: mclk clock level: 3: (1600Mhz)
+GPU[2]		: sclk clock level: 1: (800Mhz)
+GPU[2]		: socclk clock level: 3: (1090Mhz)
+GPU[3]		: fclk clock level: 0: (400Mhz)
+GPU[3]		: mclk clock level: 3: (1600Mhz)
+GPU[3]		: sclk clock level: 1: (800Mhz)
+GPU[3]		: socclk clock level: 3: (1090Mhz)
+GPU[4]		: fclk clock level: 0: (400Mhz)
+GPU[4]		: mclk clock level: 3: (1600Mhz)
+GPU[4]		: sclk clock level: 1: (800Mhz)
+GPU[4]		: socclk clock level: 3: (1090Mhz)
+GPU[5]		: fclk clock level: 0: (400Mhz)
+GPU[5]		: mclk clock level: 3: (1600Mhz)
+GPU[5]		: sclk clock level: 1: (800Mhz)
+GPU[5]		: socclk clock level: 3: (1090Mhz)
+GPU[6]		: fclk clock level: 0: (400Mhz)
+GPU[6]		: mclk clock level: 3: (1600Mhz)
+GPU[6]		: sclk clock level: 1: (800Mhz)
+GPU[6]		: socclk clock level: 3: (1090Mhz)
+GPU[7]		: fclk clock level: 0: (400Mhz)
+GPU[7]		: mclk clock level: 3: (1600Mhz)
+GPU[7]		: sclk clock level: 1: (800Mhz)
+GPU[7]		: socclk clock level: 3: (1090Mhz)
+==========================================================================================
+=================================== Current Fan Metric ===================================
+GPU[0]		: Not supported
+GPU[1]		: Not supported
+GPU[2]		: Not supported
+GPU[3]		: Not supported
+GPU[4]		: Not supported
+GPU[5]		: Not supported
+GPU[6]		: Not supported
+GPU[7]		: Not supported
+==========================================================================================
+================================= Show Performance Level =================================
+GPU[0]		: Performance Level: manual
+GPU[1]		: Performance Level: manual
+GPU[2]		: Performance Level: manual
+GPU[3]		: Performance Level: manual
+GPU[4]		: Performance Level: manual
+GPU[5]		: Performance Level: manual
+GPU[6]		: Performance Level: manual
+GPU[7]		: Performance Level: manual
+==========================================================================================
+==================================== OverDrive Level =====================================
+GPU[0]		: get_overdrive_level_sclk, Not supported on the given system
+GPU[1]		: get_overdrive_level_sclk, Not supported on the given system
+GPU[2]		: get_overdrive_level_sclk, Not supported on the given system
+GPU[3]		: get_overdrive_level_sclk, Not supported on the given system
+GPU[4]		: get_overdrive_level_sclk, Not supported on the given system
+GPU[5]		: get_overdrive_level_sclk, Not supported on the given system
+GPU[6]		: get_overdrive_level_sclk, Not supported on the given system
+GPU[7]		: get_overdrive_level_sclk, Not supported on the given system
+==========================================================================================
+==================================== OverDrive Level =====================================
+GPU[0]		: get_mem_overdrive_level_mclk, Not supported on the given system
+GPU[1]		: get_mem_overdrive_level_mclk, Not supported on the given system
+GPU[2]		: get_mem_overdrive_level_mclk, Not supported on the given system
+GPU[3]		: get_mem_overdrive_level_mclk, Not supported on the given system
+GPU[4]		: get_mem_overdrive_level_mclk, Not supported on the given system
+GPU[5]		: get_mem_overdrive_level_mclk, Not supported on the given system
+GPU[6]		: get_mem_overdrive_level_mclk, Not supported on the given system
+GPU[7]		: get_mem_overdrive_level_mclk, Not supported on the given system
+==========================================================================================
+======================================= Power Cap ========================================
+GPU[0]		: Max Graphics Package Power (W): 500.0
+GPU[1]		: Max Graphics Package Power (W): 0.0
+GPU[2]		: Max Graphics Package Power (W): 500.0
+GPU[3]		: Max Graphics Package Power (W): 0.0
+GPU[4]		: Max Graphics Package Power (W): 500.0
+GPU[5]		: Max Graphics Package Power (W): 0.0
+GPU[6]		: Max Graphics Package Power (W): 500.0
+GPU[7]		: Max Graphics Package Power (W): 0.0
+==========================================================================================
+================================== Show Power Profiles ===================================
+GPU[0]		: get_power_profiles, Not supported on the given system
+GPU[1]		: get_power_profiles, Not supported on the given system
+GPU[2]		: get_power_profiles, Not supported on the given system
+GPU[3]		: get_power_profiles, Not supported on the given system
+GPU[4]		: get_power_profiles, Not supported on the given system
+GPU[5]		: get_power_profiles, Not supported on the given system
+GPU[6]		: get_power_profiles, Not supported on the given system
+GPU[7]		: get_power_profiles, Not supported on the given system
+==========================================================================================
+=================================== Power Consumption ====================================
+GPU[0]		: Average Graphics Package Power (W): 89.0
+GPU[1]		: Average Graphics Package Power (W): N/A (Secondary die)
+GPU[2]		: Average Graphics Package Power (W): 86.0
+GPU[3]		: Average Graphics Package Power (W): N/A (Secondary die)
+GPU[4]		: Average Graphics Package Power (W): 83.0
+GPU[5]		: Average Graphics Package Power (W): N/A (Secondary die)
+GPU[6]		: Average Graphics Package Power (W): 87.0
+GPU[7]		: Average Graphics Package Power (W): N/A (Secondary die)
+
+		Primary die (usually one above or below the secondary) shows total (primary + secondary) socket power information
+==========================================================================================
+============================== Supported clock frequencies ===============================
+GPU[0]		: 
+GPU[0]		: Supported fclk frequencies on GPU0
+GPU[0]		: 0: 400Mhz *
+GPU[0]		: 
+GPU[0]		: Supported mclk frequencies on GPU0
+GPU[0]		: 0: 400Mhz
+GPU[0]		: 1: 700Mhz
+GPU[0]		: 2: 1200Mhz
+GPU[0]		: 3: 1600Mhz *
+GPU[0]		: 
+GPU[0]		: Supported sclk frequencies on GPU0
+GPU[0]		: 0: 500Mhz
+GPU[0]		: 1: 800Mhz *
+GPU[0]		: 2: 1650Mhz
+GPU[0]		: 
+GPU[0]		: Supported socclk frequencies on GPU0
+GPU[0]		: 0: 666Mhz
+GPU[0]		: 1: 857Mhz
+GPU[0]		: 2: 1000Mhz
+GPU[0]		: 3: 1090Mhz *
+GPU[0]		: 4: 1333Mhz
+GPU[0]		: 
+GPU[0]		: 
+------------------------------------------------------------------------------------------
+GPU[1]		: 
+GPU[1]		: Supported fclk frequencies on GPU1
+GPU[1]		: 0: 400Mhz *
+GPU[1]		: 
+GPU[1]		: Supported mclk frequencies on GPU1
+GPU[1]		: 0: 400Mhz
+GPU[1]		: 1: 700Mhz
+GPU[1]		: 2: 1200Mhz
+GPU[1]		: 3: 1600Mhz *
+GPU[1]		: 
+GPU[1]		: Supported sclk frequencies on GPU1
+GPU[1]		: 0: 500Mhz
+GPU[1]		: 1: 800Mhz *
+GPU[1]		: 2: 1650Mhz
+GPU[1]		: 
+GPU[1]		: Supported socclk frequencies on GPU1
+GPU[1]		: 0: 666Mhz
+GPU[1]		: 1: 857Mhz
+GPU[1]		: 2: 1000Mhz
+GPU[1]		: 3: 1090Mhz *
+GPU[1]		: 4: 1333Mhz
+GPU[1]		: 
+GPU[1]		: 
+------------------------------------------------------------------------------------------
+GPU[2]		: 
+GPU[2]		: Supported fclk frequencies on GPU2
+GPU[2]		: 0: 400Mhz *
+GPU[2]		: 
+GPU[2]		: Supported mclk frequencies on GPU2
+GPU[2]		: 0: 400Mhz
+GPU[2]		: 1: 700Mhz
+GPU[2]		: 2: 1200Mhz
+GPU[2]		: 3: 1600Mhz *
+GPU[2]		: 
+GPU[2]		: Supported sclk frequencies on GPU2
+GPU[2]		: 0: 500Mhz
+GPU[2]		: 1: 800Mhz *
+GPU[2]		: 2: 1650Mhz
+GPU[2]		: 
+GPU[2]		: Supported socclk frequencies on GPU2
+GPU[2]		: 0: 666Mhz
+GPU[2]		: 1: 857Mhz
+GPU[2]		: 2: 1000Mhz
+GPU[2]		: 3: 1090Mhz *
+GPU[2]		: 4: 1333Mhz
+GPU[2]		: 
+GPU[2]		: 
+------------------------------------------------------------------------------------------
+GPU[3]		: 
+GPU[3]		: Supported fclk frequencies on GPU3
+GPU[3]		: 0: 400Mhz *
+GPU[3]		: 
+GPU[3]		: Supported mclk frequencies on GPU3
+GPU[3]		: 0: 400Mhz
+GPU[3]		: 1: 700Mhz
+GPU[3]		: 2: 1200Mhz
+GPU[3]		: 3: 1600Mhz *
+GPU[3]		: 
+GPU[3]		: Supported sclk frequencies on GPU3
+GPU[3]		: 0: 500Mhz
+GPU[3]		: 1: 800Mhz *
+GPU[3]		: 2: 1650Mhz
+GPU[3]		: 
+GPU[3]		: Supported socclk frequencies on GPU3
+GPU[3]		: 0: 666Mhz
+GPU[3]		: 1: 857Mhz
+GPU[3]		: 2: 1000Mhz
+GPU[3]		: 3: 1090Mhz *
+GPU[3]		: 4: 1333Mhz
+GPU[3]		: 
+GPU[3]		: 
+------------------------------------------------------------------------------------------
+GPU[4]		: 
+GPU[4]		: Supported fclk frequencies on GPU4
+GPU[4]		: 0: 400Mhz *
+GPU[4]		: 
+GPU[4]		: Supported mclk frequencies on GPU4
+GPU[4]		: 0: 400Mhz
+GPU[4]		: 1: 700Mhz
+GPU[4]		: 2: 1200Mhz
+GPU[4]		: 3: 1600Mhz *
+GPU[4]		: 
+GPU[4]		: Supported sclk frequencies on GPU4
+GPU[4]		: 0: 500Mhz
+GPU[4]		: 1: 800Mhz *
+GPU[4]		: 2: 1650Mhz
+GPU[4]		: 
+GPU[4]		: Supported socclk frequencies on GPU4
+GPU[4]		: 0: 666Mhz
+GPU[4]		: 1: 857Mhz
+GPU[4]		: 2: 1000Mhz
+GPU[4]		: 3: 1090Mhz *
+GPU[4]		: 4: 1333Mhz
+GPU[4]		: 
+GPU[4]		: 
+------------------------------------------------------------------------------------------
+GPU[5]		: 
+GPU[5]		: Supported fclk frequencies on GPU5
+GPU[5]		: 0: 400Mhz *
+GPU[5]		: 
+GPU[5]		: Supported mclk frequencies on GPU5
+GPU[5]		: 0: 400Mhz
+GPU[5]		: 1: 700Mhz
+GPU[5]		: 2: 1200Mhz
+GPU[5]		: 3: 1600Mhz *
+GPU[5]		: 
+GPU[5]		: Supported sclk frequencies on GPU5
+GPU[5]		: 0: 500Mhz
+GPU[5]		: 1: 800Mhz *
+GPU[5]		: 2: 1650Mhz
+GPU[5]		: 
+GPU[5]		: Supported socclk frequencies on GPU5
+GPU[5]		: 0: 666Mhz
+GPU[5]		: 1: 857Mhz
+GPU[5]		: 2: 1000Mhz
+GPU[5]		: 3: 1090Mhz *
+GPU[5]		: 4: 1333Mhz
+GPU[5]		: 
+GPU[5]		: 
+------------------------------------------------------------------------------------------
+GPU[6]		: 
+GPU[6]		: Supported fclk frequencies on GPU6
+GPU[6]		: 0: 400Mhz *
+GPU[6]		: 
+GPU[6]		: Supported mclk frequencies on GPU6
+GPU[6]		: 0: 400Mhz
+GPU[6]		: 1: 700Mhz
+GPU[6]		: 2: 1200Mhz
+GPU[6]		: 3: 1600Mhz *
+GPU[6]		: 
+GPU[6]		: Supported sclk frequencies on GPU6
+GPU[6]		: 0: 500Mhz
+GPU[6]		: 1: 800Mhz *
+GPU[6]		: 2: 1650Mhz
+GPU[6]		: 
+GPU[6]		: Supported socclk frequencies on GPU6
+GPU[6]		: 0: 666Mhz
+GPU[6]		: 1: 857Mhz
+GPU[6]		: 2: 1000Mhz
+GPU[6]		: 3: 1090Mhz *
+GPU[6]		: 4: 1333Mhz
+GPU[6]		: 
+GPU[6]		: 
+------------------------------------------------------------------------------------------
+GPU[7]		: 
+GPU[7]		: Supported fclk frequencies on GPU7
+GPU[7]		: 0: 400Mhz *
+GPU[7]		: 
+GPU[7]		: Supported mclk frequencies on GPU7
+GPU[7]		: 0: 400Mhz
+GPU[7]		: 1: 700Mhz
+GPU[7]		: 2: 1200Mhz
+GPU[7]		: 3: 1600Mhz *
+GPU[7]		: 
+GPU[7]		: Supported sclk frequencies on GPU7
+GPU[7]		: 0: 500Mhz
+GPU[7]		: 1: 800Mhz *
+GPU[7]		: 2: 1650Mhz
+GPU[7]		: 
+GPU[7]		: Supported socclk frequencies on GPU7
+GPU[7]		: 0: 666Mhz
+GPU[7]		: 1: 857Mhz
+GPU[7]		: 2: 1000Mhz
+GPU[7]		: 3: 1090Mhz *
+GPU[7]		: 4: 1333Mhz
+GPU[7]		: 
+GPU[7]		: 
+------------------------------------------------------------------------------------------
+==========================================================================================
+=================================== % time GPU is busy ===================================
+GPU[0]		: GPU use (%): 0
+GPU[0]		: GFX Activity: 4091481504
+GPU[1]		: GPU use (%): 0
+GPU[1]		: GFX Activity: 439149923
+GPU[2]		: GPU use (%): 0
+GPU[2]		: GFX Activity: 707799951
+GPU[3]		: GPU use (%): 0
+GPU[3]		: GFX Activity: 1246415631
+GPU[4]		: GPU use (%): 0
+GPU[4]		: GFX Activity: 1128990583
+GPU[5]		: GPU use (%): 0
+GPU[5]		: GFX Activity: 531340757
+GPU[6]		: GPU use (%): 0
+GPU[6]		: GFX Activity: 1068332140
+GPU[7]		: GPU use (%): 0
+GPU[7]		: GFX Activity: 1042203084
+==========================================================================================
+=================================== Current Memory Use ===================================
+GPU[0]		: GPU Memory Allocated (VRAM%): 0
+GPU[0]		: GPU Memory Read/Write Activity (%): 0
+GPU[0]		: Memory Activity: 1728789638
+GPU[0]		: Avg. Memory Bandwidth: 0
+GPU[1]		: GPU Memory Allocated (VRAM%): 0
+GPU[1]		: GPU Memory Read/Write Activity (%): 0
+GPU[1]		: Memory Activity: 1700139491
+GPU[1]		: Avg. Memory Bandwidth: 0
+GPU[2]		: GPU Memory Allocated (VRAM%): 0
+GPU[2]		: GPU Memory Read/Write Activity (%): 0
+GPU[2]		: Memory Activity: 1743263641
+GPU[2]		: Avg. Memory Bandwidth: 0
+GPU[3]		: GPU Memory Allocated (VRAM%): 0
+GPU[3]		: GPU Memory Read/Write Activity (%): 0
+GPU[3]		: Memory Activity: 1809986885
+GPU[3]		: Avg. Memory Bandwidth: 0
+GPU[4]		: GPU Memory Allocated (VRAM%): 0
+GPU[4]		: GPU Memory Read/Write Activity (%): 0
+GPU[4]		: Memory Activity: 1766825989
+GPU[4]		: Avg. Memory Bandwidth: 0
+GPU[5]		: GPU Memory Allocated (VRAM%): 0
+GPU[5]		: GPU Memory Read/Write Activity (%): 0
+GPU[5]		: Memory Activity: 1726326264
+GPU[5]		: Avg. Memory Bandwidth: 0
+GPU[6]		: GPU Memory Allocated (VRAM%): 0
+GPU[6]		: GPU Memory Read/Write Activity (%): 0
+GPU[6]		: Memory Activity: 1782609957
+GPU[6]		: Avg. Memory Bandwidth: 0
+GPU[7]		: GPU Memory Allocated (VRAM%): 0
+GPU[7]		: GPU Memory Read/Write Activity (%): 0
+GPU[7]		: Memory Activity: 1742967514
+GPU[7]		: Avg. Memory Bandwidth: 0
+==========================================================================================
+===================================== Memory Vendor ======================================
+GPU[0]		: GPU memory vendor: hynix
+GPU[1]		: GPU memory vendor: hynix
+GPU[2]		: GPU memory vendor: hynix
+GPU[3]		: GPU memory vendor: hynix
+GPU[4]		: GPU memory vendor: hynix
+GPU[5]		: GPU memory vendor: hynix
+GPU[6]		: GPU memory vendor: hynix
+GPU[7]		: GPU memory vendor: hynix
+==========================================================================================
+================================== PCIe Replay Counter ===================================
+GPU[0]		: PCIe Replay Count: 0
+GPU[1]		: PCIe Replay Count: 0
+GPU[2]		: PCIe Replay Count: 0
+GPU[3]		: PCIe Replay Count: 0
+GPU[4]		: PCIe Replay Count: 0
+GPU[5]		: PCIe Replay Count: 0
+GPU[6]		: PCIe Replay Count: 0
+GPU[7]		: PCIe Replay Count: 0
+==========================================================================================
+===================================== Serial Number ======================================
+GPU[0]		: Serial Number: 692140000254
+GPU[1]		: Serial Number: 692140000254
+GPU[2]		: Serial Number: 692140000550
+GPU[3]		: Serial Number: 692140000550
+GPU[4]		: Serial Number: 692140000070
+GPU[5]		: Serial Number: 692140000070
+GPU[6]		: Serial Number: 692140000191
+GPU[7]		: Serial Number: 692140000191
+==========================================================================================
+===================================== KFD Processes ======================================
+No KFD PIDs currently running
+==========================================================================================
+================================== GPUs Indexed by PID ===================================
+No KFD PIDs currently running
+==========================================================================================
+======================= GPU Memory clock frequencies and voltages ========================
+GPU[0]		: OD_SCLK:
+GPU[0]		: 0: 500Mhz
+GPU[0]		: 1: 1650Mhz
+GPU[0]		: OD_MCLK:
+GPU[0]		: 0: 400Mhz
+GPU[0]		: 1: 1600Mhz
+GPU[1]		: OD_SCLK:
+GPU[1]		: 0: 500Mhz
+GPU[1]		: 1: 1650Mhz
+GPU[1]		: OD_MCLK:
+GPU[1]		: 0: 400Mhz
+GPU[1]		: 1: 1600Mhz
+GPU[2]		: OD_SCLK:
+GPU[2]		: 0: 500Mhz
+GPU[2]		: 1: 1650Mhz
+GPU[2]		: OD_MCLK:
+GPU[2]		: 0: 400Mhz
+GPU[2]		: 1: 1600Mhz
+GPU[3]		: OD_SCLK:
+GPU[3]		: 0: 500Mhz
+GPU[3]		: 1: 1650Mhz
+GPU[3]		: OD_MCLK:
+GPU[3]		: 0: 400Mhz
+GPU[3]		: 1: 1600Mhz
+GPU[4]		: OD_SCLK:
+GPU[4]		: 0: 500Mhz
+GPU[4]		: 1: 1650Mhz
+GPU[4]		: OD_MCLK:
+GPU[4]		: 0: 400Mhz
+GPU[4]		: 1: 1600Mhz
+GPU[5]		: OD_SCLK:
+GPU[5]		: 0: 500Mhz
+GPU[5]		: 1: 1650Mhz
+GPU[5]		: OD_MCLK:
+GPU[5]		: 0: 400Mhz
+GPU[5]		: 1: 1600Mhz
+GPU[6]		: OD_SCLK:
+GPU[6]		: 0: 500Mhz
+GPU[6]		: 1: 1650Mhz
+GPU[6]		: OD_MCLK:
+GPU[6]		: 0: 400Mhz
+GPU[6]		: 1: 1600Mhz
+GPU[7]		: OD_SCLK:
+GPU[7]		: 0: 500Mhz
+GPU[7]		: 1: 1650Mhz
+GPU[7]		: OD_MCLK:
+GPU[7]		: 0: 400Mhz
+GPU[7]		: 1: 1600Mhz
+==========================================================================================
+==================================== Current voltage =====================================
+GPU[0]		: Voltage (mV): 725
+GPU[1]		: Voltage (mV): 756
+GPU[2]		: Voltage (mV): 750
+GPU[3]		: Voltage (mV): 812
+GPU[4]		: Voltage (mV): 731
+GPU[5]		: Voltage (mV): 743
+GPU[6]		: Voltage (mV): 818
+GPU[7]		: Voltage (mV): 750
+==========================================================================================
+======================================= PCI Bus ID =======================================
+GPU[0]		: PCI Bus: 0000:C1:00.0
+GPU[1]		: PCI Bus: 0000:C6:00.0
+GPU[2]		: PCI Bus: 0000:C9:00.0
+GPU[3]		: PCI Bus: 0000:CE:00.0
+GPU[4]		: PCI Bus: 0000:D1:00.0
+GPU[5]		: PCI Bus: 0000:D6:00.0
+GPU[6]		: PCI Bus: 0000:D9:00.0
+GPU[7]		: PCI Bus: 0000:DE:00.0
+==========================================================================================
+================================== Firmware Information ==================================
+GPU[0]		: MEC firmware version: 	92
+GPU[0]		: MEC2 firmware version: 	92
+GPU[0]		: RLC firmware version: 	17
+GPU[0]		: SDMA firmware version: 	9
+GPU[0]		: SDMA2 firmware version: 	9
+GPU[0]		: SMC firmware version: 	00.68.63.00
+GPU[0]		: SOS firmware version: 	0x00270181
+GPU[0]		: TA RAS firmware version: 	27.39.01.63
+GPU[0]		: TA XGMI firmware version: 	32.00.00.19
+GPU[0]		: VCN firmware version: 	0x0110101c
+GPU[1]		: MEC firmware version: 	92
+GPU[1]		: MEC2 firmware version: 	92
+GPU[1]		: RLC firmware version: 	17
+GPU[1]		: SDMA firmware version: 	9
+GPU[1]		: SDMA2 firmware version: 	9
+GPU[1]		: SMC firmware version: 	00.68.63.00
+GPU[1]		: SOS firmware version: 	0x00270181
+GPU[1]		: TA RAS firmware version: 	27.39.01.63
+GPU[1]		: TA XGMI firmware version: 	32.00.00.19
+GPU[1]		: VCN firmware version: 	0x0110101c
+GPU[2]		: MEC firmware version: 	92
+GPU[2]		: MEC2 firmware version: 	92
+GPU[2]		: RLC firmware version: 	17
+GPU[2]		: SDMA firmware version: 	9
+GPU[2]		: SDMA2 firmware version: 	9
+GPU[2]		: SMC firmware version: 	00.68.63.00
+GPU[2]		: SOS firmware version: 	0x00270181
+GPU[2]		: TA RAS firmware version: 	27.39.01.63
+GPU[2]		: TA XGMI firmware version: 	32.00.00.19
+GPU[2]		: VCN firmware version: 	0x0110101c
+GPU[3]		: MEC firmware version: 	92
+GPU[3]		: MEC2 firmware version: 	92
+GPU[3]		: RLC firmware version: 	17
+GPU[3]		: SDMA firmware version: 	9
+GPU[3]		: SDMA2 firmware version: 	9
+GPU[3]		: SMC firmware version: 	00.68.63.00
+GPU[3]		: SOS firmware version: 	0x00270181
+GPU[3]		: TA RAS firmware version: 	27.39.01.63
+GPU[3]		: TA XGMI firmware version: 	32.00.00.19
+GPU[3]		: VCN firmware version: 	0x0110101c
+GPU[4]		: MEC firmware version: 	92
+GPU[4]		: MEC2 firmware version: 	92
+GPU[4]		: RLC firmware version: 	17
+GPU[4]		: SDMA firmware version: 	9
+GPU[4]		: SDMA2 firmware version: 	9
+GPU[4]		: SMC firmware version: 	00.68.63.00
+GPU[4]		: SOS firmware version: 	0x00270181
+GPU[4]		: TA RAS firmware version: 	27.39.01.63
+GPU[4]		: TA XGMI firmware version: 	32.00.00.19
+GPU[4]		: VCN firmware version: 	0x0110101c
+GPU[5]		: MEC firmware version: 	92
+GPU[5]		: MEC2 firmware version: 	92
+GPU[5]		: RLC firmware version: 	17
+GPU[5]		: SDMA firmware version: 	9
+GPU[5]		: SDMA2 firmware version: 	9
+GPU[5]		: SMC firmware version: 	00.68.63.00
+GPU[5]		: SOS firmware version: 	0x00270181
+GPU[5]		: TA RAS firmware version: 	27.39.01.63
+GPU[5]		: TA XGMI firmware version: 	32.00.00.19
+GPU[5]		: VCN firmware version: 	0x0110101c
+GPU[6]		: MEC firmware version: 	92
+GPU[6]		: MEC2 firmware version: 	92
+GPU[6]		: RLC firmware version: 	17
+GPU[6]		: SDMA firmware version: 	9
+GPU[6]		: SDMA2 firmware version: 	9
+GPU[6]		: SMC firmware version: 	00.68.63.00
+GPU[6]		: SOS firmware version: 	0x00270181
+GPU[6]		: TA RAS firmware version: 	27.39.01.63
+GPU[6]		: TA XGMI firmware version: 	32.00.00.19
+GPU[6]		: VCN firmware version: 	0x0110101c
+GPU[7]		: MEC firmware version: 	92
+GPU[7]		: MEC2 firmware version: 	92
+GPU[7]		: RLC firmware version: 	17
+GPU[7]		: SDMA firmware version: 	9
+GPU[7]		: SDMA2 firmware version: 	9
+GPU[7]		: SMC firmware version: 	00.68.63.00
+GPU[7]		: SOS firmware version: 	0x00270181
+GPU[7]		: TA RAS firmware version: 	27.39.01.63
+GPU[7]		: TA XGMI firmware version: 	32.00.00.19
+GPU[7]		: VCN firmware version: 	0x0110101c
+==========================================================================================
+====================================== Product Info ======================================
+GPU[0]		: Card Series: 		AMD Instinct MI250X
+GPU[0]		: Card Model: 		0x7408
+GPU[0]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[0]		: Card SKU: 		D65201
+GPU[0]		: Subsystem ID: 	0x0b0c
+GPU[0]		: Device Rev: 		0x00
+GPU[0]		: Node ID: 		4
+GPU[0]		: GUID: 		63582
+GPU[0]		: GFX Version: 		gfx90a
+GPU[1]		: Card Series: 		AMD Instinct MI250X
+GPU[1]		: Card Model: 		0x7408
+GPU[1]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[1]		: Card SKU: 		D65201
+GPU[1]		: Subsystem ID: 	0x0b0c
+GPU[1]		: Device Rev: 		0x00
+GPU[1]		: Node ID: 		5
+GPU[1]		: GUID: 		51740
+GPU[1]		: GFX Version: 		gfx90a
+GPU[2]		: Card Series: 		AMD Instinct MI250X
+GPU[2]		: Card Model: 		0x7408
+GPU[2]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[2]		: Card SKU: 		D65201
+GPU[2]		: Subsystem ID: 	0x0b0c
+GPU[2]		: Device Rev: 		0x00
+GPU[2]		: Node ID: 		6
+GPU[2]		: GUID: 		15961
+GPU[2]		: GFX Version: 		gfx90a
+GPU[3]		: Card Series: 		AMD Instinct MI250X
+GPU[3]		: Card Model: 		0x7408
+GPU[3]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[3]		: Card SKU: 		D65201
+GPU[3]		: Subsystem ID: 	0x0b0c
+GPU[3]		: Device Rev: 		0x00
+GPU[3]		: Node ID: 		7
+GPU[3]		: GUID: 		3099
+GPU[3]		: GFX Version: 		gfx90a
+GPU[4]		: Card Series: 		AMD Instinct MI250X
+GPU[4]		: Card Model: 		0x7408
+GPU[4]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[4]		: Card SKU: 		D65201
+GPU[4]		: Subsystem ID: 	0x0b0c
+GPU[4]		: Device Rev: 		0x00
+GPU[4]		: Node ID: 		8
+GPU[4]		: GUID: 		13395
+GPU[4]		: GFX Version: 		gfx90a
+GPU[5]		: Card Series: 		AMD Instinct MI250X
+GPU[5]		: Card Model: 		0x7408
+GPU[5]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[5]		: Card SKU: 		D65201
+GPU[5]		: Subsystem ID: 	0x0b0c
+GPU[5]		: Device Rev: 		0x00
+GPU[5]		: Node ID: 		9
+GPU[5]		: GUID: 		1553
+GPU[5]		: GFX Version: 		gfx90a
+GPU[6]		: Card Series: 		AMD Instinct MI250X
+GPU[6]		: Card Model: 		0x7408
+GPU[6]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[6]		: Card SKU: 		D65201
+GPU[6]		: Subsystem ID: 	0x0b0c
+GPU[6]		: Device Rev: 		0x00
+GPU[6]		: Node ID: 		10
+GPU[6]		: GUID: 		62036
+GPU[6]		: GFX Version: 		gfx90a
+GPU[7]		: Card Series: 		AMD Instinct MI250X
+GPU[7]		: Card Model: 		0x7408
+GPU[7]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[7]		: Card SKU: 		D65201
+GPU[7]		: Subsystem ID: 	0x0b0c
+GPU[7]		: Device Rev: 		0x00
+GPU[7]		: Node ID: 		11
+GPU[7]		: GUID: 		49174
+GPU[7]		: GFX Version: 		gfx90a
+==========================================================================================
+======================================= Pages Info =======================================
+==========================================================================================
+================================= Show Valid sclk Range ==================================
+GPU[0]		: Valid sclk range: 500Mhz - 1650Mhz
+GPU[1]		: Valid sclk range: 500Mhz - 1650Mhz
+GPU[2]		: Valid sclk range: 500Mhz - 1650Mhz
+GPU[3]		: Valid sclk range: 500Mhz - 1650Mhz
+GPU[4]		: Valid sclk range: 500Mhz - 1650Mhz
+GPU[5]		: Valid sclk range: 500Mhz - 1650Mhz
+GPU[6]		: Valid sclk range: 500Mhz - 1650Mhz
+GPU[7]		: Valid sclk range: 500Mhz - 1650Mhz
+==========================================================================================
+================================= Show Valid mclk Range ==================================
+GPU[0]		: Valid mclk range: 400Mhz - 1600Mhz
+GPU[1]		: Valid mclk range: 400Mhz - 1600Mhz
+GPU[2]		: Valid mclk range: 400Mhz - 1600Mhz
+GPU[3]		: Valid mclk range: 400Mhz - 1600Mhz
+GPU[4]		: Valid mclk range: 400Mhz - 1600Mhz
+GPU[5]		: Valid mclk range: 400Mhz - 1600Mhz
+GPU[6]		: Valid mclk range: 400Mhz - 1600Mhz
+GPU[7]		: Valid mclk range: 400Mhz - 1600Mhz
+WARNING: GPU[0]	: Voltage curve regions unsupported.
+WARNING: GPU[1]	: Voltage curve regions unsupported.
+WARNING: GPU[2]	: Voltage curve regions unsupported.
+WARNING: GPU[3]	: Voltage curve regions unsupported.
+WARNING: GPU[4]	: Voltage curve regions unsupported.
+WARNING: GPU[5]	: Voltage curve regions unsupported.
+WARNING: GPU[6]	: Voltage curve regions unsupported.
+WARNING: GPU[7]	: Voltage curve regions unsupported.
+WARNING: GPU[0]	: Voltage curve Points unsupported.
+WARNING: GPU[1]	: Voltage curve Points unsupported.
+WARNING: GPU[2]	: Voltage curve Points unsupported.
+WARNING: GPU[3]	: Voltage curve Points unsupported.
+WARNING: GPU[4]	: Voltage curve Points unsupported.
+WARNING: GPU[5]	: Voltage curve Points unsupported.
+WARNING: GPU[6]	: Voltage curve Points unsupported.
+WARNING: GPU[7]	: Voltage curve Points unsupported.
+==========================================================================================
+================================ Show Valid voltage Range ================================
+==========================================================================================
+================================== Voltage Curve Points ==================================
+==========================================================================================
+==================================== Consumed Energy =====================================
+GPU[0]		: Energy counter: 18940197643907
+GPU[0]		: Accumulated Energy (uJ): 289785027564333.1
+GPU[1]		: Energy counter: 0
+GPU[1]		: Accumulated Energy (uJ): 0.0
+GPU[2]		: Energy counter: 18835556953026
+GPU[2]		: Accumulated Energy (uJ): 288184024973895.2
+GPU[3]		: Energy counter: 0
+GPU[3]		: Accumulated Energy (uJ): 0.0
+GPU[4]		: Energy counter: 19060229958793
+GPU[4]		: Accumulated Energy (uJ): 291621522004983.25
+GPU[5]		: Energy counter: 0
+GPU[5]		: Accumulated Energy (uJ): 0.0
+GPU[6]		: Energy counter: 18830749834322
+GPU[6]		: Accumulated Energy (uJ): 288110476056807.1
+GPU[7]		: Energy counter: 0
+GPU[7]		: Accumulated Energy (uJ): 0.0
+==========================================================================================
+=============================== Current Compute Partition ================================
+GPU[0]		: Not supported on the given system
+GPU[1]		: Not supported on the given system
+GPU[2]		: Not supported on the given system
+GPU[3]		: Not supported on the given system
+GPU[4]		: Not supported on the given system
+GPU[5]		: Not supported on the given system
+GPU[6]		: Not supported on the given system
+GPU[7]		: Not supported on the given system
+==========================================================================================
+================================ Current Memory Partition ================================
+GPU[0]		: Not supported on the given system
+GPU[1]		: Not supported on the given system
+GPU[2]		: Not supported on the given system
+GPU[3]		: Not supported on the given system
+GPU[4]		: Not supported on the given system
+GPU[5]		: Not supported on the given system
+GPU[6]		: Not supported on the given system
+GPU[7]		: Not supported on the given system
+==========================================================================================
+====================================== GPU Metrics =======================================
+GPU[0]		: Metric Version and Size (Bytes): 1.3 120
+GPU[0]		: temperature_edge (C): 50
+GPU[0]		: temperature_hotspot (C): 51
+GPU[0]		: temperature_mem (C): 59
+GPU[0]		: temperature_vrgfx (C): 56
+GPU[0]		: temperature_vrsoc (C): 60
+GPU[0]		: temperature_vrmem (C): 58
+GPU[0]		: average_gfx_activity (%): 0
+GPU[0]		: average_umc_activity (%): 0
+GPU[0]		: average_mm_activity (%): 0
+GPU[0]		: average_socket_power (W): 90
+GPU[0]		: energy_accumulator (15.259uJ (2^-16)): 18940197673639
+GPU[0]		: system_clock_counter (ns): 897531352897063
+GPU[0]		: average_gfxclk_frequency (MHz): 802
+GPU[0]		: average_socclk_frequency (MHz): 999
+GPU[0]		: average_uclk_frequency (MHz): 1599
+GPU[0]		: average_vclk0_frequency (MHz): 0
+GPU[0]		: average_dclk0_frequency (MHz): 0
+GPU[0]		: average_vclk1_frequency (MHz): N/A
+GPU[0]		: average_dclk1_frequency (MHz): N/A
+GPU[0]		: current_gfxclk (MHz): 800
+GPU[0]		: current_socclk (MHz): 1090
+GPU[0]		: current_uclk (MHz): 1600
+GPU[0]		: current_vclk0 (MHz): 1000
+GPU[0]		: current_dclk0 (MHz): 875
+GPU[0]		: current_vclk1 (MHz): N/A
+GPU[0]		: current_dclk1 (MHz): N/A
+GPU[0]		: throttle_status: 0
+GPU[0]		: current_fan_speed (rpm): 0
+GPU[0]		: pcie_link_width (Lanes): 16
+GPU[0]		: pcie_link_speed (0.1 GT/s): 25
+GPU[0]		: gfx_activity_acc (%): 4091481504
+GPU[0]		: mem_activity_acc (%): 1728789638
+GPU[0]		: temperature_hbm (C): [59, 56, 58, 57]
+GPU[0]		: firmware_timestamp (10ns resolution): 897682062736160
+GPU[0]		: voltage_soc (mV): N/A
+GPU[0]		: voltage_gfx (mV): N/A
+GPU[0]		: voltage_mem (mV): N/A
+GPU[0]		: indep_throttle_status: 0
+GPU[0]		: current_socket_power (W): N/A
+GPU[0]		: vcn_activity (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[0]		: gfxclk_lock_status: N/A
+GPU[0]		: xgmi_link_width: N/A
+GPU[0]		: xgmi_link_speed (Gbps): N/A
+GPU[0]		: pcie_bandwidth_acc (GB/s): N/A
+GPU[0]		: pcie_bandwidth_inst (GB/s): N/A
+GPU[0]		: pcie_l0_to_recov_count_acc (Count): N/A
+GPU[0]		: pcie_replay_count_acc (Count): N/A
+GPU[0]		: pcie_replay_rover_count_acc (Count): N/A
+GPU[0]		: xgmi_read_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0]		: xgmi_write_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0]		: current_gfxclks (MHz): [800, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0]		: current_socclks (MHz): [1090, 'N/A', 'N/A', 'N/A']
+GPU[0]		: current_vclk0s (MHz): [1000, 'N/A', 'N/A', 'N/A']
+GPU[0]		: current_dclk0s (MHz): [875, 'N/A', 'N/A', 'N/A']
+GPU[0]		: jpeg_activity (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0]		: pcie_nak_sent_count_acc (Count): N/A
+GPU[0]		: pcie_nak_rcvd_count_acc (Count): N/A
+GPU[0]		: accumulation_counter (Count): N/A
+GPU[0]		: prochot_residency_acc (Count): N/A
+GPU[0]		: ppt_residency_acc (Count): N/A
+GPU[0]		: socket_thm_residency_acc (Count): N/A
+GPU[0]		: vr_thm_residency_acc (Count): N/A
+GPU[0]		: hbm_thm_residency_acc (Count): N/A
+GPU[0]		: pcie_lc_perf_other_end_recovery (Count): N/A
+GPU[0]		: vram_max_bandwidth (GB/s): N/A
+GPU[0]		: xgmi_link_status (Up/Down): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0]		: num_partition: N/A
+GPU[0] XCP[0]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[1]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[2]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[3]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[4]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[5]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[6]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[7]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[0]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[1]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[2]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[3]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[4]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[5]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[6]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[7]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[0]	: xcp_stats.vcn_busy (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[1]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[2]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[3]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[4]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[5]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[6]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[7]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[0]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[1]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[2]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[3]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[4]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[5]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[6]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[7]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[0]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[1]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[2]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[3]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[4]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[5]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[6]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[0] XCP[7]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+==========================================================================================
+GPU[1]		: Metric Version and Size (Bytes): 1.3 120
+GPU[1]		: temperature_edge (C): 51
+GPU[1]		: temperature_hotspot (C): 55
+GPU[1]		: temperature_mem (C): 60
+GPU[1]		: temperature_vrgfx (C): 55
+GPU[1]		: temperature_vrsoc (C): 0
+GPU[1]		: temperature_vrmem (C): 0
+GPU[1]		: average_gfx_activity (%): 0
+GPU[1]		: average_umc_activity (%): 0
+GPU[1]		: average_mm_activity (%): 0
+GPU[1]		: average_socket_power (W): 0
+GPU[1]		: energy_accumulator (15.259uJ (2^-16)): 0
+GPU[1]		: system_clock_counter (ns): 897531361359431
+GPU[1]		: average_gfxclk_frequency (MHz): 796
+GPU[1]		: average_socclk_frequency (MHz): 999
+GPU[1]		: average_uclk_frequency (MHz): 1599
+GPU[1]		: average_vclk0_frequency (MHz): 0
+GPU[1]		: average_dclk0_frequency (MHz): 0
+GPU[1]		: average_vclk1_frequency (MHz): N/A
+GPU[1]		: average_dclk1_frequency (MHz): N/A
+GPU[1]		: current_gfxclk (MHz): 800
+GPU[1]		: current_socclk (MHz): 1090
+GPU[1]		: current_uclk (MHz): 1600
+GPU[1]		: current_vclk0 (MHz): 1000
+GPU[1]		: current_dclk0 (MHz): 875
+GPU[1]		: current_vclk1 (MHz): N/A
+GPU[1]		: current_dclk1 (MHz): N/A
+GPU[1]		: throttle_status: 0
+GPU[1]		: current_fan_speed (rpm): 0
+GPU[1]		: pcie_link_width (Lanes): 16
+GPU[1]		: pcie_link_speed (0.1 GT/s): 160
+GPU[1]		: gfx_activity_acc (%): 439149923
+GPU[1]		: mem_activity_acc (%): 1700139491
+GPU[1]		: temperature_hbm (C): [60, 55, 56, 58]
+GPU[1]		: firmware_timestamp (10ns resolution): 897682071203520
+GPU[1]		: voltage_soc (mV): N/A
+GPU[1]		: voltage_gfx (mV): N/A
+GPU[1]		: voltage_mem (mV): N/A
+GPU[1]		: indep_throttle_status: 0
+GPU[1]		: current_socket_power (W): N/A
+GPU[1]		: vcn_activity (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[1]		: gfxclk_lock_status: N/A
+GPU[1]		: xgmi_link_width: N/A
+GPU[1]		: xgmi_link_speed (Gbps): N/A
+GPU[1]		: pcie_bandwidth_acc (GB/s): N/A
+GPU[1]		: pcie_bandwidth_inst (GB/s): N/A
+GPU[1]		: pcie_l0_to_recov_count_acc (Count): N/A
+GPU[1]		: pcie_replay_count_acc (Count): N/A
+GPU[1]		: pcie_replay_rover_count_acc (Count): N/A
+GPU[1]		: xgmi_read_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1]		: xgmi_write_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1]		: current_gfxclks (MHz): [800, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1]		: current_socclks (MHz): [1090, 'N/A', 'N/A', 'N/A']
+GPU[1]		: current_vclk0s (MHz): [1000, 'N/A', 'N/A', 'N/A']
+GPU[1]		: current_dclk0s (MHz): [875, 'N/A', 'N/A', 'N/A']
+GPU[1]		: jpeg_activity (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1]		: pcie_nak_sent_count_acc (Count): N/A
+GPU[1]		: pcie_nak_rcvd_count_acc (Count): N/A
+GPU[1]		: accumulation_counter (Count): N/A
+GPU[1]		: prochot_residency_acc (Count): N/A
+GPU[1]		: ppt_residency_acc (Count): N/A
+GPU[1]		: socket_thm_residency_acc (Count): N/A
+GPU[1]		: vr_thm_residency_acc (Count): N/A
+GPU[1]		: hbm_thm_residency_acc (Count): N/A
+GPU[1]		: pcie_lc_perf_other_end_recovery (Count): N/A
+GPU[1]		: vram_max_bandwidth (GB/s): N/A
+GPU[1]		: xgmi_link_status (Up/Down): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1]		: num_partition: N/A
+GPU[1] XCP[0]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[1]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[2]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[3]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[4]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[5]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[6]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[7]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[0]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[1]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[2]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[3]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[4]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[5]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[6]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[7]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[0]	: xcp_stats.vcn_busy (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[1]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[2]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[3]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[4]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[5]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[6]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[7]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[0]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[1]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[2]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[3]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[4]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[5]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[6]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[7]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[0]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[1]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[2]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[3]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[4]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[5]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[6]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[1] XCP[7]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+==========================================================================================
+GPU[2]		: Metric Version and Size (Bytes): 1.3 120
+GPU[2]		: temperature_edge (C): 48
+GPU[2]		: temperature_hotspot (C): 48
+GPU[2]		: temperature_mem (C): 56
+GPU[2]		: temperature_vrgfx (C): 51
+GPU[2]		: temperature_vrsoc (C): 54
+GPU[2]		: temperature_vrmem (C): 53
+GPU[2]		: average_gfx_activity (%): 0
+GPU[2]		: average_umc_activity (%): 0
+GPU[2]		: average_mm_activity (%): 0
+GPU[2]		: average_socket_power (W): 87
+GPU[2]		: energy_accumulator (15.259uJ (2^-16)): 18835557081201
+GPU[2]		: system_clock_counter (ns): 897531369919597
+GPU[2]		: average_gfxclk_frequency (MHz): 792
+GPU[2]		: average_socclk_frequency (MHz): 999
+GPU[2]		: average_uclk_frequency (MHz): 1599
+GPU[2]		: average_vclk0_frequency (MHz): 0
+GPU[2]		: average_dclk0_frequency (MHz): 0
+GPU[2]		: average_vclk1_frequency (MHz): N/A
+GPU[2]		: average_dclk1_frequency (MHz): N/A
+GPU[2]		: current_gfxclk (MHz): 800
+GPU[2]		: current_socclk (MHz): 1090
+GPU[2]		: current_uclk (MHz): 1600
+GPU[2]		: current_vclk0 (MHz): 1000
+GPU[2]		: current_dclk0 (MHz): 875
+GPU[2]		: current_vclk1 (MHz): N/A
+GPU[2]		: current_dclk1 (MHz): N/A
+GPU[2]		: throttle_status: 0
+GPU[2]		: current_fan_speed (rpm): 0
+GPU[2]		: pcie_link_width (Lanes): 16
+GPU[2]		: pcie_link_speed (0.1 GT/s): 25
+GPU[2]		: gfx_activity_acc (%): 707799951
+GPU[2]		: mem_activity_acc (%): 1743263641
+GPU[2]		: temperature_hbm (C): [55, 50, 53, 56]
+GPU[2]		: firmware_timestamp (10ns resolution): 897682030084680
+GPU[2]		: voltage_soc (mV): N/A
+GPU[2]		: voltage_gfx (mV): N/A
+GPU[2]		: voltage_mem (mV): N/A
+GPU[2]		: indep_throttle_status: 0
+GPU[2]		: current_socket_power (W): N/A
+GPU[2]		: vcn_activity (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[2]		: gfxclk_lock_status: N/A
+GPU[2]		: xgmi_link_width: N/A
+GPU[2]		: xgmi_link_speed (Gbps): N/A
+GPU[2]		: pcie_bandwidth_acc (GB/s): N/A
+GPU[2]		: pcie_bandwidth_inst (GB/s): N/A
+GPU[2]		: pcie_l0_to_recov_count_acc (Count): N/A
+GPU[2]		: pcie_replay_count_acc (Count): N/A
+GPU[2]		: pcie_replay_rover_count_acc (Count): N/A
+GPU[2]		: xgmi_read_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2]		: xgmi_write_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2]		: current_gfxclks (MHz): [800, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2]		: current_socclks (MHz): [1090, 'N/A', 'N/A', 'N/A']
+GPU[2]		: current_vclk0s (MHz): [1000, 'N/A', 'N/A', 'N/A']
+GPU[2]		: current_dclk0s (MHz): [875, 'N/A', 'N/A', 'N/A']
+GPU[2]		: jpeg_activity (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2]		: pcie_nak_sent_count_acc (Count): N/A
+GPU[2]		: pcie_nak_rcvd_count_acc (Count): N/A
+GPU[2]		: accumulation_counter (Count): N/A
+GPU[2]		: prochot_residency_acc (Count): N/A
+GPU[2]		: ppt_residency_acc (Count): N/A
+GPU[2]		: socket_thm_residency_acc (Count): N/A
+GPU[2]		: vr_thm_residency_acc (Count): N/A
+GPU[2]		: hbm_thm_residency_acc (Count): N/A
+GPU[2]		: pcie_lc_perf_other_end_recovery (Count): N/A
+GPU[2]		: vram_max_bandwidth (GB/s): N/A
+GPU[2]		: xgmi_link_status (Up/Down): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2]		: num_partition: N/A
+GPU[2] XCP[0]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[1]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[2]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[3]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[4]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[5]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[6]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[7]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[0]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[1]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[2]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[3]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[4]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[5]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[6]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[7]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[0]	: xcp_stats.vcn_busy (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[1]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[2]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[3]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[4]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[5]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[6]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[7]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[0]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[1]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[2]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[3]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[4]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[5]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[6]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[7]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[0]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[1]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[2]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[3]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[4]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[5]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[6]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[2] XCP[7]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+==========================================================================================
+GPU[3]		: Metric Version and Size (Bytes): 1.3 120
+GPU[3]		: temperature_edge (C): 39
+GPU[3]		: temperature_hotspot (C): 45
+GPU[3]		: temperature_mem (C): 55
+GPU[3]		: temperature_vrgfx (C): 51
+GPU[3]		: temperature_vrsoc (C): 0
+GPU[3]		: temperature_vrmem (C): 0
+GPU[3]		: average_gfx_activity (%): 0
+GPU[3]		: average_umc_activity (%): 0
+GPU[3]		: average_mm_activity (%): 0
+GPU[3]		: average_socket_power (W): 0
+GPU[3]		: energy_accumulator (15.259uJ (2^-16)): 0
+GPU[3]		: system_clock_counter (ns): 897531378451870
+GPU[3]		: average_gfxclk_frequency (MHz): 792
+GPU[3]		: average_socclk_frequency (MHz): 999
+GPU[3]		: average_uclk_frequency (MHz): 1598
+GPU[3]		: average_vclk0_frequency (MHz): 0
+GPU[3]		: average_dclk0_frequency (MHz): 0
+GPU[3]		: average_vclk1_frequency (MHz): N/A
+GPU[3]		: average_dclk1_frequency (MHz): N/A
+GPU[3]		: current_gfxclk (MHz): 800
+GPU[3]		: current_socclk (MHz): 1090
+GPU[3]		: current_uclk (MHz): 1600
+GPU[3]		: current_vclk0 (MHz): 1000
+GPU[3]		: current_dclk0 (MHz): 875
+GPU[3]		: current_vclk1 (MHz): N/A
+GPU[3]		: current_dclk1 (MHz): N/A
+GPU[3]		: throttle_status: 0
+GPU[3]		: current_fan_speed (rpm): 0
+GPU[3]		: pcie_link_width (Lanes): 16
+GPU[3]		: pcie_link_speed (0.1 GT/s): 160
+GPU[3]		: gfx_activity_acc (%): 1246415631
+GPU[3]		: mem_activity_acc (%): 1809986885
+GPU[3]		: temperature_hbm (C): [53, 52, 53, 55]
+GPU[3]		: firmware_timestamp (10ns resolution): 897682038621680
+GPU[3]		: voltage_soc (mV): N/A
+GPU[3]		: voltage_gfx (mV): N/A
+GPU[3]		: voltage_mem (mV): N/A
+GPU[3]		: indep_throttle_status: 0
+GPU[3]		: current_socket_power (W): N/A
+GPU[3]		: vcn_activity (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[3]		: gfxclk_lock_status: N/A
+GPU[3]		: xgmi_link_width: N/A
+GPU[3]		: xgmi_link_speed (Gbps): N/A
+GPU[3]		: pcie_bandwidth_acc (GB/s): N/A
+GPU[3]		: pcie_bandwidth_inst (GB/s): N/A
+GPU[3]		: pcie_l0_to_recov_count_acc (Count): N/A
+GPU[3]		: pcie_replay_count_acc (Count): N/A
+GPU[3]		: pcie_replay_rover_count_acc (Count): N/A
+GPU[3]		: xgmi_read_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3]		: xgmi_write_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3]		: current_gfxclks (MHz): [800, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3]		: current_socclks (MHz): [1090, 'N/A', 'N/A', 'N/A']
+GPU[3]		: current_vclk0s (MHz): [1000, 'N/A', 'N/A', 'N/A']
+GPU[3]		: current_dclk0s (MHz): [875, 'N/A', 'N/A', 'N/A']
+GPU[3]		: jpeg_activity (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3]		: pcie_nak_sent_count_acc (Count): N/A
+GPU[3]		: pcie_nak_rcvd_count_acc (Count): N/A
+GPU[3]		: accumulation_counter (Count): N/A
+GPU[3]		: prochot_residency_acc (Count): N/A
+GPU[3]		: ppt_residency_acc (Count): N/A
+GPU[3]		: socket_thm_residency_acc (Count): N/A
+GPU[3]		: vr_thm_residency_acc (Count): N/A
+GPU[3]		: hbm_thm_residency_acc (Count): N/A
+GPU[3]		: pcie_lc_perf_other_end_recovery (Count): N/A
+GPU[3]		: vram_max_bandwidth (GB/s): N/A
+GPU[3]		: xgmi_link_status (Up/Down): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3]		: num_partition: N/A
+GPU[3] XCP[0]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[1]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[2]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[3]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[4]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[5]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[6]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[7]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[0]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[1]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[2]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[3]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[4]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[5]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[6]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[7]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[0]	: xcp_stats.vcn_busy (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[1]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[2]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[3]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[4]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[5]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[6]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[7]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[0]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[1]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[2]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[3]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[4]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[5]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[6]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[7]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[0]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[1]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[2]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[3]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[4]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[5]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[6]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[3] XCP[7]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+==========================================================================================
+GPU[4]		: Metric Version and Size (Bytes): 1.3 120
+GPU[4]		: temperature_edge (C): 45
+GPU[4]		: temperature_hotspot (C): 49
+GPU[4]		: temperature_mem (C): 56
+GPU[4]		: temperature_vrgfx (C): 52
+GPU[4]		: temperature_vrsoc (C): 56
+GPU[4]		: temperature_vrmem (C): 55
+GPU[4]		: average_gfx_activity (%): 0
+GPU[4]		: average_umc_activity (%): 0
+GPU[4]		: average_mm_activity (%): 0
+GPU[4]		: average_socket_power (W): 83
+GPU[4]		: energy_accumulator (15.259uJ (2^-16)): 19060230170953
+GPU[4]		: system_clock_counter (ns): 897531386919146
+GPU[4]		: average_gfxclk_frequency (MHz): 799
+GPU[4]		: average_socclk_frequency (MHz): 999
+GPU[4]		: average_uclk_frequency (MHz): 1599
+GPU[4]		: average_vclk0_frequency (MHz): 0
+GPU[4]		: average_dclk0_frequency (MHz): 0
+GPU[4]		: average_vclk1_frequency (MHz): N/A
+GPU[4]		: average_dclk1_frequency (MHz): N/A
+GPU[4]		: current_gfxclk (MHz): 800
+GPU[4]		: current_socclk (MHz): 1090
+GPU[4]		: current_uclk (MHz): 1600
+GPU[4]		: current_vclk0 (MHz): 1000
+GPU[4]		: current_dclk0 (MHz): 875
+GPU[4]		: current_vclk1 (MHz): N/A
+GPU[4]		: current_dclk1 (MHz): N/A
+GPU[4]		: throttle_status: 0
+GPU[4]		: current_fan_speed (rpm): 0
+GPU[4]		: pcie_link_width (Lanes): 16
+GPU[4]		: pcie_link_speed (0.1 GT/s): 25
+GPU[4]		: gfx_activity_acc (%): 1128990583
+GPU[4]		: mem_activity_acc (%): 1766825989
+GPU[4]		: temperature_hbm (C): [56, 56, 54, 56]
+GPU[4]		: firmware_timestamp (10ns resolution): 897680065161800
+GPU[4]		: voltage_soc (mV): N/A
+GPU[4]		: voltage_gfx (mV): N/A
+GPU[4]		: voltage_mem (mV): N/A
+GPU[4]		: indep_throttle_status: 0
+GPU[4]		: current_socket_power (W): N/A
+GPU[4]		: vcn_activity (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[4]		: gfxclk_lock_status: N/A
+GPU[4]		: xgmi_link_width: N/A
+GPU[4]		: xgmi_link_speed (Gbps): N/A
+GPU[4]		: pcie_bandwidth_acc (GB/s): N/A
+GPU[4]		: pcie_bandwidth_inst (GB/s): N/A
+GPU[4]		: pcie_l0_to_recov_count_acc (Count): N/A
+GPU[4]		: pcie_replay_count_acc (Count): N/A
+GPU[4]		: pcie_replay_rover_count_acc (Count): N/A
+GPU[4]		: xgmi_read_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4]		: xgmi_write_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4]		: current_gfxclks (MHz): [800, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4]		: current_socclks (MHz): [1090, 'N/A', 'N/A', 'N/A']
+GPU[4]		: current_vclk0s (MHz): [1000, 'N/A', 'N/A', 'N/A']
+GPU[4]		: current_dclk0s (MHz): [875, 'N/A', 'N/A', 'N/A']
+GPU[4]		: jpeg_activity (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4]		: pcie_nak_sent_count_acc (Count): N/A
+GPU[4]		: pcie_nak_rcvd_count_acc (Count): N/A
+GPU[4]		: accumulation_counter (Count): N/A
+GPU[4]		: prochot_residency_acc (Count): N/A
+GPU[4]		: ppt_residency_acc (Count): N/A
+GPU[4]		: socket_thm_residency_acc (Count): N/A
+GPU[4]		: vr_thm_residency_acc (Count): N/A
+GPU[4]		: hbm_thm_residency_acc (Count): N/A
+GPU[4]		: pcie_lc_perf_other_end_recovery (Count): N/A
+GPU[4]		: vram_max_bandwidth (GB/s): N/A
+GPU[4]		: xgmi_link_status (Up/Down): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4]		: num_partition: N/A
+GPU[4] XCP[0]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[1]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[2]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[3]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[4]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[5]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[6]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[7]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[0]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[1]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[2]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[3]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[4]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[5]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[6]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[7]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[0]	: xcp_stats.vcn_busy (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[1]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[2]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[3]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[4]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[5]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[6]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[7]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[0]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[1]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[2]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[3]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[4]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[5]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[6]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[7]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[0]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[1]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[2]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[3]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[4]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[5]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[6]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[4] XCP[7]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+==========================================================================================
+GPU[5]		: Metric Version and Size (Bytes): 1.3 120
+GPU[5]		: temperature_edge (C): 45
+GPU[5]		: temperature_hotspot (C): 52
+GPU[5]		: temperature_mem (C): 57
+GPU[5]		: temperature_vrgfx (C): 52
+GPU[5]		: temperature_vrsoc (C): 0
+GPU[5]		: temperature_vrmem (C): 0
+GPU[5]		: average_gfx_activity (%): 0
+GPU[5]		: average_umc_activity (%): 0
+GPU[5]		: average_mm_activity (%): 0
+GPU[5]		: average_socket_power (W): 0
+GPU[5]		: energy_accumulator (15.259uJ (2^-16)): 0
+GPU[5]		: system_clock_counter (ns): 897531395311558
+GPU[5]		: average_gfxclk_frequency (MHz): 798
+GPU[5]		: average_socclk_frequency (MHz): 999
+GPU[5]		: average_uclk_frequency (MHz): 1599
+GPU[5]		: average_vclk0_frequency (MHz): 0
+GPU[5]		: average_dclk0_frequency (MHz): 0
+GPU[5]		: average_vclk1_frequency (MHz): N/A
+GPU[5]		: average_dclk1_frequency (MHz): N/A
+GPU[5]		: current_gfxclk (MHz): 800
+GPU[5]		: current_socclk (MHz): 1090
+GPU[5]		: current_uclk (MHz): 1600
+GPU[5]		: current_vclk0 (MHz): 1000
+GPU[5]		: current_dclk0 (MHz): 875
+GPU[5]		: current_vclk1 (MHz): N/A
+GPU[5]		: current_dclk1 (MHz): N/A
+GPU[5]		: throttle_status: 0
+GPU[5]		: current_fan_speed (rpm): 0
+GPU[5]		: pcie_link_width (Lanes): 16
+GPU[5]		: pcie_link_speed (0.1 GT/s): 160
+GPU[5]		: gfx_activity_acc (%): 531340757
+GPU[5]		: mem_activity_acc (%): 1726326264
+GPU[5]		: temperature_hbm (C): [57, 53, 54, 54]
+GPU[5]		: firmware_timestamp (10ns resolution): 897680073560080
+GPU[5]		: voltage_soc (mV): N/A
+GPU[5]		: voltage_gfx (mV): N/A
+GPU[5]		: voltage_mem (mV): N/A
+GPU[5]		: indep_throttle_status: 0
+GPU[5]		: current_socket_power (W): N/A
+GPU[5]		: vcn_activity (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[5]		: gfxclk_lock_status: N/A
+GPU[5]		: xgmi_link_width: N/A
+GPU[5]		: xgmi_link_speed (Gbps): N/A
+GPU[5]		: pcie_bandwidth_acc (GB/s): N/A
+GPU[5]		: pcie_bandwidth_inst (GB/s): N/A
+GPU[5]		: pcie_l0_to_recov_count_acc (Count): N/A
+GPU[5]		: pcie_replay_count_acc (Count): N/A
+GPU[5]		: pcie_replay_rover_count_acc (Count): N/A
+GPU[5]		: xgmi_read_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5]		: xgmi_write_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5]		: current_gfxclks (MHz): [800, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5]		: current_socclks (MHz): [1090, 'N/A', 'N/A', 'N/A']
+GPU[5]		: current_vclk0s (MHz): [1000, 'N/A', 'N/A', 'N/A']
+GPU[5]		: current_dclk0s (MHz): [875, 'N/A', 'N/A', 'N/A']
+GPU[5]		: jpeg_activity (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5]		: pcie_nak_sent_count_acc (Count): N/A
+GPU[5]		: pcie_nak_rcvd_count_acc (Count): N/A
+GPU[5]		: accumulation_counter (Count): N/A
+GPU[5]		: prochot_residency_acc (Count): N/A
+GPU[5]		: ppt_residency_acc (Count): N/A
+GPU[5]		: socket_thm_residency_acc (Count): N/A
+GPU[5]		: vr_thm_residency_acc (Count): N/A
+GPU[5]		: hbm_thm_residency_acc (Count): N/A
+GPU[5]		: pcie_lc_perf_other_end_recovery (Count): N/A
+GPU[5]		: vram_max_bandwidth (GB/s): N/A
+GPU[5]		: xgmi_link_status (Up/Down): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5]		: num_partition: N/A
+GPU[5] XCP[0]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[1]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[2]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[3]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[4]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[5]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[6]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[7]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[0]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[1]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[2]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[3]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[4]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[5]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[6]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[7]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[0]	: xcp_stats.vcn_busy (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[1]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[2]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[3]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[4]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[5]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[6]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[7]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[0]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[1]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[2]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[3]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[4]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[5]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[6]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[7]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[0]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[1]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[2]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[3]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[4]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[5]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[6]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[5] XCP[7]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+==========================================================================================
+GPU[6]		: Metric Version and Size (Bytes): 1.3 120
+GPU[6]		: temperature_edge (C): 41
+GPU[6]		: temperature_hotspot (C): 46
+GPU[6]		: temperature_mem (C): 55
+GPU[6]		: temperature_vrgfx (C): 50
+GPU[6]		: temperature_vrsoc (C): 53
+GPU[6]		: temperature_vrmem (C): 52
+GPU[6]		: average_gfx_activity (%): 0
+GPU[6]		: average_umc_activity (%): 0
+GPU[6]		: average_mm_activity (%): 0
+GPU[6]		: average_socket_power (W): 88
+GPU[6]		: energy_accumulator (15.259uJ (2^-16)): 18830750150136
+GPU[6]		: system_clock_counter (ns): 897531403922523
+GPU[6]		: average_gfxclk_frequency (MHz): 792
+GPU[6]		: average_socclk_frequency (MHz): 999
+GPU[6]		: average_uclk_frequency (MHz): 1599
+GPU[6]		: average_vclk0_frequency (MHz): 0
+GPU[6]		: average_dclk0_frequency (MHz): 0
+GPU[6]		: average_vclk1_frequency (MHz): N/A
+GPU[6]		: average_dclk1_frequency (MHz): N/A
+GPU[6]		: current_gfxclk (MHz): 800
+GPU[6]		: current_socclk (MHz): 1090
+GPU[6]		: current_uclk (MHz): 1600
+GPU[6]		: current_vclk0 (MHz): 1000
+GPU[6]		: current_dclk0 (MHz): 875
+GPU[6]		: current_vclk1 (MHz): N/A
+GPU[6]		: current_dclk1 (MHz): N/A
+GPU[6]		: throttle_status: 0
+GPU[6]		: current_fan_speed (rpm): 0
+GPU[6]		: pcie_link_width (Lanes): 16
+GPU[6]		: pcie_link_speed (0.1 GT/s): 25
+GPU[6]		: gfx_activity_acc (%): 1068332140
+GPU[6]		: mem_activity_acc (%): 1782609957
+GPU[6]		: temperature_hbm (C): [55, 52, 55, 54]
+GPU[6]		: firmware_timestamp (10ns resolution): 897678381687560
+GPU[6]		: voltage_soc (mV): N/A
+GPU[6]		: voltage_gfx (mV): N/A
+GPU[6]		: voltage_mem (mV): N/A
+GPU[6]		: indep_throttle_status: 0
+GPU[6]		: current_socket_power (W): N/A
+GPU[6]		: vcn_activity (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[6]		: gfxclk_lock_status: N/A
+GPU[6]		: xgmi_link_width: N/A
+GPU[6]		: xgmi_link_speed (Gbps): N/A
+GPU[6]		: pcie_bandwidth_acc (GB/s): N/A
+GPU[6]		: pcie_bandwidth_inst (GB/s): N/A
+GPU[6]		: pcie_l0_to_recov_count_acc (Count): N/A
+GPU[6]		: pcie_replay_count_acc (Count): N/A
+GPU[6]		: pcie_replay_rover_count_acc (Count): N/A
+GPU[6]		: xgmi_read_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6]		: xgmi_write_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6]		: current_gfxclks (MHz): [800, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6]		: current_socclks (MHz): [1090, 'N/A', 'N/A', 'N/A']
+GPU[6]		: current_vclk0s (MHz): [1000, 'N/A', 'N/A', 'N/A']
+GPU[6]		: current_dclk0s (MHz): [875, 'N/A', 'N/A', 'N/A']
+GPU[6]		: jpeg_activity (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6]		: pcie_nak_sent_count_acc (Count): N/A
+GPU[6]		: pcie_nak_rcvd_count_acc (Count): N/A
+GPU[6]		: accumulation_counter (Count): N/A
+GPU[6]		: prochot_residency_acc (Count): N/A
+GPU[6]		: ppt_residency_acc (Count): N/A
+GPU[6]		: socket_thm_residency_acc (Count): N/A
+GPU[6]		: vr_thm_residency_acc (Count): N/A
+GPU[6]		: hbm_thm_residency_acc (Count): N/A
+GPU[6]		: pcie_lc_perf_other_end_recovery (Count): N/A
+GPU[6]		: vram_max_bandwidth (GB/s): N/A
+GPU[6]		: xgmi_link_status (Up/Down): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6]		: num_partition: N/A
+GPU[6] XCP[0]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[1]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[2]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[3]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[4]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[5]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[6]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[7]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[0]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[1]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[2]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[3]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[4]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[5]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[6]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[7]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[0]	: xcp_stats.vcn_busy (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[1]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[2]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[3]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[4]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[5]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[6]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[7]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[0]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[1]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[2]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[3]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[4]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[5]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[6]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[7]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[0]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[1]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[2]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[3]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[4]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[5]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[6]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[6] XCP[7]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+==========================================================================================
+GPU[7]		: Metric Version and Size (Bytes): 1.3 120
+GPU[7]		: temperature_edge (C): 44
+GPU[7]		: temperature_hotspot (C): 49
+GPU[7]		: temperature_mem (C): 54
+GPU[7]		: temperature_vrgfx (C): 50
+GPU[7]		: temperature_vrsoc (C): 0
+GPU[7]		: temperature_vrmem (C): 0
+GPU[7]		: average_gfx_activity (%): 0
+GPU[7]		: average_umc_activity (%): 0
+GPU[7]		: average_mm_activity (%): 0
+GPU[7]		: average_socket_power (W): 0
+GPU[7]		: energy_accumulator (15.259uJ (2^-16)): 0
+GPU[7]		: system_clock_counter (ns): 897531412575028
+GPU[7]		: average_gfxclk_frequency (MHz): 798
+GPU[7]		: average_socclk_frequency (MHz): 999
+GPU[7]		: average_uclk_frequency (MHz): 1599
+GPU[7]		: average_vclk0_frequency (MHz): 0
+GPU[7]		: average_dclk0_frequency (MHz): 0
+GPU[7]		: average_vclk1_frequency (MHz): N/A
+GPU[7]		: average_dclk1_frequency (MHz): N/A
+GPU[7]		: current_gfxclk (MHz): 800
+GPU[7]		: current_socclk (MHz): 1090
+GPU[7]		: current_uclk (MHz): 1600
+GPU[7]		: current_vclk0 (MHz): 1000
+GPU[7]		: current_dclk0 (MHz): 875
+GPU[7]		: current_vclk1 (MHz): N/A
+GPU[7]		: current_dclk1 (MHz): N/A
+GPU[7]		: throttle_status: 0
+GPU[7]		: current_fan_speed (rpm): 0
+GPU[7]		: pcie_link_width (Lanes): 16
+GPU[7]		: pcie_link_speed (0.1 GT/s): 160
+GPU[7]		: gfx_activity_acc (%): 1042203084
+GPU[7]		: mem_activity_acc (%): 1742967514
+GPU[7]		: temperature_hbm (C): [53, 52, 52, 54]
+GPU[7]		: firmware_timestamp (10ns resolution): 897678390345800
+GPU[7]		: voltage_soc (mV): N/A
+GPU[7]		: voltage_gfx (mV): N/A
+GPU[7]		: voltage_mem (mV): N/A
+GPU[7]		: indep_throttle_status: 0
+GPU[7]		: current_socket_power (W): N/A
+GPU[7]		: vcn_activity (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[7]		: gfxclk_lock_status: N/A
+GPU[7]		: xgmi_link_width: N/A
+GPU[7]		: xgmi_link_speed (Gbps): N/A
+GPU[7]		: pcie_bandwidth_acc (GB/s): N/A
+GPU[7]		: pcie_bandwidth_inst (GB/s): N/A
+GPU[7]		: pcie_l0_to_recov_count_acc (Count): N/A
+GPU[7]		: pcie_replay_count_acc (Count): N/A
+GPU[7]		: pcie_replay_rover_count_acc (Count): N/A
+GPU[7]		: xgmi_read_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7]		: xgmi_write_data_acc (kB): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7]		: current_gfxclks (MHz): [800, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7]		: current_socclks (MHz): [1090, 'N/A', 'N/A', 'N/A']
+GPU[7]		: current_vclk0s (MHz): [1000, 'N/A', 'N/A', 'N/A']
+GPU[7]		: current_dclk0s (MHz): [875, 'N/A', 'N/A', 'N/A']
+GPU[7]		: jpeg_activity (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7]		: pcie_nak_sent_count_acc (Count): N/A
+GPU[7]		: pcie_nak_rcvd_count_acc (Count): N/A
+GPU[7]		: accumulation_counter (Count): N/A
+GPU[7]		: prochot_residency_acc (Count): N/A
+GPU[7]		: ppt_residency_acc (Count): N/A
+GPU[7]		: socket_thm_residency_acc (Count): N/A
+GPU[7]		: vr_thm_residency_acc (Count): N/A
+GPU[7]		: hbm_thm_residency_acc (Count): N/A
+GPU[7]		: pcie_lc_perf_other_end_recovery (Count): N/A
+GPU[7]		: vram_max_bandwidth (GB/s): N/A
+GPU[7]		: xgmi_link_status (Up/Down): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7]		: num_partition: N/A
+GPU[7] XCP[0]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[1]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[2]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[3]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[4]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[5]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[6]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[7]	: xcp_stats.gfx_busy_inst (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[0]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[1]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[2]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[3]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[4]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[5]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[6]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[7]	: xcp_stats.jpeg_busy (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[0]	: xcp_stats.vcn_busy (%): [0, 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[1]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[2]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[3]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[4]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[5]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[6]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[7]	: xcp_stats.vcn_busy (%): ['N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[0]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[1]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[2]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[3]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[4]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[5]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[6]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[7]	: xcp_stats.gfx_busy_acc (Count): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[0]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[1]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[2]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[3]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[4]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[5]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[6]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+GPU[7] XCP[7]	: xcp_stats.gfx_below_host_limit_acc (%): ['N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']
+==========================================================================================
+================================== End of ROCm SMI Log ===================================

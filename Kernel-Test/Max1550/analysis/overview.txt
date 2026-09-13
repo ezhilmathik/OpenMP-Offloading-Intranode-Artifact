@@ -1,0 +1,13 @@
+site      bench   GPU                     size GB           N   CUDA time    OMP time  OMP/CUDA  OMP/best unit      tput C/O  regs C/O  occ% C/O   DRAM% C/O
+lrz       matmul  Intel(R) Data Center G       30       35328    247.25 s    394.14 s     1.59x     8.20x GFLOP/s    357/224       n/a       n/a         n/a
+lrz       matmul  Intel(R) Data Center G       45       43264    456.12 s    662.21 s     1.45x     7.45x GFLOP/s    355/245       n/a       n/a         n/a
+lrz       matmul  Intel(R) Data Center G       55       47744    615.68 s    947.62 s     1.54x     7.92x GFLOP/s    354/230       n/a       n/a         n/a
+lrz       matvec  Intel(R) Data Center G       30       61184   191.32 ms   237.68 ms     1.24x     7.64x GB/s       156/126       n/a       n/a         n/a
+lrz       matvec  Intel(R) Data Center G       45       74880   248.14 ms   425.68 ms     1.72x     9.17x GB/s       181/105       n/a       n/a         n/a
+lrz       matvec  Intel(R) Data Center G       55       82816   343.18 ms   499.61 ms     1.46x     8.80x GB/s       160/110       n/a       n/a         n/a
+lrz       vecadd  Intel(R) Data Center G       30  1250000000    28.64 ms    28.89 ms     1.01x     1.01x GB/s     1048/1038       n/a       n/a         n/a
+lrz       vecadd  Intel(R) Data Center G       45  1874999936    42.60 ms    43.70 ms     1.03x     1.03x GB/s     1056/1030       n/a       n/a         n/a
+lrz       vecadd  Intel(R) Data Center G       55  2291666560    53.02 ms    52.53 ms     0.99x     0.99x GB/s     1037/1047       n/a       n/a         n/a
+CUDA = naive (matmul), 1-D (vecadd), thread/row (matvec): the counterpart of the OpenMP loop. OMP = your OpenMP kernel.
+best = tiled32 (matmul), fastest of 1-D / 2-D grid / double2 (vecadd), fastest of thread/row / warp/row (matvec).
+Kernel times: profiler median (Nsight Systems on NVIDIA, rocprofv3 on AMD), warm-up excluded.

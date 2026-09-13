@@ -1,0 +1,4 @@
+stty: 'standard input': Inappropriate ioctl for device
+=== vecadd lrz 55GB rep1 stage=ncu on i20r02c02s02 at Sun 13 Sep 2026 03:27:05 AM CEST ===
+  N=2291666560  arch=pvc  results in /hppfs/work/pn67qe/di97zez/test-3/results/lrz/vecadd-55GB/rep1/ncu
+slurmstepd: error: *** JOB 537921 ON i20r02c02s02 CANCELLED AT 2026-09-13T03:55:50 DUE TO TIME LIMIT ***

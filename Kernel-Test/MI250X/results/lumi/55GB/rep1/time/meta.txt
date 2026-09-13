@@ -1,0 +1,39 @@
+site: lumi
+bench: matmul
+stage: time
+size_gb: 55
+N: 47744
+rep: 1
+reps: 1
+date: 2026-09-13T01:48:01+03:00
+host: nid007337
+job: 21993335
+gpu_index: 0
+arch: gfx90a
+gpu: AMD Instinct MI250X
+gpu_info: 68702699520 B VRAM, ROCm /appl/lumi/SW/LUMI-25.09/G/EB/rocm/6.4.4
+cpu: AMD EPYC 7A53 64-Core Processor
+omp_num_threads: 56
+modules: LUMI/25.09 partition/G craype-accel-amd-gfx90a PrgEnv-amd rocm/6.4.4 lumi-CrayPath
+vendor: amd
+native_compiler: /appl/lumi/SW/LUMI-25.09/G/EB/rocm/6.4.4/bin/hipcc -- HIP version: 6.4.43484-123eb5128
+omp_compiler: /opt/cray/pe/craype/2.7.35/bin/CC -- AMD clang version 19.0.0git (https://github.com/RadeonOpenCompute/llvm-project roc-6.4.4 25224 d366fa84f3fdcbd4b10847ebd5db572ae12a34fb)
+rocprof: /appl/lumi/SW/LUMI-25.09/G/EB/rocm/6.4.4/bin/rocprofv3 usage: rocprofv3 [options] -- <application> [application options]
+gpu_metrics_option: none
+sha256: 5de29858cb5d11807a55cfc842228b13b8e72014a0dc684ad9c77233f79f673d  mat-hip.cpp
+sha256: 946d388d0dbcb0c801010b38a458221298cb186c96a5cd853b1c0a768f9151f3  mat-omp.cpp
+--- module list
+
+Currently Loaded Modules:
+  1) ModuleLabel/label              (S)  10) craype-accel-amd-gfx90a
+  2) lumi-tools/26.06               (S)  11) amd/6.4.4
+  3) init-lumi/0.3                  (S)  12) craype/2.7.35
+  4) LUMI/25.09                     (S)  13) cray-dsmml/0.3.1
+  5) craype-x86-trento                   14) cray-mpich/9.0.1
+  6) libfabric/1.22.0                    15) cray-libsci/25.09.0
+  7) craype-network-ofi                  16) PrgEnv-amd/8.6.0
+  8) xpmem/2.11.5-1.3_g73ade43320bc      17) rocm/6.4.4
+  9) partition/G                    (S)  18) lumi-CrayPath/0.1
+
+  Where:
+   S:  Module is Sticky, requires --force to unload or purge

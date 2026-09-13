@@ -1,0 +1,230 @@
+1544 [22982936528704] INFO perfrun.launcher <> - Launcher main begin
+1644 [22982936528704] INFO perfrun.launcher <> - MessageCatalogInit finished
+1644 [22982936528704] INFO perfrun.launcher <> - Launcher instance created
+1645 [22982936528704] INFO perfrun.launcher <> - argc = 7; cmdline = /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/bin64/amplxe-runss --ui-output-format xml --ui-output-fd 8 --option-file /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/config/runss.options 
+1854 [22982936528704] INFO perfrun.perfcollector <> - SEP tool path: /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/bin64/sep
+1867 [22982936528704] INFO perfrun.launcher <> - create msngr2::ICliToolContext
+1867 [22982936528704] INFO perfrun.launcher <> - create file finder object
+1871 [22982936528704] INFO perfrun.launcher <> - create a result directory: pattern = /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl pid = 4294967295
+1892 [22982936528704] INFO perfrun.sdk <> - checked that the directory /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl is a local directory
+1892 [22982936528704] INFO perfrun.sdk <> - the directory /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl is located on a share or its FS ID is unknown 1196443219
+1893 [22982936528704] INFO perfrun.sdk <> - checked that the directory /hppfs/scratch/03/di97zez/tmp/amplxe-tmp-di97zez is a local directory
+1893 [22982936528704] INFO perfrun.sdk <> - the directory /hppfs/scratch/03/di97zez/tmp/amplxe-tmp-di97zez is located on a share or its FS ID is unknown 1196443219
+1894 [22982936528704] INFO perfrun.launcher <> - create data directory = /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0
+1895 [22982936528704] INFO perfrun.launcher <> - Creating the master collection flag
+1902 [22982936528704] INFO perfrun.launcher <> - Done creating the master collection flag
+1931 [22982782265088] INFO perfrun.launcher <> - plugin [remoteplug] was disabled because it doesn't support the given collection type.
+1942 [22982782265088] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/systemcollector-177933-i20r01c02s10.sc
+2433 [22982782265088] INFO perfrun.system <> - Tpss based collection
+2439 [22982782265088] INFO perfrun.launcher <> - plugin [ptracecollector] was disabled because it doesn't support the given collection type.
+2447 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+2447 [22982782265088] WARN perfrun.sdk <> - Metrics Discovery library was not found, lib name: 'libigdmd.so', lib path: '', at file: _sdks/release_posix-x86_64_icx_2023.0.0_gnutools_9.2_binutils_2.28/perfrun_1.33.7/include/perfrun1/pluginsdk/metrics_discovery_lib.hpp:1002
+3077 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3086 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3095 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3104 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3113 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3122 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3131 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3141 [22982782265088] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+3141 [22982782265088] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+3142 [22982782265088] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+3143 [22982782265088] INFO perfrun.mrte <> - system-wide mode is 0
+3144 [22982782265088] INFO perfrun.mrte <> - Getting  mrte profiling environment ...
+3595 [22982782265088] INFO perfrun.mrte <> - INTEL_MRTE_DATA_DIR=/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0
+3595 [22982782265088] INFO perfrun.mrte <> - INTEL_MRTE_HOST_NAME=i20r01c02s10
+3595 [22982782265088] INFO perfrun.mrte <> - JAVA_TOOL_OPTIONS=-agentlib:amplxe_samplingmrte_javaprof_1.0 -Dsun.boot.library.path=/dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib32/runtime:/dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib64/runtime
+3595 [22982782265088] INFO perfrun.mrte <> - LD_LIBRARY_PATH=/dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib32/runtime:/dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib64/runtime:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-dpl/2022.5.0-gcc-ea4n6et/dpl/2022.5/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ippcp/2021.11.0-gcc-66eoga7/ippcp/2021.11/lib/:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-dal/2024.2.0-gcc-gbbxmgi/dal/2024.2/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ipp/2021.11.0-gcc-jz2ih7h/ipp/2021.11/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-tbb/2021.12.0-gcc-k4shxy2/tbb/2021.12/env/../lib/intel64/gcc4.8:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-itac/2022.1.0-gcc-ckhvit6/itac/2022.1/slib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-dnn/2024.1.0-gcc-qttqcwg/dnnl/2024.1/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ccl/2021.12.0-gcc-vtqlqnu/ccl/2021.12/lib/:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ccl/2021.12.0-gcc-vtqlqnu/mpi/2021.12/opt/mpi/libfabric/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ccl/2021.12.0-gcc-vtqlqnu/mpi/2021.12/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-mkl/2024.1.0-gcc-tca4zfy/mkl/2024.1/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-mpi/2021.12.0-gcc-7zg7lbt/mpi/2021.12/opt/mpi/libfabric/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-mpi/2021.12.0-gcc-7zg7lbt/mpi/2021.12/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/debugger/2024.1/opt/debugger/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/tbb/2021.12/env/../lib/intel64/gcc4.8:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/opt/oclfpga/host/linux64/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/opt/compiler/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/lib:/usr/lib64/psm2-compat
+3595 [22982782265088] INFO perfrun.mrte <> - CORECLR_ENABLE_PROFILING=1
+3595 [22982782265088] INFO perfrun.mrte <> - CORECLR_PROFILER={AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+3595 [22982782265088] INFO perfrun.mrte <> - CORECLR_PROFILER_PATH=/dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib64/libamplxe_samplingmrte_clrprof_1.0.so
+3595 [22982782265088] INFO perfrun.mrte <> - INTEL_MRTE_PROFILER_MODE=mixed
+3595 [22982782265088] INFO perfrun.mrte <> - Data directory: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0
+3595 [22982782265088] INFO perfrun.mrte <> - Mrte plugin is initialized
+3595 [22982782265088] INFO perfrun.launcher <> - plugin [emon] was disabled because it doesn't support the given collection type.
+3595 [22982782265088] INFO perfrun.launcher <> - plugin [cuscol] was disabled because it doesn't support the given collection type.
+3596 [22982782265088] INFO perfrun.launcher <> - plugin [stdsrc] was disabled because it doesn't support the given collection type.
+3598 [22982782265088] INFO perfrun.launcher <> - plugin [sep] was disabled because it doesn't support the given collection type.
+3598 [22982782265088] INFO perfrun.launcher <> - plugin [vtsspp] was disabled because it doesn't support the given collection type.
+3599 [22982782265088] INFO perfrun.launcher <> - plugin [perf] was disabled because it doesn't support the given collection type.
+3599 [22982782265088] INFO perfrun.launcher <> - plugin [aoclprofile] was disabled because it doesn't support the given collection type.
+3600 [22982782265088] INFO perfrun.tpss <> - initialize tpss controller
+3600 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = opencl_ex:nostack|0:58:0.0
+3606 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = opencl:nostack|0:58:0.0
+3606 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = mediasdk:nostack|0:58:0.0
+3606 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = level_zero:nostack|0:58:0.0
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = opencl_ex:nostack|0:75:0.0
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = opencl:nostack|0:75:0.0
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = mediasdk:nostack|0:75:0.0
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = level_zero:nostack|0:75:0.0
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = opencl_ex:nostack|0:202:0.0
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = opencl:nostack|0:202:0.0
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = mediasdk:nostack|0:202:0.0
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = level_zero:nostack|0:202:0.0
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = opencl_ex:nostack|0:218:0.0
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = opencl:nostack|0:218:0.0
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = mediasdk:nostack|0:218:0.0
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = level_zero:nostack|0:218:0.0
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = cpu:counters:nostack
+3607 [22982782265088] INFO perfrun.tpss <> - configure collection mode: value = cpu:nostack
+3607 [22982782265088] INFO perfrun.tpss <> - default obj-size-min=1024
+3607 [22982782265088] INFO perfrun.tpss <> - default hash-table-size=0
+3610 [22982782265088] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+3610 [22982782265088] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+3610 [22982782265088] INFO perfrun.launcher <> - plugin [parallelfs] was disabled because it doesn't support the given collection type.
+3610 [22982782265088] INFO perfrun.launcher <> - plugin [power] was disabled because it doesn't support the given collection type.
+3610 [22982782265088] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+3611 [22982782265088] INFO perfrun.launcher <> - plugin [ipmwatch] was disabled because it doesn't support the given collection type.
+3611 [22982782265088] INFO perfrun.launcher <> - plugin [os_counters] was disabled because it doesn't support the given collection type.
+3611 [22982782265088] INFO perfrun.launcher <> - plugin [l0_metrics] was disabled because it doesn't support the given collection type.
+3613 [22982936528704] INFO perfrun.launcher <> - set environment variable: LD_LIBRARY_PATH = /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib32/runtime:/dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib64/runtime:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-dpl/2022.5.0-gcc-ea4n6et/dpl/2022.5/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ippcp/2021.11.0-gcc-66eoga7/ippcp/2021.11/lib/:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-dal/2024.2.0-gcc-gbbxmgi/dal/2024.2/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ipp/2021.11.0-gcc-jz2ih7h/ipp/2021.11/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-tbb/2021.12.0-gcc-k4shxy2/tbb/2021.12/env/../lib/intel64/gcc4.8:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-itac/2022.1.0-gcc-ckhvit6/itac/2022.1/slib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-dnn/2024.1.0-gcc-qttqcwg/dnnl/2024.1/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ccl/2021.12.0-gcc-vtqlqnu/ccl/2021.12/lib/:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ccl/2021.12.0-gcc-vtqlqnu/mpi/2021.12/opt/mpi/libfabric/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ccl/2021.12.0-gcc-vtqlqnu/mpi/2021.12/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-mkl/2024.1.0-gcc-tca4zfy/mkl/2024.1/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-mpi/2021.12.0-gcc-7zg7lbt/mpi/2021.12/opt/mpi/libfabric/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-mpi/2021.12.0-gcc-7zg7lbt/mpi/2021.12/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/debugger/2024.1/opt/debugger/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/tbb/2021.12/env/../lib/intel64/gcc4.8:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/opt/oclfpga/host/linux64/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/opt/compiler/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/lib:/usr/lib64/psm2-compat
+3613 [22982936528704] INFO perfrun.launcher <> - set environment variable: INTEL_LIBITTNOTIFY32 = /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib32/runtime/libittnotify_collector.so
+3613 [22982936528704] INFO perfrun.launcher <> - set environment variable: INTEL_LIBITTNOTIFY64 = /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib64/runtime/libittnotify_collector.so
+3613 [22982936528704] INFO perfrun.launcher <> - set environment variable: INTEL_ITTNOTIFY_GROUPS = 
+3613 [22982936528704] INFO perfrun.launcher <> - set environment variable: INTEL_JIT_PROFILER32 = /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib32/runtime/libittnotify_collector.so
+3613 [22982936528704] INFO perfrun.launcher <> - set environment variable: INTEL_JIT_PROFILER64 = /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib64/runtime/libittnotify_collector.so
+3613 [22982936528704] INFO perfrun.launcher <> - set environment variable: ENABLE_JITPROFILING = 1
+3613 [22982936528704] INFO perfrun.launcher <> - set environment variable: CL_CONFIG_USE_VTUNE = True
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: KMP_FORKJOIN_FRAMES = 0
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: KMP_FORKJOIN_FRAMES_MODE = 0
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_DATA_DIR = /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_HOST_NAME = i20r01c02s10
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: JAVA_TOOL_OPTIONS = -agentlib:amplxe_samplingmrte_javaprof_1.0 -Dsun.boot.library.path=/dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib32/runtime:/dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib64/runtime
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: LD_LIBRARY_PATH = /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib32/runtime:/dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib64/runtime:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-dpl/2022.5.0-gcc-ea4n6et/dpl/2022.5/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ippcp/2021.11.0-gcc-66eoga7/ippcp/2021.11/lib/:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-dal/2024.2.0-gcc-gbbxmgi/dal/2024.2/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ipp/2021.11.0-gcc-jz2ih7h/ipp/2021.11/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-tbb/2021.12.0-gcc-k4shxy2/tbb/2021.12/env/../lib/intel64/gcc4.8:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-itac/2022.1.0-gcc-ckhvit6/itac/2022.1/slib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-dnn/2024.1.0-gcc-qttqcwg/dnnl/2024.1/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ccl/2021.12.0-gcc-vtqlqnu/ccl/2021.12/lib/:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ccl/2021.12.0-gcc-vtqlqnu/mpi/2021.12/opt/mpi/libfabric/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-ccl/2021.12.0-gcc-vtqlqnu/mpi/2021.12/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-mkl/2024.1.0-gcc-tca4zfy/mkl/2024.1/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-mpi/2021.12.0-gcc-7zg7lbt/mpi/2021.12/opt/mpi/libfabric/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-toolkit/2024.1.0/intel-oneapi-mpi/2021.12.0-gcc-7zg7lbt/mpi/2021.12/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/debugger/2024.1/opt/debugger/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/tbb/2021.12/env/../lib/intel64/gcc4.8:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/opt/oclfpga/host/linux64/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/opt/compiler/lib:/dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/lib:/usr/lib64/psm2-compat
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: CORECLR_ENABLE_PROFILING = 1
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: CORECLR_PROFILER = {AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: CORECLR_PROFILER_PATH = /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib64/libamplxe_samplingmrte_clrprof_1.0.so
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_PROFILER_MODE = mixed
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: NEOReadDebugKeys = 1
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: NEOReadDebugKeys = 1
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: NEOReadDebugKeys = 1
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: NEOReadDebugKeys = 1
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: NEOReadDebugKeys = 1
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: NEOReadDebugKeys = 1
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: NEOReadDebugKeys = 1
+3614 [22982936528704] INFO perfrun.launcher <> - set environment variable: NEOReadDebugKeys = 1
+3620 [22982936528704] INFO perfrun.launcher <> - RpcServer: run RPC server to handle requests
+3629 [22982936528704] INFO perfrun.launcher <> - Launcher: command line to start before modification = ./matvec_sycl 74880 1
+3638 [22982936528704] INFO perfrun.launcher <> - Launcher: command line to start after modification = /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/bin64/pin -error_file /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/pinerr.tpsslog -detach_reattach -follow_execv -tool_load_option deepbind -t64 /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib64/libtpsstool.so -t /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/lib32/libtpsstool.so -server_name tpss_ipc.177933 -prd_dir /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2 -- ./matvec_sycl 74880 1
+3640 [22982936528704] INFO perfrun.launcher <> - ProcessCreator object was created
+3647 [22982936528704] INFO perfrun.launcher <> - Launcher: the process was started in suspend mode
+3656 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3657 [22982782265088] WARN perfrun.sdk <> - Metrics Discovery library was not found, lib name: 'libigdmd.so', lib path: '', at file: _sdks/release_posix-x86_64_icx_2023.0.0_gnutools_9.2_binutils_2.28/perfrun_1.33.7/include/perfrun1/pluginsdk/metrics_discovery_lib.hpp:1002
+3657 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3657 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3658 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3658 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3658 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3658 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3658 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+3692 [22982782265088] WARN perfrun.system <> - Could not do anything with /sys/kernel/debug/kvm: boost::filesystem::status: Permission denied [system:13]: "/sys/kernel/debug/kvm", at file: vcs/perfrun1/plugins/system/src/trace_writer.cpp:787
+3692 [22982782265088] WARN perfrun.system <> - Folder "/var/run/libvirt/qemu/"doesn't exist, at file: vcs/perfrun1/plugins/system/src/trace_writer.cpp:800
+3706 [22982782265088] INFO perfrun.sdk <> - runCmd: /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/bin64/sep -platform-info
+3711 [22982782265088] INFO perfrun.sdk <> - runCmd started PID 177947
+3733 [22982782265088] WARN perfrun.sdk <> - SEP driver is not available, at file: vcs/perfrun1/plugins/pluginsdk/src/device_mapper.cpp:1083
+3733 [22982782265088] INFO perfrun.sdk <> - runCmd: /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/bin64/amplxe-perf stat --iostat=list
+3737 [22982782265088] INFO perfrun.sdk <> - runCmd started PID 177948
+4077 [22982782265088] INFO perfrun.sdk <> - I/O platform topology is not supported on this platform via perf
+4080 [22982782265088] INFO perfrun.sdk <> - runCmd: /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/bin64/sep -platform-info
+4084 [22982782265088] INFO perfrun.sdk <> - runCmd started PID 177949
+4111 [22982782265088] WARN perfrun.sdk <> - SEP driver is not available, at file: vcs/perfrun1/plugins/pluginsdk/src/device_mapper.cpp:1083
+4113 [22982782265088] INFO perfrun.sdk <> - runCmd: /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/bin64/sep -platform-info
+4117 [22982782265088] INFO perfrun.sdk <> - runCmd started PID 177950
+4139 [22982782265088] WARN perfrun.sdk <> - SEP driver is not available, at file: vcs/perfrun1/plugins/pluginsdk/src/device_mapper.cpp:1083
+4139 [22982782265088] INFO perfrun.sdk <> - runCmd: /dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/bin64/amplxe-perf stat --iostat=list
+4146 [22982782265088] INFO perfrun.sdk <> - runCmd started PID 177951
+4491 [22982782265088] INFO perfrun.sdk <> - I/O platform topology is not supported on this platform via perf
+4498 [22982782265088] WARN perfrun.sdk <> - Failed to find xl binary on any of the system paths: /bin, /sbin, /usr/bin, /usr/sbin., at file: vcs/perfrun1/sdk/src/utils.cpp:205
+4499 [22982782265088] WARN perfrun.system <> - Could not start ContainerMapping collector, at file: vcs/perfrun1/plugins/system/src/controller.cpp:450
+4520 [22982782265088] INFO perfrun.vdso <> - Helper runtool '/dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/bin32/amplxe-runss -dump-vdso -r /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl --tmp-dir /hppfs/scratch/03/di97zez/tmp/amplxe-tmp-di97zez' returned 1
+4807 [22982782265088] INFO perfrun.vdso <> - Helper runtool '/dss/lrzsys/sys/spack/release/24.4.0/opt/x86_64/intel-oneapi-vtune/2024.2.1-gcc-zuja4jm/vtune/2024.2/bin64/amplxe-runss -dump-vdso -r /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl --tmp-dir /hppfs/scratch/03/di97zez/tmp/amplxe-tmp-di97zez' returned 0
+4807 [22982782265088] INFO perfrun.itt <> - start itt controller for pid #177946
+4820 [22982782265088] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.58.0.0.0.oa.0.cfg
+4821 [22982782265088] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.58.0.0.0.oa.0.cfg
+4822 [22982775961344] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.58.0.0.0.oa.0.vtss
+4823 [22982782265088] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.58.0.0.1.oa.0.cfg
+4825 [22982782265088] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.58.0.0.1.oa.0.cfg
+4826 [22982775961344] INFO perfrun.gpu <> - Open stream for subdevice 0
+4827 [22982571325184] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.58.0.0.1.oa.0.vtss
+4828 [22982782265088] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.75.0.0.0.oa.0.cfg
+4828 [22982571325184] INFO perfrun.gpu <> - Open stream for subdevice 1
+5028 [22982782265088] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.75.0.0.0.oa.0.cfg
+5029 [22982501050112] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.75.0.0.0.oa.0.vtss
+5030 [22982782265088] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.75.0.0.1.oa.0.cfg
+5030 [22982501050112] INFO perfrun.gpu <> - Open stream for subdevice 0
+5032 [22982782265088] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.75.0.0.1.oa.0.cfg
+5032 [22982498948864] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.75.0.0.1.oa.0.vtss
+5033 [22982782265088] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.202.0.0.0.oa.0.cfg
+5036 [22982498948864] INFO perfrun.gpu <> - Open stream for subdevice 1
+5036 [22982782265088] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.202.0.0.0.oa.0.cfg
+5038 [22982480066304] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.202.0.0.0.oa.0.vtss
+5039 [22982782265088] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.202.0.0.1.oa.0.cfg
+5039 [22982480066304] INFO perfrun.gpu <> - Open stream for subdevice 0
+5040 [22982782265088] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.202.0.0.1.oa.0.cfg
+5043 [22982460659456] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.202.0.0.1.oa.0.vtss
+5043 [22982782265088] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.218.0.0.0.oa.0.cfg
+5044 [22982460659456] INFO perfrun.gpu <> - Open stream for subdevice 1
+5044 [22982782265088] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.218.0.0.0.oa.0.cfg
+5046 [22982458558208] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.218.0.0.0.oa.0.vtss
+5047 [22982782265088] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.218.0.0.1.oa.0.cfg
+5047 [22982458558208] INFO perfrun.gpu <> - Open stream for subdevice 0
+5048 [22982782265088] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.218.0.0.1.oa.0.cfg
+5049 [22982782265088] INFO perfrun.tpss <> - start tpss controller for pid #177946
+5051 [22982386611968] INFO perfrun.sdk <> - Allocating TMU :/hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.218.0.0.1.oa.0.vtss
+5052 [22982386611968] INFO perfrun.gpu <> - Open stream for subdevice 1
+5113 [22982936528704] INFO perfrun.launcher <> - Launcher: all plugins were started
+5113 [22982936528704] INFO perfrun.launcher <> - DirectoryMonitor object was created
+5114 [22982936528704] INFO perfrun.launcher <> - DirectoryMonitor: a callback was added
+5115 [22982936528704] INFO perfrun.launcher <> - DirectoryMonitor was started with pingTime = 1000
+5116 [22982936528704] INFO perfrun.launcher <> - DeadlineTimer is going to be constructed
+5118 [22982936528704] INFO perfrun.launcher <> - DeadlineTimer: a callback was added
+5137 [22982936528704] INFO perfrun.launcher <> - Launcher: resume the profiled application and  wait its termination or stop command
+36529 [22982936528704] INFO perfrun.launcher <> - Launcher: the profiled application was terminated  with exit code = 0
+128564 [22982782265088] INFO perfrun.itt <> - detach itt controller
+128564 [22982782265088] INFO perfrun.itt <> - detach itt controller done
+128564 [22982782265088] INFO perfrun.gpu <> - Waiting for data collection thread to finish
+128593 [22982775961344] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.58.0.0.0.oa.0.vtss
+128593 [22982782265088] INFO perfrun.gpu <> - Data collection thread finished, shutting down the session
+128593 [22982782265088] INFO perfrun.gpu <> - Waiting for data collection thread to finish
+128630 [22982571325184] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.58.0.0.1.oa.0.vtss
+128630 [22982782265088] INFO perfrun.gpu <> - Data collection thread finished, shutting down the session
+128630 [22982782265088] INFO perfrun.gpu <> - Waiting for data collection thread to finish
+128663 [22982501050112] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.75.0.0.0.oa.0.vtss
+128663 [22982782265088] INFO perfrun.gpu <> - Data collection thread finished, shutting down the session
+128663 [22982782265088] INFO perfrun.gpu <> - Waiting for data collection thread to finish
+128711 [22982498948864] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.75.0.0.1.oa.0.vtss
+128711 [22982782265088] INFO perfrun.gpu <> - Data collection thread finished, shutting down the session
+128711 [22982782265088] INFO perfrun.gpu <> - Waiting for data collection thread to finish
+128741 [22982480066304] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.202.0.0.0.oa.0.vtss
+128741 [22982782265088] INFO perfrun.gpu <> - Data collection thread finished, shutting down the session
+128741 [22982782265088] INFO perfrun.gpu <> - Waiting for data collection thread to finish
+128761 [22982460659456] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.202.0.0.1.oa.0.vtss
+128762 [22982782265088] INFO perfrun.gpu <> - Data collection thread finished, shutting down the session
+128762 [22982782265088] INFO perfrun.gpu <> - Waiting for data collection thread to finish
+128793 [22982458558208] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.218.0.0.0.oa.0.vtss
+128793 [22982782265088] INFO perfrun.gpu <> - Data collection thread finished, shutting down the session
+128793 [22982782265088] INFO perfrun.gpu <> - Waiting for data collection thread to finish
+128821 [22982386611968] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/gen_metrics0.218.0.0.1.oa.0.vtss
+128821 [22982782265088] INFO perfrun.gpu <> - Data collection thread finished, shutting down the session
+128821 [22982782265088] ERROR perfrun.gpu <> - Failed to detach the consumer, at file: vcs/perfrun1/plugins/gpu/src/event_consumer_univ.cpp:912
+128821 [22982782265088] ERROR perfrun.gpu <> - Failed to detach consumer, at file: vcs/perfrun1/plugins/gpu/src/controller_impl.cpp:374
+128822 [22982782265088] ERROR perfrun.launcher <> - Messenger::say: Cannot stop collection of GPU events
+128822 [22982782265088] ERROR perfrun.launcher <> - gpu can not perform an operation and will be disabled., at file: vcs/perfrun1/launcher/src/plugin_manager_impl.hpp:422
+128822 [22982782265088] INFO perfrun.tpss <> - stop tpss controller
+128838 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+128838 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+128838 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+128838 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+128838 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+128838 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+128838 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+128839 [22982782265088] INFO perfrun.sdk <> - Reading value (0) from file: /proc/sys/dev/i915/perf_stream_paranoid
+128839 [22982782265088] INFO perfrun.sdk <> - De-allocating TMU: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/systemcollector-177933-i20r01c02s10.sc
+128839 [22982782265088] INFO perfrun.system <> - closed the system trace file: /hppfs/work/pn67qe/di97zez/test-3/results/lrz/matvec-45GB/rep1/ncu/vt_sycl/data.0/systemcollector-177933-i20r01c02s10.sc
+128840 [22982936528704] INFO perfrun.launcher <> - Launcher: all plugins were stopped.
+128840 [22982936528704] INFO perfrun.launcher <> - DeadlineTimer is going to be destroyed
+128840 [22982936528704] INFO perfrun.launcher <> - DeadlineTimer was destroyed
+128840 [22982936528704] INFO perfrun.launcher <> - DirectoryMonitor object was destroyed
+128841 [22982936528704] WARN perfrun.launcher <> - Stop command is ignored because it is received when collection is already stopped, at file: vcs/perfrun1/launcher/src/command_handler.cpp:226
+128846 [22982936528704] INFO perfrun.launcher <> - Application exit code: 0
+128846 [22982936528704] INFO perfrun.launcher <> - Exit code: 0

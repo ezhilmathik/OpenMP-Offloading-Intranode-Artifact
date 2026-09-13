@@ -248,7 +248,7 @@ def plot_chart(series, avg, ns, gpu_count, out_pdf, title_suffix, hierarchy, sho
 
     ax.set_xlabel("Grid Size ($N^3$).", fontsize=MEDIUM_SIZE)
     ax.set_ylabel("Solver Time in Seconds.", fontsize=MEDIUM_SIZE)
-    ax.set_title(f"Intel 1550 - {gpu_count} GPUs ({hierarchy}) {title_suffix}")
+    ax.set_title(f"Intel Max 1550 - {gpu_count} GPUs ({hierarchy}) {title_suffix}")
     ax.set_xticks(x + (n_series - 1) / 2.0 * barWidth)
     ax.set_xticklabels([f"${n}^3$" for n in ns])
     ax.minorticks_on()

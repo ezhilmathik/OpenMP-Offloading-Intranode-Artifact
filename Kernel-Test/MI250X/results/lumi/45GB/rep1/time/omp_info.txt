@@ -1,0 +1,2 @@
+"PluginInterface" device 0 info: Launching kernel __omp_offloading_43b2fce4_440002d7__Z20matrixMultiplyOpenMPPdS_S_mi_l29 with 440 blocks and 256 threads in SPMD-Big-Jump-Loop mode
+"PluginInterface" device 0 info: Launching kernel __omp_offloading_43b2fce4_440002d7__Z17emptyTargetRegioni_l48 with 1 blocks and 256 threads in Generic-SPMD mode

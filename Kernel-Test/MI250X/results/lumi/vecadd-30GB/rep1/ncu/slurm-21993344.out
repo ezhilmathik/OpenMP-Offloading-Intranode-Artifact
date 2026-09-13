@@ -1,0 +1,3 @@
+=== vecadd lumi 30GB rep1 stage=ncu on nid006593 at sön 13 sep 2026 01:54:08 EEST ===
+  N=1250000000  arch=gfx90a  results in /pfs/lustrep2/scratch/project_465003145/Git/CG-Halo/SIMT-SIMD/test-5-all/results/lumi/vecadd-30GB/rep1/ncu
+=== done 30GB ncu at sön 13 sep 2026 01:56:11 EEST ===

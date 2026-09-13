@@ -1,0 +1,1416 @@
+Start (ns),Duration (ns),CorrId,GrdX,GrdY,GrdZ,BlkX,BlkY,BlkZ,Reg/Trd,StcSMem (MB),DymSMem (MB),Bytes (MB),Throughput (MB/s),SrcMemKd,DstMemKd,Device,Ctx,GreenCtx,Strm,Name
+7845133512,1784916666,128,,,,,,,,,,18333.332,0.000,Pageable,Device,NVIDIA H100 (0),1,,7,[CUDA memcpy Host-to-Device]
+9630218338,1791396707,129,,,,,,,,,,18333.332,0.000,Pageable,Device,NVIDIA H100 (0),1,,7,[CUDA memcpy Host-to-Device]
+11421742501,11275230,133,,,,,,,,,,18333.332,1613333.258,Device,,NVIDIA H100 (0),1,,7,[CUDA memset]
+11433101635,36115259,134,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11469251262,36103002,137,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11505363608,36107451,139,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11541480851,36119194,141,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11577610445,36083835,143,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11613702888,36082234,145,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11649793762,36083483,147,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11685887037,36089722,149,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11721985495,36081658,151,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11758076625,36087099,153,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11794173260,36102234,155,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11830284582,36096059,157,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11866390273,36081530,159,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11902480539,36092315,161,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11938581750,36105562,163,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+11974696784,36125371,165,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12010831083,36096122,167,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12046935205,36113149,169,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12083057474,36096510,171,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12119163200,36092349,173,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12155264253,36081502,175,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12191355291,36114269,177,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12227479064,36085246,179,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12263573078,36109533,181,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12299691955,36122110,183,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12335822385,36094365,185,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12371925550,36083838,187,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12408018828,36105053,189,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12444131913,36101150,191,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12480242599,36122781,193,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12516373828,36111422,195,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12552493506,36103133,197,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12588605791,36078942,199,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12624693885,36087453,201,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12660789370,36078238,203,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12696880408,36085789,205,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12732975445,36077566,207,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12769061619,36112317,209,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12805183408,36080062,211,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12841271918,36080509,213,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12877361419,36102782,215,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12913473449,36100701,217,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12949582374,36109790,219,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+12985701252,36121117,221,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13021831585,36118654,223,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13057958655,36097821,225,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13094065532,36118718,227,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13130193210,36103421,229,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13166305303,36082110,231,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13202396565,36115101,233,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13238520626,36079166,235,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13274608144,36102237,237,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13310719437,36117886,239,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13346847563,36111165,241,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13382967080,36081246,243,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13419057574,36087165,245,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13455153315,36082430,247,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13491244225,36092765,249,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13527345758,36084030,251,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13563438300,36084989,253,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13599533177,36080126,255,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13635621783,36079421,257,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13671710004,36116510,259,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13707835762,36125693,261,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13743970383,36122462,263,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13780101293,36083677,265,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13816194090,36080830,267,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13852283848,36084349,269,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13888376517,36092414,271,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13924478243,36082973,273,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13960569984,36089086,275,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+13996667998,36082877,277,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14032760283,36079966,279,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14068860025,36086785,281,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14104955898,36080288,283,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14141045370,36109024,285,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14177162202,36108961,287,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14213279739,36100672,289,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14249388763,36106752,291,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14285503387,36086337,293,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14321599004,36102944,295,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14357710012,36103553,297,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14393821245,36121504,299,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14429951133,36119296,301,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14466078205,36130593,303,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14502217118,36125760,305,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14538351582,36099809,307,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14574459455,36104736,309,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14610572319,36115872,311,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14646697023,36110657,313,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14682815552,36079904,315,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14718903648,36112001,317,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14755024513,36121472,319,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14791153921,36084288,321,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14827246561,36120961,323,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14863376194,36080864,325,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14899465058,36080224,327,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14935553986,36096065,329,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+14971658019,36102432,331,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+15007773699,36099393,333,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+15043881700,36125472,335,8951823,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_1d(const double *, const double *, double *, unsigned long)"
+15080036772,4196932786,338,,,,,,,,,,18333.332,0.000,Device,Pageable,NVIDIA H100 (0),1,,7,[CUDA memcpy Device-to-Host]
+22959250142,11283490,339,,,,,,,,,,18333.332,1613333.258,Device,,NVIDIA H100 (0),1,,7,[CUDA memset]
+22970540192,37095684,340,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23007652388,37052036,343,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23044713864,37017829,345,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23081741805,37038276,347,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23118789937,37020772,349,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23155819925,37022661,351,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23192852442,37019300,353,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23229881726,37024292,355,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23266914754,37020837,357,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23303944231,37020932,359,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23340973963,37038692,361,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23378022159,37032516,363,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23415063251,37025957,365,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23452098200,37040228,367,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23489147420,37027204,369,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23526183264,37034309,371,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23563225893,37036452,373,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23600271305,37100132,375,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23637380813,37034821,377,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23674425426,37030084,379,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23711464406,37053380,381,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23748526426,37033061,383,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23785568831,37025316,385,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23822606947,37041924,387,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23859657639,37035205,389,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23896701868,37031204,391,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23933741648,37012420,393,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+23970763060,37026885,395,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24007797913,37043556,397,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24044850909,37016358,399,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24081876035,37022887,401,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24118908074,37031591,403,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24155948913,37039975,405,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24192997432,37014247,407,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24230021055,37063463,409,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24267093254,37103591,411,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24304206093,37128455,413,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24341343092,37065319,415,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24378417115,37081031,417,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24415512450,37067783,419,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24452588521,37072519,421,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24489669936,37055367,423,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24526733751,37091975,425,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24563834686,37100871,427,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24600944165,37070535,429,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24638023276,37087783,431,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24675120307,37070504,433,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24712200795,37073799,435,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24749283650,37072679,437,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24786364745,37088199,439,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24823462096,37082407,441,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24860553911,37066791,443,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24897628702,37024103,445,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24934661221,37020391,447,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+24971690860,37030951,449,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25008730355,37039143,451,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25045778010,37022695,453,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25082809985,37018183,455,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25119837256,37016871,457,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25156862511,37013095,459,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25193883766,37023847,461,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25230917053,37024903,463,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25267950884,37079655,465,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25305038987,37105287,467,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25342153554,37063495,469,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25379226201,37022695,471,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25416257248,37031879,473,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25453297383,37020999,475,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25490327182,37024168,477,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25527360150,37030791,479,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25564399037,37040487,481,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25601448100,37026407,483,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25638483883,37030375,485,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25675522738,37035143,487,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25712566521,37018695,489,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25749594752,37028135,491,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25786631495,37017095,493,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25823657262,37029959,495,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25860695285,37042951,497,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25897747676,37037959,499,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25934794403,37033671,501,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+25971836682,37018567,503,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26008864785,37054375,505,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26045927512,37121479,507,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26083057407,37045705,509,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26120111848,37027593,511,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26157149329,37018889,513,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26194182650,37036681,515,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26231227715,37028777,517,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26268265804,37025481,519,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26305299637,37029577,521,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26342337758,37025961,523,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26379371847,37017833,525,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26416400720,37051529,527,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26453460185,37022761,529,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26490491202,37031785,531,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26527531659,37032073,533,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26564572884,37033480,535,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26601614812,37041705,537,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26638664773,37024041,539,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26675698318,37035497,541,2992,2992,1,16,16,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_2d(const double *, const double *, double *, unsigned long)"
+26712766615,1015157749,544,,,,,,,,,,18333.332,0.000,Device,Pageable,NVIDIA H100 (0),1,,7,[CUDA memcpy Device-to-Host]
+31392337964,11279267,545,,,,,,,,,,18333.332,1613333.258,Device,,NVIDIA H100 (0),1,,7,[CUDA memset]
+31403623631,36475466,546,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31440113785,36397290,549,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31476520803,36464970,551,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31512994861,36459690,553,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31549467191,36466058,555,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31585943873,36465418,557,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31622418027,36478058,559,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31658904405,36482122,561,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31695395967,36437514,563,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31731849865,36448778,565,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31768307987,36472266,567,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31804788765,36467722,569,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31841265479,36481834,571,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31877754769,36449194,573,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31914211675,36470570,575,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31950690117,36475050,577,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+31987173903,36477290,579,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32023659289,36470282,581,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32060137731,36477674,583,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32096623821,36457388,585,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32133089017,36455787,587,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32169552420,36456715,589,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32206017039,36457132,591,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32242482843,36473067,593,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32278963494,36452555,595,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32315424017,36459788,597,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32351892637,36481067,599,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32388381576,36476875,601,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32424866483,36444459,603,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32461319070,36443884,605,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32497771498,36464139,607,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32534243669,36467947,609,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32570719776,36482284,611,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32607210028,36456491,613,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32643675607,36453611,615,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32680137186,36475692,617,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32716620974,36474283,619,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32753104121,36452555,621,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32789564292,36454380,623,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32826026512,36467371,625,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32862501467,36431947,627,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32898941926,36470636,629,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32935420818,36431371,631,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+32971860285,36435691,633,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33008304040,36476812,635,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33044789460,36444971,637,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33081242431,36457291,639,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33117707178,36473931,641,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33154189685,36461772,643,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33190659745,36465547,645,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33227133036,36466603,647,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33263607543,36456940,649,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33300073059,36452267,651,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33336533742,36455371,653,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33372996665,36461420,655,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33409466533,36468651,657,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33445943344,36473067,659,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33482424059,36467884,661,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33518899495,36444011,663,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33555351986,36445483,665,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33591805757,36473484,667,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33628287209,36473067,669,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33664767988,36453323,671,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33701230239,36447468,673,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33737688619,36456011,675,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33774152470,36471019,677,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33810632161,36424428,679,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33847065197,36472139,681,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33883549720,36477675,683,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33920034819,36458763,685,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33956502606,36458924,687,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+33992968986,36466059,689,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34029442789,36449163,691,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34065899984,36473997,693,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34102383613,36426764,695,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34138818889,36412973,697,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34175240022,36445069,699,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34211694371,36464268,701,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34248166415,36426797,703,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34284601180,36431565,705,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34321040553,36455404,707,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34357504501,36466701,709,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34393978754,36428845,711,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34430415439,36444108,713,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34466869019,36472749,715,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34503349416,36416909,717,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34539773813,36458284,719,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34576240065,36455501,721,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34612704142,36459437,723,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34649171835,36444940,725,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34685624391,36469997,727,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34722102676,36473837,729,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34758585569,36470636,731,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34795063821,36474893,733,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34831546778,36471885,735,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34868027079,36477100,737,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34904512211,36463693,739,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34940983840,36456301,741,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+34977448205,36478732,743,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+35013935545,36468237,745,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+35050411910,36463309,747,2237956,1,1,256,1,1,28,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_vec2(const double *, const double *, double *, unsigned long)"
+35086903827,1001199131,750,,,,,,,,,,18333.332,0.000,Device,Pageable,NVIDIA H100 (0),1,,7,[CUDA memcpy Device-to-Host]
+39757230956,11286724,751,,,,,,,,,,18333.332,1613333.258,Device,,NVIDIA H100 (0),1,,7,[CUDA memset]
+39768523920,37672878,752,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+39806209150,37978126,755,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+39844195628,37679309,757,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+39881882905,37730798,759,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+39919622567,38080014,761,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+39957711029,37499598,763,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+39995218851,37465965,765,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40032693904,37478254,767,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40070179838,37626830,769,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40107814764,37461935,771,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40145284123,37635696,773,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40182928363,37567823,775,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40220510618,37606671,777,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40258128233,37635727,779,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40295773912,37380591,781,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40333163143,37707440,783,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40370879479,37449519,785,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40408337574,37666287,787,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40446012949,37838799,789,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40483860324,37453519,791,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40521323379,37549968,793,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40558882819,37448111,795,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40596339954,37679695,797,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40634028705,38021231,799,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40672058192,37647472,801,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40709714880,37532079,803,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40747255983,37583407,805,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40784848318,37692079,807,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40822549645,37795567,809,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40860353660,37576528,811,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40897939052,37803247,813,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40935750811,37442063,815,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+40973202218,37596751,817,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41010807897,37424975,819,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41048241736,38079920,821,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41086334200,37482351,823,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41123828263,37806703,825,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41161643830,37645551,827,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41199297797,37495312,829,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41236802357,37466159,831,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41274277508,37469423,833,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41311755187,37662351,835,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41349427010,37439439,837,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41386874993,37503983,839,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41424387776,37450736,841,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41461846704,37669327,843,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41499525215,37410895,845,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41536945230,37480079,847,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41574433885,37457967,849,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41611901068,37478927,851,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41649388891,37544240,853,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41686942411,37759151,855,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41724710234,37627439,857,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41762347689,37755599,859,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41800112440,37721264,861,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41837846568,37655535,863,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41875510679,37471407,865,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41912991206,37490671,867,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41950490741,37445103,869,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+41987944292,38175152,871,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42026128628,37699791,873,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42063837411,37679648,875,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42101525411,37745199,877,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42139279250,37506062,879,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42176794656,37439695,881,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42214243503,37488238,883,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42251739965,37455791,885,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42289205100,37581742,887,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42326796090,37694127,889,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42364498825,37739823,891,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42402247256,37659887,893,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42439916519,37646831,895,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42477571638,37497326,897,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42515077220,37711823,899,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42552798195,37708175,901,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42590515842,37468526,903,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42627993104,37478383,905,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42665480127,37521614,907,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42703011501,37418127,909,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42740438620,37458254,911,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42777906026,37451023,913,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42815365977,37687599,915,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42853062376,37586574,917,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42890657494,37520943,919,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42928186917,37689743,921,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+42965887764,37743695,923,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43003639843,37670190,925,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43041318353,38225968,927,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43079553409,37472526,929,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43117034927,37649295,931,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43154692510,37650351,933,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43192355693,37710223,935,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43230075708,37643246,937,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43267726666,37724431,939,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43305459193,37736719,941,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43343204392,37741391,943,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43380953911,37482159,945,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43418443878,37543982,947,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43455995604,37482927,949,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43493487523,37663630,951,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43531159057,37629103,953,3200,1,1,128,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,"vadd_gridstride(const double *, const double *, double *, unsigned long)"
+43568818528,1002247539,956,,,,,,,,,,18333.332,0.000,Device,Pageable,NVIDIA H100 (0),1,,7,[CUDA memcpy Device-to-Host]
+48240234308,864,957,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240261028,832,959,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240269732,864,961,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240277316,832,963,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240285316,832,965,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240293572,864,967,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240301092,832,969,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240309732,832,971,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240317252,864,973,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240325668,864,975,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240333156,864,977,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240340676,832,979,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240348228,864,981,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240356196,864,983,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240363492,832,985,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240370916,832,987,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240378884,832,989,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240386532,864,991,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240393732,832,993,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240401092,864,995,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240408836,832,997,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240416324,864,999,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240423652,832,1001,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240431044,864,1003,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240439012,864,1005,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240446628,832,1007,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240453924,864,1009,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240461796,832,1011,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240469092,832,1013,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240476580,864,1015,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240484196,864,1017,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240492740,832,1019,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240500068,864,1021,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240507556,832,1023,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240514820,832,1025,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240522500,864,1027,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240529860,832,1029,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240537540,864,1031,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240545476,864,1033,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240552868,864,1035,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240560196,832,1037,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240567876,832,1039,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240575748,832,1041,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240583076,832,1043,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240591460,864,1045,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240600420,864,1047,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240608036,832,1049,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240615684,832,1051,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240623044,864,1053,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240631108,832,1055,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240638436,832,1057,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240645796,864,1059,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240653188,864,1061,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240661092,864,1063,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240668644,832,1065,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240676004,832,1067,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240683716,864,1069,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240691268,832,1071,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240698596,864,1073,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240705924,864,1075,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240713732,832,1077,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240721156,864,1079,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240728548,864,1081,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240741508,864,1083,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240749284,864,1085,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240756868,864,1087,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240764196,832,1089,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240771940,864,1091,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240779428,864,1093,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240786980,832,1095,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240794340,832,1097,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240802148,832,1099,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240809476,864,1101,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240816900,864,1103,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240826148,864,1105,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240833988,864,1107,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240841348,832,1109,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240848804,832,1111,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240856804,864,1113,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240864260,864,1115,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240872740,832,1117,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240880452,864,1119,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240888356,864,1121,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240895780,832,1123,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240903044,864,1125,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240910564,832,1127,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240918468,832,1129,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240925892,832,1131,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240933252,832,1133,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240941508,832,1135,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240949028,832,1137,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240956516,832,1139,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240963876,864,1141,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240971812,864,1143,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240979140,864,1145,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240986628,864,1147,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48240993988,864,1149,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241001956,832,1151,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241009156,864,1153,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241016484,832,1155,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241024292,832,1157,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241032388,864,1159,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241039940,832,1161,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241047460,832,1163,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241055236,832,1165,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241062756,832,1167,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241070020,832,1169,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241077476,832,1171,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241085220,832,1173,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241092804,864,1175,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241100132,864,1177,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241107908,832,1179,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241119492,864,1181,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241127044,864,1183,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241134532,832,1185,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241142308,864,1187,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241149636,864,1189,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241157092,864,1191,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241164516,832,1193,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241172356,832,1195,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241179588,864,1197,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241187172,832,1199,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241194884,832,1201,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241202148,832,1203,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241209412,864,1205,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241216996,832,1207,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241224868,832,1209,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241233892,864,1211,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241241476,832,1213,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241248996,832,1215,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241256708,832,1217,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241264196,832,1219,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241271460,832,1221,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241279364,864,1223,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241286788,832,1225,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241294148,832,1227,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241301476,832,1229,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241309380,864,1231,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241316932,864,1233,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241324388,832,1235,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241331684,864,1237,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241339620,832,1239,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241346980,832,1241,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241354340,832,1243,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241362020,832,1245,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241369540,832,1247,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241376772,832,1249,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241384132,864,1251,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241391972,832,1253,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241399396,832,1255,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241406788,864,1257,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241414276,864,1259,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241422020,832,1261,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241430660,832,1263,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241438052,864,1265,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241445860,864,1267,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241453188,832,1269,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241460804,864,1271,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241468260,832,1273,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241476196,832,1275,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241483620,864,1277,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241491428,832,1279,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241498852,832,1281,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241506660,864,1283,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241514020,832,1285,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241521508,832,1287,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241529316,832,1289,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241536644,864,1291,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241544100,832,1293,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241551620,832,1295,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241559300,832,1297,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241566756,832,1299,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241574020,864,1301,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241582148,832,1303,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241589604,832,1305,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241596996,832,1307,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241604420,864,1309,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241612452,832,1311,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241619748,864,1313,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241627172,864,1315,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241634436,864,1317,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241642372,864,1319,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241649860,832,1321,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241657252,864,1323,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241665220,864,1325,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241672804,832,1327,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241680292,832,1329,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241687588,864,1331,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241695396,832,1333,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241702820,864,1335,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241710276,864,1337,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241722724,832,1339,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241730596,832,1341,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241738180,832,1343,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241745412,864,1345,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241753252,864,1347,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241760580,832,1349,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241768324,864,1351,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241775748,832,1353,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241783524,832,1355,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241791044,832,1357,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241798628,832,1359,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241805924,864,1361,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241813764,832,1363,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241822340,832,1365,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241829828,864,1367,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241837828,832,1369,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241845252,832,1371,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241852676,832,1373,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241860324,864,1375,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241868228,832,1377,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241875588,832,1379,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241882852,864,1381,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241890308,864,1383,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241898180,832,1385,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241905540,832,1387,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241912964,864,1389,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241920932,864,1391,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241928228,832,1393,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241935652,864,1395,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241942916,864,1397,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241950788,864,1399,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241958340,832,1401,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241965860,864,1403,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241973252,864,1405,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241981444,832,1407,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241989828,832,1409,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48241997220,832,1411,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242004964,832,1413,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242012612,832,1415,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242020068,864,1417,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242027396,864,1419,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242035204,864,1421,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242042884,832,1423,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242050404,832,1425,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242057732,832,1427,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242065540,832,1429,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242073028,864,1431,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242080388,864,1433,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242088388,864,1435,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242095748,864,1437,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242103332,864,1439,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242110756,864,1441,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242118436,832,1443,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242125732,864,1445,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242133252,864,1447,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242140612,832,1449,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242148356,864,1451,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242155748,832,1453,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242163300,832,1455,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242171172,864,1457,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242178500,864,1459,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242185860,864,1461,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242193508,832,1463,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242201348,832,1465,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242210308,832,1467,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242217700,864,1469,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242225316,864,1471,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242233093,832,1473,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242240517,832,1475,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242247877,832,1477,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242255909,832,1479,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242263269,864,1481,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242270789,832,1483,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242278213,832,1485,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242286373,832,1487,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242293765,864,1489,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242301157,832,1491,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242308453,832,1493,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242316357,864,1495,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242324005,864,1497,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242331557,832,1499,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242339397,864,1501,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242349797,832,1503,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242357029,864,1505,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242364389,864,1507,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242372165,864,1509,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242379717,832,1511,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242387077,832,1513,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242394533,832,1515,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242402469,832,1517,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242410277,864,1519,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242417605,864,1521,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242425477,864,1523,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242432901,864,1525,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242440325,864,1527,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242447781,864,1529,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242455557,832,1531,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242463045,864,1533,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242470629,864,1535,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242477925,832,1537,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242485701,832,1539,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242493093,864,1541,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242500581,832,1543,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242508453,864,1545,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242515813,832,1547,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242523237,832,1549,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242530885,832,1551,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242538661,832,1553,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242545989,832,1555,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242554405,864,1557,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242562469,832,1559,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242569861,832,1561,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242577285,832,1563,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242584869,864,1565,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242592997,832,1567,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242600325,864,1569,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242607653,864,1571,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242615077,864,1573,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242623141,832,1575,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242630501,864,1577,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242637861,832,1579,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242647493,832,1581,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242655909,832,1583,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242663333,864,1585,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242670821,832,1587,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242678789,832,1589,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242686341,864,1591,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242693701,832,1593,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242702629,864,1595,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242710437,864,1597,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242717989,832,1599,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242725413,832,1601,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242733381,864,1603,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242740645,864,1605,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242748133,864,1607,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242755493,864,1609,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242763269,832,1611,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242770661,864,1613,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242778277,832,1615,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242785573,832,1617,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242793349,832,1619,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242800677,864,1621,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242808133,832,1623,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242815941,832,1625,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242825189,864,1627,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242832517,832,1629,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242840069,832,1631,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242847845,864,1633,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242855301,864,1635,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242862501,864,1637,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242870021,864,1639,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242877861,832,1641,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242885285,832,1643,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242892645,832,1645,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242900549,864,1647,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242907813,832,1649,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242915141,832,1651,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242922469,832,1653,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242930373,864,1655,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242937829,832,1657,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242945285,832,1659,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242952741,832,1661,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242960741,832,1663,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242968165,832,1665,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242975493,832,1667,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242983269,832,1669,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242990789,864,1671,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48242998053,864,1673,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243005509,832,1675,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243013317,832,1677,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243020837,864,1679,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243028101,864,1681,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243035461,832,1683,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243043173,832,1685,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243050725,864,1687,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243058181,832,1689,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243066117,832,1691,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243073509,832,1693,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243081093,864,1695,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243088485,832,1697,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243096325,832,1699,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243103685,864,1701,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243112357,832,1703,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243119781,832,1705,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243127685,832,1707,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243135045,832,1709,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243142597,832,1711,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243150373,864,1713,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243157701,832,1715,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243165061,864,1717,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243172485,864,1719,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243180581,864,1721,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243189445,864,1723,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243196869,832,1725,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243204389,864,1727,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243212133,864,1729,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243219493,864,1731,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243226789,832,1733,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243234789,832,1735,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243242085,864,1737,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243249413,864,1739,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243256805,864,1741,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243264773,864,1743,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243272101,864,1745,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243279493,864,1747,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243286853,864,1749,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243294885,832,1751,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243302245,864,1753,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243309669,864,1755,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243317445,864,1757,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243325029,832,1759,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243332325,864,1761,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243339749,864,1763,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243347557,832,1765,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243355045,832,1767,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243362405,832,1769,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243369893,864,1771,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243377573,864,1773,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243385189,832,1775,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243392421,832,1777,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243400261,832,1779,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243407653,864,1781,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243415109,864,1783,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243422469,832,1785,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243430181,832,1787,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243437509,832,1789,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243444997,832,1791,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243455461,832,1793,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243463205,832,1795,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243470437,832,1797,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243477957,832,1799,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243485765,864,1801,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243493285,864,1803,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243500677,832,1805,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243508197,864,1807,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243515973,832,1809,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243523237,832,1811,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243530597,864,1813,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243538533,832,1815,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243545925,832,1817,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243553285,864,1819,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243560773,832,1821,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243568677,832,1823,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243576069,832,1825,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243583429,832,1827,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243590725,832,1829,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243598661,864,1831,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243606085,864,1833,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243613541,864,1835,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243621413,864,1837,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243628997,864,1839,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243636229,832,1841,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243643685,832,1843,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243651461,832,1845,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243658949,832,1847,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243667333,864,1849,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243676133,832,1851,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243683973,832,1853,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243691557,832,1855,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243698949,832,1857,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243706885,832,1859,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243714149,832,1861,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243721605,832,1863,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243728997,864,1865,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243736805,864,1867,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243744293,864,1869,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243751909,832,1871,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243759141,864,1873,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243766917,864,1875,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243774245,832,1877,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243781797,864,1879,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243789669,832,1881,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243797125,864,1883,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243804549,832,1885,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243812037,832,1887,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243819717,864,1889,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243827045,832,1891,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243834469,832,1893,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243841989,832,1895,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243849733,864,1897,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243857093,832,1899,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243864485,864,1901,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243872389,864,1903,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243879781,832,1905,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243887109,832,1907,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243894565,832,1909,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243902437,832,1911,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243909861,832,1913,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243917221,864,1915,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243924581,832,1917,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243932517,832,1919,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243939973,832,1921,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243947205,864,1923,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243954949,864,1925,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243962437,864,1927,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243969765,864,1929,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243977189,864,1931,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243985061,832,1933,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243992709,832,1935,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48243999973,832,1937,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244007333,832,1939,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244015109,864,1941,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244022725,832,1943,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244030117,864,1945,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244038053,832,1947,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244045413,864,1949,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244052997,864,1951,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244060389,832,1953,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244068229,832,1955,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244075525,832,1957,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244083205,832,1959,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244090533,832,1961,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244098373,832,1963,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244105861,832,1965,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244113445,832,1967,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244121189,832,1969,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244128549,832,1971,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244135845,864,1973,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244143269,864,1975,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244151173,832,1977,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244159973,864,1979,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244167365,864,1981,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244175045,832,1983,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244182821,832,1985,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244190053,864,1987,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244197317,832,1989,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244205253,832,1991,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244212613,832,1993,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244220965,864,1995,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244228325,832,1997,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244236293,864,1999,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244243653,832,2001,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244250949,832,2003,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244258277,832,2005,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244266245,832,2007,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244273573,832,2009,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244280869,864,2011,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244288773,864,2013,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244296357,832,2015,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244303557,864,2017,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244310949,832,2019,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244318757,864,2021,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244326245,832,2023,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244333509,864,2025,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244340869,864,2027,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244348741,832,2029,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244356293,864,2031,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244363685,832,2033,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244371429,832,2035,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244378725,832,2037,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244386213,832,2039,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244393669,832,2041,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244401509,864,2043,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244408997,864,2045,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244416453,832,2047,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244423685,864,2049,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244431493,832,2051,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244438757,864,2053,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244446309,864,2055,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244453989,832,2057,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244461349,832,2059,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244468677,864,2061,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244476357,832,2063,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244484165,864,2065,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244491526,864,2067,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244498790,864,2069,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244506822,832,2071,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244514278,832,2073,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244521638,864,2075,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244529030,832,2077,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244536934,864,2079,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244544294,832,2081,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244551526,832,2083,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244558790,864,2085,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244566726,832,2087,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244574054,832,2089,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244581446,832,2091,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244589318,832,2093,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244596934,864,2095,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244604230,832,2097,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244611718,832,2099,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244619494,832,2101,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244627142,832,2103,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244634502,832,2105,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244643334,832,2107,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244651206,832,2109,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244658790,832,2111,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244666342,832,2113,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244674150,864,2115,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244681606,832,2117,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244689094,864,2119,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244696582,832,2121,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244704230,864,2123,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244711590,864,2125,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244719174,832,2127,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244726630,832,2129,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244734278,832,2131,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244741574,864,2133,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244749158,864,2135,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244757030,864,2137,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244764326,864,2139,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244771686,832,2141,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244779302,864,2143,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244786886,832,2145,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244794118,832,2147,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244801542,832,2149,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244809190,832,2151,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244816966,864,2153,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244824582,832,2155,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244832006,832,2157,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244840038,832,2159,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244847334,832,2161,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244854630,864,2163,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244861958,864,2165,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244870022,832,2167,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244877382,864,2169,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244884966,864,2171,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244892358,864,2173,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244900294,832,2175,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244914822,832,2177,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244922214,864,2179,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244929766,864,2181,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244937158,864,2183,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244944518,832,2185,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244951910,832,2187,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244959302,832,2189,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244967078,832,2191,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244974342,864,2193,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244981702,832,2195,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244988966,832,2197,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48244996422,832,2199,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245003654,864,2201,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245010982,864,2203,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245018310,864,2205,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245025926,832,2207,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245033190,832,2209,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245040550,832,2211,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245047814,832,2213,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245055238,832,2215,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245062694,832,2217,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245070182,832,2219,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245077606,832,2221,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245085126,832,2223,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245092518,864,2225,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245099910,832,2227,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245107206,832,2229,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245114758,864,2231,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245122118,864,2233,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245131302,832,2235,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245138694,864,2237,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245146246,864,2239,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245153478,864,2241,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245160902,832,2243,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245168230,832,2245,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245175750,864,2247,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245183046,832,2249,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245190470,864,2251,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245197926,832,2253,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245205414,864,2255,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245212806,832,2257,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245220166,832,2259,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245227462,832,2261,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245234854,832,2263,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245242278,832,2265,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245249798,832,2267,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245257222,832,2269,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245264742,864,2271,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245272102,832,2273,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245279462,832,2275,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245286758,864,2277,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245294246,864,2279,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245301638,832,2281,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245309126,864,2283,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245316486,864,2285,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245324262,832,2287,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245331494,864,2289,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245338790,832,2291,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245346310,864,2293,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245353766,864,2295,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245361126,832,2297,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245368422,864,2299,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245375782,864,2301,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245383558,832,2303,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245390950,864,2305,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245398342,832,2307,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245405606,832,2309,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245413094,864,2311,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245420486,832,2313,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245427878,832,2315,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245435302,832,2317,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245442854,832,2319,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245450086,832,2321,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245457414,832,2323,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245464806,864,2325,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245472390,832,2327,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245479814,832,2329,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245487174,832,2331,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245494630,832,2333,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245502150,832,2335,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245509414,832,2337,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245516774,832,2339,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245524102,832,2341,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245531590,832,2343,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245538918,832,2345,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245546374,832,2347,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245553830,832,2349,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245561414,832,2351,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245568710,832,2353,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245575974,864,2355,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245583334,832,2357,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245590822,864,2359,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245598150,832,2361,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245607302,864,2363,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245614694,864,2365,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245622374,864,2367,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245629670,864,2369,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245636998,832,2371,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245644294,864,2373,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245651878,832,2375,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245659270,832,2377,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245666630,864,2379,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245674022,864,2381,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245681574,832,2383,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245688870,864,2385,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245696422,832,2387,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245703686,832,2389,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245711206,864,2391,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245718630,832,2393,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245726022,832,2395,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245733446,832,2397,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245740870,832,2399,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245748134,832,2401,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245755334,864,2403,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245762630,832,2405,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245770086,832,2407,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245777478,864,2409,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245789318,832,2411,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245796678,832,2413,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245804134,832,2415,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245811494,832,2417,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245818726,864,2419,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245826278,832,2421,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245833830,864,2423,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245841158,832,2425,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245848742,832,2427,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245856166,864,2429,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245863654,832,2431,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245871238,832,2433,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245878566,832,2435,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245885894,832,2437,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245893414,832,2439,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245900614,864,2441,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245908134,832,2443,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245915718,832,2445,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245923366,864,2447,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245930662,864,2449,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245937958,832,2451,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245945446,832,2453,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245953158,832,2455,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245960518,864,2457,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245967942,832,2459,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245975206,864,2461,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245982822,832,2463,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245990182,832,2465,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48245997574,832,2467,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246004902,832,2469,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246012358,864,2471,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246019654,832,2473,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246027014,832,2475,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246034438,864,2477,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246042022,832,2479,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246049254,864,2481,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246056646,832,2483,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246063910,864,2485,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246071366,832,2487,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246078630,832,2489,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246087430,832,2491,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246094822,832,2493,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246102374,832,2495,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246109702,832,2497,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246116998,832,2499,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246124326,864,2501,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246131846,832,2503,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246139206,864,2505,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246146598,832,2507,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246153894,832,2509,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246161446,864,2511,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246168742,832,2513,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246176038,864,2515,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246183462,832,2517,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246190950,832,2519,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246198406,832,2521,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246205862,864,2523,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246213222,832,2525,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246220902,864,2527,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246228166,864,2529,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246235558,832,2531,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246242822,832,2533,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246250342,864,2535,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246257702,832,2537,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246264966,864,2539,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246272486,864,2541,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246280006,864,2543,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246287302,832,2545,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246294758,864,2547,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246302214,832,2549,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246309702,864,2551,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246317062,864,2553,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246324550,832,2555,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246331846,864,2557,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246339398,832,2559,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246346822,832,2561,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246354054,864,2563,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246361510,832,2565,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246369030,864,2567,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246376326,864,2569,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246383686,864,2571,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246391174,832,2573,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246398790,832,2575,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246406150,832,2577,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246413478,864,2579,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246420966,832,2581,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246428550,832,2583,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246435846,864,2585,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246443206,832,2587,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246450854,832,2589,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246458406,864,2591,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246465734,864,2593,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246473126,832,2595,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246480358,864,2597,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246487814,864,2599,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246495174,864,2601,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246502566,864,2603,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246509958,864,2605,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246517446,832,2607,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246524742,864,2609,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246531910,864,2611,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246539526,832,2613,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246546950,864,2615,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246554310,864,2617,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246563334,832,2619,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246570662,864,2621,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246578278,832,2623,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246585542,832,2625,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246592902,864,2627,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246600358,832,2629,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246607718,864,2631,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246615046,864,2633,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246622534,832,2635,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246629798,864,2637,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246637222,832,2639,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246644486,864,2641,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246651782,832,2643,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246659174,864,2645,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246666630,832,2647,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246674022,832,2649,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246681350,864,2651,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246688774,832,2653,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246696582,864,2655,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246703910,832,2657,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246711270,832,2659,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246718726,832,2661,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246726150,864,2663,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246733510,864,2665,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246740870,864,2667,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246748199,832,2669,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246755751,832,2671,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246763047,832,2673,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246770439,864,2675,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246777607,832,2677,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246785127,864,2679,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246792359,864,2681,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246799751,832,2683,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246807207,832,2685,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246814695,864,2687,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246825223,864,2689,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246834183,864,2691,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246842663,864,2693,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246852135,864,2695,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246860935,864,2697,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246869799,832,2699,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246878727,864,2701,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246887335,832,2703,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246896231,832,2705,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246905415,864,2707,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246914151,832,2709,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246923207,832,2711,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246931527,832,2713,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246939143,864,2715,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246946631,832,2717,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246954087,832,2719,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246961415,864,2721,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246968711,864,2723,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246976007,864,2725,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246983591,832,2727,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246990983,864,2729,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48246998407,832,2731,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247005767,864,2733,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247013511,832,2735,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247020871,832,2737,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247028231,832,2739,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247035527,864,2741,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247042983,864,2743,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247050343,864,2745,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247060743,864,2747,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247068199,864,2749,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247075719,832,2751,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247083079,864,2753,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247090503,832,2755,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247097895,864,2757,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247105447,832,2759,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247112999,832,2761,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247120359,832,2763,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247127783,864,2765,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247135335,864,2767,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247142695,864,2769,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247150087,832,2771,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247157351,864,2773,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247164775,832,2775,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247172135,864,2777,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247179559,832,2779,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247186919,864,2781,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247194535,864,2783,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247201959,832,2785,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247209191,832,2787,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247216615,864,2789,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247224263,832,2791,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247231495,832,2793,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247238855,832,2795,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247246247,832,2797,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247253671,832,2799,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247260999,832,2801,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247268295,832,2803,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247275751,832,2805,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247283271,832,2807,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247290535,864,2809,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247297959,832,2811,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247305447,864,2813,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247312935,864,2815,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247320359,864,2817,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247327847,832,2819,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247335175,864,2821,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247342631,832,2823,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247349895,864,2825,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247357447,864,2827,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247364967,864,2829,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247372743,832,2831,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247380135,832,2833,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247387463,832,2835,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247394887,832,2837,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247402439,832,2839,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247409895,832,2841,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247417319,832,2843,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247424711,832,2845,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247432391,832,2847,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247439623,832,2849,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247446983,864,2851,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247454407,864,2853,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247461895,832,2855,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247469223,864,2857,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247476679,832,2859,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247483975,832,2861,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247491527,832,2863,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247498791,832,2865,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247506119,832,2867,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247513511,864,2869,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247520999,864,2871,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247528455,864,2873,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247537575,864,2875,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247545159,832,2877,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247552647,864,2879,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247559911,864,2881,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247567271,864,2883,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247574567,864,2885,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247582023,864,2887,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247589415,864,2889,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247596775,864,2891,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247604231,832,2893,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247611879,864,2895,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247619111,864,2897,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247626567,864,2899,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247633959,832,2901,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247641383,864,2903,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247648679,832,2905,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247656103,864,2907,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247663559,832,2909,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247671079,864,2911,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247678407,832,2913,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247685607,832,2915,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247692967,864,2917,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247700551,864,2919,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247708039,864,2921,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247715623,832,2923,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247722887,832,2925,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247730471,864,2927,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247737799,864,2929,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247745031,864,2931,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247752359,832,2933,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247759751,864,2935,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247767271,832,2937,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247774759,864,2939,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247782087,864,2941,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247789735,864,2943,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247796967,832,2945,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247804359,832,2947,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247811847,864,2949,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247819399,864,2951,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247828359,864,2953,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247837415,864,2955,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()
+48247846311,832,2957,1,1,1,1,1,1,16,0.000,0.000,,,,,NVIDIA H100 (0),1,,7,empty_kernel()

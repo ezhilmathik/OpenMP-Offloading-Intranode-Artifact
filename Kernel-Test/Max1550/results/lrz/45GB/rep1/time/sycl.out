@@ -1,0 +1,10 @@
+GPU : Intel(R) Data Center GPU Max 1550 (512 EUs, 64 GB)
+N = 43264, each matrix 14.974 GB, reps = 1, 161960.834 GFLOP per multiply
+H2D copy                       969.309 ms  (A and B, not included in kernel times)
+kernel                       time/call        GFLOP/s   check vs CPU
+naive (32x8 threads)        111873.092 ms      1447.7   bitwise exact (512/512 exact, max rel err 0.0e+00)  [min 111873.092 max 111873.092, wall 456118.785 ms] {groups 7311616, wg 256, per_item 1}
+naive (128x1, OMP-like)     322446.103 ms       502.3   bitwise exact (512/512 exact, max rel err 0.0e+00)  [min 322446.103 max 322446.103, wall 666974.376 ms] {groups 14623232, wg 128, per_item 1}
+tiled32 (your original)      88868.978 ms      1822.5   bitwise exact (512/512 exact, max rel err 0.0e+00)  [min 88868.978 max 88868.978, wall 88993.191 ms] {groups 1827904, wg 1024, per_item 1}
+regtile 64x64x16, 4x4       234779.385 ms       689.8   bitwise exact (512/512 exact, max rel err 0.0e+00)  [min 234779.385 max 234779.385, wall 235107.288 ms] {groups 456976, wg 256, per_item 16}
+regtile 128x128x8, 8x8      180393.924 ms       897.8   bitwise exact (512/512 exact, max rel err 0.0e+00)  [min 180393.924 max 180393.924, wall 524723.280 ms] {groups 114244, wg 256, per_item 64}
+launch overhead                   6.29 us  (empty kernel, submit + wait, mean of 1000)

@@ -1,0 +1,34 @@
+site: mn5
+bench: vecadd
+stage: ncu
+size_gb: 55
+N: 2291666560
+rep: 1
+reps: 100
+date: 2026-09-11T21:02:50+02:00
+host: as01r2b26
+job: 45751800
+gpu_index: 0
+arch: sm_90
+gpu: NVIDIA H100
+gpu_info: 595.71.05, 65247 MiB, 1980 MHz, 1593 MHz
+cpu: Intel(R) Xeon(R) Platinum 8460Y+
+omp_num_threads: 1
+modules: EB/apps GCC/13.2.0 cuda/12.8 clang/18.1.8-cuda12.8
+nvcc: Build cuda_12.8.r12.8/compiler.35404655_0
+clang: clang version 18.1.8
+nsys: NVIDIA Nsight Systems version 2024.6.2.225-246235244400v0
+ncu: Version 2026.1.1.0 (build 37634170) (public-release)
+gpu_metrics_option: --gpu-metrics-devices=all
+sha256: c2fe9e10d9064af218af0b1d4112230935674fef5f9605f1d51ce198e4f5daa0  vec-cuda.cu
+sha256: 324e6ad31191b022706e37c6ca339b2ea1b3388dc0a1c89e86c141b240e5adb3  vec-omp.cpp
+--- module list
+
+Currently Loaded Modules:
+  1) EB/apps                        5) GCC/13.2.0
+  2) GCCcore/13.2.0                 6) cuda/12.8
+  3) zlib/1.2.13-GCCcore-13.2.0     7) clang/18.1.8-cuda12.8
+  4) binutils/2.40-GCCcore-13.2.0
+
+ 
+

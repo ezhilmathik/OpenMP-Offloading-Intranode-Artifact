@@ -1,0 +1,7 @@
+GPU : AMD Instinct MI250X (gfx90a:sramecc+:xnack-, 110 CUs), theoretical DRAM bandwidth 1638 GB/s
+N = 74880, A = 44.856 GB, reps = 5, 44.857 GB moved per call
+H2D copy                      2564.418 ms  (A and x, not included in kernel times)
+kernel                       time/call           GB/s   check vs CPU (all of y)
+mv thread/row (yours)         474.0979 ms        94.6   bitwise exact (0 of 74880 wrong)
+mv warp/row                    34.3343 ms      1306.5   bitwise exact (0 of 74880 wrong)
+launch overhead                  11.07 us  (empty kernel, launch + synchronize, mean of 1000)

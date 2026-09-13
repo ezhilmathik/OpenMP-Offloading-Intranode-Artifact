@@ -1,0 +1,18 @@
+=== matmul | lrz | Intel(R) Data Center GPU Max 1550 | 45 GB (N = 43264) | rep 1 ===
+                              SYCL naive                 SYCL tiled32               OMP collapse(2)            SYCL 1-D (ref)           
+Kernel time, median [min-max]  456.12 s wall*             88.87 [88.87-88.87] s      662.21 s prog              666.97 s wall*           
+Wall per call, launch+wait    456.12 s                   88.99 s                    662.21 s                   666.97 s                 
+GFLOP/s                       355                        1822                       245                        243                      
+OMP slower by                 1.45x                      7.45x                      -                          0.99x                    
+Launch: blocks x threads      7311616 x 256 (256x1)      1827904 x 1024 (1024x1)    680 x 64 (64x1)            14623232 x 128 (128x1)   
+Elements per thread           1                          1                          43010                      1                        
+Occupancy achieved % VTune    n/a                        100.0                      99.9                       n/a                      
+DRAM throughput % VTune       n/a                        14.0                       59.2                       n/a                      
+L3 bandwidth GB/s VTune       n/a                        350                        994                        n/a                      
+XVE array active % VTune      n/a                        47.4                       22.6                       n/a                      
+Launch overhead us (wall)     6.3                        same as column 1           6.4                        same as column 1         
+Launch / sync call med us     n/a / n/a                  same as column 1           n/a / n/a                  same as column 1         
+Kernel mode | correctness     SYCL | bitwise exact       SYCL | bitwise exact       ? | bitwise exact          SYCL | bitwise exact     
+OpenMP first call (warm-up, incl. runtime setup): 662406.326 ms
+*  the SYCL event timestamp wrapped for this kernel (device timer width); the wall time per call is reported instead
+Compiled SIMD width (VTune): SYCL tiled32: 32 OMP collapse(2): 32

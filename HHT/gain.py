@@ -68,7 +68,7 @@ MACHINES = {
     # folder with no trailing digits is treated as approach "01".
     # Run with --list to see exactly what is found on disk.
     "H100": dict(color="tab:blue", patterns=["NVIDIA-H100-*"]),
-    "Intel-1550": dict(color="tab:orange", patterns=["Intel-1550-*"]),
+    "Max-1550": dict(color="tab:orange", patterns=["Intel-1550-*"]),
     "MI250X": dict(color="tab:green", patterns=["AMD-MI250X-*"]),
 }
 
@@ -116,7 +116,7 @@ VARIANT_LABEL = {}
 VARIANT_DESC = {}
 
 # How each machine is named in the legends. Keys are the MACHINES keys above.
-MACHINE_LEGEND = {"H100": "H100", "PVC 1550": "Intel-1550",
+MACHINE_LEGEND = {"H100": "H100", "PVC 1550": "Max 1550",
                   "MI250X": "MI250X"}
 
 # Display names only: the internal approach identifiers remain 01/02/03.
@@ -653,7 +653,7 @@ def plot_all_n_grid(df, variants, outdir, model, ref, ncols=2):
     fig.supylabel("speedup over 1 GPU  (t_1GPU / t).", fontsize=8)
     # fig.supxlabel("variant", fontsize=8)
     fig.supxlabel(
-    "OpenMP Offloading {2,4}-GPU Versions on H100, MI250X, and Intel-1550.",
+    "OpenMP Offloading {2,4}-GPU Versions on H100, MI250X, and Max 1550.",
     fontsize=7)
     fig.tight_layout(h_pad=1.2, w_pad=1.0)
     save(fig, outdir, f"allN_gain_{model}", bbox_inches="tight")

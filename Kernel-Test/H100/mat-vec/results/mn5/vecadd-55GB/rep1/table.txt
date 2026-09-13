@@ -1,0 +1,21 @@
+=== vecadd | mn5 | NVIDIA H100 | 55 GB (N = 2291666560) | rep 1 ===
+                              CUDA 1-D                   CUDA 2-D grid              CUDA double2               OMP teams distribute       CUDA OMP-layout (ref)    
+Kernel time, median [min-max]  36.10 [36.08-36.13] ms     37.03 [37.01-37.13] ms     36.46 [36.40-36.48] ms     39.18 [39.14-39.23] ms     37.62 [37.38-38.23] ms   
+Wall per call, launch+wait    36.11 ms                   37.05 ms                   36.47 ms                   39.47 ms                   37.63 ms                 
+GB/s (% of peak)              1524 (93%)                 1485 (91%)                 1508 (92%)                 1404 (86%)                 1462 (90%)               
+OMP slower by                 1.09x                      1.06x                      1.07x                      -                          1.04x                    
+Regs / smem B / local B       16 / 0 / 0                 16 / 0 / 0                 28 / 0 / 0                 36 / 24 / 0                16 / 0 / 0               
+Launch: blocks x threads      8951823 x 256 (256x1)      8952064 x 256 (16x16)      2237956 x 256 (256x1)      3200 x 128 (128x1)         3200 x 128 (128x1)       
+Elements per thread           1                          1                          4                          5595                       5595                     
+Occupancy theoretical %       100.0                      100.0                      100.0                      75.0                       100.0                    
+Occupancy achieved % nsys     81.9                       77.6                       81.3                       39.7                       89.8                     
+Occupancy achieved % ncu      81.8                       76.9                       81.2                       n/a                        98.1                     
+DRAM throughput % nsys        93.0                       90.9                       92.8                       85.8                       89.5                     
+DRAM throughput % ncu         93.3                       90.9                       92.6                       n/a                        89.2                     
+L1 / L2 hit % ncu             0.0 / 33.7                 0.0 / 33.5                 0.0 / 33.8                 n/a                        0.0 / 33.8               
+SM throughput % ncu           5.1                        7.4                        3.8                        n/a                        4.0                      
+Sectors per request ncu       8.00                       8.00                       16.00                      n/a                        8.00                     
+Launch overhead us (wall)     7.6                        same as column 1           same as column 1           28.2                       same as column 1         
+Launch / sync call med us     2.1 / 5.2                  same as column 1           same as column 1           4.2 / 22.0                 same as column 1         
+Kernel mode | correctness     CUDA | bitwise exact       CUDA | bitwise exact       CUDA | bitwise exact       SPMD | bitwise exact       CUDA | bitwise exact     
+OpenMP first call (warm-up, incl. runtime setup): 40.465 ms

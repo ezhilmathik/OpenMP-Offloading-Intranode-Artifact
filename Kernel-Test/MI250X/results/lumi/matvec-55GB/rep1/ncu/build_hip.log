@@ -1,0 +1,75 @@
+$ /appl/lumi/SW/LUMI-25.09/G/EB/rocm/6.4.4/bin/hipcc -O3 --offload-arch=gfx90a -ffp-contract=off -fopenmp -Rpass-analysis=kernel-resource-usage -g1 -o matvec_hip src/mv-hip.cpp -lm
+src/mv-hip.cpp:126:48: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  126 |     for (int r = 0; r < reps; ++r) { launch(); hipDeviceSynchronize(); }
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+src/mv-hip.cpp:217:65: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  217 |         for (int i = 0; i < L; ++i) { empty_kernel<<<1, 1>>>(); hipDeviceSynchronize(); }
+      |                                                                 ^~~~~~~~~~~~~~~~~~~~
+src/mv-hip.cpp:126:48: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  126 |     for (int r = 0; r < reps; ++r) { launch(); hipDeviceSynchronize(); }
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+src/mv-hip.cpp:195:27: note: in instantiation of function template specialization 'time_calls_ms<(lambda at src/mv-hip.cpp:203:34)>' requested here
+  195 |         const double ms = time_calls_ms(launch, reps);
+      |                           ^
+src/mv-hip.cpp:126:48: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  126 |     for (int r = 0; r < reps; ++r) { launch(); hipDeviceSynchronize(); }
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+src/mv-hip.cpp:195:27: note: in instantiation of function template specialization 'time_calls_ms<(lambda at src/mv-hip.cpp:206:24)>' requested here
+  195 |         const double ms = time_calls_ms(launch, reps);
+      |                           ^
+src/mv-hip.cpp:42:1: remark: Function Name: _Z13mv_thread_rowPKdS0_Pdmm [-Rpass-analysis=kernel-resource-usage]
+   42 | {
+      | ^
+src/mv-hip.cpp:42:1: remark:     SGPRs: 30 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:42:1: remark:     VGPRs: 20 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:42:1: remark:     AGPRs: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:42:1: remark:     ScratchSize [bytes/lane]: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:42:1: remark:     Dynamic Stack: False [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:42:1: remark:     Occupancy [waves/SIMD]: 8 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:42:1: remark:     SGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:42:1: remark:     VGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:42:1: remark:     LDS Size [bytes/block]: 2048 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:87:1: remark: Function Name: _Z11mv_warp_rowPKdS0_Pdmm [-Rpass-analysis=kernel-resource-usage]
+   87 | {
+      | ^
+src/mv-hip.cpp:87:1: remark:     SGPRs: 26 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:87:1: remark:     VGPRs: 36 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:87:1: remark:     AGPRs: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:87:1: remark:     ScratchSize [bytes/lane]: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:87:1: remark:     Dynamic Stack: False [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:87:1: remark:     Occupancy [waves/SIMD]: 8 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:87:1: remark:     SGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:87:1: remark:     VGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:87:1: remark:     LDS Size [bytes/block]: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:108:1: remark: Function Name: _Z12empty_kernelv [-Rpass-analysis=kernel-resource-usage]
+  108 | __global__ void empty_kernel() {}
+      | ^
+src/mv-hip.cpp:108:1: remark:     SGPRs: 4 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:108:1: remark:     VGPRs: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:108:1: remark:     AGPRs: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:108:1: remark:     ScratchSize [bytes/lane]: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:108:1: remark:     Dynamic Stack: False [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:108:1: remark:     Occupancy [waves/SIMD]: 8 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:108:1: remark:     SGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:108:1: remark:     VGPRs Spill: 0 [-Rpass-analysis=kernel-resource-usage]
+src/mv-hip.cpp:108:1: remark:     LDS Size [bytes/block]: 0 [-Rpass-analysis=kernel-resource-usage]
+4 warnings generated when compiling for gfx90a.
+src/mv-hip.cpp:126:48: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  126 |     for (int r = 0; r < reps; ++r) { launch(); hipDeviceSynchronize(); }
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+src/mv-hip.cpp:217:65: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  217 |         for (int i = 0; i < L; ++i) { empty_kernel<<<1, 1>>>(); hipDeviceSynchronize(); }
+      |                                                                 ^~~~~~~~~~~~~~~~~~~~
+src/mv-hip.cpp:126:48: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  126 |     for (int r = 0; r < reps; ++r) { launch(); hipDeviceSynchronize(); }
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+src/mv-hip.cpp:195:27: note: in instantiation of function template specialization 'time_calls_ms<(lambda at src/mv-hip.cpp:203:34)>' requested here
+  195 |         const double ms = time_calls_ms(launch, reps);
+      |                           ^
+src/mv-hip.cpp:126:48: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  126 |     for (int r = 0; r < reps; ++r) { launch(); hipDeviceSynchronize(); }
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+src/mv-hip.cpp:195:27: note: in instantiation of function template specialization 'time_calls_ms<(lambda at src/mv-hip.cpp:206:24)>' requested here
+  195 |         const double ms = time_calls_ms(launch, reps);
+      |                           ^
+4 warnings generated when compiling for host.

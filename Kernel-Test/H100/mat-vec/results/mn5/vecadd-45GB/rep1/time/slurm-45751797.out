@@ -1,0 +1,5 @@
+unload bsc/1.0 (PATH, MANPATH)
+load bsc/1.0 (PATH, MANPATH)
+=== vecadd mn5 45GB rep1 stage=time on as04r3b18 at Fri Sep 11 21:02:50 CEST 2026 ===
+  N=1874999936  arch=sm_90  results in /gpfs/projects/ehpc681/uni247030/HEXAPIC/CG-Halo/SIMT-SIMD/test-4-all/results/mn5/vecadd-45GB/rep1/time
+=== done 45GB time at Fri Sep 11 21:04:37 CEST 2026 ===

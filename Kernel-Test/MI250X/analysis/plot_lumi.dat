@@ -1,0 +1,2 @@
+GB N gf_naive gf_tiled32 gf_omp gf_rep1d gf_rt64 gf_rt128 slow_naive slow_tiled32 dram_naive dram_tiled32 dram_omp dram_rep1d occth_naive occth_tiled32 occth_omp occ_naive occ_tiled32 occ_omp l1_naive l1_tiled32 l1_rep1d launch_cuda launch_omp
+30 35328 478.55 2289.74 315.751 318.513 5316.07 3496.99 1.51559 7.25175 NaN NaN NaN NaN 100 100 100 NaN NaN NaN NaN NaN NaN 11.52 15.24

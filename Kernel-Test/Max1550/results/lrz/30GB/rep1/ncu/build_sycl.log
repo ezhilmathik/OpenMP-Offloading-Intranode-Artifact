@@ -1,0 +1,1 @@
+$ /dss/lrzsys/sys/spack/release/24.1.0/opt/x86_64/intel-oneapi-compilers/2024.1.0-gcc-fcb376w/compiler/2024.1/bin/icpx -fsycl -O3 -ffp-contract=off -fno-fast-math -fiopenmp -fno-sycl-id-queries-fit-in-int -o matmul_sycl src/mat-sycl.cpp -lm

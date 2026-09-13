@@ -1,0 +1,4 @@
+stty: 'standard input': Inappropriate ioctl for device
+=== matmul lrz 45GB rep1 stage=time on i20r02c02s08 at Sun 13 Sep 2026 03:27:06 AM CEST ===
+  N=43264  arch=pvc  results in /hppfs/work/pn67qe/di97zez/test-3/results/lrz/45GB/rep1/time
+=== done 45GB time at Sun 13 Sep 2026 04:58:44 AM CEST ===
