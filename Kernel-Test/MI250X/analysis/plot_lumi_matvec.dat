@@ -1,0 +1,4 @@
+GB N bw_thr bw_warp bw_omp bw_team pct_thr pct_warp pct_omp pct_team kern_thr_us kern_warp_us kern_omp_us kern_team_us wall_thr_us wall_warp_us wall_omp_us wall_team_us launch_cuda launch_omp
+30 61184 89.191 1307.21 77.9924 1275.92 5.44512 79.805 4.76144 77.895 335783 22910.6 383997 23472.3 336722 22921.5 384455 23585.6 11.89 14.93
+45 74880 94.2829 1309.21 86.9834 1314.48 5.75598 79.9273 5.31034 80.2493 475774 34262.9 515700 34125.4 474098 34334.3 514879 34321 11.07 15.45
+55 82816 NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN

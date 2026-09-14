@@ -1,0 +1,17 @@
+=== vecadd | lrz | Intel(R) Data Center GPU Max 1550 | 45 GB (N = 1874999936) | rep 1 ===
+                              SYCL nd_range              SYCL range                 SYCL vec2                  OMP teams distribute       SYCL OMP-layout (ref)    
+Kernel time, median [min-max]  42.43 [42.41-42.46] ms     42.51 [42.51-42.59] ms     44.05 [44.03-44.06] ms     43.09 ms prog              46.11 [46.06-46.52] ms   
+Wall per call, launch+wait    42.57 ms                   42.67 ms                   44.19 ms                   43.09 ms                   46.37 ms                 
+GB/s (% of peak)              1061 (65%)                 1059 (65%)                 1022 (62%)                 1044 (64%)                 976 (60%)                
+OMP slower by                 1.02x                      1.01x                      0.98x                      -                          0.93x                    
+Launch: blocks x threads      7324219 x 256 (256x1)      7324219 x 256 (256x1)      1831055 x 256 (256x1)      29296880 x 64 (64x1)       3200 x 256 (256x1)       
+Elements per thread           1                          1                          4                          1                          2289                     
+Occupancy achieved % VTune    91.9                       95.3                       93.9                       96.2                       94.4                     
+DRAM throughput % VTune       63.2                       63.1                       61.7                       62.8                       59.1                     
+L3 bandwidth GB/s VTune       1038                       1036                       1011                       1033                       1057                     
+XVE array active % VTune      11.1                       9.7                        6.5                        17.0                       8.7                      
+Launch overhead us (wall)     6.2                        same as column 1           same as column 1           6.2                        same as column 1         
+Launch / sync call med us     n/a / n/a                  same as column 1           same as column 1           n/a / n/a                  same as column 1         
+Kernel mode | correctness     SYCL | bitwise exact       SYCL | bitwise exact       SYCL | bitwise exact       ? | bitwise exact          SYCL | bitwise exact     
+OpenMP first call (warm-up, incl. runtime setup): 178.370 ms
+Compiled SIMD width (VTune): SYCL nd_range: 32 SYCL range: 32 SYCL vec2: 32 OMP teams distribute: 32 SYCL OMP-layout (ref): 32

@@ -1,0 +1,4 @@
+stty: 'standard input': Inappropriate ioctl for device
+=== matvec lrz 45GB rep1 stage=time on i20r02c03s10 at lör 12 sep 2026 15:38:56 CEST ===
+  N=74880  arch=pvc  results in /dss/dsshome1/03/di97zez/CG-Halo/SIMT-SMID/test/results/lrz/matvec-45GB/rep1/time
+=== done 45GB time at lör 12 sep 2026 15:39:39 CEST ===

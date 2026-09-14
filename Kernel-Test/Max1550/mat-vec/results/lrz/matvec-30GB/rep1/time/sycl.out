@@ -1,0 +1,7 @@
+GPU : Intel(R) Data Center GPU Max 1550 (512 EUs, 64 GB), theoretical DRAM bandwidth 1638 GB/s
+N = 61184, A = 29.948 GB, reps = 3, 29.949 GB moved per call
+H2D copy                       813.582 ms  (A and x, not included in kernel times)
+kernel                       time/call           GB/s   check vs CPU (all of y)
+mv thread/row                 200.4128 ms       149.4   bitwise exact (0 of 61184 wrong)  [min 191.9091 max 202.0462, wall 198.4805 ms] {groups 239, wg 256, per_item 1}
+mv sub-group/row               31.0968 ms       963.1   bitwise exact (0 of 61184 wrong)  [min 31.0869 max 31.2083, wall 31.2480 ms] {groups 7648, wg 256, sg 32, rows/wg 8}
+launch overhead                   5.97 us  (empty kernel, submit + wait, mean of 1000)

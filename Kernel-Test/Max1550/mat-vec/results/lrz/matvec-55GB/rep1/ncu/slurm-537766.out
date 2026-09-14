@@ -1,0 +1,4 @@
+stty: 'standard input': Inappropriate ioctl for device
+=== matvec lrz 55GB rep1 stage=ncu on i20r02c04s06 at lör 12 sep 2026 15:38:56 CEST ===
+  N=82816  arch=pvc  results in /dss/dsshome1/03/di97zez/CG-Halo/SIMT-SMID/test/results/lrz/matvec-55GB/rep1/ncu
+=== done 55GB ncu at lör 12 sep 2026 15:42:15 CEST ===

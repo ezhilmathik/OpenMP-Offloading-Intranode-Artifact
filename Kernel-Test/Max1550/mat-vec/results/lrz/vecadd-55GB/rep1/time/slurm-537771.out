@@ -1,0 +1,4 @@
+stty: 'standard input': Inappropriate ioctl for device
+=== vecadd lrz 55GB rep1 stage=time on i20r01c06s04 at lör 12 sep 2026 15:39:57 CEST ===
+  N=2291666560  arch=pvc  results in /dss/dsshome1/03/di97zez/CG-Halo/SIMT-SMID/test/results/lrz/vecadd-55GB/rep1/time
+=== done 55GB time at lör 12 sep 2026 15:40:47 CEST ===

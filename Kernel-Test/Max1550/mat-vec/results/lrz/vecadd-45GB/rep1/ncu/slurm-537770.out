@@ -1,0 +1,4 @@
+stty: 'standard input': Inappropriate ioctl for device
+=== vecadd lrz 45GB rep1 stage=ncu on i20r02c05s10 at lör 12 sep 2026 15:38:56 CEST ===
+  N=1874999936  arch=pvc  results in /dss/dsshome1/03/di97zez/CG-Halo/SIMT-SMID/test/results/lrz/vecadd-45GB/rep1/ncu
+=== done 45GB ncu at lör 12 sep 2026 15:41:39 CEST ===
