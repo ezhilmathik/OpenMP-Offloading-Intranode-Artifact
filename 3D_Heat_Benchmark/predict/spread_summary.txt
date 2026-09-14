@@ -1,0 +1,66 @@
+=== AMD-MI250X/Source-Results/HIP/spread.sh ===
+configurations      : 63
+repetitions each    : 5
+spread (max-min)/median:
+  median            : 2.70 %
+  mean              : 2.93 %
+  90th percentile   : 5.70 %
+  maximum           : 10.90 %   (2-hip-stream gpus=2 N=768)
+  <= 1 %            : 12 of 63 (19%)
+  <= 2 %            : 26 of 63 (41%)
+  <= 5 %            : 55 of 63 (87%)
+=== AMD-MI250X/Source-Results/OpenMP/spread.sh ===
+configurations      : 63
+repetitions each    : 5
+spread (max-min)/median:
+  median            : 2.90 %
+  mean              : 2.83 %
+  90th percentile   : 4.20 %
+  maximum           : 6.40 %   (1-omp gpus=1 N=640)
+  <= 1 %            : 4 of 63 (6%)
+  <= 2 %            : 21 of 63 (33%)
+  <= 5 %            : 60 of 63 (95%)
+=== Intel-1550/Source-Results/OpenMP/spread.sh ===
+configurations      : 63
+repetitions each    : 5
+spread (max-min)/median:
+  median            : 4.40 %
+  mean              : 5.88 %
+  90th percentile   : 11.50 %
+  maximum           : 17.60 %   (4-omp-stream gpus=4 N=768)
+  <= 1 %            : 0 of 63 (0%)
+  <= 2 %            : 5 of 63 (8%)
+  <= 5 %            : 34 of 63 (54%)
+=== Intel-1550/Source-Results/SYCL/spread.sh ===
+configurations      : 63
+repetitions each    : 5
+spread (max-min)/median:
+  median            : 5.90 %
+  mean              : 7.21 %
+  90th percentile   : 14.50 %
+  maximum           : 21.60 %   (4-sycl-stream gpus=4 N=640)
+  <= 1 %            : 2 of 63 (3%)
+  <= 2 %            : 5 of 63 (8%)
+  <= 5 %            : 27 of 63 (43%)
+=== NVIDIA-H100/Source-Results/CUDA/spread.sh ===
+configurations      : 63
+repetitions each    : 5
+spread (max-min)/median:
+  median            : 0.60 %
+  mean              : 1.99 %
+  90th percentile   : 6.40 %
+  maximum           : 7.40 %   (4-cuda-stream gpus=4 N=896)
+  <= 1 %            : 38 of 63 (60%)
+  <= 2 %            : 42 of 63 (67%)
+  <= 5 %            : 53 of 63 (84%)
+=== NVIDIA-H100/Source-Results/OpenMP/spread.sh ===
+configurations      : 63
+repetitions each    : 5
+spread (max-min)/median:
+  median            : 0.90 %
+  mean              : 1.61 %
+  90th percentile   : 4.10 %
+  maximum           : 7.10 %   (1-omp gpus=1 N=512)
+  <= 1 %            : 34 of 63 (54%)
+  <= 2 %            : 42 of 63 (67%)
+  <= 5 %            : 61 of 63 (97%)
