@@ -1,0 +1,5 @@
+variant,gpus,N,samples,failed,min_sec,median_sec,max_sec,rel_spread_pct,steps
+2-omp-stream-omp-p2p,2,1408,5,0,33.6775,34.2403,36.0497,6.9,501
+2-omp-stream-omp-p2p,2,1536,5,0,44.3332,44.5462,47.8977,8.0,500
+4-omp-stream-omp-p2p,4,1408,5,0,17.5960,18.1425,18.5897,5.5,501
+4-omp-stream-omp-p2p,4,1536,5,0,22.8582,23.0978,24.8684,8.7,500

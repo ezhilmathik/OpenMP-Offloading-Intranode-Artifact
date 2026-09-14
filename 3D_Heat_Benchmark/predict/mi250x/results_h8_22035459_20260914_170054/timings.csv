@@ -1,0 +1,3 @@
+rep,job_id,variant,family,gpus,rocr_mask,N,dt,steps,wall_sec,reported_sec,status
+1,22035459,2-omp-stream-omp-p2p,2gpu,2,0,2,1536,1.861437e-05,500,486.0280,124.840043,ok
+1,22035459,4-omp-stream-omp-p2p,4gpu,4,0,2,4,6,1536,1.861437e-05,500,337.7780,N/A,runtime_error

@@ -1,0 +1,3 @@
+rep,job_id,hier,variant,family,gpus,ze_mask,N,dt,steps,wall_sec,reported_sec,status
+5,538216,COMPOSITE,2-omp-stream-omp-p2p,2gpu,2,0,1,1536,1.861437e-05,500,198.5730,44.445351,ok
+5,538216,COMPOSITE,4-omp-stream-omp-p2p,4gpu,4,0,1,2,3,1536,1.861437e-05,500,179.4280,23.097823,ok

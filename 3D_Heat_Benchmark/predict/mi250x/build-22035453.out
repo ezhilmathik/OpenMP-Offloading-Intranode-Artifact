@@ -1,0 +1,48 @@
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+LUMI/25.09:
+   As the LUMI/25.09 stack uses a version of the programming environment
+   that is newer than the current default on the system (25.03), please be
+   aware of https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20251020/102-CPE/#warning-1-you-do-not-always-get-what-you-expect
+   and adapt LD_LIBRARY_PATH as needed. The easiest way to do this, is to
+   simply load lumi-CrayPath after loading all other modules, and reloading
+   it after a module change.
+
+-------------------------------------------------------------------------------
+This module comes with rocprof-sys, rocprof-compute, asan and debug libraries
+installed.
+Please check https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/r/rocm/
+for instructions on how to use them.
+
+
+This module comes with rocprof-sys, rocprof-compute, asan and debug libraries
+installed.
+Please check https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/r/rocm/
+for instructions on how to use them.
+
+rm -f 2-omp 2-omp-stream 2-omp-stream-omp 2-omp-stream-omp-p2p 4-omp 4-omp-stream 4-omp-stream-omp 4-omp-stream-omp-p2p 1-omp serial
+cc -O3 -fopenmp -ffp-contract=off -o 2-omp 2-openmp.c -lm
+cc -O3 -fopenmp -ffp-contract=off -o 2-omp-stream 2-openmp-stream.c -lm
+cc -O3 -fopenmp -ffp-contract=off -o 2-omp-stream-omp 2-openmp-stream-omp.c -lm
+cc -O3 -fopenmp -ffp-contract=off -o 2-omp-stream-omp-p2p 2-openmp-stream-omp-p2p.c -lm
+cc -O3 -fopenmp -ffp-contract=off -o 4-omp 4-openmp.c -lm
+cc -O3 -fopenmp -ffp-contract=off -o 4-omp-stream 4-openmp-stream.c -lm
+cc -O3 -fopenmp -ffp-contract=off -o 4-omp-stream-omp 4-openmp-stream-omp.c -lm
+cc -O3 -fopenmp -ffp-contract=off -o 4-omp-stream-omp-p2p 4-openmp-stream-omp-p2p.c -lm
+cc -O3 -fopenmp -ffp-contract=off -o 1-omp 1-openmp.c -lm
+P2P runtime OK: /scratch/project_465003145/omptarget-p2p/lib
+
+Verifying binaries...
+  OK : 2-omp
+  OK : 2-omp-stream
+  OK : 2-omp-stream-omp
+  OK : 2-omp-stream-omp-p2p
+  OK : 4-omp
+  OK : 4-omp-stream
+  OK : 4-omp-stream-omp
+  OK : 4-omp-stream-omp-p2p
+  OK : 1-omp
+
+All binaries present -- run jobs are cleared to start.
